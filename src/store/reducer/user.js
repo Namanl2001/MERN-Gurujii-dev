@@ -198,7 +198,7 @@ function rootReducer(state = defaultState, action) {
 
 export const getInitalData = () => async (dispatch) => {
   try {
-    let all = await axios.get("/users/");
+    let all = await axios.get("http://localhost:5000/users/");
     // You're dispatching not only the metadata, but also setting isDataInitialized to true, to denote, that data has been loaded
     dispatch({ type: "DATA_INITIALIZED", all, isDataInitialized: true });
   } catch (error) {
@@ -209,7 +209,7 @@ export const getInitalData = () => async (dispatch) => {
 export const getregisteredUserData = (data) => async (dispatch) => {
   try {
     dispatch({ type: "LOGIN", data });
-    let userData = await axios.get(`/users/${data.email}`);
+    let userData = await axios.get(`http://localhost:5000/users/${data.email}`);
     if (userData.data !== null) {
       dispatch({ type: "REGISTERED_USER", userData, registeredUser: true });
     }

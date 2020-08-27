@@ -32,7 +32,7 @@ class update extends Component {
     e.preventDefault();
 
     axios
-      .post(`/users/update/${this.props.data._id}`, {
+      .post(`http://0.0.0.0/users/update/${this.props.data._id}`, {
         userName: this.state.userName,
         subject: this.state.subject,
         coachingName: this.state.coachingName,

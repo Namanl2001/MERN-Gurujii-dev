@@ -31,7 +31,7 @@ class form extends Component {
     e.preventDefault();
 
     axios
-      .post("/users/add", {
+      .post("http://localhost:5000/users/add", {
         email: this.props.emailid,
         userName: this.state.userName,
         subject: this.state.subject,
@@ -49,7 +49,9 @@ class form extends Component {
       })
       .then((response) => {
         if (response.status == 200) {
-          axios.get(`/users/sendMail/${this.props.emailid}/1`);
+          axios.get(
+            `http://localhost:5000/users/sendMail/${this.props.emailid}/1`
+          );
           if (
             alert(
               `Congratulatios!! ${this.state.userName} Your profile added successfully to our database `
