@@ -23,7 +23,6 @@ function App() {
       </div>
 
       <br />
-
       <Route path="/" exact component={Home} />
     </Router>
   );

@@ -31,7 +31,7 @@ class form extends Component {
     e.preventDefault();
 
     axios
-      .post("http://localhost:5000/users/add", {
+      .post("http://192.168.42.139:5000/users/add", {
         email: this.props.emailid,
         userName: this.state.userName,
         subject: this.state.subject,
@@ -50,7 +50,7 @@ class form extends Component {
       .then((response) => {
         if (response.status == 200) {
           axios.get(
-            `http://localhost:5000/users/sendMail/${this.props.emailid}/1`
+            `http://192.168.42.139:5000/users/sendMail/${this.props.emailid}/1`
           );
           if (
             alert(
