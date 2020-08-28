@@ -6,7 +6,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "author": "naman@backend",
   "license": "ISC",
@@ -20,5 +21,8 @@
     "passport": "^0.4.1",
     "passport-google-oauth20": "^2.0.0",
     "react-redux": "^7.2.0"
+  },
+  "engines": {
+    "node": "12.14.0"
   }
 }
