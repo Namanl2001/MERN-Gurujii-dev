@@ -11,14 +11,14 @@ class form extends Component {
     coachingName: "",
     qualification: "",
     about: "",
-    c1: "",
-    c2: "",
-    c3: "",
-    c4: "",
+    c1: null,
+    c2: null,
+    c3: null,
+    c4: null,
     address: "",
     city: "",
-    pin: "",
-    phone: "",
+    pin: null,
+    phone: null,
   };
 
   handleChange = (e) => {
@@ -31,7 +31,7 @@ class form extends Component {
     e.preventDefault();
 
     axios
-      .post("http://localhost:5000/users/add", {
+      .post("/users/add", {
         email: this.props.emailid,
         userName: this.state.userName,
         subject: this.state.subject,
@@ -49,9 +49,7 @@ class form extends Component {
       })
       .then((response) => {
         if (response.status == 200) {
-          axios.get(
-            `http://localhost:5000/users/sendMail/${this.props.emailid}/1`
-          );
+          axios.get(`/users/sendMail/${this.props.emailid}/1`);
           if (
             alert(
               `Congratulatios!! ${this.state.userName} Your profile added successfully to our database `
@@ -164,7 +162,7 @@ class form extends Component {
                 <Col col="sm-3">
                   <Form.Input
                     id="c1"
-                    type="text"
+                    type="number"
                     placeholder="e.g. : '9' "
                     onChange={this.handleChange}
                     value={this.state.c1}
@@ -176,7 +174,7 @@ class form extends Component {
                 <Col col="sm-3">
                   <Form.Input
                     id="c2"
-                    type="text"
+                    type="number"
                     placeholder="e.g. : '10' "
                     onChange={this.handleChange}
                     value={this.state.c2}
@@ -191,7 +189,7 @@ class form extends Component {
                 <Col col="sm-3">
                   <Form.Input
                     id="c3"
-                    type="text"
+                    type="number"
                     placeholder="e.g. : '11' "
                     onChange={this.handleChange}
                     value={this.state.c3}
@@ -203,7 +201,7 @@ class form extends Component {
                 <Col col="sm-3">
                   <Form.Input
                     id="c4"
-                    type="text"
+                    type="number"
                     placeholder="e.g. : '12' "
                     onChange={this.handleChange}
                     value={this.state.c4}
@@ -246,8 +244,8 @@ class form extends Component {
               <Col col="sm-10">
                 <Form.Input
                   id="pin"
-                  type="text"
-                  placeholder="Enter City postal-code"
+                  type="number"
+                  placeholder="6-digit postal-code"
                   onChange={this.handleChange}
                   value={this.state.pin}
                 />
@@ -260,8 +258,8 @@ class form extends Component {
               <Col col="sm-10">
                 <Form.Input
                   id="phone"
-                  type="text"
-                  placeholder="Enter Phone number"
+                  type="number"
+                  placeholder="10-digit number"
                   onChange={this.handleChange}
                   value={this.state.phone}
                 />

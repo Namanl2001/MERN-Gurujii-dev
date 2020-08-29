@@ -35,7 +35,7 @@ class filter extends Component {
             <Row>
               <Col>
                 <Form.Input
-                  type="text"
+                  type="number"
                   onChange={this.handleChange}
                   value={this.state.content}
                   placeholder="Filter by Pin-Code"

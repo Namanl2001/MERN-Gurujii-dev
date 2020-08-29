@@ -32,7 +32,7 @@ class update extends Component {
     e.preventDefault();
 
     axios
-      .post(`http://localhost:5000/users/update/${this.props.data._id}`, {
+      .post(`/users/update/${this.props.data._id}`, {
         userName: this.state.userName,
         subject: this.state.subject,
         coachingName: this.state.coachingName,
@@ -160,7 +160,7 @@ class update extends Component {
                 <Col col="sm-3">
                   <Form.Input
                     id="c1"
-                    type="text"
+                    type="number"
                     placeholder="e.g. : '9' "
                     onChange={this.handleChange}
                     value={this.state.c1}
@@ -172,7 +172,7 @@ class update extends Component {
                 <Col col="sm-3">
                   <Form.Input
                     id="c2"
-                    type="text"
+                    type="number"
                     placeholder="e.g. : '10' "
                     onChange={this.handleChange}
                     value={this.state.c2}
@@ -187,7 +187,7 @@ class update extends Component {
                 <Col col="sm-3">
                   <Form.Input
                     id="c3"
-                    type="text"
+                    type="number"
                     placeholder="e.g. : '11' "
                     onChange={this.handleChange}
                     value={this.state.c3}
@@ -199,7 +199,7 @@ class update extends Component {
                 <Col col="sm-3">
                   <Form.Input
                     id="c4"
-                    type="text"
+                    type="number"
                     placeholder="e.g. : '12' "
                     onChange={this.handleChange}
                     value={this.state.c4}
@@ -215,7 +215,7 @@ class update extends Component {
                 <Form.Input
                   id="address"
                   type="text"
-                  placeholder="Enter Full Name"
+                  placeholder="Enter Full address"
                   onChange={this.handleChange}
                   value={this.state.address}
                 />
@@ -229,7 +229,7 @@ class update extends Component {
                 <Form.Input
                   id="city"
                   type="text"
-                  placeholder="Enter Full Name"
+                  placeholder="Enter city name"
                   onChange={this.handleChange}
                   value={this.state.city}
                 />
@@ -242,8 +242,8 @@ class update extends Component {
               <Col col="sm-10">
                 <Form.Input
                   id="pin"
-                  type="text"
-                  placeholder="Enter Full Name"
+                  type="number"
+                  placeholder="6-digit postal code"
                   onChange={this.handleChange}
                   value={this.state.pin}
                 />
@@ -256,8 +256,8 @@ class update extends Component {
               <Col col="sm-10">
                 <Form.Input
                   id="phone"
-                  type="text"
-                  placeholder="Enter Full Name"
+                  type="number"
+                  placeholder="10-digit phone"
                   onChange={this.handleChange}
                   value={this.state.phone}
                 />

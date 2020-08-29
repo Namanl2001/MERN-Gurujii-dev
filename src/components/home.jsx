@@ -11,9 +11,19 @@ class home extends Component {
   }
 
   List() {
-    return this.props.users.map((currentuser) => {
-      return <Card user={currentuser} key={currentuser._id} />;
-    });
+    if (this.props.users.length) {
+      return this.props.users.map((currentuser) => {
+        return <Card user={currentuser} key={currentuser._id} />;
+      });
+    } else {
+      return (
+        <div>
+          <h2>Sorry!! No results found.</h2>
+          <br />
+          <br />
+        </div>
+      );
+    }
   }
 
   render() {

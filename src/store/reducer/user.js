@@ -209,7 +209,7 @@ export const getInitalData = () => async (dispatch) => {
 export const getregisteredUserData = (data) => async (dispatch) => {
   try {
     dispatch({ type: "LOGIN", data });
-    let userData = await axios.get(`http://localhost:5000/users/${data.email}`);
+    let userData = await axios.get(`/users/${data.email}`);
     if (userData.data !== null) {
       dispatch({ type: "REGISTERED_USER", userData, registeredUser: true });
     }

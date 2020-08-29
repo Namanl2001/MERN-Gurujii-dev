@@ -20,12 +20,10 @@ class navbar extends Component {
     e.preventDefault();
 
     axios
-      .delete(`http://localhost:5000/users/delete/${this.props.id}`)
+      .delete(`/users/delete/${this.props.id}`)
       .then((response) => {
         if (response.status == 200) {
-          axios.get(
-            `http://localhost:5000/users/sendMail/${this.props.emailid}/2`
-          );
+          axios.get(`/users/sendMail/${this.props.emailid}/2`);
           if (alert(`Your profile deleted successfully.....!! `)) {
           } else window.location.reload();
         }
