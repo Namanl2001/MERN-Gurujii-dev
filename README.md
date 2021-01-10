@@ -2,9 +2,9 @@ Hosted website Link https://guru-jii.herokuapp.com/
 
 Want to contribute? Follow the steps below to set it up locally.
 
-Step 1: Fork and Clone the repo.
-Step 2: run `cd backend yarn install` to install backend dependencies.
-step 3: run `cd .. yarn install` to install frontend dependencies.
+Step 1: Fork and Clone the repo.<br />
+Step 2: run `cd backend yarn install` to install backend dependencies.<br />
+step 3: run `cd .. yarn install` to install frontend dependencies.<br />
 Step 4: run `yarn dev`. This should launch the website on `localhost:3000`.
 
 We have used proxy so all the requests made to backend from frontend will be served at
