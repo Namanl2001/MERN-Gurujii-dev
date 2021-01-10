@@ -10,8 +10,7 @@ Step 4: run `yarn dev`. This should launch the website on `localhost:3000`.
 We have used proxy so all the requests made to backend from frontend will be served at
 `localhost:5000` at which our backend is running.
 
-Great! Now you are good to go. Open/pick an issue, discuss your idea, make the changes
-and create your first pull request in this repo.
+Great! Now you are good to go. Open/pick an issue, discuss your idea, make the changes in your feature branch and create your first pull request in this repo.
 
 Want to test your changes on mobile phone?
 
