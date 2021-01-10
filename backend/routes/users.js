@@ -1,6 +1,7 @@
 const router = require("express").Router();
 var nodemailer = require("nodemailer");
 let User = require("../models/user.model");
+const { pass } = require('./config');
 
 router.route("/").get((req, res) => {
   User.find()
@@ -91,7 +92,7 @@ router.route("/sendMail/:email/:c").get((req, res) => {
     service: "gmail",
     auth: {
       user: "namanlakhwaninl@gmail.com",
-      pass: "naman@12345",
+      pass: `${pass}`,
     },
   });
 

@@ -6,7 +6,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "axios": "^0.19.2",
+    "axios": ">=0.21.1",
     "bootstrap-4-react": "0.0.59",
     "bootstrap4": "0.0.1-security",
     "nodemailer": "^6.4.11",
@@ -27,9 +27,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "client": " npm start",
+    "client": "yarn start",
     "server": "cd backend && npm start",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"yarn server\" \"yarn client\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -49,7 +49,7 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "devDependencies": {},
-  "author": "naman",
+  "author": "Naman Lakhwani (Namanl2001)",
   "license": "ISC",
   "proxy": "http://localhost:5000/"
 }

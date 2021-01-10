@@ -3,6 +3,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const path = require("path");
+const { username, pass, myCluster } = require('./config');
 require("dotenv").config();
 
 const app = express();
@@ -18,7 +19,7 @@ app.use("/", express.static("./public"));
 app.use(express.static(path.join(__dirname, "public")));
 
 const url =
-  "mongodb+srv://naman:naman@12345@cluster0.44im5.mongodb.net/project?retryWrites=true&w=majority";
+  `mongodb+srv://${username}:${pass}${myCluster}.mongodb.net/project?retryWrites=true&w=majority`;
 mongoose.connect(url, {
   useNewUrlParser: true,
   useCreateIndex: true,
