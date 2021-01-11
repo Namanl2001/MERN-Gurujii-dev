@@ -15,4 +15,4 @@ Great! Now you are good to go. Open/pick an issue, discuss your idea, make the c
 Want to test your changes on mobile phone?
 
 To view on mobile, your laptop and mobile phone should be on the same network.
-run ipconfig on terminal, enter `<ip4address>:3000` as url on mobile web browser. 
+Run ipconfig on terminal, enter `<ip4address>:3000` as url on mobile web browser. 
