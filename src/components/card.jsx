@@ -10,7 +10,7 @@ const img_src = Photo;
 class cards extends Component {
   render() {
     return (
-      <Card style={{ width: "21em", marginLeft: "2em", marginBottom: "3em" }}>
+      <Card style={{ width: "21em", marginLeft: "2em", marginBottom: "3em" }} className="card">
         <Card.Header>{this.props.user.coaching}</Card.Header>
         {/* <Card.Image src={img_src} alt={"image"} /> */}
         <Card.Body>

@@ -31,3 +31,11 @@ html {
     margin: auto;
   }
 }
+.card{
+  transition: transform .8s ease;
+}
+.card:hover{
+  transition: .8s;
+  transform: scale(1.14);
+  box-shadow: 4px 4px #D3D3D3;
+}

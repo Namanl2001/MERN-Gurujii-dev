@@ -3,7 +3,9 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const path = require("path");
-const { username, pass, myCluster } = require('./config');
+//const { username, pass, myCluster } = require('./config');
+const config = require('./config.js');
+const { username, pass,myCluster  } = config;
 require("dotenv").config();
 
 const app = express();
