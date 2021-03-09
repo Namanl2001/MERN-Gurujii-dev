@@ -17,9 +17,8 @@ Example how to mark a checkbox:-
 -->
 - [ ] Bug fix (non-breaking change which fixes an issue)
 - [ ] New feature (non-breaking change which adds functionality)
-- [ ] Code style update (formatting, local variables)
-- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
-- [ ] This change requires a documentation update
+- [ ] Enhancement in the existing features
+- [ ] Other
 
 ## Mention any unusual behaviour of your code (Write NA if not)
 Any unusual behaviour of your code
