@@ -22,7 +22,7 @@ class navbar extends Component {
     axios
       .delete(`/users/delete/${this.props.id}`)
       .then((response) => {
-        if (response.status == 200) {
+        if (response.status === 200) {
           axios.get(`/users/sendMail/${this.props.emailid}/2`);
           if (alert(`Your profile deleted successfully.....!! `)) {
           } else window.location.reload();

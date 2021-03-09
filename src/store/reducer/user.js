@@ -57,7 +57,7 @@ function rootReducer(state = defaultState, action) {
       };
 
     case "PIN":
-      const newArray0 = state.all.filter((user) => user.pin == action.pin);
+      const newArray0 = state.all.filter((user) => user.pin === action.pin);
       return {
         ...state,
         pindata: newArray0,
@@ -118,10 +118,10 @@ function rootReducer(state = defaultState, action) {
     case "C9":
       const newArray4 = state.subjdata.filter((user) => {
         return (
-          user.class1 == "9" ||
-          user.class2 == "9" ||
-          user.class3 == "9" ||
-          user.class4 == "9"
+          user.class1 === "9" ||
+          user.class2 === "9" ||
+          user.class3 === "9" ||
+          user.class4 === "9"
         );
       });
       return {
@@ -133,10 +133,10 @@ function rootReducer(state = defaultState, action) {
     case "C10":
       const newArray5 = state.subjdata.filter((user) => {
         return (
-          user.class1 == "10" ||
-          user.class2 == "10" ||
-          user.class3 == "10" ||
-          user.class4 == "10"
+          user.class1 === "10" ||
+          user.class2 === "10" ||
+          user.class3 === "10" ||
+          user.class4 === "10"
         );
       });
       return {
@@ -148,10 +148,10 @@ function rootReducer(state = defaultState, action) {
     case "C11":
       const newArray6 = state.subjdata.filter((user) => {
         return (
-          user.class1 == "11" ||
-          user.class2 == "11" ||
-          user.class3 == "11" ||
-          user.class4 == "11"
+          user.class1 === "11" ||
+          user.class2 === "11" ||
+          user.class3 === "11" ||
+          user.class4 === "11"
         );
       });
       return {
@@ -163,10 +163,10 @@ function rootReducer(state = defaultState, action) {
     case "C12":
       const newArray7 = state.subjdata.filter((user) => {
         return (
-          user.class1 == "12" ||
-          user.class2 == "12" ||
-          user.class3 == "12" ||
-          user.class4 == "12"
+          user.class1 === "12" ||
+          user.class2 === "12" ||
+          user.class3 === "12" ||
+          user.class4 === "12"
         );
       });
       return {
