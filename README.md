@@ -63,7 +63,7 @@ We have used proxy so all the requests made to backend from frontend will be ser
 
 Click Here to view the deployment!
  
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://guru-jii.herokuapp.com/)
+[![Deploy](https://raw.githubusercontent.com/nikitakapoor1919/Buttons/main/guruji.png)](https://guru-jii.herokuapp.com/)
 <br>
 <br>
 
