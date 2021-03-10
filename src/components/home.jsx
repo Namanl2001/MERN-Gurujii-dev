@@ -9,10 +9,19 @@ class home extends Component {
   componentDidMount() {
     this.props.getInitalData();
   }
+  // sort users by date and sort function
+  // users object contains date at "createdAt" property
+  sortUsersByTime(){
+    let sortedUsers = this.props.users.sort(function(a, b){ 
+      return new Date(b.createdAt) - new Date(a.createdAt); 
+    });
+    return sortedUsers;
+  }
 
   List() {
-    if (this.props.users.length) {
-      return this.props.users.map((currentuser) => {
+    let sortedUsers = this.sortUsersByTime();
+    if (sortedUsers.length) {
+      return sortedUsers.map((currentuser) => {
         return <Card user={currentuser} key={currentuser._id} />;
       });
     } else {
@@ -25,7 +34,6 @@ class home extends Component {
       );
     }
   }
-
   render() {
     return (
       <>
