@@ -1,71 +1,90 @@
-### How to Make A  Pull Request 
+## GIT AND GITHUB
 ***
-#### Creating a Pull Request-
-1.	On GitHub, navigate to the main page of the repository.
-2.	In the **"Branch"** menu, choose the branch that contains your commits.
-3.	Above the list of files, click  **Pull request**.
-4.	Use the base branch dropdown menu to select the branch you'd like to merge your changes into, then use the compare branch drop-down menu to choose the topic branch you made your changes in.
-5.	Type a title and description for your pull request.
-6.	To create a pull request that is ready to review , Click on **Create Pull Request**
+Before continuing we want to clarify the difference between Git and Github. Git is a version control system(VCS) which is a tool to manage the history of our Source Code. GitHub is a hosting service for Git projects.
 
-     
-Once you fixed any errors that showed up in the tests (if any), you are ready to open up your Pull Request. Here are some guidelines...
-1.	Make the Pull Request against the ***master branch***
-2.	Give the Pull Request a descriptive title
--	Good - ```  Fixing Remix Button Not Showing - Issue 1332 ```
--	Bad - ```Issue 1332 ```
-3.	In the description
--	Describe the problem you are solving
--	Describe how the person reviewing your Pull Request can get your solution to work
-4.	Include a ``` Fixes #1332 ``` message in the Pull Request description
--	When the Pull Request is merged, this automatically closes the associated issue
-5.	Review the Files Changed tab in the Pull Request viewer to make sure only the changes you intended have made it in to the Pull Request
-6.	Ping someone in a comment and ask for a Review
+We assume you have created an account on Github and installed Git on your System.
 
+Now tell Git your name and E-mail (used on Github) address.
 
+``` $ git config --global user.name "YOUR NAME" ```
+```$ git config --global user.email "YOUR EMAIL ADDRESS"```
+This is an important step to mark your commits to your name and email.
 
-#### Check if your Pull Request is good to go
-At the bottom of the Conversation tab of the Pull Request page, there is a box that describes three different aspects of your Pull Request
-##### 1.	Requested Changes
--	This will indicate if other members of the team have requested any changes to the code you've made.
-##### 2.	Travis Tests
--	Travis is an automated system that checks your code to make sure it's valid.
--	If there are errors, click on the Details link and scroll through the Travis output to find the problem.
-##### 3.	Merge conflicts
--	Sometimes, if enough time has passed since you first created your branch, changes to the master branch may require you to rebase your branch to the latest master.
-
-If any of the three above require you to make changes you do not need to make a new Pull Request. Simply make the changes in your local branch, re-test your code, and then push the changes up to your remote repository. Your new changes will automatically be reflected in your Pull Request.
-
-
-### Found a Bug? File an Issue.
+### FORK A PROJECT -
 ***
-#### Guidelines -
-1.	Write a descriptive issue title
--	Bad - ``` Editor is broken```
--	Good - ```Editor is not responsive``` after publishing a project
-2.	Provide a thorough description of the problem
--	What browser and OS are you using?
--	Does the problem happen all of the time?
-3.	Write out a series of steps for reproducing the bug, for example...
-	Step 1) Create a new project
-	Step 2) Add a second HTML file named "broken.html"
-	Step 3) The editor stops responding at this point
-4.	If possible, include a screenshot of what you are seeing
-5.	Check the console in your browser's developer tools
--	If you see any red errors, incliude a screenshot of those as well
+You can use github explore - https://github.com/explore to find a project that interests you and match your skills. Once you find your cool project to workon, you can make a copy of project to your account. This process is called forking a project to your Github account. On Upper right side of project page on Github, you can see -
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![alt](https://i.imgur.com/P0n6f97.png) 
 
-### Configuring issue templates for the repository
+Click on fork to create a copy of project to your account. This creates a separate copy for you to workon.
+
+### FINDING A FEATURE OR BUG TO WORKON - 
 ***
-#### Creating issue templates
-1.	On GitHub, navigate to the main page of the repository.
-2.	Under your repository name, click  **Settings**.
-3.	In the **"Features"** section, under **"Issues,"** click Set up templates.
-4.	Use the Add template drop-down menu, and click on the type of template you'd like to create.
-5.	To preview or edit the template before committing it to the repository, click **Preview and edit**.
-6.	To edit the template, click , and type in the fields to edit their contents.
-7.	To automatically set a default issue title, assign the issue to people with read access to the repository, or apply labels to your issue template, enter these details under "Optional additional information." You can also add these details in the issue template with title, labels, or assignees in a YAML frontmatter format.
-8.	When you're finished editing and previewing your template, click **Propose changes** in the upper right corner of the page.
-9.	Enter a commit message describing your changes.
-10.	Below the commit message fields, decide whether to commit your template directly to the default branch, or to create a new branch and open a pull request.
-11.	Click **Commit changes**. Once these changes are merged into the default branch, the template will be available for contributors to use when they open new issues in the repository.
+Open Source projects always have something to workon and improves with each new release. You can see the issues section to find something you can solve or report a bug. The project managers always welcome new contributors and can guide you to solve the problem. You can find issues in the right section of project page.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![alt](https://i.imgur.com/czVjpS7.png)
+
+### CLONE THE FORKED PROJECT -
+***
+You have forked the project you want to contribute to your github account. To get this project on your development machine we use clone command of git.
+
+```$ git clone https://github.com/<your-account-username>/<your-forked-project>.git```
+Now you have the project on your local machine.
+
+### ADD A REMOTE (UPSTREAM) TO ORIGINAL PROJECT REPOSITORY 
+***
+Remote means the remote location of project on Github. By cloning, we have a remote called origin which points to your forked repository. Now we will add a remote to the original repository from where we had forked.
+
+```$ cd <your-forked-project-folder>```
+```$ git remote add upstream https://github.com/<author-account-username>/<project>.git```
+You will see the benefits of adding remote later.
+
+### SYNCHRONIZING YOUR FORK -
+***
+Open Source projects have a number of contributors who can push code anytime. So it is necessary to make your forked copy equal with the original repository. The remote added above called Upstream helps in this.
+
+```$ git checkout master```
+```$ git fetch upstream```
+```$ git merge upstream/master```
+```$ git push origin master```
+The last command pushes the latest code to your forked repository on Github. The origin is the remote pointing to your forked repository on github.
+
+### CREATE A NEW BRANCH FOR A FEATURE OR BUGFIX -
+***
+Normally, all repositories have a master branch which is considered to remain stable and all new features should be made in a separate branch and after completion merged into master branch. So we should create a new branch for our feature or bugfix and start working on the issue.
+
+```$ git checkout -b <feature-branch>```
+This will create a new branch out of master branch. Now start working on the problem and commit your changes.
+
+```$ git add --all```
+```$ git commit -m "<commit message>"```
+The first command adds all the files or you can add specific files by removing -a and adding the file names. The second command gives a message to your changes so you can know in future what changes this commit makes. If you are solving an issue on original repository, you should add the issue number like #35 to your commit message. This will show the reference to commits in the issue.
+
+### REBASE YOUR FEATURE BRANCH WITH UPSTREAM-
+***
+It can happen that your feature takes time to complete and other contributors are constantly pushing code. After completing the feature your feature branch should be rebase on latest changes to upstream master branch.
+
+```$ git checkout <feature-branch>```
+```$ git pull --rebase upstream master```
+Now you get the latest commits from other contributors and check that your commits are compatible with the new commits. If there are any conflicts solve them.
+
+### SQUASHING YOUR COMMITS-
+***
+You have completed the feature, but you have made a number of commits which make less sense. You should squash your commits to make good commits.
+
+```$ git rebase -i HEAD~5```
+This will open an editor which will allow you to squash the commits.
+
+### PUSH CODE AND CREATE A PULL REQUEST -
+***
+Till this point you have a new branch with the feature or bugfix you want in the project you had forked. Now push your new branch to your remote fork on github.
+
+```$ git push origin <feature-branch>```
+Now you are ready to help the project by opening a pull request means you now tell the project managers to add the feature or bugfix to original repository. You can open a pull request by clicking on green icon -
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![alt](https://i.imgur.com/aGaqAD5.png)
+
+Remember your upstream base branch should be master and source should be your feature branch. Click on create pull request and add a name to your pull request. You can also describe your feature.
+
+Awesome! You have made your first contribution. If you have any doubts please let me know in the comments.
+
+#### BE OPEN!
