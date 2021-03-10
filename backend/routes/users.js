@@ -14,6 +14,7 @@ router.route("/:email").get((req, res) => {
     .then((users) => res.json(users))
     .catch((err) => res.status(400).json("Error: " + err));
 });
+
 router.route("/add").post((req, res) => {
   const email = req.body.email;
   const username = req.body.userName;
