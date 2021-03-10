@@ -48,7 +48,7 @@ class update extends Component {
         phone: this.state.phone,
       })
       .then((response) => {
-        if (response.status == 200) {
+        if (response.status === 200) {
           if (
             alert(
               `Congratulatios!! ${this.state.userName} Your profile Updated Successfully `
