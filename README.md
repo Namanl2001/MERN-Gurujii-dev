@@ -1,5 +1,8 @@
 Hosted website Link https://guru-jii.herokuapp.com/
-
+<h3 align="center">Demo</h3>
+<div align="center">
+  <img align="center"src="https://user-images.githubusercontent.com/63860014/110662198-4895b300-81eb-11eb-8c01-bfe0ad3ba15c.gif"/>
+</div>
 Want to contribute? Follow the steps below to set it up locally.
 
 Step 1: Fork and Clone the repo.<br />
