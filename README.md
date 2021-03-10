@@ -1,9 +1,9 @@
 <b><h1 align=center> GuruJi </h1></b>
 
-## <strong>About Us🚩[![GitHub contributors](https://img.shields.io/github/contributors/Namanl2001/MERN-Gurujii-dev.svg)](https://github.com/Namanl2001/MERN-Gurujii-dev/graphs/contributors/)
+## <strong>About Us🚩[![GitHub contributors](https://img.shields.io/github/contributors/Namanl2001/MERN-Gurujii-dev.svg)](https://github.com/Namanl2001/MERN-Gurujii-dev/graphs/contributors/)</strong>
 We have created this platform to help the students find best tution teacher in their city easily.You just have to enter pincode of your city and we will show you best teachers in your locality along with their teaching styles and their qualification from which you can select best teacher for yourself.
 
-## <strong>Technology Stack 🔥:
+## <strong>Technology Stack 🔥:</strong>
 
 <img src ="https://img.shields.io/badge/MongoDB-%234ea94b.svg?&style=for-the-badge&logo=mongodb&logoColor=white"/> <img src="https://img.shields.io/badge/express.js%20-%23404d59.svg?&style=for-the-badge"/> <img src="https://img.shields.io/badge/reactjs%20-61DAFB.svg?&style=for-the-badge&logo=react&logoColor=blue"/> <img src="https://img.shields.io/badge/Node.js-%234ea94b.svg?&style=for-the-badge&logo=node.js&logoColor=white"> <img src="https://img.shields.io/badge/git%20-%23121011.svg?&style=for-the-badge&logo=git&logoColor=white&logoWidth=20">
 
@@ -14,7 +14,7 @@ We have created this platform to help the students find best tution teacher in t
 - **Database**: MongoDb
 - **Hosting**: Heroku
 
-## <strong>Getting Started 🚀 
+## <strong>Getting Started 🚀 </strong>
 ### Want to contribute? Follow the steps below to set it up locally.
 
 ```
@@ -38,11 +38,11 @@ This should launch the website on `localhost:3000`.
 We have used proxy so all the requests made to backend from frontend will be served at
 `localhost:5000` at which our backend is running.
 
-### <strong>Note 👀
+### <strong>Note 👀</strong>
 - This project uses yarn to install the dependencies. Don't use npm install.
 - For security reasons we have made the MongoDb URI secure, by not adding a hardcoded username and password. For development purpose, you can install, MongoDB locally or use the  online version.
 
-## <strong>Hosted website Link 📦 
+## <strong>Hosted website Link 📦 </strong>
 
 Click Here to view the deployment!
  
@@ -54,7 +54,7 @@ Click Here to view the deployment!
 
 #### Happy?? Star ⭐ this Repo. 🤩
 
-## ⭐<strong> Issues [![GitHub issues](https://img.shields.io/github/issues/Namanl2001/MERN-Gurujii-dev.svg)](https://github.com/Namanl2001/MERN-Gurujii-dev/issues) [![GitHub issues](https://img.shields.io/github/issues-closed/Namanl2001/MERN-Gurujii-dev.svg)](https://github.com/Namanl2001/MERN-Gurujii-dev/issues?q=is%3Aissue+is%3Aclosed)
+## ⭐<strong> Issues [![GitHub issues](https://img.shields.io/github/issues/Namanl2001/MERN-Gurujii-dev.svg)](https://github.com/Namanl2001/MERN-Gurujii-dev/issues) [![GitHub issues](https://img.shields.io/github/issues-closed/Namanl2001/MERN-Gurujii-dev.svg)](https://github.com/Namanl2001/MERN-Gurujii-dev/issues?q=is%3Aissue+is%3Aclosed)</strong>
 For major changes, you are welcomed to open an issue and discuss what you would like to contribute. Enhancements will be appreciated.
 
 ### Want to test your changes on mobile phone?
@@ -62,7 +62,7 @@ For major changes, you are welcomed to open an issue and discuss what you would 
 - To view on mobile, your laptop and mobile phone should be on the same network.
 - Run ipconfig on terminal, enter `<ip4address>:3000` as url on mobile web browser. 
 
-## 📢 <strong>Open Source Program [![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)](https://github.com/Namanl2001/)  [![Open Source Love svg3](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://github.com/Namanl2001/)
+## 📢 <strong>Open Source Program [![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)](https://github.com/Namanl2001/)  [![Open Source Love svg3](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://github.com/Namanl2001/)</strong>
 
 This Project is a part of the following Open Source Program
 
