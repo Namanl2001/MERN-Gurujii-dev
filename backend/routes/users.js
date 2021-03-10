@@ -1,9 +1,7 @@
 const router = require("express").Router();
 var nodemailer = require("nodemailer");
 let User = require("../models/user.model");
-//const { pass } = require('./config');
-const config = require('../config');
-const {pass}=config;
+const { pass } = require('../config');
 
 router.route("/").get((req, res) => {
   User.find()
@@ -16,7 +14,6 @@ router.route("/:email").get((req, res) => {
     .then((users) => res.json(users))
     .catch((err) => res.status(400).json("Error: " + err));
 });
-
 router.route("/add").post((req, res) => {
   const email = req.body.email;
   const username = req.body.userName;
