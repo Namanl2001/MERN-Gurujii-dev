@@ -49,6 +49,10 @@ We have used proxy so all the requests made to backend from frontend will be ser
 ### <strong>Note 👀</strong>
 - This project uses yarn to install the dependencies. Don't use npm install.
 - For security reasons we have made the MongoDb URI secure, by not adding a hardcoded username and password. For development purpose, you can install, MongoDB locally or use the  online version.
+- Comment line number 6,7,22 in backend/server.js.
+- If you have use the  online version add your url in line number 22.
+- Comment line number 4 in backend/routes/users.js.
+- Add your auth and pass in backend/routes/users.js line number 94 and 95.
 <br>
 <br>
 <br>
