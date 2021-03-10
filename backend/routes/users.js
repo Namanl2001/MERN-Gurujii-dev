@@ -1,7 +1,7 @@
 const router = require("express").Router();
 var nodemailer = require("nodemailer");
 let User = require("../models/user.model");
-const { pass } = require('./config');
+const { pass } = require("../config");
 
 router.route("/").get((req, res) => {
   User.find()
