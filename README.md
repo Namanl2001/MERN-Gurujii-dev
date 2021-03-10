@@ -52,7 +52,7 @@ Click Here to view the deployment!
 
 ### Great! Now you are good to go. Open/pick an issue, discuss your idea, make the changes in your feature branch and create your first pull request in this repo.
 
-#### Happy?? Star ⭐ this Repo. 🤩
+#### <strong>Interesting?? Star ⭐ this Repo.</strong> 🤩
 
 ## ⭐<strong> Issues [![GitHub issues](https://img.shields.io/github/issues/Namanl2001/MERN-Gurujii-dev.svg)](https://github.com/Namanl2001/MERN-Gurujii-dev/issues) [![GitHub issues](https://img.shields.io/github/issues-closed/Namanl2001/MERN-Gurujii-dev.svg)](https://github.com/Namanl2001/MERN-Gurujii-dev/issues?q=is%3Aissue+is%3Aclosed)</strong>
 For major changes, you are welcomed to open an issue and discuss what you would like to contribute. Enhancements will be appreciated.
