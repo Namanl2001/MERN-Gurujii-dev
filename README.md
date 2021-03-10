@@ -8,6 +8,7 @@ We have created this platform to help the students find best tution teacher in t
 <br>
 <br>
 <br>
+
 ## <strong>Technology Stack 🔥:</strong>
 
 <img src ="https://img.shields.io/badge/MongoDB-%234ea94b.svg?&style=for-the-badge&logo=mongodb&logoColor=white"/> <img src="https://img.shields.io/badge/express.js%20-%23404d59.svg?&style=for-the-badge"/> <img src="https://img.shields.io/badge/reactjs%20-61DAFB.svg?&style=for-the-badge&logo=react&logoColor=blue"/> <img src="https://img.shields.io/badge/Node.js-%234ea94b.svg?&style=for-the-badge&logo=node.js&logoColor=white"> <img src="https://img.shields.io/badge/git%20-%23121011.svg?&style=for-the-badge&logo=git&logoColor=white&logoWidth=20">
@@ -56,6 +57,7 @@ We have used proxy so all the requests made to backend from frontend will be ser
 <br>
 <br>
 <br>
+
 ### <strong>Want to test your changes on mobile phone?</strong>
 
 - To view on mobile, your laptop and mobile phone should be on the same network.
@@ -63,11 +65,13 @@ We have used proxy so all the requests made to backend from frontend will be ser
 <br>
 <br>
 <br>
+
 ## <strong>Hosted website Link 📦 </strong>
 
 Click Here to view the deployment!
  
 [![Deploy](https://raw.githubusercontent.com/nikitakapoor1919/Buttons/main/guruji.png)](https://guru-jii.herokuapp.com/)
+<br>
 <br>
 <br>
 
@@ -76,13 +80,14 @@ Click Here to view the deployment!
 #### <strong>Interesting?? Star ⭐ this Repo.</strong> 🤩
 <br>
 <br>
-
+<br>
 
 ## ⭐<strong> Issues [![GitHub issues](https://img.shields.io/github/issues/Namanl2001/MERN-Gurujii-dev.svg)](https://github.com/Namanl2001/MERN-Gurujii-dev/issues) [![GitHub issues](https://img.shields.io/github/issues-closed/Namanl2001/MERN-Gurujii-dev.svg)](https://github.com/Namanl2001/MERN-Gurujii-dev/issues?q=is%3Aissue+is%3Aclosed)</strong>
 For major changes, you are welcomed to open an issue and discuss what you would like to contribute. Enhancements will be appreciated.
 <br>
 <br>
 <br>
+
 ## 📢 <strong>Open Source Program [![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)](https://github.com/Namanl2001/)  [![Open Source Love svg3](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://github.com/Namanl2001/)</strong>
 
 This Project is a part of the following Open Source Program
