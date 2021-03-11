@@ -88,6 +88,9 @@ Click Here to view the deployment!
  
 [![Deploy](https://raw.githubusercontent.com/nikitakapoor1919/Buttons/main/guruji.png)](https://guru-jii.herokuapp.com/)
 
+<div>
+<img src="https://user-images.githubusercontent.com/63860014/110734802-8f68c480-824e-11eb-910d-7fab7f404fb2.gif"/>
+</div>
 
 <strong><em> Great! Now you are good to go. Open/pick an issue, discuss your idea, make the changes in your feature branch and create your first pull request in this repo.</em></strong>
 
