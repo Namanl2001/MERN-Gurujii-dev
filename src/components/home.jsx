@@ -12,7 +12,17 @@ class home extends Component {
 
   List() {
     if (this.props.users.length) {
-      return this.props.users.map((currentuser) => {
+
+      var displayUser =this.props.users;
+      var randomSet =[];
+      var l=(this.props.users.length);
+      for(var i = 0; i < this.props.users.length; i++){
+        var rand = Math.ceil(Math.random() *l) - 1;
+        randomSet.push(displayUser[rand]);
+        displayUser.splice(rand, 1);
+        l--;
+      }
+      return randomSet.map((currentuser) => {
         return <Card user={currentuser} key={currentuser._id} />;
       });
     } else {
