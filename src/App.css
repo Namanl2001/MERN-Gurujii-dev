@@ -39,3 +39,7 @@ html {
   transform: scale(1.1);
   box-shadow: 6px 6px #D3D3D3;
 }
+
+.dropdown-item:hover{
+cursor: pointer;
+}
