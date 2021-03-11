@@ -1,7 +1,16 @@
 const router = require("express").Router();
 var nodemailer = require("nodemailer");
 let User = require("../models/user.model");
-const { pass } = require('../config');
+const { pass } = require("../config");
+
+// Setting up rate limiter
+var RateLimit = require("express-rate-limit");
+var limiter = new RateLimit({
+  windowMs: 1 * 60 * 1000, // 1 minute
+  max: 25,
+});
+// All user routes will be rate limited
+app.use("/", limiter);
 
 router.route("/").get((req, res) => {
   User.find()
