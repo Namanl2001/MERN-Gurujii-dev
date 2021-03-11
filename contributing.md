@@ -31,7 +31,9 @@ Open Source projects always have something to workon and improves with each new 
 ***
 You have forked the project you want to contribute to your github account. To get this project on your development machine we use clone command of git.
 
-```$ git clone https://github.com/<your-account-username>/MERN-Gurujii-dev.git```
+```
+$ git clone https://github.com/<your-account-username>/MERN-Gurujii-dev.git
+```
 Now you have the project on your local machine. Set up the project locally following the instructions given in [readme.md](https://github.com/Namanl2001/MERN-Gurujii-dev/blob/master/README.md)
 
 ### ADD A REMOTE (UPSTREAM) TO ORIGINAL PROJECT REPOSITORY 
