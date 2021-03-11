@@ -68,6 +68,10 @@ We have used proxy so all the requests made to backend from frontend will be ser
 
 </p>
 
+<h2>Contribution <a><img src="https://www.flaticon.com/svg/vstatic/svg/3770/3770154.svg?token=exp=1615474171~hmac=fa7fbbf94c47c0f20d170cfb3eaf5d19" width="3%"></a> </h2>
+<p>
+ Please check this link <a href="https://github.com/Namanl2001/MERN-Gurujii-dev/blob/master/contributing.md">contribution.md </a> before start contributing and making pull request.
+</p>
 <h2>Want to test your changes on mobile phone? <a><img src="https://www.flaticon.com/svg/vstatic/svg/2983/2983780.svg?token=exp=1615463134~hmac=4fda65bf3de21f5b36a756493a77736e" width="3%"></a></h2>
 
 <p>
