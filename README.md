@@ -41,10 +41,12 @@ $ git clone https://github.com/your-username/MERN-Gurujii-dev.git
 $ cd MERN-Gurujii-dev
 
 # Install backend dependencies
-$ cd backend yarn install
+$ cd backend 
+$ yarn install
 
 # Install frontend dependencies
-$ cd .. yarn install
+$ cd .. 
+$ yarn install
 
 # Run website
 $ yarn dev
