@@ -1,5 +1,5 @@
  
-## <strong>GURU JI <a><img src="https://www.flaticon.com/svg/vstatic/svg/2436/2436654.svg?token=exp=1615461073~hmac=25a78a5de137d7ccd83b97a906829076" width="5%"></a></strong>  
+<h1>GURU JI <a><img src="https://www.flaticon.com/svg/vstatic/svg/2436/2436654.svg?token=exp=1615461073~hmac=25a78a5de137d7ccd83b97a906829076" width="5%"></a></h1>  
 
 
 <h2>About Us <a><img src="https://www.flaticon.com/svg/vstatic/svg/3048/3048425.svg?token=exp=1615462204~hmac=a8c0b7f6fb6cda0e0e674b7d462d1dd4" width="4%"></a></h2>
@@ -22,19 +22,21 @@
 
 <p>
  
+<img height="25" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png">
+<img height="25" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png">
+<img height="25" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png">
+<img height="25" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png">
+<img height="25" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mongodb/mongodb.png">
+<!--
 <img src ="https://img.shields.io/badge/MongoDB-%234ea94b.svg?&style=for-the-badge&logo=mongodb&logoColor=white"/> 
 <img src="https://img.shields.io/badge/express.js%20-%23404d59.svg?&style=for-the-badge"/> 
 <img src="https://img.shields.io/badge/reactjs%20-61DAFB.svg?&style=for-the-badge&logo=react&logoColor=blue"/> 
 <img src="https://img.shields.io/badge/Node.js-%234ea94b.svg?&style=for-the-badge&logo=node.js&logoColor=white"> 
 <img src="https://img.shields.io/badge/git%20-%23121011.svg?&style=for-the-badge&logo=git&logoColor=white&logoWidth=20">
-
-</p>  
-<!--
-- **Frontend**: ReactJS
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDb
-- **Hosting**: Heroku
+<img src="https://img.shields.io/badge/vscode%20-%23121011.svg?&style=for-the-badge&logo=vscodoe&logoColor=blue&logoWidth=20">
 -->
+</p>  
+
 
 <h2>Getting Started <a><img src="https://www.flaticon.com/svg/vstatic/svg/639/639373.svg?token=exp=1615462454~hmac=46545c4fef9ca99ffbc823b4d67f0b54" width="4%"></a></h2>
 <h3>Want to contribute? Follow the steps below to set it up locally.</h3>
