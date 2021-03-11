@@ -1,9 +1,6 @@
-<h1> 
-GURU JI <a><img src="https://www.flaticon.com/svg/vstatic/svg/2436/2436654.svg?token=exp=1615461073~hmac=25a78a5de137d7ccd83b97a906829076" width="5%"></a>  
-</h1>
+ 
+## <strong>GURU JI <a><img src="https://www.flaticon.com/svg/vstatic/svg/2436/2436654.svg?token=exp=1615461073~hmac=25a78a5de137d7ccd83b97a906829076" width="5%"></a></strong>  
 
-<p>
-</p>
 
 <h2>About Us <a><img src="https://www.flaticon.com/svg/vstatic/svg/3048/3048425.svg?token=exp=1615462204~hmac=a8c0b7f6fb6cda0e0e674b7d462d1dd4" width="4%"></a></h2>
 <p>
@@ -32,12 +29,12 @@ GURU JI <a><img src="https://www.flaticon.com/svg/vstatic/svg/2436/2436654.svg?t
 <img src="https://img.shields.io/badge/git%20-%23121011.svg?&style=for-the-badge&logo=git&logoColor=white&logoWidth=20">
 
 </p>  
-
+<!--
 - **Frontend**: ReactJS
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDb
 - **Hosting**: Heroku
-
+-->
 
 <h2>Getting Started <a><img src="https://www.flaticon.com/svg/vstatic/svg/639/639373.svg?token=exp=1615462454~hmac=46545c4fef9ca99ffbc823b4d67f0b54" width="4%"></a></h2>
 <h3>Want to contribute? Follow the steps below to set it up locally.</h3>
@@ -96,7 +93,7 @@ Click Here to view the deployment!
 
 <strong><em> Great! Now you are good to go. Open/pick an issue, discuss your idea, make the changes in your feature branch and create your first pull request in this repo.</em></strong>
 
-<h2>Interesting?? Star this Repo <a><img src="https://www.flaticon.com/svg/vstatic/svg/616/616490.svg?token=exp=1615462793~hmac=5772fcd51c3eb5652dc0c39b0f968c5f" width="3%"></a> </h2>
+<em>Interesting?? Star this Repo <a><img src="https://www.flaticon.com/svg/vstatic/svg/616/616490.svg?token=exp=1615462793~hmac=5772fcd51c3eb5652dc0c39b0f968c5f" width="3%"></a> </em>
 
 <!--
 ## ⭐<strong> Issues [![GitHub issues](https://img.shields.io/github/issues/Namanl2001/MERN-Gurujii-dev.svg)](https://github.com/Namanl2001/MERN-Gurujii-dev/issues) [![GitHub issues](https://img.shields.io/github/issues-closed/Namanl2001/MERN-Gurujii-dev.svg)](https://github.com/Namanl2001/MERN-Gurujii-dev/issues?q=is%3Aissue+is%3Aclosed)</strong>
