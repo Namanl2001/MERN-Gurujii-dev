@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 import Card from "./card";
 import Filter from "./filter";
 import { Container, Row } from "bootstrap-4-react";
+import ScrollToTop from "./scrolltotop";
+
 
 class home extends Component {
   componentDidMount() {
@@ -51,6 +53,7 @@ class home extends Component {
             <div className="bg-dark py-1 text-center text-white">
               <h2>­&#169; Some rights reserved @lakhwaniJii</h2>
             </div>
+            <ScrollToTop />
           </div>
         )}
       </>
@@ -58,4 +61,6 @@ class home extends Component {
   }
 }
 
+
 export default connect((state) => state, { getInitalData })(home);
+
