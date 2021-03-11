@@ -20,6 +20,13 @@ We have created this platform to help the students find best tution teacher in t
 - **Database**: MongoDb
 - **Hosting**: Heroku
 <br>
+
+## <strong>Demo 👀</strong>
+ 
+<div align="center">
+<img src="https://user-images.githubusercontent.com/63860014/110734802-8f68c480-824e-11eb-910d-7fab7f404fb2.gif"/>
+</div>
+<br>
 <br>
 <br>
 
@@ -34,10 +41,12 @@ $ git clone https://github.com/your-username/MERN-Gurujii-dev.git
 $ cd MERN-Gurujii-dev
 
 # Install backend dependencies
-$ cd backend yarn install
+$ cd backend 
+$ yarn install
 
 # Install frontend dependencies
-$ cd .. yarn install
+$ cd .. 
+$ yarn install
 
 # Run website
 $ yarn dev
@@ -47,7 +56,7 @@ This should launch the website on `localhost:3000`.
 We have used proxy so all the requests made to backend from frontend will be served at
 `localhost:5000` at which our backend is running.
 
-### <strong>Note 👀</strong>
+### <strong>Note 👀:</strong>
 - This project uses yarn to install the dependencies. Don't use npm install.
 - For security reasons we have made the MongoDb URI secure, by not adding a hardcoded username and password. For development purpose, you can install, MongoDB locally or use the  online version.
 - Comment line number 6,7,22 in backend/server.js.
