@@ -1,7 +1,10 @@
-<b><h1 align=center> 
-GURU JI<br>
+<b>
+<h1 text-align="center"> 
+GURU JI
+<br>
 <img src="https://st2.depositphotos.com/1037178/7669/v/600/depositphotos_76695295-stock-illustration-concentrating-maharishi-vishvamitra-hindu-saint.jpg" style="width:40%;">
-</h1></b>
+</h1>
+</b>
 
 ## <strong>About Us🚩[![GitHub contributors](https://img.shields.io/github/contributors/Namanl2001/MERN-Gurujii-dev.svg)](https://github.com/Namanl2001/MERN-Gurujii-dev/graphs/contributors/)</strong>
 We have created this platform to help the students find best tution teacher in their city easily.You just have to enter pincode of your city and we will show you best teachers in your locality along with their teaching styles and their qualification from which you can select best teacher for yourself.
