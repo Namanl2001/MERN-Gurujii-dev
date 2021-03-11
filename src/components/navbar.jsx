@@ -17,6 +17,13 @@ import axios from "axios";
 import "./style.css";
 
 class navbar extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+         hidden:false
+    }
+}
   handleSubmit = (e) => {
     e.preventDefault();
 
@@ -222,7 +229,7 @@ class navbar extends Component {
           </div>
         )}
 
-        <div
+        {this.state.hidden ? " ":<div
           className="alert alert-success alert-dismissible fade show "
           // style="margin-bottom:0"
         >
@@ -231,9 +238,16 @@ class navbar extends Component {
           </button>
           <strong>Great Landing !</strong> Teachers have to signin to make
           profile.
-        </div>
+        </div>}
       </div>
     );
+  }
+  componentDidMount() {
+    this.timer = setInterval(() => { this.setState({ hidden: true}) }, 5000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timer)
   }
 }
 
