@@ -33,7 +33,6 @@
 <img src="https://img.shields.io/badge/reactjs%20-61DAFB.svg?&style=for-the-badge&logo=react&logoColor=blue"/> 
 <img src="https://img.shields.io/badge/Node.js-%234ea94b.svg?&style=for-the-badge&logo=node.js&logoColor=white"> 
 <img src="https://img.shields.io/badge/git%20-%23121011.svg?&style=for-the-badge&logo=git&logoColor=white&logoWidth=20">
-<img src="https://img.shields.io/badge/vscode%20-%23121011.svg?&style=for-the-badge&logo=vscodoe&logoColor=blue&logoWidth=20">
 
 </p>  
 
