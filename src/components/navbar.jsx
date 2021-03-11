@@ -14,6 +14,7 @@ import Logout from "./logout";
 import Form1 from "./form";
 import Update from "./update";
 import axios from "axios";
+import "./style.css";
 
 class navbar extends Component {
   handleSubmit = (e) => {
@@ -155,24 +156,28 @@ class navbar extends Component {
               </Modal.Dialog>
             </Modal>
 
-            <Modal id="Modal1" fade>
-              <Modal.Dialog centered>
-                <Modal.Content>
-                  <Modal.Header>
-                    <Modal.Title>Delete Profile</Modal.Title>
+            <Modal id="Modal1" fade className="modal fade">
+              <Modal.Dialog centered className="modal-dialog modal-confirm">
+                <Modal.Content className="modal-content"> 
+                  <Modal.Header className="modal-header flex-column">
+                    <div className="icon-box">
+                      <i className="fa fa-exclamation-triangle"></i>
+                    </div>					
+                    <h4 className="modal-title w-100">Are you sure?</h4>
+                    {/* <Modal.Title className="modal-heading"></Modal.Title> */}
                     <Modal.Close>
                       <span aria-hidden="true">&times;</span>
                     </Modal.Close>
                   </Modal.Header>
-                  <Modal.Body>
-                    <h2>Are you sure to delete your profile permanently ?</h2>
+                  <Modal.Body className="modal-body">
+                    <p className="modal-subHeading">Do you really want to delete your profile permanently ? This process cannot be undone.</p>
                   </Modal.Body>
-                  <Modal.Footer>
+                  <Modal.Footer className="modal-footer justify-content-center">
                     <Button secondary data-dismiss="modal">
                       Close
                     </Button>
                     <Button
-                      warning
+                      danger
                       onClick={this.handleSubmit}
                       data-dismiss="modal"
                     >
