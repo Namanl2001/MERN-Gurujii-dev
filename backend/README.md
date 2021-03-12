@@ -1,14 +1,17 @@
-# MERN_Guru-jii
+# MERN-Guriji-dev-Backend
 
-Pull/download the repository
+Follow the steps below to set it up locally.
 
-In the cmd move to the downloaded folder
+```
+# Clone the repository
+# Move to downloaded folder
 
-run npm install
+$ npm install
+$ npm start
 
-run npm start
-
-Open localhost:5000 in your browser
+```
+Open `localhost:3000` in your browser.
 
 To view on mobile your laptop and mobile should be on the same network.
-run ipconfig on cmd, enter "ip4address":5000 on mobile browser
+
+Run ipconfig on cmd, enter `"ip4address":5000` on mobile browser
