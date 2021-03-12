@@ -2,10 +2,9 @@ body,
 html {
   height: 100%;
 }
-
 .parallax {
   /* The image used */
-  background-image: url("./img.jpg");
+  background-image: url('./img.jpg');
 
   /* Full height */
   height: 100%;
@@ -31,15 +30,15 @@ html {
     margin: auto;
   }
 }
-.card{
-  transition: transform .8s ease;
+.card {
+  transition: transform 0.8s ease;
 }
-.card:hover{
-  transition: .8s;
+.card:hover {
+  transition: 0.8s;
   transform: scale(1.1);
-  box-shadow: 6px 6px #D3D3D3;
+  box-shadow: 6px 6px #d3d3d3;
 }
 
-.dropdown-item:hover{
-cursor: pointer;
+.dropdown-item:hover {
+  cursor: pointer;
 }
