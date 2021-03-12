@@ -1,7 +1,7 @@
 <h1>GURU JI <a><img src="./readme_image/teacher(1).svg" width="5%"></a></h1>  
 
 
-<h2>About Us <a><img src="https://github.com/Samridhi-98/MERN-Gurujii-dev/blob/master/readme_image/reading.svg" width="4%"></a></h2>
+<h2>About Us <a><img src="./readme_image/reading.svg" width="4%"></a></h2>
 <p>
  
 [![GitHub contributors](https://img.shields.io/github/contributors/Namanl2001/MERN-Gurujii-dev.svg)](https://github.com/Namanl2001/MERN-Gurujii-dev/graphs/contributors/)
@@ -17,7 +17,7 @@
 </p>
 
 
-<h2>Technology Stack <a><img src="https://github.com/Samridhi-98/MERN-Gurujii-dev/blob/master/readme_image/atom.svg" width="4%"></a></h2>
+<h2>Technology Stack <a><img src="./readme_image/atom.svg" width="4%"></a></h2>
 
 <p>
 
@@ -30,7 +30,7 @@
 </p>  
 
 
-<h2>Getting Started <a><img src="https://github.com/Samridhi-98/MERN-Gurujii-dev/blob/master/readme_image/rocket.svg" width="4%"></a></h2>
+<h2>Getting Started <a><img src="./readme_image/rocket.svg" width="4%"></a></h2>
 <h3>Want to contribute? Follow the steps below to set it up locally.</h3>
 
 ```
@@ -58,7 +58,7 @@ We have used proxy so all the requests made to backend from frontend will be ser
 `localhost:5000` at which our backend is running.
 
 
-<h2>Note <a><img src="https://github.com/Samridhi-98/MERN-Gurujii-dev/blob/master/readme_image/alarm.svg" width="3%"></a> </h2>
+<h2>Note <a><img src="./readme_image/alarm.svg" width="3%"></a> </h2>
 <p>
  
 - This project uses yarn to install the dependencies. Don't use npm install.
@@ -70,11 +70,11 @@ We have used proxy so all the requests made to backend from frontend will be ser
 
 </p>
 
-<h2>Contribution <a><img src="https://github.com/Samridhi-98/MERN-Gurujii-dev/blob/master/readme_image/support(1).svg" width="3%"></a> </h2>
+<h2>Contribution <a><img src="./readme_image/support(1).svg" width="3%"></a> </h2>
 <p>
  Please check this link <a href="https://github.com/Namanl2001/MERN-Gurujii-dev/blob/master/contributing.md">contribution.md </a> before start contributing and making pull request.
 </p>
-<h2>Want to test your changes on mobile phone? <a><img src="https://github.com/Samridhi-98/MERN-Gurujii-dev/blob/master/readme_image/smartphone.svg" width="3%"></a></h2>
+<h2>Want to test your changes on mobile phone? <a><img src="./readme_image/smartphone.svg" width="3%"></a></h2>
 
 <p>
  
@@ -84,7 +84,7 @@ We have used proxy so all the requests made to backend from frontend will be ser
 </p>
 
 
-<h2> Demo Link <a><img src="https://github.com/Samridhi-98/MERN-Gurujii-dev/blob/master/readme_image/play.svg" width="3%"></a></h2>
+<h2> Demo Link <a><img src="./readme_image/play.svg" width="3%"></a></h2>
 
 Click Here to view the deployment!
  
@@ -96,10 +96,10 @@ Click Here to view the deployment!
 
 <strong><em> Great! Now you are good to go. Open/pick an issue, discuss your idea, make the changes in your feature branch and create your first pull request in this repo.</em></strong>
 
-<em>Interesting?? Star this Repo <a><img src="https://github.com/Samridhi-98/MERN-Gurujii-dev/blob/master/readme_image/star.svg" width="3%"></a> </em>
+<em>Interesting?? Star this Repo <a><img src="./readme_image/star.svg" width="3%"></a> </em>
 
 
-<h2> Open Source Program <a><img src="https://github.com/Samridhi-98/MERN-Gurujii-dev/blob/master/readme_image/open-source.svg" width="3%"></a></h2>
+<h2> Open Source Program <a><img src="./readme_image/open-source.svg" width="3%"></a></h2>
 
 This Project is a part of the following Open Source Program
 
