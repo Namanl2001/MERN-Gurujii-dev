@@ -84,7 +84,7 @@ Contributions are very welcome! See our <a href="https://github.com/Namanl2001/M
 </p>
 
 
-<h2> Demo Link <a><img src="https://github.com/Samridhi-98/Images/blob/master/Images/play.svg" width="3%"></a></h2>
+<h2> Demo <a><img src="https://github.com/Samridhi-98/Images/blob/master/Images/play.svg" width="3%"></a></h2>
 
 Click Here to view the deployment!
  
