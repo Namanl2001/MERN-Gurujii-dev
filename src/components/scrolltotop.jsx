@@ -3,7 +3,7 @@ import { FaArrowUp } from 'react-icons/fa';
 import { animateScroll as scroll } from "react-scroll";
 
 
-class scrolltotop extends Component{
+class scrollToTop extends Component{
     state = {
     opacity: '0'
     }
@@ -36,4 +36,4 @@ class scrolltotop extends Component{
     }
 } 
 
-export default scrolltotop
+export default scrollToTop

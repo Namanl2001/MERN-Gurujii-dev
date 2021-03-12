@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import Card from "./card";
 import Filter from "./filter";
 import { Container, Row } from "bootstrap-4-react";
-import ScrollToTop from "./scrolltotop";
+import ScrollToTop from "./scrollToTop";
 
 class home extends Component {
   componentDidMount() {
