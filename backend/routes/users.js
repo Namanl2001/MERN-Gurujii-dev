@@ -60,6 +60,7 @@ router.route('/update/:id').post((req, res) => {
   User.findById(req.params.id)
     .then(user => {
       user.username = req.body.userName;
+
       user.subject = req.body.subject;
       user.coaching = req.body.coachingName;
       user.qualification = req.body.qualification;

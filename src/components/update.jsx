@@ -11,6 +11,7 @@ class update extends Component {
     coachingName: this.props.data.coaching,
     qualification: this.props.data.qualification,
     about: this.props.data.about,
+
     c1: this.props.data.class1,
     c2: this.props.data.class2,
     c3: this.props.data.class3,

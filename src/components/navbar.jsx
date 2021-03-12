@@ -8,6 +8,7 @@ import {
   Collapse,
   Modal,
 } from 'bootstrap-4-react';
+
 import { connect } from 'react-redux';
 import Login from './login';
 import Logout from './logout';

@@ -6,6 +6,7 @@ import { getregisteredUserData } from '../store/reducer/user';
 import { GoogleLogin } from 'react-google-login';
 // refresh token
 import { refreshTokenSetup } from '../utils/refreshToken';
+
 const clientId =
   '245240540416-fs5i5j4omlae8ifjcffuai5717amq8if.apps.googleusercontent.com';
 

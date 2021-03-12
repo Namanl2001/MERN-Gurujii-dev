@@ -77,6 +77,7 @@ class form extends Component {
                   <Form.PlainText value={this.props.emailid}></Form.PlainText>
                 </Col>
               </Row>
+
               <Row>
                 <Form.LabelCol col='sm-2' htmlFor='userName'>
                   Name

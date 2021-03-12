@@ -7,6 +7,7 @@ import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import user from './store/reducer/user';
 import store from './store/reducer/user';
+
 const rootReducer = combineReducers({
   use: user,
 });

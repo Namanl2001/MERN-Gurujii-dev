@@ -9,6 +9,7 @@ function App() {
     <Router>
       <div className='parallax'>
         <Navbar />
+
         <br />
         <br />
         <br />
