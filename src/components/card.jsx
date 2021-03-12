@@ -14,7 +14,7 @@ class cards extends Component {
         <Card.Header>{this.props.user.coaching}</Card.Header>
         {/* <Card.Image src={img_src} alt={"image"} /> */}
         <Card.Body>
-          <Card.Title>Mr. {this.props.user.username}</Card.Title>
+          <Card.Title>{this.props.user.title} {this.props.user.username}</Card.Title>
           <Card.Subtitle mb="2" text="muted">
             {this.props.user.subject} ( {this.props.user.class1}{" "}
             {this.props.user.class2} {this.props.user.class3}{" "}
