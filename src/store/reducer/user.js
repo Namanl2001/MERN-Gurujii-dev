@@ -11,7 +11,6 @@
 import thunkMiddleware from 'redux-thunk';
 import { createStore, applyMiddleware } from 'redux';
 import axios from 'axios';
-
 const defaultState = {
   all: {},
   users: {}, // It should be empty during store init
