@@ -7,8 +7,7 @@ import Board from './board.jpg';
 function App() {
   return (
     <Router>
-      <div 
-      className='parallax'>
+      <div className='parallax'>
         <Navbar />
         <br />
         <br />
@@ -21,7 +20,6 @@ function App() {
         <br />
         <br />
       </div>
-
       <br />
       <Route path='/' exact component={Home} />
     </Router>
