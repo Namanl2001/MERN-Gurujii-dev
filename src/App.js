@@ -7,7 +7,8 @@ import Board from './board.jpg';
 function App() {
   return (
     <Router>
-      <div className='parallax'>
+      <div 
+      className='parallax'>
         <Navbar />
         <br />
         <br />
