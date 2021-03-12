@@ -1,7 +1,7 @@
-<h1>GURU JI <a><img src="https://www.flaticon.com/svg/vstatic/svg/2436/2436654.svg?token=exp=1615461073~hmac=25a78a5de137d7ccd83b97a906829076" width="5%"></a></h1>  
+<h1>GURU JI <a><img src="https://github.com/Samridhi-98/MERN-Gurujii-dev/blob/master/readme_image/teacher(1).svg" width="5%"></a></h1>  
 
 
-<h2>About Us <a><img src="https://www.flaticon.com/svg/vstatic/svg/3048/3048425.svg?token=exp=1615462204~hmac=a8c0b7f6fb6cda0e0e674b7d462d1dd4" width="4%"></a></h2>
+<h2>About Us <a><img src="https://github.com/Samridhi-98/MERN-Gurujii-dev/blob/master/readme_image/reading.svg" width="4%"></a></h2>
 <p>
  
 [![GitHub contributors](https://img.shields.io/github/contributors/Namanl2001/MERN-Gurujii-dev.svg)](https://github.com/Namanl2001/MERN-Gurujii-dev/graphs/contributors/)
@@ -17,7 +17,7 @@
 </p>
 
 
-<h2>Technology Stack <a><img src="https://www.flaticon.com/svg/vstatic/svg/3081/3081530.svg?token=exp=1615462328~hmac=46d76d4ce8fa2e109318d6a960180096" width="4%"></a></h2>
+<h2>Technology Stack <a><img src="https://github.com/Samridhi-98/MERN-Gurujii-dev/blob/master/readme_image/atom.svg" width="4%"></a></h2>
 
 <p>
 
@@ -30,7 +30,7 @@
 </p>  
 
 
-<h2>Getting Started <a><img src="https://www.flaticon.com/svg/vstatic/svg/639/639373.svg?token=exp=1615462454~hmac=46545c4fef9ca99ffbc823b4d67f0b54" width="4%"></a></h2>
+<h2>Getting Started <a><img src="https://github.com/Samridhi-98/MERN-Gurujii-dev/blob/master/readme_image/rocket.svg" width="4%"></a></h2>
 <h3>Want to contribute? Follow the steps below to set it up locally.</h3>
 
 ```
@@ -58,7 +58,7 @@ We have used proxy so all the requests made to backend from frontend will be ser
 `localhost:5000` at which our backend is running.
 
 
-<h2>Note <a><img src="https://www.flaticon.com/svg/vstatic/svg/1672/1672451.svg?token=exp=1615462959~hmac=5e67387dc6d44cf0776979e0baec33d4" width="3%"></a> </h2>
+<h2>Note <a><img src="https://github.com/Samridhi-98/MERN-Gurujii-dev/blob/master/readme_image/alarm.svg" width="3%"></a> </h2>
 <p>
  
 - This project uses yarn to install the dependencies. Don't use npm install.
@@ -70,11 +70,11 @@ We have used proxy so all the requests made to backend from frontend will be ser
 
 </p>
 
-<h2>Contribution <a><img src="https://www.flaticon.com/svg/vstatic/svg/3770/3770154.svg?token=exp=1615474171~hmac=fa7fbbf94c47c0f20d170cfb3eaf5d19" width="3%"></a> </h2>
+<h2>Contribution <a><img src="https://github.com/Samridhi-98/MERN-Gurujii-dev/blob/master/readme_image/support(1).svg" width="3%"></a> </h2>
 <p>
  Please check this link <a href="https://github.com/Namanl2001/MERN-Gurujii-dev/blob/master/contributing.md">contribution.md </a> before start contributing and making pull request.
 </p>
-<h2>Want to test your changes on mobile phone? <a><img src="https://www.flaticon.com/svg/vstatic/svg/2983/2983780.svg?token=exp=1615463134~hmac=4fda65bf3de21f5b36a756493a77736e" width="3%"></a></h2>
+<h2>Want to test your changes on mobile phone? <a><img src="https://github.com/Samridhi-98/MERN-Gurujii-dev/blob/master/readme_image/smartphone.svg" width="3%"></a></h2>
 
 <p>
  
@@ -84,7 +84,7 @@ We have used proxy so all the requests made to backend from frontend will be ser
 </p>
 
 
-<h2> Demo Link <a><img src="https://www.flaticon.com/svg/vstatic/svg/2489/2489509.svg?token=exp=1615463441~hmac=af90ba601f50b75d4e6658a02af19827" width="3%"></a></h2>
+<h2> Demo Link <a><img src="https://github.com/Samridhi-98/MERN-Gurujii-dev/blob/master/readme_image/play.svg" width="3%"></a></h2>
 
 Click Here to view the deployment!
  
@@ -96,10 +96,10 @@ Click Here to view the deployment!
 
 <strong><em> Great! Now you are good to go. Open/pick an issue, discuss your idea, make the changes in your feature branch and create your first pull request in this repo.</em></strong>
 
-<em>Interesting?? Star this Repo <a><img src="https://www.flaticon.com/svg/vstatic/svg/616/616490.svg?token=exp=1615462793~hmac=5772fcd51c3eb5652dc0c39b0f968c5f" width="3%"></a> </em>
+<em>Interesting?? Star this Repo <a><img src="https://github.com/Samridhi-98/MERN-Gurujii-dev/blob/master/readme_image/star.svg" width="3%"></a> </em>
 
 
-<h2> Open Source Program <a><img src="https://www.flaticon.com/svg/vstatic/svg/888/888868.svg?token=exp=1615463824~hmac=ce1a6ded0bf603db8a85281bbd176f51" width="3%"></a></h2>
+<h2> Open Source Program <a><img src="https://github.com/Samridhi-98/MERN-Gurujii-dev/blob/master/readme_image/open-source.svg" width="3%"></a></h2>
 
 This Project is a part of the following Open Source Program
 
