@@ -1,4 +1,4 @@
-<h1>GURU JI <a><img src="https://github.com/Samridhi-98/MERN-Gurujii-dev/blob/master/readme_image/teacher(1).svg" width="5%"></a></h1>  
+<h1>GURU JI <a><img src="./readme_image/teacher(1).svg" width="5%"></a></h1>  
 
 
 <h2>About Us <a><img src="https://github.com/Samridhi-98/MERN-Gurujii-dev/blob/master/readme_image/reading.svg" width="4%"></a></h2>
