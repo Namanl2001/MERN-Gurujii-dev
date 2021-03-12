@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
+
 import {
   Navbar,
   Nav,
@@ -14,7 +15,7 @@ import Logout from "./logout";
 import Form1 from "./form";
 import Update from "./update";
 import axios from "axios";
-
+import style from '../navbar.css';
 class navbar extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
@@ -36,13 +37,13 @@ class navbar extends Component {
   responseGoogle = (response) => {
     console.log(response);
   };
-
+ 
   render() {
     return (
       <div>
         {this.props.logged && !this.props.registeredUser && (
           <div>
-            <Navbar expand="lg" dark bg="dark">
+            <Navbar expand="lg" >
               <Navbar.Brand href="#">GuruJii</Navbar.Brand>
               <Navbar.Toggler target="#navbarSupportedContent" />
               <Collapse navbar id="navbarSupportedContent">
