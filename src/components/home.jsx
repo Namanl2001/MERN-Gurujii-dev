@@ -12,17 +12,21 @@ class home extends Component {
 
   List() {
     if (this.props.users.length) {
+      var currentIndex = this.props.users.length;
+      var array = this.props.users;
 
-      var displayUser =this.props.users;
-      var randomSet =[];
-      var l=(this.props.users.length);
-      for(var i = 0; i < this.props.users.length; i++){
-        var rand = Math.ceil(Math.random() *l) - 1;
-        randomSet.push(displayUser[rand]);
-        displayUser.splice(rand, 1);
-        l--;
+      // While there remain elements to shuffle...
+      while (0 !== currentIndex) {
+        // Pick a remaining element...
+        var randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        // And swap it with the current element.
+        var temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
       }
-      return randomSet.map((currentuser) => {
+      return this.props.users.map((currentuser) => {
         return <Card user={currentuser} key={currentuser._id} />;
       });
     } else {
