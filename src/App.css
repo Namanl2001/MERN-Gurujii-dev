@@ -31,3 +31,35 @@ html {
     margin: auto;
   }
 }
+.card {
+  transition: transform 0.8s ease;
+}
+.card:hover {
+  transition: 0.8s;
+  transform: scale(1.1);
+  box-shadow: 6px 6px #d3d3d3;
+}
+
+.back-to-top {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  right: 15px;
+  bottom: 15px;
+  background: #5d6266;
+  color: #fff;
+  transition: display 0.5s ease-in-out;
+  z-index: 99999;
+}
+
+.scrollButton {
+  z-index: 200;
+  position: fixed;
+  bottom: 0;
+  transition: opacity 0.3s ease;
+}
+
+.dropdown-item:hover{
+cursor: pointer;
+}
