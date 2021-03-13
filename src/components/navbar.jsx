@@ -10,6 +10,7 @@ import {
 } from "bootstrap-4-react";
 import { connect } from "react-redux";
 import Login from "./login";
+import './navbar.css'
 import Logout from "./logout";
 import Form1 from "./form";
 import Update from "./update";

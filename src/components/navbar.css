@@ -1,0 +1,29 @@
+
+
+.navbar {
+  width: 100%;
+  min-height: 6vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.7s ease-in;
+  position: fixed;
+padding-top:30px;
+}
+.alert{
+position:relative;
+display:flex;
+width:100%;
+padding-top:0px;
+
+}
+.scrolled {
+margin-top:0px;
+  top: 0;
+  left: 0;
+}
+.logo img {
+  width: 50px;
+}
+
