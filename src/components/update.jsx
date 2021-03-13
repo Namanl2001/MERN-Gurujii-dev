@@ -6,6 +6,7 @@ import { Modal, Button, Form, Row, Col } from 'bootstrap-4-react';
 class update extends Component {
   state = {
     email: this.props.data.email,
+    title: this.props.data.title,
     userName: this.props.data.username,
     subject: this.props.data.subject,
     coachingName: this.props.data.coaching,
@@ -33,6 +34,7 @@ class update extends Component {
 
     axios
       .post(`/users/update/${this.props.data._id}`, {
+        title: this.state.title,
         userName: this.state.userName,
         subject: this.state.subject,
         coachingName: this.state.coachingName,
@@ -69,18 +71,36 @@ class update extends Component {
           <Form>
             <Form.Group>
               <Row>
-                <Form.LabelCol col='sm-2' htmlFor='staticEmail'>
+                <Form.LabelCol col='sm-3' htmlFor='staticEmail'>
                   Email
                 </Form.LabelCol>
-                <Col col='sm-10'>
+                <Col col='sm-8'>
                   <Form.PlainText value={this.state.email}></Form.PlainText>
                 </Col>
               </Row>
               <Row>
-                <Form.LabelCol col='sm-2' htmlFor='userName'>
+                <Form.LabelCol col='sm-3' htmlFor='title'>
+                  Title
+                </Form.LabelCol>
+                <Col col='sm-8'>
+                  <Form.CustomSelect
+                    sm
+                    mb='3'
+                    id='title'
+                    onChange={this.handleChange}
+                    value={this.state.title}
+                  >
+                    <option defaultValue>Open this to select title</option>
+                    <option value='Mr.'>Mr.</option>
+                    <option value='Mrs.'>Mrs.</option>
+                  </Form.CustomSelect>
+                </Col>
+              </Row>
+              <Row>
+                <Form.LabelCol col='sm-3' htmlFor='userName'>
                   Name
                 </Form.LabelCol>
-                <Col col='sm-10'>
+                <Col col='sm-8'>
                   <Form.Input
                     id='userName'
                     type='text'

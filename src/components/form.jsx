@@ -6,6 +6,7 @@ import { Modal, Button, Form, Row, Col } from 'bootstrap-4-react';
 
 class form extends Component {
   state = {
+    title: '',
     userName: this.props.currentUser,
     subject: '',
     coachingName: '',
@@ -33,6 +34,7 @@ class form extends Component {
     axios
       .post('/users/add', {
         email: this.props.emailid,
+        title: this.state.title,
         userName: this.state.userName,
         subject: this.state.subject,
         coachingName: this.state.coachingName,
@@ -70,19 +72,38 @@ class form extends Component {
           <Form>
             <Form.Group>
               <Row>
-                <Form.LabelCol col='sm-2' htmlFor='staticEmail'>
+                <Form.LabelCol col='sm-3' htmlFor='staticEmail'>
                   Email
                 </Form.LabelCol>
-                <Col col='sm-10'>
+                <Col col='sm-8'>
                   <Form.PlainText value={this.props.emailid}></Form.PlainText>
                 </Col>
               </Row>
 
               <Row>
-                <Form.LabelCol col='sm-2' htmlFor='userName'>
+                <Form.LabelCol col='sm-3' htmlFor='title'>
+                  Title
+                </Form.LabelCol>
+                <Col col='sm-8'>
+                  <Form.CustomSelect
+                    sm
+                    mb='3'
+                    id='title'
+                    onChange={this.handleChange}
+                    value={this.state.title}
+                  >
+                    <option defaultValue>Open this to select title</option>
+                    <option value='Mr.'>Mr.</option>
+                    <option value='Mrs.'>Mrs.</option>
+                  </Form.CustomSelect>
+                </Col>
+              </Row>
+
+              <Row>
+                <Form.LabelCol col='sm-3' htmlFor='userName'>
                   Name
                 </Form.LabelCol>
-                <Col col='sm-10'>
+                <Col col='sm-8'>
                   <Form.Input
                     id='userName'
                     type='text'

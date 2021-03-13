@@ -1,37 +1,34 @@
-<b><h1 align=center> 
-GURU JI<br>
-<img src="https://st2.depositphotos.com/1037178/7669/v/600/depositphotos_76695295-stock-illustration-concentrating-maharishi-vishvamitra-hindu-saint.jpg" style="width:40%;">
-</h1></b>
+<h1>GURU JI <a><img src="https://github.com/Samridhi-98/Images/blob/master/Images/teacher(1).svg" width="5%"></a></h1>
 
-## <strong>About Us🚩[![GitHub contributors](https://img.shields.io/github/contributors/Namanl2001/MERN-Gurujii-dev.svg)](https://github.com/Namanl2001/MERN-Gurujii-dev/graphs/contributors/)</strong>
-We have created this platform to help the students find best tution teacher in their city easily.You just have to enter pincode of your city and we will show you best teachers in your locality along with their teaching styles and their qualification from which you can select best teacher for yourself.
-<br>
-<br>
-<br>
-
-## <strong>Technology Stack 🔥:</strong>
-
-<img src ="https://img.shields.io/badge/MongoDB-%234ea94b.svg?&style=for-the-badge&logo=mongodb&logoColor=white"/> <img src="https://img.shields.io/badge/express.js%20-%23404d59.svg?&style=for-the-badge"/> <img src="https://img.shields.io/badge/reactjs%20-61DAFB.svg?&style=for-the-badge&logo=react&logoColor=blue"/> <img src="https://img.shields.io/badge/Node.js-%234ea94b.svg?&style=for-the-badge&logo=node.js&logoColor=white"> <img src="https://img.shields.io/badge/git%20-%23121011.svg?&style=for-the-badge&logo=git&logoColor=white&logoWidth=20">
-
-- **Frontend**: ReactJS
-- **Backend**: Node.js, Express.js
-- **IDE**: VS Code
-- **Version Control**: Git and GitHub
-- **Database**: MongoDb
-- **Hosting**: Heroku
-<br>
-
-## <strong>Demo 👀</strong>
+<h2>About Us <a><img src="https://github.com/Samridhi-98/Images/blob/master/Images/reading.svg" width="4%"></a></h2>
+<p>
  
-<div align="center">
-<img src="https://user-images.githubusercontent.com/63860014/110734802-8f68c480-824e-11eb-910d-7fab7f404fb2.gif"/>
-</div>
-<br>
-<br>
-<br>
+[![GitHub contributors](https://img.shields.io/github/contributors/Namanl2001/MERN-Gurujii-dev.svg)](https://github.com/Namanl2001/MERN-Gurujii-dev/graphs/contributors/)
+[![Issues](https://img.shields.io/github/issues/Namanl2001/MERN-Gurujii-dev)](https://github.com/Namanl2001/MERN-Gurujii-dev/issues)
+[![PRs](https://img.shields.io/github/issues-pr/Namanl2001/MERN-Gurujii-dev)](https://github.com/Namanl2001/MERN-Gurujii-dev/pulls)
+[![Forks](https://img.shields.io/github/forks/Namanl2001/MERN-Gurujii-dev?style=social)](https://github.com/Namanl2001/MERN-Gurujii-dev) 
+[![Stars](https://img.shields.io/github/stars/Namanl2001/MERN-Gurujii-dev?style=social)](https://github.com/Namanl2001/MERN-Gurujii-dev)
 
-## <strong>Getting Started 🚀 </strong>
-### Want to contribute? Follow the steps below to set it up locally.
+</p>
+
+<p>
+ We have created this platform to help the students find best tution teacher in their city easily.You just have to enter pincode of your city and we will show you best teachers in your locality along with their teaching styles and their qualification from which you can select best teacher for yourself.
+</p>
+
+<h2>Technology Stack <a><img src="https://github.com/Samridhi-98/Images/blob/master/Images/atom.svg" width="4%"></a></h2>
+
+<p>
+
+<img src ="https://img.shields.io/badge/MongoDB-%234ea94b.svg?&style=for-the-badge&logo=mongodb&logoColor=white"/> 
+<img src="https://img.shields.io/badge/express.js%20-%23404d59.svg?&style=for-the-badge"/> 
+<img src="https://img.shields.io/badge/reactjs%20-61DAFB.svg?&style=for-the-badge&logo=react&logoColor=blue"/> 
+<img src="https://img.shields.io/badge/Node.js-%234ea94b.svg?&style=for-the-badge&logo=node.js&logoColor=white"> 
+<img src="https://img.shields.io/badge/git%20-%23121011.svg?&style=for-the-badge&logo=git&logoColor=white&logoWidth=20">
+
+</p>
+
+<h2>Getting Started <a><img src="https://github.com/Samridhi-98/Images/blob/master/Images/rocket.svg" width="4%"></a></h2>
+<h3>Want to contribute? Follow the steps below to set it up locally.</h3>
 
 ```
 # Clone this repository
@@ -41,63 +38,62 @@ $ git clone https://github.com/your-username/MERN-Gurujii-dev.git
 $ cd MERN-Gurujii-dev
 
 # Install backend dependencies
-$ cd backend 
+$ cd backend
 $ yarn install
 
 # Install frontend dependencies
-$ cd .. 
+$ cd ..
 $ yarn install
 
 # Run website
 $ yarn dev
 ```
-This should launch the website on `localhost:3000`.
+
+<strong> This should launch the website on `localhost:3000`. <strong>
 
 We have used proxy so all the requests made to backend from frontend will be served at
 `localhost:5000` at which our backend is running.
 
-### <strong>Note 👀:</strong>
+<h2>Note <a><img src="https://github.com/Samridhi-98/Images/blob/master/Images/alarm.svg" width="3%"></a> </h2>
+<p>
+ 
 - This project uses yarn to install the dependencies. Don't use npm install.
 - For security reasons we have made the MongoDb URI secure, by not adding a hardcoded username and password. For development purpose, you can install, MongoDB locally or use the  online version.
 - Comment line number 6,7,22 in backend/server.js.
 - If you have use the  online version add your url in line number 22.
 - Comment line number 4 in backend/routes/users.js.
 - Add your auth and pass in backend/routes/users.js line number 94 and 95.
-<br>
-<br>
-<br>
 
-### <strong>Want to test your changes on mobile phone?</strong>
+</p>
 
+<h2>Contribution <a><img src="https://github.com/Samridhi-98/Images/blob/master/Images/support(1).svg" width="3%"></a> </h2>
+<p>
+Contributions are very welcome! See our <a href="https://github.com/Namanl2001/MERN-Gurujii-dev/blob/master/contributing.md">CONTRIBUTING.md</a> for more information.
+</p>
+<h2>Want to test your changes on mobile phone? <a><img src="https://github.com/Samridhi-98/Images/blob/master/Images/smartphone.svg" width="3%"></a></h2>
+
+<p>
+ 
 - To view on mobile, your laptop and mobile phone should be on the same network.
-- Run ipconfig on terminal, enter `<ip4address>:3000` as url on mobile web browser. 
-<br>
-<br>
-<br>
+- Run ipconfig on terminal, enter `<ip4address>:3000` as url on mobile web browser.
 
-## <strong>Hosted website Link 📦 </strong>
+</p>
+
+<h2> Demo <a><img src="https://github.com/Samridhi-98/Images/blob/master/Images/play.svg" width="3%"></a></h2>
 
 Click Here to view the deployment!
- 
+
 [![Deploy](https://raw.githubusercontent.com/nikitakapoor1919/Buttons/main/guruji.png)](https://guru-jii.herokuapp.com/)
-<br>
-<br>
-<br>
 
-### Great! Now you are good to go. Open/pick an issue, discuss your idea, make the changes in your feature branch and create your first pull request in this repo.
+<div>
+<img src="https://user-images.githubusercontent.com/63860014/110734802-8f68c480-824e-11eb-910d-7fab7f404fb2.gif"/>
+</div>
 
-#### <strong>Interesting?? Star ⭐ this Repo.</strong> 🤩
-<br>
-<br>
-<br>
+<strong><em> Great! Now you are good to go. Open/pick an issue, discuss your idea, make the changes in your feature branch and create your first pull request in this repo.</em></strong>
 
-## ⭐<strong> Issues [![GitHub issues](https://img.shields.io/github/issues/Namanl2001/MERN-Gurujii-dev.svg)](https://github.com/Namanl2001/MERN-Gurujii-dev/issues) [![GitHub issues](https://img.shields.io/github/issues-closed/Namanl2001/MERN-Gurujii-dev.svg)](https://github.com/Namanl2001/MERN-Gurujii-dev/issues?q=is%3Aissue+is%3Aclosed)</strong>
-For major changes, you are welcomed to open an issue and discuss what you would like to contribute. Enhancements will be appreciated.
-<br>
-<br>
-<br>
+<em>Interesting?? Star this Repo <a><img src="https://github.com/Samridhi-98/Images/blob/master/Images/star.svg" width="3%"></a> </em>
 
-## 📢 <strong>Open Source Program [![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)](https://github.com/Namanl2001/)  [![Open Source Love svg3](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://github.com/Namanl2001/)</strong>
+<h2> Open Source Program <a><img src="https://github.com/Samridhi-98/Images/blob/master/Images/open-source.svg" width="3%"></a></h2>
 
 This Project is a part of the following Open Source Program
 

@@ -17,6 +17,7 @@ router.route('/:email').get((req, res) => {
 
 router.route('/add').post((req, res) => {
   const email = req.body.email;
+  const title = req.body.title;
   const username = req.body.userName;
   const subject = req.body.subject;
   const coaching = req.body.coachingName;
@@ -33,6 +34,7 @@ router.route('/add').post((req, res) => {
 
   const newUser = new User({
     email,
+    title,
     username,
     subject,
     coaching,
@@ -59,8 +61,8 @@ router.route('/add').post((req, res) => {
 router.route('/update/:id').post((req, res) => {
   User.findById(req.params.id)
     .then(user => {
+      user.title = req.body.title;
       user.username = req.body.userName;
-
       user.subject = req.body.subject;
       user.coaching = req.body.coachingName;
       user.qualification = req.body.qualification;
