@@ -116,63 +116,21 @@ function rootReducer(state = defaultState, action) {
       };
 
     case "C9":
+    case "C10":
+    case "C11":
+    case "C12":
       const newArray4 = state.subjdata.filter((user) => {
         return (
-          user.class1 === "9" ||
-          user.class2 === "9" ||
-          user.class3 === "9" ||
-          user.class4 === "9"
+          user.class1 === action.type.slice(1) ||
+          user.class2 === action.type.slice(1) ||
+          user.class3 === action.type.slice(1) ||
+          user.class4 === action.type.slice(1)
         );
       });
       return {
         ...state,
         users: newArray4,
-        class: "9",
-      };
-
-    case "C10":
-      const newArray5 = state.subjdata.filter((user) => {
-        return (
-          user.class1 === "10" ||
-          user.class2 === "10" ||
-          user.class3 === "10" ||
-          user.class4 === "10"
-        );
-      });
-      return {
-        ...state,
-        users: newArray5,
-        class: "10",
-      };
-
-    case "C11":
-      const newArray6 = state.subjdata.filter((user) => {
-        return (
-          user.class1 === "11" ||
-          user.class2 === "11" ||
-          user.class3 === "11" ||
-          user.class4 === "11"
-        );
-      });
-      return {
-        ...state,
-        users: newArray6,
-        class: "11",
-      };
-
-    case "C12":
-      const newArray7 = state.subjdata.filter((user) => {
-        return (
-          user.class1 === "12" ||
-          user.class2 === "12" ||
-          user.class3 === "12" ||
-          user.class4 === "12"
-        );
-      });
-      return {
-        ...state,
-        users: newArray7,
-        class: "12",
+        class: action.type.slice(1),
       };
 
     case "LOGIN":
