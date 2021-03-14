@@ -6,6 +6,31 @@ body {
   width: 400px;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Redressed&display=swap');
+
+.bg-dark {
+  background-color: #1e212d !important;
+}
+
+.navbar-brand {
+  padding-left: 10%;
+  font-size: 50px;
+  font-family: Redressed;
+}
+
+#navbarSupportedContent {
+  padding-right: 10%;
+  font-family: Raleway;
+}
+
+.nav-item {
+  padding: 0 9px;
+}
+
+.nav-link {
+  padding: 0 9px;
+}
+
 .modal-confirm .modal-content {
   padding: 20px;
   border-radius: 5px;
