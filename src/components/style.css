@@ -55,3 +55,8 @@ body {
 	display: inline-block;
 	margin-top: 13px;
 }
+.auth .github {
+	margin-left: 1vw;
+	font-size: 2em;
+	color: white;
+}

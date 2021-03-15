@@ -4,6 +4,9 @@ import { connect } from "react-redux";
 import { getregisteredUserData } from "../store/reducer/user";
 
 import { GoogleLogin } from "react-google-login";
+import { FaGithub } from 'react-icons/fa';
+//styles
+import "./style.css";
 // refresh token
 import { refreshTokenSetup } from "../utils/refreshToken";
 
@@ -29,7 +32,7 @@ class Login extends Component {
   };
   render() {
     return (
-      <div>
+      <div className="auth">
         <GoogleLogin
           clientId={clientId}
           buttonText="Signin with Google"
@@ -40,6 +43,10 @@ class Login extends Component {
           style={{ marginTop: "100px" }}
           isSignedIn={true}
         />
+        <a href="http://localhost:5000/auth/github/">
+          <FaGithub className="github" />
+        </a>
+        
       </div>
     );
   }
