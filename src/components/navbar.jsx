@@ -230,7 +230,7 @@ class navbar extends Component {
         )}
 
         {this.state.hidden ? " ":<div
-          className="alert alert-success alert-dismissible fade show "
+          className="alert alert-success alert-dismissible fade show myalert"
           // style="margin-bottom:0"
         >
           <button type="button" class="close" data-dismiss="alert">
@@ -243,7 +243,7 @@ class navbar extends Component {
     );
   }
   componentDidMount() {
-    this.timer = setInterval(() => { this.setState({ hidden: true}) }, 5000);
+    this.timer = setInterval(() => { this.setState({ hidden: true}) }, 12000);
   }
 
   componentWillUnmount() {
