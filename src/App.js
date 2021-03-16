@@ -4,9 +4,11 @@ import Navbar from './components/navbar';
 import Home from './components/home';
 import './App.css';
 import Board from './board.jpg';
+import Footer from './components/Footer';
 
 function App() {
   return (
+    <>
     <Router>
       <div className='parallax'>
         <Navbar />
@@ -25,6 +27,8 @@ function App() {
       <br />
       <Route path='/' exact component={Home} />
     </Router>
+    <Footer/>
+    </>
   );
 }
 
