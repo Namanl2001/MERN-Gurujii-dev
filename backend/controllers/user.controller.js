@@ -2,18 +2,21 @@ let User = require('../models/user.model');
 var nodemailer = require('nodemailer');
 const { pass } = require('../config');
 
+// Fetch All Users from the DB
 const fetchAllUsers = (req, res) => {
   User.find()
     .then(users => res.json(users))
     .catch(err => res.status(400).json('Error: ' + err));
 };
 
+// Fetch a user document based on the email passed
 const fetchUserByEmail = (req, res) => {
   User.findOne({ email: req.params.email })
     .then(user => res.json(user))
     .catch(err => res.status(400).json('Error: ' + err));
 };
 
+// Add new user document to db
 const addNewUser = (req, res) => {
   const newUser = new User({
     email: req.body.email,
@@ -41,6 +44,7 @@ const addNewUser = (req, res) => {
     .catch(err => res.status(400).json('Error: ' + err));
 };
 
+// Update existing user document to the db
 const updateUser = (req, res) => {
   User.findById(req.params.id)
     .then(user => {
@@ -67,12 +71,14 @@ const updateUser = (req, res) => {
     .catch(err => res.status(400).json('Error: ' + err));
 };
 
+// Delete existing user document on basis of ID
 const deleteUser = (req, res) => {
   User.findByIdAndDelete(req.params.id)
     .then(() => res.json('Profile deleted.'))
     .catch(err => res.status(400).json('Error: ' + err));
 };
 
+// Emailer
 const sendEmail = (req, res) => {
   var transporter = nodemailer.createTransport({
     service: 'gmail',
