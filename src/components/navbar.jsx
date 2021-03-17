@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import {
   Navbar,
   Nav,
@@ -230,7 +230,7 @@ class navbar extends Component {
           className='alert alert-success alert-dismissible fade show '
           // style="margin-bottom:0"
         >
-          <button type='button' class='close' data-dismiss='alert'>
+          <button type='button' className='close' data-dismiss='alert'>
             &times;
           </button>
           <strong>Great Landing !</strong> Teachers have to signin to make

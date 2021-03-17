@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import ReadMoreReact from 'read-more-react';
 import StarRatingComponent from 'react-star-rating-component';
 import { Card } from 'bootstrap-4-react';
-import Photo from './photo.png';
+// import Photo from './photo.png';
 
-const img_src = Photo;
+// const img_src = Photo;
 
 class cards extends Component {
   render() {
