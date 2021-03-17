@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import {
   Navbar,
   Nav,
@@ -7,14 +7,15 @@ import {
   Dropdown,
   Collapse,
   Modal,
-} from "bootstrap-4-react";
-import { connect } from "react-redux";
-import Login from "./login";
-import Logout from "./logout";
-import Form1 from "./form";
-import Update from "./update";
-import axios from "axios";
-import "./style.css";
+} from 'bootstrap-4-react';
+
+import { connect } from 'react-redux';
+import Login from './login';
+import Logout from './logout';
+import Form1 from './form';
+import Update from './update';
+import axios from 'axios';
+import './style.css';
 
 class navbar extends Component {
   constructor(props) {
@@ -29,7 +30,7 @@ class navbar extends Component {
 
     axios
       .delete(`/users/delete/${this.props.id}`)
-      .then((response) => {
+      .then(response => {
         if (response.status == 200) {
           axios.get(`/users/sendMail/${this.props.emailid}/2`);
           if (alert(`Your profile deleted successfully.....!! `)) {
@@ -41,7 +42,7 @@ class navbar extends Component {
       });
   };
 
-  responseGoogle = (response) => {
+  responseGoogle = response => {
     console.log(response);
   };
 
@@ -50,16 +51,16 @@ class navbar extends Component {
       <div>
         {this.props.logged && !this.props.registeredUser && (
           <div>
-            <Navbar expand="lg" dark bg="dark">
-              <Navbar.Brand href="#">GuruJii</Navbar.Brand>
-              <Navbar.Toggler target="#navbarSupportedContent" />
-              <Collapse navbar id="navbarSupportedContent">
-                <Navbar.Nav ml="auto">
+            <Navbar expand='lg' dark bg='dark'>
+              <Navbar.Brand href='#'>GuruJii</Navbar.Brand>
+              <Navbar.Toggler target='#navbarSupportedContent' />
+              <Collapse navbar id='navbarSupportedContent'>
+                <Navbar.Nav ml='auto'>
                   <Nav.Item active>
-                    <Nav.Link href="#">Home</Nav.Link>
+                    <Nav.Link href='#'>Home</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link href="#">Link</Nav.Link>
+                    <Nav.Link href='#'>Link</Nav.Link>
                   </Nav.Item>
                   <Nav.Item dropdown>
                     <Nav.Link dropdownToggle>Dropdown</Nav.Link>
@@ -76,16 +77,16 @@ class navbar extends Component {
                 </Navbar.Nav>
                 <Button
                   warning
-                  mr="sm-4"
-                  data-toggle="modal"
-                  data-target="#Modal"
+                  mr='sm-4'
+                  data-toggle='modal'
+                  data-target='#Modal'
                 >
                   Create Profile
                 </Button>
                 <Logout />
               </Collapse>
             </Navbar>
-            <Modal id="Modal" fade>
+            <Modal id='Modal' fade>
               <Modal.Dialog centered>
                 <Modal.Content>
                   <Modal.Header>
@@ -93,7 +94,7 @@ class navbar extends Component {
                       Register here (except class 2,3,4 all mandatory)
                     </Modal.Title>
                     <Modal.Close>
-                      <span aria-hidden="true">&times;</span>
+                      <span aria-hidden='true'>&times;</span>
                     </Modal.Close>
                   </Modal.Header>
                   <Form1 />
@@ -105,16 +106,16 @@ class navbar extends Component {
 
         {this.props.logged && this.props.registeredUser && (
           <div>
-            <Navbar expand="lg" dark bg="dark">
-              <Navbar.Brand href="#">GuruJii</Navbar.Brand>
-              <Navbar.Toggler target="#navbarSupportedContent" />
-              <Collapse navbar id="navbarSupportedContent">
-                <Navbar.Nav ml="auto">
+            <Navbar expand='lg' dark bg='dark'>
+              <Navbar.Brand href='#'>GuruJii</Navbar.Brand>
+              <Navbar.Toggler target='#navbarSupportedContent' />
+              <Collapse navbar id='navbarSupportedContent'>
+                <Navbar.Nav ml='auto'>
                   <Nav.Item active>
-                    <Nav.Link href="#">Home</Nav.Link>
+                    <Nav.Link href='#'>Home</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link href="#">Link</Nav.Link>
+                    <Nav.Link href='#'>Link</Nav.Link>
                   </Nav.Item>
                   <Nav.Item dropdown>
                     <Nav.Link dropdownToggle>Dropdown</Nav.Link>
@@ -131,17 +132,17 @@ class navbar extends Component {
                 </Navbar.Nav>
                 <Button
                   danger
-                  mr="sm-4"
-                  data-toggle="modal"
-                  data-target="#Modal1"
+                  mr='sm-4'
+                  data-toggle='modal'
+                  data-target='#Modal1'
                 >
                   Delete Profile
                 </Button>
                 <Button
                   secondary
-                  mr="sm-4"
-                  data-toggle="modal"
-                  data-target="#Modal"
+                  mr='sm-4'
+                  data-toggle='modal'
+                  data-target='#Modal'
                 >
                   Update Profile
                 </Button>
@@ -149,13 +150,13 @@ class navbar extends Component {
               </Collapse>
             </Navbar>
 
-            <Modal id="Modal" fade>
+            <Modal id='Modal' fade>
               <Modal.Dialog centered>
                 <Modal.Content>
                   <Modal.Header>
                     <Modal.Title>Update Profile</Modal.Title>
                     <Modal.Close>
-                      <span aria-hidden="true">&times;</span>
+                      <span aria-hidden='true'>&times;</span>
                     </Modal.Close>
                   </Modal.Header>
                   <Update />
@@ -163,30 +164,33 @@ class navbar extends Component {
               </Modal.Dialog>
             </Modal>
 
-            <Modal id="Modal1" fade className="modal fade">
-              <Modal.Dialog centered className="modal-dialog modal-confirm">
-                <Modal.Content className="modal-content"> 
-                  <Modal.Header className="modal-header flex-column">
-                    <div className="icon-box">
-                      <i className="fa fa-exclamation-triangle"></i>
-                    </div>					
-                    <h4 className="modal-title w-100">Are you sure?</h4>
+            <Modal id='Modal1' fade className='modal fade'>
+              <Modal.Dialog centered className='modal-dialog modal-confirm'>
+                <Modal.Content className='modal-content'>
+                  <Modal.Header className='modal-header flex-column'>
+                    <div className='icon-box'>
+                      <i className='fa fa-exclamation-triangle'></i>
+                    </div>
+                    <h4 className='modal-title w-100'>Are you sure?</h4>
                     {/* <Modal.Title className="modal-heading"></Modal.Title> */}
                     <Modal.Close>
-                      <span aria-hidden="true">&times;</span>
+                      <span aria-hidden='true'>&times;</span>
                     </Modal.Close>
                   </Modal.Header>
-                  <Modal.Body className="modal-body">
-                    <p className="modal-subHeading">Do you really want to delete your profile permanently ? This process cannot be undone.</p>
+                  <Modal.Body className='modal-body'>
+                    <p className='modal-subHeading'>
+                      Do you really want to delete your profile permanently ?
+                      This process cannot be undone.
+                    </p>
                   </Modal.Body>
-                  <Modal.Footer className="modal-footer justify-content-center">
-                    <Button secondary data-dismiss="modal">
+                  <Modal.Footer className='modal-footer justify-content-center'>
+                    <Button secondary data-dismiss='modal'>
                       Close
                     </Button>
                     <Button
                       danger
                       onClick={this.handleSubmit}
-                      data-dismiss="modal"
+                      data-dismiss='modal'
                     >
                       Delete
                     </Button>
@@ -199,16 +203,16 @@ class navbar extends Component {
 
         {!this.props.logged && (
           <div>
-            <Navbar expand="lg" dark bg="dark">
-              <Navbar.Brand href="#">GuruJii</Navbar.Brand>
-              <Navbar.Toggler target="#navbarSupportedContent" />
-              <Collapse navbar id="navbarSupportedContent">
-                <Navbar.Nav ml="auto">
+            <Navbar expand='lg' dark bg='dark'>
+              <Navbar.Brand href='#'>GuruJii</Navbar.Brand>
+              <Navbar.Toggler target='#navbarSupportedContent' />
+              <Collapse navbar id='navbarSupportedContent'>
+                <Navbar.Nav ml='auto'>
                   <Nav.Item active>
-                    <Nav.Link href="#">Home</Nav.Link>
+                    <Nav.Link href='#'>Home</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link href="#">Link</Nav.Link>
+                    <Nav.Link href='#'>Link</Nav.Link>
                   </Nav.Item>
                   <Nav.Item dropdown>
                     <Nav.Link dropdownToggle>Dropdown</Nav.Link>
@@ -233,7 +237,7 @@ class navbar extends Component {
           className="alert alert-success alert-dismissible fade show myalert"
           // style="margin-bottom:0"
         >
-          <button type="button" class="close" data-dismiss="alert">
+          <button type='button' class='close' data-dismiss='alert'>
             &times;
           </button>
           <strong>Great Landing !</strong> Teachers have to signin to make
@@ -251,7 +255,7 @@ class navbar extends Component {
   }
 }
 
-const mapStatetoProps = (state) => {
+const mapStatetoProps = state => {
   return {
     emailid: state.email,
     logged: state.loggedin,
@@ -260,9 +264,9 @@ const mapStatetoProps = (state) => {
   };
 };
 
-const mapDispatchtoProps = (dispatch) => {
+const mapDispatchtoProps = dispatch => {
   return {
-    email: (email) => dispatch({ type: "Email", email: email }),
+    email: email => dispatch({ type: 'Email', email: email }),
   };
 };
 
