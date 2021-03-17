@@ -1,21 +1,21 @@
-const router = require("express").Router();
-var nodemailer = require("nodemailer");
-let User = require("../models/user.model");
+const router = require('express').Router();
+var nodemailer = require('nodemailer');
+let User = require('../models/user.model');
 const { pass } = require('../config');
 
-router.route("/").get((req, res) => {
+router.route('/').get((req, res) => {
   User.find()
-    .then((users) => res.json(users))
-    .catch((err) => res.status(400).json("Error: " + err));
+    .then(users => res.json(users))
+    .catch(err => res.status(400).json('Error: ' + err));
 });
 
-router.route("/:email").get((req, res) => {
+router.route('/:email').get((req, res) => {
   User.findOne({ email: req.params.email })
-    .then((users) => res.json(users))
-    .catch((err) => res.status(400).json("Error: " + err));
+    .then(users => res.json(users))
+    .catch(err => res.status(400).json('Error: ' + err));
 });
 
-router.route("/add").post((req, res) => {
+router.route('/add').post((req, res) => {
   const email = req.body.email;
   const title = req.body.title;
   const username = req.body.userName;
@@ -53,14 +53,14 @@ router.route("/add").post((req, res) => {
   newUser
     .save()
     .then(() => {
-      res.json("User added!");
+      res.json('User added!');
     })
-    .catch((err) => res.status(400).json("Error: " + err));
+    .catch(err => res.status(400).json('Error: ' + err));
 });
 
-router.route("/update/:id").post((req, res) => {
+router.route('/update/:id').post((req, res) => {
   User.findById(req.params.id)
-    .then((user) => {
+    .then(user => {
       user.title = req.body.title;
       user.username = req.body.userName;
       user.subject = req.body.subject;
@@ -78,52 +78,54 @@ router.route("/update/:id").post((req, res) => {
 
       user
         .save()
-        .then(() => res.json("Exercise updated!"))
-        .catch((err) => res.status(400).json("Error: " + err));
+        .then(() => res.json('Exercise updated!'))
+        .catch(err => res.status(400).json('Error: ' + err));
     })
-    .catch((err) => res.status(400).json("Error: " + err));
+    .catch(err => res.status(400).json('Error: ' + err));
 });
 
-router.route("/delete/:id").delete((req, res) => {
+router.route('/delete/:id').delete((req, res) => {
   User.findByIdAndDelete(req.params.id)
-    .then(() => res.json("Profile deleted."))
-    .catch((err) => res.status(400).json("Error: " + err));
+    .then(() => res.json('Profile deleted.'))
+    .catch(err => res.status(400).json('Error: ' + err));
 });
 
-router.route("/sendMail/:email/:c").get((req, res) => {
+router.route('/sendMail/:email/:c').get((req, res) => {
   var transporter = nodemailer.createTransport({
-    service: "gmail",
+    service: 'gmail',
     auth: {
-      user: "namanlakhwaninl@gmail.com",
+      user: 'namanlakhwaninl@gmail.com',
       pass: `${pass}`,
     },
   });
 
+  let mailOptions;
   if (req.params.c == 1) {
-    var mailOptions = {
-      from: "namanlakhwaninl@gmail.com",
+    mailOptions = {
+      from: 'namanlakhwaninl@gmail.com',
       to: req.params.email,
-      subject: "GuruJii.com",
+      subject: 'GuruJii.com',
       text:
-        "Greetings from GuruJii.com !!. We are glad to see you and will try to serve our great and best services to you. \n\nThanks and regards \nNaman Lakhwani ",
+        'Greetings from GuruJii.com !!. We are glad to see you and will try to serve our great and best services to you. \n\nThanks and regards \nNaman Lakhwani ',
     };
   }
 
   if (req.params.c == 2) {
-    var mailOptions = {
-      from: "namanlakhwaninl@gmail.com",
+    mailOptions = {
+      from: 'namanlakhwaninl@gmail.com',
       to: req.params.email,
-      subject: "GuruJii.com",
+      subject: 'GuruJii.com',
       text:
-        "It is very disheartening to see you leave. We hope that you liked our service and would come back again. \n\nThanks and regards \nNaman Lakhwani",
+        'It is very disheartening to see you leave. We hope that you liked our service and would come back again. \n\nThanks and regards \nNaman Lakhwani',
     };
   }
 
+  // eslint-disable-next-line no-unused-vars
   transporter.sendMail(mailOptions, function (error, info) {
     if (error) {
-      res.status(400).json("Error: " + error);
+      res.status(400).json('Error: ' + error);
     } else {
-      res.json("Email sent!");
+      res.json('Email sent!');
     }
   });
 });
