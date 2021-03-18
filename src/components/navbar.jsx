@@ -18,6 +18,13 @@ import axios from 'axios';
 import './style.css';
 
 class navbar extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      hidden: false,
+    };
+  }
   handleSubmit = e => {
     e.preventDefault();
 
@@ -226,18 +233,31 @@ class navbar extends Component {
           </div>
         )}
 
-        <div
-          className='alert alert-success alert-dismissible fade show '
-          // style="margin-bottom:0"
-        >
-          <button type='button' className='close' data-dismiss='alert'>
-            &times;
-          </button>
-          <strong>Great Landing !</strong> Teachers have to signin to make
-          profile.
-        </div>
+        {this.state.hidden ? (
+          ' '
+        ) : (
+          <div
+            className='alert alert-success alert-dismissible fade show myalert'
+            // style="margin-bottom:0"
+          >
+            <button type='button' className='close' data-dismiss='alert'>
+              &times;
+            </button>
+            <strong>Great Landing !</strong> Teachers have to signin to make
+            profile.
+          </div>
+        )}
       </div>
     );
+  }
+  componentDidMount() {
+    this.timer = setInterval(() => {
+      this.setState({ hidden: true });
+    }, 12000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timer);
   }
 }
 
