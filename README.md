@@ -62,14 +62,14 @@ We have used proxy so all the requests made to backend from frontend will be ser
 <p>
  
 - This project uses yarn to install the dependencies. Don't use npm install.
-- For security reasons we have made the MongoDb URI secure, by not adding a hardcoded username and password. For development purpose, you can install, MongoDB locally or use the  online version. To use your own mongodb, add your url in line number 20.
-- To run the app locally, either comment out the lines that reference the `backend/config.js` file:
-	- Lines 5, 7, 20, 23 of `backend/server.js` (if you do not want to use the database at all)
+
+- To run the app locally, if you do not want to use the database at all, comment out the lines that reference the `backend/config.js` file:
+	- Lines 5, 7, 20, 23 of `backend/server.js` 
 	- Line 3 of `backend/controllers/user.controller.js`
 
-  It is recommended that you create your own `backend/config.js` file following the format given in `backend.config.example/js`. 
+ - For security reasons we have made the MongoDb URI secure, by not adding a hardcoded username and password. For development purpose, you can install, MongoDB locally or use the  online version. Also create your own `backend/config.js` file with proper credentials, following the format given in `backend.config.example/js`. 
 - There is a route that sends emails - Line 82 of `backend/controllers/user.controller.js`. Remember to replace the auth credentials with your own before testing the route.
-- Remember not push any personal data like mongo uri or mail credentials.
+- Remember not to push any personal data like mongo uri or mail credentials.
 
 </p>
 
