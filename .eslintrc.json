@@ -12,7 +12,6 @@
   "rules": {
     "no-undef": "off",
     "no-case-declarations": "off",
-    "no-empty": "off",
     "react/prop-types": "off"
   },
   "settings": {

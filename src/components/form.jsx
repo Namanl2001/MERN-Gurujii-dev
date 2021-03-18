@@ -53,11 +53,12 @@ class form extends Component {
         if (response.status == 200) {
           axios.get(`/users/sendMail/${this.props.emailid}/1`);
           if (
-            alert(
+            !alert(
               `Congratulatios!! ${this.state.userName} Your profile added successfully to our database `
             )
           ) {
-          } else window.location.reload();
+            window.location.reload();
+          }
         }
       })
       .catch(function (error) {
