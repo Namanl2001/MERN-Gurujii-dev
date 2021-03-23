@@ -1,14 +1,14 @@
-import React, { Component } from "react";
-import axios from "axios";
-import { connect } from "react-redux";
-
-import { Modal, Button, Form, Row, Col } from "bootstrap-4-react";
+import React, { Component } from 'react';
+import axios from 'axios';
+import { connect } from 'react-redux';
+import { Modal, Button, Form, Row, Col } from 'bootstrap-4-react';
 
 class update extends Component {
   state = {
     email: this.props.data.email,
     title: this.props.data.title,
     userName: this.props.data.username,
+    tutor: this.props.data.tutor,
     subject: this.props.data.subject,
     coachingName: this.props.data.coaching,
     qualification: this.props.data.qualification,
@@ -23,19 +23,20 @@ class update extends Component {
     phone: this.props.data.phone,
   };
 
-  handleChange = (e) => {
+  handleChange = e => {
     this.setState({
       [e.target.id]: e.target.value,
     });
   };
 
-  handleSubmit = (e) => {
+  handleSubmit = e => {
     e.preventDefault();
 
     axios
       .post(`/users/update/${this.props.data._id}`, {
         title: this.state.title,
         userName: this.state.userName,
+        tutor: this.state.tutor,
         subject: this.state.subject,
         coachingName: this.state.coachingName,
         qualification: this.state.qualification,
@@ -49,7 +50,7 @@ class update extends Component {
         pin: this.state.pin,
         phone: this.state.phone,
       })
-      .then((response) => {
+      .then(response => {
         if (response.status == 200) {
           if (
             alert(
@@ -71,156 +72,173 @@ class update extends Component {
           <Form>
             <Form.Group>
               <Row>
-                <Form.LabelCol col="sm-3" htmlFor="staticEmail">
+                <Form.LabelCol col='sm-3' htmlFor='staticEmail'>
                   Email
                 </Form.LabelCol>
-                <Col col="sm-8">
+                <Col col='sm-8'>
                   <Form.PlainText value={this.state.email}></Form.PlainText>
                 </Col>
               </Row>
               <Row>
-                <Form.LabelCol col="sm-3" htmlFor="title">
-                Title
+                <Form.LabelCol col='sm-3' htmlFor='title'>
+                  Title
                 </Form.LabelCol>
-                <Col col="sm-8">
+
+                <Col col='sm-8'>
                   <Form.CustomSelect
                     sm
-                    mb="3"
-                    id="title"
+                    mb='3'
+                    id='title'
                     onChange={this.handleChange}
                     value={this.state.title}
                   >
                     <option defaultValue>Open this to select title</option>
-                    <option value="Mr.">Mr.</option>
-                    <option value="Mrs.">Mrs.</option>
-                    
+                    <option value='Mr.'>Mr.</option>
+                    <option value='Mrs.'>Mrs.</option>
                   </Form.CustomSelect>
                 </Col>
               </Row>
               <Row>
-                <Form.LabelCol col="sm-3" htmlFor="userName">
+                <Form.LabelCol col='sm-3' htmlFor='userName'>
                   Name
                 </Form.LabelCol>
-                <Col col="sm-8">
+                <Col col='sm-8'>
                   <Form.Input
-                    id="userName"
-                    type="text"
-                    placeholder="Enter Full Name"
+                    id='userName'
+                    type='text'
+                    placeholder='Enter Full Name'
                     onChange={this.handleChange}
                     value={this.state.userName}
                   />
                 </Col>
               </Row>
-              <br />
               <Row>
-                <Form.LabelCol col="sm-3" htmlFor="subject">
-                  Subject
+                <Form.LabelCol col='sm-3' htmlFor='subject'>
+                  Tutot Type
                 </Form.LabelCol>
-                <Col col="sm-8">
+                <Col col='sm-8'>
                   <Form.CustomSelect
                     sm
-                    mb="3"
-                    id="subject"
+                    mb='3'
+                    id='tutor'
+                    onChange={this.handleChange}
+                    value={this.state.tutor}
+                  >
+                    <option defaultValue>Open this to select tutor type</option>
+                    <option value='Home Tutor'>Home Tutor</option>
+                    <option value='External Tutor'>External Tutor</option>
+                  </Form.CustomSelect>
+                </Col>
+              </Row>
+              <Row>
+                <Form.LabelCol col='sm-3' htmlFor='subject'>
+                  Subject
+                </Form.LabelCol>
+                <Col col='sm-8'>
+                  <Form.CustomSelect
+                    sm
+                    mb='3'
+                    id='subject'
                     onChange={this.handleChange}
                     value={this.state.subject}
                   >
                     <option defaultValue>Open this to select subject</option>
-                    <option value="physics">Physics</option>
-                    <option value="chemistry">Chemistry</option>
-                    <option value="mathematics">Mathematics</option>
+                    <option value='physics'>Physics</option>
+                    <option value='chemistry'>Chemistry</option>
+                    <option value='mathematics'>Mathematics</option>
                   </Form.CustomSelect>
                 </Col>
               </Row>
 
               <Row>
-                <Form.LabelCol col="sm-3" htmlFor="coachingName">
+                <Form.LabelCol col='sm-3' htmlFor='coachingName'>
                   Coaching
                 </Form.LabelCol>
-                <Col col="sm-8">
+                <Col col='sm-8'>
                   <Form.Input
-                    id="coachingName"
-                    type="text"
-                    placeholder="Enter coaching name"
+                    id='coachingName'
+                    type='text'
+                    placeholder='Enter coaching name'
                     onChange={this.handleChange}
                     value={this.state.coachingName}
                   />
                 </Col>
               </Row>
               <Row>
-                <Form.LabelCol col="sm-3" htmlFor="qualification">
+                <Form.LabelCol col='sm-3' htmlFor='qualification'>
                   Qualification
                 </Form.LabelCol>
-                <Col col="sm-8">
+                <Col col='sm-8'>
                   <Form.Input
-                    id="qualification"
-                    type="text"
-                    placeholder="Enter your qualification"
+                    id='qualification'
+                    type='text'
+                    placeholder='Enter your qualification'
                     onChange={this.handleChange}
                     value={this.state.qualification}
                   />
                 </Col>
               </Row>
               <Row>
-                <Form.LabelCol col="sm-3" htmlFor="about">
+                <Form.LabelCol col='sm-3' htmlFor='about'>
                   About
                 </Form.LabelCol>
-                <Col col="sm-8">
+                <Col col='sm-8'>
                   <Form.Input
-                    id="about"
-                    type="text"
-                    placeholder="Write about your teching methodology."
+                    id='about'
+                    type='text'
+                    placeholder='Write about your teching methodology.'
                     onChange={this.handleChange}
                     value={this.state.about}
                   />
                 </Col>
               </Row>
+              <br></br>
               <Row>
-                <Form.LabelCol col="sm-2" htmlFor="c1">
+                <Form.LabelCol col='sm-3' htmlFor='c1'>
                   Class 1
                 </Form.LabelCol>
-                <Col col="sm-3">
+                <Col col='sm-3'>
                   <Form.Input
-                    id="c1"
-                    type="number"
+                    id='c1'
+                    type='number'
                     placeholder="e.g. : '9' "
                     onChange={this.handleChange}
                     value={this.state.c1}
                   />
                 </Col>
-                <Form.LabelCol col="sm-2" htmlFor="c2">
+                <Form.LabelCol col='sm-3' htmlFor='c2'>
                   Class 2
                 </Form.LabelCol>
-                <Col col="sm-3">
+                <Col col='sm-3'>
                   <Form.Input
-                    id="c2"
-                    type="number"
+                    id='c2'
+                    type='number'
                     placeholder="e.g. : '10' "
                     onChange={this.handleChange}
                     value={this.state.c2}
                   />
                 </Col>
               </Row>
-
               <Row>
-                <Form.LabelCol col="sm-2" htmlFor="c3">
+                <Form.LabelCol col='sm-3' htmlFor='c3'>
                   Class 3
                 </Form.LabelCol>
-                <Col col="sm-3">
+                <Col col='sm-3'>
                   <Form.Input
-                    id="c3"
-                    type="number"
+                    id='c3'
+                    type='number'
                     placeholder="e.g. : '11' "
                     onChange={this.handleChange}
                     value={this.state.c3}
                   />
                 </Col>
-                <Form.LabelCol col="sm-2" htmlFor="c2">
+                <Form.LabelCol col='sm-3' htmlFor='c2'>
                   Class 4
                 </Form.LabelCol>
-                <Col col="sm-3">
+                <Col col='sm-3'>
                   <Form.Input
-                    id="c4"
-                    type="number"
+                    id='c4'
+                    type='number'
                     placeholder="e.g. : '12' "
                     onChange={this.handleChange}
                     value={this.state.c4}
@@ -229,56 +247,56 @@ class update extends Component {
               </Row>
             </Form.Group>
             <Row>
-              <Form.LabelCol col="sm-2" htmlFor="address">
+              <Form.LabelCol col='sm-2' htmlFor='address'>
                 address
               </Form.LabelCol>
-              <Col col="sm-10">
+              <Col col='sm-10'>
                 <Form.Input
-                  id="address"
-                  type="text"
-                  placeholder="Enter Full address"
+                  id='address'
+                  type='text'
+                  placeholder='Enter Full address'
                   onChange={this.handleChange}
                   value={this.state.address}
                 />
               </Col>
             </Row>
             <Row>
-              <Form.LabelCol col="sm-2" htmlFor="city">
+              <Form.LabelCol col='sm-2' htmlFor='city'>
                 city
               </Form.LabelCol>
-              <Col col="sm-10">
+              <Col col='sm-10'>
                 <Form.Input
-                  id="city"
-                  type="text"
-                  placeholder="Enter city name"
+                  id='city'
+                  type='text'
+                  placeholder='Enter city name'
                   onChange={this.handleChange}
                   value={this.state.city}
                 />
               </Col>
             </Row>
             <Row>
-              <Form.LabelCol col="sm-2" htmlFor="pin">
+              <Form.LabelCol col='sm-2' htmlFor='pin'>
                 pin
               </Form.LabelCol>
-              <Col col="sm-10">
+              <Col col='sm-10'>
                 <Form.Input
-                  id="pin"
-                  type="number"
-                  placeholder="6-digit postal code"
+                  id='pin'
+                  type='number'
+                  placeholder='6-digit postal code'
                   onChange={this.handleChange}
                   value={this.state.pin}
                 />
               </Col>
             </Row>
             <Row>
-              <Form.LabelCol col="sm-2" htmlFor="phone">
+              <Form.LabelCol col='sm-2' htmlFor='phone'>
                 phone
               </Form.LabelCol>
-              <Col col="sm-10">
+              <Col col='sm-10'>
                 <Form.Input
-                  id="phone"
-                  type="number"
-                  placeholder="10-digit phone"
+                  id='phone'
+                  type='number'
+                  placeholder='10-digit phone'
                   onChange={this.handleChange}
                   value={this.state.phone}
                 />
@@ -287,10 +305,10 @@ class update extends Component {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button secondary data-dismiss="modal">
+          <Button secondary data-dismiss='modal'>
             Close
           </Button>
-          <Button primary onClick={this.handleSubmit} data-dismiss="modal">
+          <Button primary onClick={this.handleSubmit} data-dismiss='modal'>
             Submit
           </Button>
         </Modal.Footer>
@@ -299,7 +317,7 @@ class update extends Component {
   }
 }
 
-const mapStatetoProps = (state) => {
+const mapStatetoProps = state => {
   return {
     emailid: state.email,
     logged: state.loggedin,
@@ -307,9 +325,9 @@ const mapStatetoProps = (state) => {
   };
 };
 
-const mapDispatchtoProps = (dispatch) => {
+const mapDispatchtoProps = dispatch => {
   return {
-    email: (email) => dispatch({ type: "Email", email: email }),
+    email: email => dispatch({ type: 'Email', email: email }),
   };
 };
 

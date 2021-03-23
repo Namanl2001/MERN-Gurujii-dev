@@ -9,15 +9,16 @@
     "axios": ">=0.21.1",
     "bootstrap-4-react": "0.0.59",
     "bootstrap4": "0.0.1-security",
-    "concurrently": "^6.0.0",
     "nodemailer": "^6.4.11",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-google-login": "^5.1.21",
+    "react-icons": "^4.2.0",
     "react-multiselect-checkboxes": "^0.1.1",
     "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
+    "react-scroll": "^1.8.2",
     "react-star-rating-component": "^1.4.1",
     "read-more-react": "^1.0.10",
     "redux": "^4.0.5",
@@ -47,9 +48,18 @@
       "last 1 safari version"
     ]
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "husky": "4.3.8",
+    "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.0"
+  },
   "author": "Naman Lakhwani (Namanl2001)",
   "license": "ISC",
   "proxy": "http://localhost:5000/"
