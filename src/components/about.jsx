@@ -5,7 +5,7 @@ function about() {
   return (
     <div className='parallax'>
       <div className='center'>
-        <img src={Board} alt='' />
+        <img src={Board} alt='Board' />
       </div>
     </div>
   );
