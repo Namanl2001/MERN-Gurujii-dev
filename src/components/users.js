@@ -1,0 +1,58 @@
+const users = [
+  {
+    _id: 1,
+    email: 'abc@xyz.in',
+    title: 'Mr.',
+    username: 'user1',
+    subject: 'Chemistry',
+    coaching: 'Tutuion1',
+    qualification: 'dsahdgsaid',
+    about:
+      'kjclakbshdbljWBDLJSABDHBDHBHDBXBDHBhbdvjhdfbvhjdfbvhfdbvjfdbvsahkdjbvkasgv',
+    class1: 11,
+    class2: 12,
+    address: 'asjkvxasghkcv',
+    city: 'CsacjvhkbSHGc',
+    pin: 271312,
+    phone: 9899898989,
+  },
+  {
+    _id: 2,
+    email: 'sdcsd@asdas.in',
+    title: 'Mrs.',
+    username: 'user2',
+    subject: 'Physics',
+    coaching: 'Tutuion2',
+    qualification: 'dsahdgsaid',
+    about:
+      'kjclakbshdbljWBDLJSABDHBDHBHDBXBDHBhbdvjhdfbvhjdfbvhfdbvjfdbvsahkdjbvkasgv',
+    class1: 11,
+    class2: 12,
+    class3: 10,
+    address: 'asjkvxasghkcv',
+    city: 'CsacjvhkbSHGc',
+    pin: 271312,
+    phone: 9899898989,
+  },
+  {
+    _id: 3,
+    email: 'CSX@daS.in',
+    title: 'Mr.',
+    username: 'user3',
+    subject: 'Maths',
+    coaching: 'Tutuion3',
+    qualification: 'dsahdgsaid',
+    about:
+      'kjclakbshdbljWBDLJSABDHBDHBHDBXBDHBhbdvjhdfbvhjdfbvhfdbvjfdbvsahkdjbvkasgv',
+    class1: 9,
+    class2: 10,
+    class3: 11,
+    class4: 12,
+    address: 'asjkvxasghkcv',
+    city: 'CsacjvhkbSHGc',
+    pin: 271312,
+    phone: 9899898989,
+  },
+];
+
+export default users;
