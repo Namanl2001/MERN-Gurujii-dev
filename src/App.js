@@ -1,29 +1,18 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './components/navbar';
 import Home from './components/home';
 import './App.css';
-import Board from './board.jpg';
+import About from './components/about';
 
 function App() {
   return (
     <Router>
-      <div className='parallax'>
-        <Navbar />
-        <br />
-        <br />
-        <br />
-        <div className='center'>
-          <img src={Board} alt='' />
-        </div>
-        <br />
-        <br />
-        <br />
-        <br />
-      </div>
-
-      <br />
-      <Route path='/' exact component={Home} />
+      <Navbar />
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route exact path='/about' component={About} />
+      </Switch>
     </Router>
   );
 }
