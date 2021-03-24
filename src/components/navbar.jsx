@@ -284,7 +284,7 @@ class navbar extends Component {
         ) : (
           <div
             className='alert alert-success alert-dismissible fade show myalert'
-            // style="margin-bottom:0"
+            style={{ position: 'absolute', marginTop: '8vh' }}
           >
             <button type='button' class='close' data-dismiss='alert'>
               &times;
