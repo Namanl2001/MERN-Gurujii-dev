@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 import Card from './card';
 import Filter from './filter';
 import { Container, Row } from 'bootstrap-4-react';
-
 import ScrollToTop from './scrollToTop';
+import users from './users';
 
 class home extends Component {
   componentDidMount() {
@@ -13,6 +13,7 @@ class home extends Component {
   }
 
   List() {
+    // if (users.length) {
     if (this.props.users.length) {
       var currentIndex = this.props.users.length;
       var array = this.props.users;
@@ -28,8 +29,15 @@ class home extends Component {
         array[currentIndex] = array[randomIndex];
         array[randomIndex] = temporaryValue;
       }
+      // return users.map(currentuser => {
+      //   return (
+      //     <Card user={currentuser} key={currentuser._id} id={currentuser._id} />
+      //   );
+      // });
       return this.props.users.map(currentuser => {
-        return <Card user={currentuser} key={currentuser._id} />;
+        return (
+          <Card user={currentuser} key={currentuser._id} id={currentuser._id} />
+        );
       });
     } else {
       return (
