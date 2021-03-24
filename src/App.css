@@ -64,3 +64,8 @@ html {
 .dropdown-item:hover {
   cursor: pointer;
 }
+
+.nav-links {
+  text-decoration: none !important;
+  color: #fff;
+}

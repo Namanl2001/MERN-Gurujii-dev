@@ -16,16 +16,17 @@ import Form1 from './form';
 import Update from './update';
 import axios from 'axios';
 import './style.css';
+import { Link } from 'react-router-dom';
 
 class navbar extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
-         hidden:false
-    }
-}
-  handleSubmit = (e) => {
+      hidden: false,
+    };
+  }
+  handleSubmit = e => {
     e.preventDefault();
 
     axios
@@ -52,12 +53,27 @@ class navbar extends Component {
         {this.props.logged && !this.props.registeredUser && (
           <div>
             <Navbar expand='lg' dark bg='dark'>
-              <Navbar.Brand href='#'>GuruJii</Navbar.Brand>
+              <Navbar.Brand>
+                <Link to='/' className='nav-links'>
+                  GuruJii
+                </Link>
+              </Navbar.Brand>
               <Navbar.Toggler target='#navbarSupportedContent' />
               <Collapse navbar id='navbarSupportedContent'>
                 <Navbar.Nav ml='auto'>
                   <Nav.Item active>
-                    <Nav.Link href='#'>Home</Nav.Link>
+                    <Nav.Link>
+                      <Link to='/' className='nav-links'>
+                        Home
+                      </Link>
+                    </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link>
+                      <Link to='/about' className='nav-links'>
+                        About
+                      </Link>
+                    </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
                     <Nav.Link href='#'>Link</Nav.Link>
@@ -107,12 +123,27 @@ class navbar extends Component {
         {this.props.logged && this.props.registeredUser && (
           <div>
             <Navbar expand='lg' dark bg='dark'>
-              <Navbar.Brand href='#'>GuruJii</Navbar.Brand>
+              <Navbar.Brand>
+                <Link to='/' className='nav-links'>
+                  GuruJii
+                </Link>
+              </Navbar.Brand>
               <Navbar.Toggler target='#navbarSupportedContent' />
               <Collapse navbar id='navbarSupportedContent'>
                 <Navbar.Nav ml='auto'>
                   <Nav.Item active>
-                    <Nav.Link href='#'>Home</Nav.Link>
+                    <Nav.Link>
+                      <Link to='/' className='nav-links'>
+                        Home
+                      </Link>
+                    </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link>
+                      <Link to='/about' className='nav-links'>
+                        About
+                      </Link>
+                    </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
                     <Nav.Link href='#'>Link</Nav.Link>
@@ -204,12 +235,27 @@ class navbar extends Component {
         {!this.props.logged && (
           <div>
             <Navbar expand='lg' dark bg='dark'>
-              <Navbar.Brand href='#'>GuruJii</Navbar.Brand>
+              <Navbar.Brand>
+                <Link to='/' className='nav-links'>
+                  GuruJii
+                </Link>
+              </Navbar.Brand>
               <Navbar.Toggler target='#navbarSupportedContent' />
               <Collapse navbar id='navbarSupportedContent'>
                 <Navbar.Nav ml='auto'>
                   <Nav.Item active>
-                    <Nav.Link href='#'>Home</Nav.Link>
+                    <Nav.Link>
+                      <Link to='/' className='nav-links'>
+                        Home
+                      </Link>
+                    </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link>
+                      <Link to='/about' className='nav-links'>
+                        About
+                      </Link>
+                    </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
                     <Nav.Link href='#'>Link</Nav.Link>
@@ -233,25 +279,31 @@ class navbar extends Component {
           </div>
         )}
 
-        {this.state.hidden ? " ":<div
-          className="alert alert-success alert-dismissible fade show myalert"
-          // style="margin-bottom:0"
-        >
-          <button type='button' class='close' data-dismiss='alert'>
-            &times;
-          </button>
-          <strong>Great Landing !</strong> Teachers have to signin to make
-          profile.
-        </div>}
+        {this.state.hidden ? (
+          ' '
+        ) : (
+          <div
+            className='alert alert-success alert-dismissible fade show myalert'
+            // style="margin-bottom:0"
+          >
+            <button type='button' class='close' data-dismiss='alert'>
+              &times;
+            </button>
+            <strong>Great Landing !</strong> Teachers have to signin to make
+            profile.
+          </div>
+        )}
       </div>
     );
   }
   componentDidMount() {
-    this.timer = setInterval(() => { this.setState({ hidden: true}) }, 12000);
+    this.timer = setInterval(() => {
+      this.setState({ hidden: true });
+    }, 12000);
   }
 
   componentWillUnmount() {
-    clearInterval(this.timer)
+    clearInterval(this.timer);
   }
 }
 
