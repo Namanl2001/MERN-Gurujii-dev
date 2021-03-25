@@ -63,3 +63,20 @@ html {
 .dropdown-item:hover {
   cursor: pointer;
 }
+
+.formRoot {
+  display: flex;
+}
+
+.modal-content {
+  position: absolute;
+  width: 850px;
+  margin-left: -175px;
+}
+.form-control {
+  margin-bottom: 8px;
+}
+
+.form-child-left {
+  width: 440px;
+}
