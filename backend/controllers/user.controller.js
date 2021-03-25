@@ -22,6 +22,7 @@ const addNewUser = (req, res) => {
     email: req.body.email,
     title: req.body.title,
     username: req.body.userName,
+    tutor: req.body.tutor,
     subject: req.body.subject,
     coaching: req.body.coachingName,
     qualification: req.body.qualification,
@@ -50,6 +51,7 @@ const updateUser = (req, res) => {
     .then(user => {
       user.title = req.body.title;
       user.username = req.body.userName;
+      user.tutor = req.body.tutor;
       user.subject = req.body.subject;
       user.coaching = req.body.coachingName;
       user.qualification = req.body.qualification;
