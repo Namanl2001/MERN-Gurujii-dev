@@ -54,7 +54,7 @@ class form extends Component {
           axios.get(`/users/sendMail/${this.props.emailid}/1`);
           if (
             alert(
-              `Congratulatios!! ${this.state.userName} Your profile added successfully to our database `
+              `Congratulations!! ${this.state.userName} Your profile added successfully to our database `
             )
           ) {
           } else window.location.reload();
@@ -92,7 +92,9 @@ class form extends Component {
                       onChange={this.handleChange}
                       value={this.state.title}
                     >
-                      <option defaultValue>Open this to select title</option>
+                      <option defaultValue hidden>
+                        Open this to select title
+                      </option>
                       <option value='Mr.'>Mr.</option>
                       <option value='Mrs.'>Mrs.</option>
                     </Form.CustomSelect>
@@ -126,7 +128,9 @@ class form extends Component {
                       onChange={this.handleChange}
                       value={this.state.subject}
                     >
-                      <option defaultValue>Open this to select subject</option>
+                      <option defaultValue hidden>
+                        Open this to select subject
+                      </option>
                       <option value='physics'>Physics</option>
                       <option value='chemistry'>Chemistry</option>
                       <option value='mathematics'>Mathematics</option>
