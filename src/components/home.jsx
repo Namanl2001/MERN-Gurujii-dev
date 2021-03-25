@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import Card from './card';
 import Filter from './filter';
 import { Container, Row } from 'bootstrap-4-react';
-
+import * as ReactBootStrap from 'react-bootstrap';
 import ScrollToTop from './scrollToTop';
 
 class home extends Component {
@@ -45,7 +45,11 @@ class home extends Component {
   render() {
     return (
       <>
-        {!this.props.isDataInitialized && <div>Initializing data...</div>}
+        {!this.props.isDataInitialized && (
+          <div className='spinner'>
+            {<ReactBootStrap.Spinner animation='border' variant='success' />}
+          </div>
+        )}
         {this.props.isDataInitialized && (
           <div>
             <div className='text-center'>
