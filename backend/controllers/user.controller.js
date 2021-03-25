@@ -41,7 +41,10 @@ const addNewUser = (req, res) => {
     .then(() => {
       res.json('User added!');
     })
-    .catch(err => res.status(400).json('Error: ' + err));
+    .catch(err => {
+      console.log(err);
+      res.status(400).json('Error: ' + err);
+    });
 };
 
 // Update existing user document to the db
