@@ -2,10 +2,6 @@ body {
   font-family: 'Varela Round', sans-serif;
 }
 
-.spinner {
-  padding-left: 2em;
-  padding-bottom: 1.1em;
-}
 .modal-confirm {
   color: #636363;
   width: 400px;
@@ -136,6 +132,12 @@ body {
   -ms-animation: alert 1s ease forwards;
   -o-animation: alert 1s ease forwards;
   animation: alert 1s ease forwards;
+}
+
+.spinner {
+  padding-left: 47%;
+  margin-top: -1rem;
+  margin-bottom: 0.45rem;
 }
 
 /* Animation */

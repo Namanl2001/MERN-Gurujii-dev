@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 import Card from './card';
 import Filter from './filter';
 import { Container, Row } from 'bootstrap-4-react';
-import * as ReactBootStrap from 'react-bootstrap';
 import ScrollToTop from './scrollToTop';
+import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 class home extends Component {
   componentDidMount() {
@@ -47,7 +47,16 @@ class home extends Component {
       <>
         {!this.props.isDataInitialized && (
           <div className='spinner'>
-            {<ReactBootStrap.Spinner animation='border' variant='success' />}
+            <div
+              class='spinner-border text-success'
+              role='status'
+              style={{
+                width: '2.5rem',
+                height: '2.5rem',
+              }}
+            >
+              <span class='sr-only'>Loading...</span>
+            </div>
           </div>
         )}
         {this.props.isDataInitialized && (
