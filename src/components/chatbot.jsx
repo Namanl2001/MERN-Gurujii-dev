@@ -18,6 +18,13 @@ const config = {
   width: '400px',
   height: '500px',
   floating: true,
+  floatingStyle: {
+    right: '15px',
+    bottom: '60px',
+    width: '40px',
+    height: '40px',
+  },
+  headerTitle: 'Chat Help',
 };
 
 const steps = [
