@@ -95,6 +95,7 @@ class form extends Component {
                       <option defaultValue>Open this to select title</option>
                       <option value='Mr.'>Mr.</option>
                       <option value='Mrs.'>Mrs.</option>
+                      <option value='Ms.'>Ms.</option>
                     </Form.CustomSelect>
                   </Col>
                 </Row>
