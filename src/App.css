@@ -90,3 +90,57 @@ input::-webkit-inner-spin-button {
 input[type='number'] {
   -moz-appearance: textfield;
 }
+.card {
+  margin: 20px;
+  width: 320px;
+  height: 490px;
+  border-radius: 50px;
+  border: 1px solid transparent;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.card .card_image {
+  width: 130%;
+  height: 31vh;
+  margin-left: -15%;
+  object-fit: cover;
+  margin-top: -2%;
+}
+
+.card:hover {
+  transform: scale(1.02, 1.02);
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+}
+
+.title-black {
+  color: black;
+}
+
+@media all and (max-width: 500px) {
+  .card-list {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+}
+.text {
+  margin-top: -5%;
+}
+.footer1 {
+  margin-top: -5%;
+}
+.text4 {
+  margin-top: 2%;
+  text-align: center;
+}
+hr {
+  width: 116%;
+  margin-left: -8%;
+  margin-top: -1%;
+}
+.text1 {
+  margin-top: -4%;
+}

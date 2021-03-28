@@ -10,12 +10,15 @@ const img_src = Photo;
 class cards extends Component {
   render() {
     return (
-      <Card
-        style={{ width: '21em', marginLeft: '2em', marginBottom: '3em' }}
-        className='card'
-      >
-        <Card.Header>{this.props.user.coaching}</Card.Header>
-        {/* <Card.Image src={img_src} alt={"image"} /> */}
+      <div class='card'>
+        <Card.Text className='text4'>{this.props.user.coaching}</Card.Text>
+        <Card.Image
+          src={
+            'https://i.pinimg.com/originals/54/62/5e/54625e30c68d92754683ce56c2b4e5cc.gif'
+          }
+          className='card_image'
+        ></Card.Image>
+
         <Card.Body>
           <Card.Title>
             {this.props.user.title} {this.props.user.username}
@@ -26,7 +29,7 @@ class cards extends Component {
             {this.props.user.class4} )
           </Card.Subtitle>
           {this.props.user.tutor}
-          <div style={{ fontSize: 25 }}>
+          <div style={{ fontSize: 20 }}>
             <StarRatingComponent
               name='rate2'
               editing={false}
@@ -34,7 +37,7 @@ class cards extends Component {
               value={4}
             />
           </div>
-          <Card.Text>
+          <Card.Text className='text1'>
             Qualification : {this.props.user.qualification}
             <ReadMoreReact
               text={this.props.user.about}
@@ -44,15 +47,16 @@ class cards extends Component {
               readMoreText='Click! to read more'
             />
           </Card.Text>
+          <hr></hr>
+          <Card.Text className='footer1'>
+            Address: {this.props.user.address} , {this.props.user.city} ,
+            {this.props.user.pin}
+            <br />
+            Contact: {this.props.user.phone}
+            {/* <Card.Link href="#">Another Link</Card.Link> */}
+          </Card.Text>
         </Card.Body>
-        <Card.Footer>
-          Address: {this.props.user.address} , {this.props.user.city} ,
-          {this.props.user.pin}
-          <br />
-          Contact: {this.props.user.phone}
-          {/* <Card.Link href="#">Another Link</Card.Link> */}
-        </Card.Footer>
-      </Card>
+      </div>
     );
   }
 }
