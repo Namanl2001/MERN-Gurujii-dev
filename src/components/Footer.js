@@ -41,7 +41,7 @@ function Footer() {
             <div class='col-xl-4 col-lg-4 mb-50'>
               <div class='footer-widget'>
                 <div class='footer-logo'>
-                  <a href='index.html'>
+                  <a href='/#'>
                     <img src='faviconNew.png' class='img-fluid' alt='logo' />
                   </a>
                 </div>
@@ -53,13 +53,13 @@ function Footer() {
                 </div>
                 <div class='footer-social-icon'>
                   <span>Follow us</span>
-                  <a href='#'>
+                  <a href='/#'>
                     <i class='fa fa-facebook-f facebook-bg'></i>
                   </a>
-                  <a href='#'>
+                  <a href='/#'>
                     <i class='fa fa-twitter twitter-bg'></i>
                   </a>
-                  <a href='#'>
+                  <a href='/#'>
                     <i class='fa fa-instagram instagram-bg'></i>
                   </a>
                 </div>
@@ -68,20 +68,21 @@ function Footer() {
             <div class='col-xl-4 col-lg-4 col-md-6 mb-30'>
               <div class='footer-widget'>
                 <div class='footer-widget-heading'>
+                  <br></br>
                   <h3>Useful Links</h3>
                 </div>
                 <ul>
                   <li>
-                    <a href='#'>Home</a>
+                    <a href='/#'>Home</a>
                   </li>
                   <li>
-                    <a href='#'>services</a>
+                    <a href='/#'>services</a>
                   </li>
                   <li>
-                    <a href='#'>About us</a>
+                    <a href='/#'>About us</a>
                   </li>
                   <li>
-                    <a href='#'>Contact us</a>
+                    <a href='/#'>Contact us</a>
                   </li>
                 </ul>
               </div>
@@ -89,6 +90,7 @@ function Footer() {
             <div class='col-xl-4 col-lg-4 col-md-6 mb-50'>
               <div class='footer-widget'>
                 <div class='footer-widget-heading'>
+                  <br></br>
                   <h3>Subscribe</h3>
                 </div>
                 <div class='footer-text mb-25'>
@@ -98,7 +100,7 @@ function Footer() {
                   </p>
                 </div>
                 <div class='subscribe-form'>
-                  <form action='#'>
+                  <form action='/#'>
                     <input type='text' placeholder='Email Address' />
                     <button>
                       <i class='fa fa-telegram fa-5x'></i>
@@ -125,19 +127,19 @@ function Footer() {
               <div class='footer-menu'>
                 <ul>
                   <li>
-                    <a href='#'>Home</a>
+                    <a href='/#'>Home</a>
                   </li>
                   <li>
-                    <a href='#'>Terms</a>
+                    <a href='/#'>Terms</a>
                   </li>
                   <li>
-                    <a href='#'>Privacy</a>
+                    <a href='/#'>Privacy</a>
                   </li>
                   <li>
-                    <a href='#'>Policy</a>
+                    <a href='/#'>Policy</a>
                   </li>
                   <li>
-                    <a href='#'>Contact</a>
+                    <a href='/#'>Contact</a>
                   </li>
                 </ul>
               </div>
