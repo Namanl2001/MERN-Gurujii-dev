@@ -63,3 +63,30 @@ html {
 .dropdown-item:hover {
   cursor: pointer;
 }
+
+.formRoot {
+  display: flex;
+}
+
+.modal-content {
+  position: absolute;
+  width: 850px;
+  margin-left: -175px;
+}
+.form-control {
+  margin-bottom: 8px;
+}
+
+.form-child-left {
+  width: 467px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}

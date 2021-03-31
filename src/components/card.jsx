@@ -25,7 +25,7 @@ class cards extends Component {
             {this.props.user.class2} {this.props.user.class3}{' '}
             {this.props.user.class4} )
           </Card.Subtitle>
-
+          {this.props.user.tutor}
           <div style={{ fontSize: 25 }}>
             <StarRatingComponent
               name='rate2'
