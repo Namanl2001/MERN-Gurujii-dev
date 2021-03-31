@@ -68,7 +68,7 @@ function Footer() {
             <div class='col-xl-4 col-lg-4 col-md-6 mb-30'>
               <div class='footer-widget'>
                 <div class='footer-widget-heading'>
-                  <br></br>
+                  <br />
                   <h3>Useful Links</h3>
                 </div>
                 <ul>
@@ -90,7 +90,7 @@ function Footer() {
             <div class='col-xl-4 col-lg-4 col-md-6 mb-50'>
               <div class='footer-widget'>
                 <div class='footer-widget-heading'>
-                  <br></br>
+                  <br />
                   <h3>Subscribe</h3>
                 </div>
                 <div class='footer-text mb-25'>
