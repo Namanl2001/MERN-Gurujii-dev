@@ -55,6 +55,13 @@ body {
 	font-size: 46px;
 	display: inline-block;
 	margin-top: 13px;
+
+}
+.auth .github {
+	margin-left: 1vw;
+	font-size: 2em;
+	color: white;
+
 }
 .myalert {
     color: #155724;
