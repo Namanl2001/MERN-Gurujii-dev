@@ -53,7 +53,7 @@ const steps = [
   },
   {
     id: 'teacher',
-    message: 'Ok Sir, you can login with your google account',
+    message: 'Ok Sir/Madam, you can login with your google account',
     trigger: 'teacher2',
   },
 
