@@ -64,9 +64,6 @@ class home extends Component {
             >
               <Row>{this.List()}</Row>
             </Container>
-            <div className='bg-dark py-1 text-center text-white'>
-              <h2>­&#169; Some rights reserved @lakhwaniJii</h2>
-            </div>
             <ScrollToTop />
           </div>
         )}
