@@ -64,8 +64,7 @@ We have used proxy so all the requests made to backend from frontend will be ser
 - This project uses yarn to install the dependencies. Don't use npm install.
 
 - To run the app locally, if you do not want to use the database at all, comment out the lines that reference the `backend/config.js` file:
-	- Lines 10, 11, 43 of `backend/server.js` 
-	- Lines 5, 7, 20, 23 of `backend/server.js`
+	- Lines 5, 7, 10, 11, 20, 23, 43 of `backend/server.js` 
 	- Line 3 of `backend/controllers/user.controller.js`
 
  - For security reasons we have made the MongoDb URI secure, by not adding a hardcoded username and password. For development purpose, you can install, MongoDB locally or use the  online version. Also create your own `backend/config.js` file with proper credentials, following the format given in `backend.config.example/js`. 
