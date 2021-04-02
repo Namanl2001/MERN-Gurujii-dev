@@ -17,6 +17,7 @@ const defaultState = {
   users: {}, // It should be empty during store init
   pindata: {},
   subjdata: {},
+  tutordata: {},
   isDataInitialized: false, // You can add additional property to denote, that data is not fetched for the first time
   subject: 'All',
   class: 'All',
@@ -36,6 +37,7 @@ function rootReducer(state = defaultState, action) {
         users: action.all.data,
         pindata: action.all.data,
         subjdata: action.all.data,
+        tutdata: action.all.data,
         isDataInitialized: true,
       };
 
@@ -53,6 +55,7 @@ function rootReducer(state = defaultState, action) {
         pindata: state.all,
         subjdata: state.all,
         subject: 'All',
+        tutor: 'All',
         class: 'All',
       };
 
@@ -64,6 +67,7 @@ function rootReducer(state = defaultState, action) {
         subjdata: newArray0,
         users: newArray0,
         subject: 'All',
+        tutor: 'All',
         class: 'All',
       };
     case 'ALLSUB':
@@ -72,6 +76,7 @@ function rootReducer(state = defaultState, action) {
         users: state.pindata,
         subjdata: state.pindata,
         subject: 'All',
+        tutor: 'All',
         class: 'All',
       };
     case 'PHY':
@@ -83,6 +88,7 @@ function rootReducer(state = defaultState, action) {
         subjdata: newArray1,
         users: newArray1,
         subject: 'Physics',
+        tutor: 'All',
         class: 'All',
       };
     case 'CHE':
@@ -94,6 +100,7 @@ function rootReducer(state = defaultState, action) {
         subjdata: newArray2,
         users: newArray2,
         subject: 'Chemistry',
+        tutor: 'All',
         class: 'All',
       };
     case 'MAT':
@@ -105,8 +112,44 @@ function rootReducer(state = defaultState, action) {
         subjdata: newArray3,
         users: newArray3,
         subject: 'Maths',
+        tutor: 'All',
         class: 'All',
       };
+    //=============================================================================
+    case 'ALLTUT':
+        return {
+          ...state,
+          users: state.pindata,
+          tutdata: state.pindata,
+          subject: 'All',
+          tutor: 'All',
+        };
+    case 'HOME':
+        const newArray8 = state.pindata.filter(
+            user => user.tutor === 'Home Tutor'
+        );
+        return {
+            ...state,
+            subjdata: newArray8,
+            users: newArray8,
+            tutor: 'Home',
+            subject: 'All',
+            class: 'All',
+        };
+    case 'EXE':
+        const newArray9 = state.pindata.filter(
+            user => user.tutor === 'External Tutor'
+        );
+        return {
+            ...state,
+            subjdata: newArray9,
+            users: newArray9,
+            tutor: 'External',
+            subject: 'All',
+            class: 'All',
+        };
+    
+    //===================================================================================
 
     case 'ALLCLS':
       return {
