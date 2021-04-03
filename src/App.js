@@ -7,9 +7,9 @@ import './App.css';
 import Board from './board.jpg';
 import Footer from './components/Footer';
 import { ThemeProvider } from 'styled-components';
-import { useDarkMode } from './components/useDarkMode';
+import { useDarkMode } from './components/themes/useDarkMode';
 import Toggle from './components/Toggle';
-import { lightTheme, darkTheme } from './components/themes';
+import { lightTheme, darkTheme } from './components/themes/theme';
 
 function App() {
   const [theme, toggleTheme] = useDarkMode();
