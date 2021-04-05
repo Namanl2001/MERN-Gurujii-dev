@@ -116,12 +116,15 @@ function rootReducer(state = defaultState, action) {
       };
 
     case 'C9':
+    case 'C10':
+    case 'C11':
+    case 'C12':
       const newArray4 = state.subjdata.filter(user => {
         return (
-          user.class1 == '9' ||
-          user.class2 == '9' ||
-          user.class3 == '9' ||
-          user.class4 == '9'
+          user.class1.toString() === action.type.slice(1) ||
+          user.class2.toString() === action.type.slice(1) ||
+          user.class3.toString() === action.type.slice(1) ||
+          user.class4.toString() === action.type.slice(1)
         );
       });
       return {
