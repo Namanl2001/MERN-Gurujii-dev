@@ -352,3 +352,16 @@ ul {
   font-size: 14px;
   color: #878787;
 }
+.contct {
+  justify-content: center;
+  padding: 25px;
+  justify-items: center;
+}
+#contact-form {
+  width: 434px;
+  border: 2px black solid;
+  padding: 26px;
+}
+.contct h1 {
+  text-align: center;
+}
