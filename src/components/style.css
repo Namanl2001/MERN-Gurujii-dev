@@ -356,12 +356,34 @@ ul {
   justify-content: center;
   padding: 25px;
   justify-items: center;
+  box-shadow: 5px 5px #636363 20px;
 }
 #contact-form {
   width: 434px;
-  border: 2px black solid;
-  padding: 26px;
+  border: 1px black solid;
+  border-radius: 0px;
+  padding: 40px;
+  justify-items: center;
 }
 .contct h1 {
   text-align: center;
+  margin-bottom: 50px;
+}
+.contct #form-submit {
+  margin-left: 28%;
+  width: 160px;
+  height: 50px;
+  border-radius: 5px;
+  margin-top: 9px;
+  cursor: pointer;
+  color: white;
+  background-color: #5855e2;
+  margin-bottom: 0px;
+}
+.contct textarea {
+  height: 90px;
+  margin-bottom: 20px;
+}
+.contct input {
+  margin-bottom: 20px;
 }
