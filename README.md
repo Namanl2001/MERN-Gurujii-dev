@@ -39,7 +39,8 @@ $ git clone https://github.com/your-username/MERN-Gurujii-dev.git
 $ cd MERN-Gurujii-dev
 
 # Install dependencies
-$ yarn dep
+$ yarn dep0
+$ yarn dep1
 
 # Run website
 $ yarn dev
