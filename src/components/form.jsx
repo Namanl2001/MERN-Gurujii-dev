@@ -9,6 +9,7 @@ class form extends Component {
     title: '',
     userName: this.props.currentUser,
     subject: '',
+    tutor: '',
     coachingName: '',
     qualification: '',
     about: '',
@@ -37,6 +38,7 @@ class form extends Component {
         title: this.state.title,
         userName: this.state.userName,
         subject: this.state.subject,
+        tutor: this.state.tutor,
         coachingName: this.state.coachingName,
         qualification: this.state.qualification,
         about: this.state.about,
@@ -134,7 +136,26 @@ class form extends Component {
                     </Form.CustomSelect>
                   </Col>
                 </Row>
-
+                <Row>
+                  <Form.LabelCol col='sm-3' htmlFor='tutor'>
+                    Tutor
+                  </Form.LabelCol>
+                  <Col col='sm-8'>
+                    <Form.CustomSelect
+                      sm
+                      mb='3'
+                      id='tutor'
+                      onChange={this.handleChange}
+                      value={this.state.tutor}
+                    >
+                      <option defaultValue hidden>
+                        Open this to select tutor type
+                      </option>
+                      <option value='Home Tutor'>Home Tutor</option>
+                      <option value='External Tutor'>External Tutor</option>
+                    </Form.CustomSelect>
+                  </Col>
+                </Row>
                 <Row>
                   <Form.LabelCol col='sm-3' htmlFor='coachingName'>
                     Coaching

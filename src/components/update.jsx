@@ -9,6 +9,7 @@ class update extends Component {
     email: this.props.data.email,
     title: this.props.data.title,
     userName: this.props.data.username,
+    tutor: this.props.data.tutor,
     subject: this.props.data.subject,
     coachingName: this.props.data.coaching,
     qualification: this.props.data.qualification,
@@ -37,6 +38,7 @@ class update extends Component {
         title: this.state.title,
         userName: this.state.userName,
         subject: this.state.subject,
+        tutor: this.state.tutor,
         coachingName: this.state.coachingName,
         qualification: this.state.qualification,
         about: this.state.about,
@@ -136,7 +138,23 @@ class update extends Component {
                     </Form.CustomSelect>
                   </Col>
                 </Row>
-
+                <Row>
+                  <Form.LabelCol col='sm-3' htmlFor='tutor'>
+                    Tutor
+                  </Form.LabelCol>
+                  <Col col='sm-8'>
+                    <Form.CustomSelect
+                      sm
+                      mb='3'
+                      id='tutor'
+                      onChange={this.handleChange}
+                      value={this.state.tutor}
+                    >
+                      <option value='Home Tutor'>Home Tutor</option>
+                      <option value='External Tutor'>External Tutor</option>
+                    </Form.CustomSelect>
+                  </Col>
+                </Row>
                 <Row>
                   <Form.LabelCol col='sm-3' htmlFor='coachingName'>
                     Coaching
