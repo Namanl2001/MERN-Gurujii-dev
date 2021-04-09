@@ -66,6 +66,18 @@ function rootReducer(state = defaultState, action) {
         subject: 'All',
         class: 'All',
       };
+    case 'USERS':
+      const newArray8 = state.all.filter(
+        user => user.username == action.username
+      );
+      return {
+        ...state,
+        pindata: newArray8,
+        subjdata: newArray8,
+        users: newArray8,
+        subject: 'All',
+        class: 'All',
+      };
     case 'ALLSUB':
       return {
         ...state,
