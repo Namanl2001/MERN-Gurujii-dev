@@ -94,7 +94,9 @@ class form extends Component {
                       onChange={this.handleChange}
                       value={this.state.title}
                     >
-                      <option defaultValue>Open this to select title</option>
+                      <option defaultValue hidden>
+                        Open this to select title
+                      </option>
                       <option value='Mr.'>Mr.</option>
                       <option value='Mrs.'>Mrs.</option>
                       <option value='Ms.'>Ms.</option>
@@ -129,7 +131,9 @@ class form extends Component {
                       onChange={this.handleChange}
                       value={this.state.subject}
                     >
-                      <option defaultValue>Open this to select subject</option>
+                      <option defaultValue hidden>
+                        Open this to select subject
+                      </option>
                       <option value='physics'>Physics</option>
                       <option value='chemistry'>Chemistry</option>
                       <option value='mathematics'>Mathematics</option>

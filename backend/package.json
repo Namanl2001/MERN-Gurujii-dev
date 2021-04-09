@@ -19,7 +19,6 @@
     "helmet": "^4.4.1",
     "mongoose": "^5.9.20",
     "nodemailer": "^6.4.11",
-    "nodemon": "^2.0.7",
     "react-redux": "^7.2.0",
     "xss-clean": "^0.1.1"
   },
