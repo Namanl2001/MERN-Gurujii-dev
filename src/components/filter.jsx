@@ -31,7 +31,7 @@ class filter extends Component {
             justifyContent: 'center',
           }}
         >
-          <Form inline my='2 lg-0'>
+          <Form inline my='2 lg-0' onSubmit={this.handleSubmit}>
             <Row>
               <Col>
                 <Form.Input
@@ -40,16 +40,12 @@ class filter extends Component {
                   value={this.state.content}
                   placeholder='Filter by Pin-Code'
                   mr='sm-8'
+                  min='111111'
+                  max='999999'
                 />
               </Col>
               <Col>
-                <Button
-                  outline
-                  success
-                  mr='sm-0'
-                  my='sm-0'
-                  onClick={this.handleSubmit}
-                >
+                <Button outline success type='submit' mr='sm-0' my='sm-0'>
                   Search
                 </Button>
               </Col>

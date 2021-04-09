@@ -21,6 +21,11 @@ const userSchema = new mongoose.Schema({
     trim: true,
     required: true,
   },
+  tutor: {
+    type: String,
+    trim: true,
+    required: true,
+  },
   coaching: {
     type: String,
     trim: true,
