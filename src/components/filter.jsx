@@ -1,58 +1,66 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import './style.css';
 import { Dropdown, Form, Button, Row, Col } from 'bootstrap-4-react';
 
 class filter extends Component {
   state = {
     content: '',
+    name: '',
   };
 
-  handleChange = e => {
+  handleNameChange = e => {
+    this.setState({
+      name: e.target.value,
+    });
+  };
+  handlePinChange = e => {
     this.setState({
       content: e.target.value,
     });
   };
 
-  handleSubmit = e => {
+  handleSubmitName = e => {
+    e.preventDefault();
+    this.props.username(this.state.name);
+  };
+
+  handleSubmitPIN = e => {
     e.preventDefault();
     this.props.pin(this.state.content);
-    this.setState({ content: '' });
   };
 
   render() {
     return (
       <div>
-        <div
-          style={{
-            // marginTop: "2em",
-            textAlign: 'center',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <Form inline my='2 lg-0' onSubmit={this.handleSubmit}>
-            <Row>
-              <Col>
-                <Form.Input
-                  type='number'
-                  onChange={this.handleChange}
-                  value={this.state.content}
-                  placeholder='Filter by Pin-Code'
-                  mr='sm-8'
-                  min='111111'
-                  max='999999'
-                />
-              </Col>
-              <Col>
-                <Button outline success type='submit' mr='sm-0' my='sm-0'>
-                  Search
-                </Button>
-              </Col>
-            </Row>
-          </Form>
+        <div>
+          <form onSubmit={this.handleSubmitName} className='form2'>
+            <input
+              class='textbox'
+              type='string'
+              onChange={this.handleNameChange}
+              value={this.state.name}
+              placeholder='Search by Name'
+              mr='sm-9'
+            />
+            <input title='Search' value='' type='submit' class='button' />
+          </form>
+          <form onSubmit={this.handleSubmitPIN} className='form1'>
+            <input
+              class='textbox'
+              type='number'
+              onChange={this.handlePinChange}
+              value={this.state.content}
+              placeholder='Search by Pin-Code'
+              mr='sm-9'
+              min='111111'
+              max='999999'
+            />
+            <input title='Search' value='' type='submit' class='button' />
+          </form>
         </div>
-
+        <br />
+        <br />
         <div
           style={{
             marginTop: '2em',
@@ -118,6 +126,7 @@ const mapStatetoProps = state => {
 const mapDispatchtoProps = dispatch => {
   return {
     pin: pin => dispatch({ type: 'PIN', pin: pin }),
+    username: username => dispatch({ type: 'USERS', username: username }),
 
     allsub: () => dispatch({ type: 'ALLSUB' }),
     phy: () => dispatch({ type: 'PHY' }),
