@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import './style.css';
 import ReadMoreReact from 'read-more-react';
 import StarRatingComponent from 'react-star-rating-component';
 
@@ -72,15 +73,7 @@ class cards extends Component {
                 <br />
                 {this.props.user.pin}
                 <br />
-                <p
-                  style={{
-                    marginTop: '70%',
-                    textAlign: 'center',
-                    fontSize: '15px',
-                  }}
-                >
-                  Contact: {this.props.user.phone}
-                </p>
+                <p className='cont'>Contact: {this.props.user.phone}</p>
               </div>
             </div>
           </div>
