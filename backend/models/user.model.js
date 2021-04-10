@@ -54,6 +54,7 @@ const userSchema = new mongoose.Schema({
     max: 12,
     trim: true,
   },
+
   class3: {
     type: Number,
     min: 9,
