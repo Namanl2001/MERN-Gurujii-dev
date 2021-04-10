@@ -59,7 +59,8 @@ class form extends Component {
               `Congratulations!! ${this.state.userName} Your profile added successfully to our database `
             )
           ) {
-          } else window.location.reload();
+            window.location.reload();
+          }
         }
       })
       .catch(function (error) {

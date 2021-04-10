@@ -54,11 +54,12 @@ class update extends Component {
       .then((response) => {
         if (response.status === 200) {
           if (
-            alert(
+            !alert(
               `Congratulations!! ${this.state.userName} Your profile Updated Successfully `
             )
           ) {
-          } else window.location.reload();
+            window.location.reload();
+          }
         }
       })
       .catch(function (error) {
