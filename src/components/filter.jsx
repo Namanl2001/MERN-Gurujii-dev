@@ -33,7 +33,7 @@ class filter extends Component {
         >
           <Form inline my='2 lg-0' onSubmit={this.handleSubmit}>
             <Row>
-              <Col>
+              <Col style={{ paddingRight: '50px', paddingLeft: '45px' }}>
                 <Form.Input
                   type='number'
                   onChange={this.handleChange}
@@ -42,6 +42,7 @@ class filter extends Component {
                   mr='sm-8'
                   min='111111'
                   max='999999'
+                  style={{ width: '170%' }}
                 />
               </Col>
               <Col>
