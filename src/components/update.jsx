@@ -98,6 +98,7 @@ class update extends Component {
                       </option>
                       <option value='Mr.'>Mr.</option>
                       <option value='Mrs.'>Mrs.</option>
+                      <option value='Ms.'>Ms.</option>
                     </Form.CustomSelect>
                   </Col>
                 </Row>
