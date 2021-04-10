@@ -352,3 +352,7 @@ ul {
   font-size: 14px;
   color: #878787;
 }
+.col {
+  padding-right: 50px;
+  padding-left: 45px;
+}
