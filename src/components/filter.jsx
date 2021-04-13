@@ -60,12 +60,12 @@ class filter extends Component {
             <input title='Search' value='' type='submit' className='button' />
           </form>
         </div>
+        <br />
         <div
           style={{
             marginTop: '2em',
             textAlign: 'center',
             display: 'flex',
-            flexDirection: 'row',
             alignItems: 'center',
             justifyContent: 'center',
           }}

@@ -36,7 +36,7 @@ class form extends Component {
       .post('/users/add', {
         email: this.props.emailid,
         title: this.state.title,
-        userName: this.state.userName.toLowerCase(),
+        userName: this.state.userName,
         subject: this.state.subject,
         tutor: this.state.tutor,
         coachingName: this.state.coachingName,

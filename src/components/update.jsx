@@ -8,7 +8,7 @@ class update extends Component {
   state = {
     email: this.props.data.email,
     title: this.props.data.title,
-    userName: this.props.data.username.toLowerCase(),
+    userName: this.props.data.username,
     tutor: this.props.data.tutor,
     subject: this.props.data.subject,
     coachingName: this.props.data.coaching,

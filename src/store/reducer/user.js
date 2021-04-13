@@ -176,7 +176,7 @@ function rootReducer(state = defaultState, action) {
       };
     case 'USERS':
       const newArray8 = state.all.filter(
-        user => user.username === action.username
+        user => user.username.toLowerCase() === action.username.toLowerCase()
       );
       return {
         ...state,
