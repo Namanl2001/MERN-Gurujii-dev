@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './style.css';
-import { Dropdown, Form, Button, Row, Col } from 'bootstrap-4-react';
+import { Dropdown, Button } from 'bootstrap-4-react';
 
 class filter extends Component {
   state = {
@@ -23,7 +23,7 @@ class filter extends Component {
 
   handleSubmitName = e => {
     e.preventDefault();
-    this.props.username(this.state.name);
+    this.props.username(this.state.name.toLowerCase());
   };
 
   handleSubmitPIN = e => {
@@ -44,7 +44,7 @@ class filter extends Component {
               placeholder='Search by Name'
               mr='sm-9'
             />
-            <input title='Search' value='' type='submit' class='button' />
+            <input title='Search' value='' type='submit' className='button' />
           </form>
           <form onSubmit={this.handleSubmitPIN} className='form1'>
             <input
@@ -57,16 +57,15 @@ class filter extends Component {
               min='111111'
               max='999999'
             />
-            <input title='Search' value='' type='submit' class='button' />
+            <input title='Search' value='' type='submit' className='button' />
           </form>
         </div>
-        <br />
-        <br />
         <div
           style={{
             marginTop: '2em',
             textAlign: 'center',
             display: 'flex',
+            flexDirection: 'row',
             alignItems: 'center',
             justifyContent: 'center',
           }}

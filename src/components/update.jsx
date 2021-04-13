@@ -8,7 +8,7 @@ class update extends Component {
   state = {
     email: this.props.data.email,
     title: this.props.data.title,
-    userName: this.props.data.username,
+    userName: this.props.data.username.toLowerCase(),
     tutor: this.props.data.tutor,
     subject: this.props.data.subject,
     coachingName: this.props.data.coaching,
@@ -52,10 +52,10 @@ class update extends Component {
         phone: this.state.phone,
       })
       .then(response => {
-        if (response.status == 200) {
+        if (response.status === 200) {
           if (
             !alert(
-              `Congratulations!! ${this.state.userName} Your profile Updated Successfully `
+              `Congratulations!! ${this.state.userName.toUpperCase()} Your profile Updated Successfully `
             )
           ) {
             window.location.reload();

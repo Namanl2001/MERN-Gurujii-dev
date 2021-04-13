@@ -211,9 +211,10 @@ html {
 
 .flip-box-header {
   font-size: 32px;
+}
+.head {
   text-transform: capitalize;
 }
-
 .flip-box p {
   font-size: 20px;
   line-height: 1.5em;
