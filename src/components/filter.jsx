@@ -23,7 +23,7 @@ class filter extends Component {
 
   handleSubmitName = e => {
     e.preventDefault();
-    this.props.username(this.state.name.toLowerCase());
+    this.props.username(this.state.name);
   };
 
   handleSubmitPIN = e => {
