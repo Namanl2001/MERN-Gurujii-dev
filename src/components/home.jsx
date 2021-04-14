@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import Card from './card';
 import Filter from './filter';
 import { Container, Row } from 'bootstrap-4-react';
-
+import { Progress } from 'bootstrap-4-react';
 import ScrollToTop from './scrollToTop';
 
 class home extends Component {
@@ -45,7 +45,13 @@ class home extends Component {
   render() {
     return (
       <>
-        {!this.props.isDataInitialized && <div>Initializing data...</div>}
+        {!this.props.isDataInitialized && (
+          <Progress mb='4' w='25%'>
+            <Progress.Bar striped animated min='0' max='100' mx='auto' now='50'>
+              Initializing data
+            </Progress.Bar>
+          </Progress>
+        )}
         {this.props.isDataInitialized && (
           <div>
             <div className='text-center'>
