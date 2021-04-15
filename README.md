@@ -13,7 +13,7 @@
 </p>
 
 <p>
- We have created this platform to help students find the best tution teacher in their city quite easily.You just have to enter the pincode of your city and we will show you the best teachers in your locality along with their teaching styles and their qualification from which you can select the best teacher for yourself.
+ We have created this platform to help students find the best tution teachers in their city quite easily.You just have to enter the pincode of your city and we will show you the best teachers in your locality along with their teaching styles and their qualification from which you can select the best teacher for yourself.
 </p>
 
 <h2>Technology Stack <a><img src="https://github.com/Samridhi-98/Images/blob/master/Images/atom.svg" width="4%"></a></h2>
