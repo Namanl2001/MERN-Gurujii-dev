@@ -359,31 +359,60 @@ ul {
   box-shadow: 5px 5px #636363 20px;
 }
 #contact-form {
-  width: 434px;
   border: 1px black solid;
   border-radius: 0px;
-  padding: 40px;
-  justify-items: center;
 }
 .contct h1 {
   text-align: center;
-  margin-bottom: 50px;
+  color: white;
 }
 .contct #form-submit {
   margin-left: 28%;
-  width: 160px;
+  width: 180px;
   height: 50px;
-  border-radius: 5px;
+  border-radius: 25px;
   margin-top: 9px;
   cursor: pointer;
   color: white;
-  background-color: #5855e2;
+  background-color: rgb(160, 2, 160);
   margin-bottom: 0px;
+  font-size: 22px;
+  font-family: cursive;
 }
 .contct textarea {
   height: 90px;
   margin-bottom: 20px;
+  border-bottom: 2px #bfb4b4 solid;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  /* border-bottom:none; */
+  outline: none;
+  width: 100%;
 }
-.contct input {
-  margin-bottom: 20px;
+
+#sec2 input {
+  margin-bottom: 25px;
+  border-bottom: 2px #bfb4b4 solid;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  outline: none;
+  width: 100%;
+}
+.cont {
+  margin-top: 70%;
+  text-align: center;
+}
+#sec1 {
+  width: 434px;
+  padding: 40px 40px 0px 40px;
+  justify-items: center;
+  background-image: url('https://freefrontend.com/assets/img/css-background-patterns/simple-pattern-with-css3.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#sec2 {
+  width: 434px;
+  padding: 40px;
 }
