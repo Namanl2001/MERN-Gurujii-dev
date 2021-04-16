@@ -42,6 +42,7 @@ class filter extends Component {
                   mr='sm-8'
                   min='111111'
                   max='999999'
+                  style={{ width: '170%' }}
                 />
               </Col>
               <Col>
