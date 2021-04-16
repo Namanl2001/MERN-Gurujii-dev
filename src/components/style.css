@@ -371,3 +371,7 @@ ul {
 .flip-box-back {
   min-height: 490px;
 }
+.cont {
+  margin-top: 70%;
+  text-align: center;
+}

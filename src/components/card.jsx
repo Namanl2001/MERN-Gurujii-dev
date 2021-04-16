@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './style.css';
 import ReadMoreReact from 'read-more-react';
 import StarRatingComponent from 'react-star-rating-component';
 
@@ -15,7 +16,11 @@ class cards extends Component {
                 backgroundImage: `url(https://i.pinimg.com/originals/7c/05/50/7c05508149920eba2d934c19ff83cbba.jpg)`,
               }}
             >
-              <img className='card-img-top' src={imageUrl} alt='Card image cap' />
+              <img
+                className='card-img-top'
+                src={imageUrl}
+                alt='Card image cap'
+              />
 
               <div className='front-face-card inner color-white'>
                 <h3
@@ -32,8 +37,8 @@ class cards extends Component {
                   {this.props.user.subject} <br />
                 </h3>
                 <p>
-                  ( {this.props.user.class1}, {this.props.user.class2},{' '}
-                  {this.props.user.class3}, {this.props.user.class4} )
+                  ( {this.props.user.class1} {this.props.user.class2}{' '}
+                  {this.props.user.class3} {this.props.user.class4} )
                 </p>
                 <img
                   src='https://s25.postimg.cc/65hsttv9b/cta-arrow.png'
@@ -73,9 +78,9 @@ class cards extends Component {
                 <br />
                 Address: {this.props.user.address} , {this.props.user.city}{' '}
                 <br />
-                Pin Code:{this.props.user.pin}
+                {this.props.user.pin}
                 <br />
-                Contact: {this.props.user.phone}
+                <p className='cont'>Contact: {this.props.user.phone}</p>
               </div>
             </div>
           </div>
