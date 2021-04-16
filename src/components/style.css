@@ -356,3 +356,18 @@ ul {
   padding-right: 50px;
   padding-left: 45px;
 }
+.front-face-card {
+  top: 74% !important;
+}
+.card-img-top {
+  border-radius: 10px;
+  max-width: 70%;
+  margin: 26px 49px;
+}
+.flip-box-img {
+  margin-top: 0 !important;
+}
+.flip-box-front,
+.flip-box-back {
+  min-height: 490px;
+}

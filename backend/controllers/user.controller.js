@@ -1,11 +1,27 @@
 let User = require('../models/user.model');
 var nodemailer = require('nodemailer');
 const { pass } = require('../config');
+var multer = require('multer');
+
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, './public/uploads');
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + '-' + file.originalname);
+  },
+});
+
+var upload = multer({ storage }).single('file');
 
 // Fetch All Users from the DB
 const fetchAllUsers = (req, res) => {
   User.find()
-    .then(users => res.json(users))
+    .then(users => {
+      // console.log(users);
+      res.json(users);
+    })
+
     .catch(err => res.status(400).json('Error: ' + err));
 };
 
@@ -18,34 +34,45 @@ const fetchUserByEmail = (req, res) => {
 
 // Add new user document to db
 const addNewUser = (req, res) => {
-  const newUser = new User({
-    email: req.body.email,
-    title: req.body.title,
-    username: req.body.userName,
-    subject: req.body.subject,
-    tutor: req.body.tutor,
-    coaching: req.body.coachingName,
-    qualification: req.body.qualification,
-    about: req.body.about,
-    class1: req.body.c1,
-    class2: req.body.c2,
-    class3: req.body.c3,
-    class4: req.body.c4,
-    address: req.body.address,
-    city: req.body.city,
-    pin: req.body.pin,
-    phone: req.body.phone,
-  });
+  console.log('this function works');
+  upload(req, res, function (err) {
+    if (err instanceof multer.MulterError) {
+      return res.status(500).json('there is some error');
+    } else if (err) {
+      return res.status(500).json(err);
+    }
+    console.log(req.body);
+    console.log(req.file.filename);
 
-  newUser
-    .save()
-    .then(() => {
-      res.json('User added!');
-    })
-    .catch(err => {
-      console.log(err);
-      res.status(400).json('Error: ' + err);
+    const newUser = new User({
+      email: req.body.email,
+      title: req.body.title,
+      username: req.body.userName,
+      subject: req.body.subject,
+      tutor: req.body.tutor,
+      coaching: req.body.coachingName,
+      qualification: req.body.qualification,
+      about: req.body.about,
+      class1: req.body.c1,
+      class2: req.body.c2,
+      class3: req.body.c3,
+      class4: req.body.c4,
+      address: req.body.address,
+      city: req.body.city,
+      pin: req.body.pin,
+      phone: req.body.phone,
+      profilePic: req.file.filename,
     });
+
+    newUser.save(function (err) {
+      if (err) {
+        console.log('error occured');
+        return res.status(400).json('Error: ' + err);
+      }
+      console.log('user added');
+      return res.status(200).send(req.file);
+    });
+  });
 };
 
 // Update existing user document to the db
