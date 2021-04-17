@@ -40,7 +40,7 @@
     "server": "cd backend && yarn start",
     "dev": "concurrently \"yarn server\" \"yarn client\"",
     "check-formatting": "prettier --check '**/*.{js,jsx,css,html}'",
-    "check-linting":"eslint '**/*.{js,jsx}'"
+    "check-linting": "eslint '**/*.{js,jsx}'"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -59,7 +59,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint-staged"
+      "pre-commit": "pretty-quick --staged && yarn lint-staged"
     }
   },
   "lint-staged": {
