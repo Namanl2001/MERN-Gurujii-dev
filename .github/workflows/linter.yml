@@ -32,8 +32,5 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile
 
-      - name: Format Code
-        run: pretty-quick --staged
-
       - name: Check linting
         run: yarn lint-staged
