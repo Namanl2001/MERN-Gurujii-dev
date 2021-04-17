@@ -6,7 +6,7 @@ import StarRatingComponent from 'react-star-rating-component';
 class cards extends Component {
   render() {
     return (
-        <div className='box-container'>
+              <div className='box-container'>
         <div className='box-item'>
           <div className='flip-box'>
             <div
