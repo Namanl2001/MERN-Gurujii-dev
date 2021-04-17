@@ -2,7 +2,7 @@ name: Run linters
 
 on:
   push:
-    branches: [ master ]
+    branches: [ workflow ]
   pull_request:
     branches: [ master ]
 
