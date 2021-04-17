@@ -33,8 +33,9 @@ class navbar extends Component {
       .then(response => {
         if (response.status == 200) {
           axios.get(`/users/sendMail/${this.props.emailid}/2`);
-          if (alert(`Your profile deleted successfully.....!! `)) {
-          } else window.location.reload();
+          if (!alert(`Your profile deleted successfully.....!! `)) {
+            window.location.reload();
+          }
         }
       })
       .catch(function (error) {
