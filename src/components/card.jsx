@@ -1,58 +1,83 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import './style.css';
 import ReadMoreReact from 'read-more-react';
 import StarRatingComponent from 'react-star-rating-component';
-import { Card } from 'bootstrap-4-react';
-import Photo from './photo.png';
-
-const img_src = Photo;
 
 class cards extends Component {
   render() {
     return (
-      <Card
-        style={{ width: '21em', marginLeft: '2em', marginBottom: '3em' }}
-        className='card'
-      >
-        <Card.Header>{this.props.user.coaching}</Card.Header>
-        {/* <Card.Image src={img_src} alt={"image"} /> */}
-        <Card.Body>
-          <Card.Title>
-            {this.props.user.title} {this.props.user.username}
-          </Card.Title>
-          <Card.Subtitle mb='2' text='muted'>
-            {this.props.user.subject} ( {this.props.user.class1}{' '}
-            {this.props.user.class2} {this.props.user.class3}{' '}
-            {this.props.user.class4} )
-          </Card.Subtitle>
-          {this.props.user.tutor}
-          <div style={{ fontSize: 25 }}>
-            <StarRatingComponent
-              name='rate2'
-              editing={false}
-              starCount={5}
-              value={4}
-            />
+      <div className='box-container'>
+        <div className='box-item'>
+          <div className='flip-box'>
+            <div
+              className='flip-box-front text-center'
+              style={{
+                backgroundImage: `url(https://i.pinimg.com/originals/7c/05/50/7c05508149920eba2d934c19ff83cbba.jpg)`,
+              }}
+            >
+              <div className='inner color-white'>
+                <br />
+                <br />
+                <h3
+                  className='flip-box-header'
+                  style={{ textTransform: 'uppercase' }}
+                >
+                  {this.props.user.coaching}
+                </h3>
+                <br />
+                <h5>
+                  {this.props.user.title} {this.props.user.username}
+                </h5>
+                <h3 className='flip-box-header'>
+                  {this.props.user.subject} <br />
+                </h3>
+                <p>
+                  ( {this.props.user.class1} {this.props.user.class2}{' '}
+                  {this.props.user.class3} {this.props.user.class4} )
+                </p>
+                <img
+                  src='https://s25.postimg.cc/65hsttv9b/cta-arrow.png'
+                  alt=''
+                  className='flip-box-img'
+                />
+              </div>
+            </div>
+            <div
+              className='flip-box-back text-center'
+              style={{
+                backgroundImage: `url(https://i.pinimg.com/736x/5e/e2/db/5ee2db0b6b3098b78812712d137c102d.jpg)`,
+              }}
+            >
+              <div className='inner color-white'>
+                <h4 style={{ marginTop: '50%' }}>{this.props.user.tutor}</h4>
+                <div style={{ fontSize: 25 }}>
+                  <StarRatingComponent
+                    name='rate2'
+                    editing={false}
+                    starCount={5}
+                    value={4}
+                    emptyStarColor={'#FFFFFF'}
+                  />
+                </div>
+                Qualification : {this.props.user.qualification}
+                <ReadMoreReact
+                  text={this.props.user.about}
+                  min='60'
+                  ideal='65'
+                  max='80'
+                  readMoreText='Click! to read more'
+                />
+                <br />
+                Address: {this.props.user.address} , {this.props.user.city}{' '}
+                <br />
+                {this.props.user.pin}
+                <br />
+                <p className='cont'>Contact: {this.props.user.phone}</p>
+              </div>
+            </div>
           </div>
-          <Card.Text>
-            Qualification : {this.props.user.qualification}
-            <ReadMoreReact
-              text={this.props.user.about}
-              min='60'
-              ideal='65'
-              max='80'
-              readMoreText='Click! to read more'
-            />
-          </Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          Address: {this.props.user.address} , {this.props.user.city} ,
-          {this.props.user.pin}
-          <br />
-          Contact: {this.props.user.phone}
-          {/* <Card.Link href="#">Another Link</Card.Link> */}
-        </Card.Footer>
-      </Card>
+        </div>
+      </div>
     );
   }
 }

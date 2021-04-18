@@ -59,7 +59,8 @@ class form extends Component {
               `Congratulations!! ${this.state.userName} Your profile added successfully to our database `
             )
           ) {
-          } else window.location.reload();
+            window.location.reload();
+          }
         }
       })
       .catch(function (error) {
@@ -99,6 +100,7 @@ class form extends Component {
                       </option>
                       <option value='Mr.'>Mr.</option>
                       <option value='Mrs.'>Mrs.</option>
+                      <option value='Ms.'>Ms.</option>
                     </Form.CustomSelect>
                   </Col>
                 </Row>

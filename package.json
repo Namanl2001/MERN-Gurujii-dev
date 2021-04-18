@@ -9,7 +9,7 @@
     "axios": ">=0.21.1",
     "bootstrap-4-react": "0.0.59",
     "bootstrap4": "0.0.1-security",
-    "concurrently": "^6.0.0",
+    "concurrently": "^6.0.1",
     "nodemailer": "^6.4.11",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -32,8 +32,12 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "dep0": "yarn add concurrently",
+    "server-dependencies": "cd backend && yarn install --ignore-engines",
+    "client-dependencies": "yarn install --ignore-engines",
+    "dep1": "concurrently \"yarn server-dependencies\" \"yarn client-dependencies\"",
     "client": "yarn start",
-    "server": "cd backend && npm start",
+    "server": "cd backend && yarn start",
     "dev": "concurrently \"yarn server\" \"yarn client\""
   },
   "eslintConfig": {
@@ -53,13 +57,22 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged"
+      "pre-commit": "pretty-quick --staged && yarn lint-staged"
     }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx}": [
+      "eslint --fix"
+    ]
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-react": "^7.22.0",
     "husky": "4.3.8",
+    "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
     "pretty-quick": "^3.1.0"
   },

@@ -33,7 +33,7 @@ class scrollToTop extends Component {
               scroll.scrollToTop();
             }}
           >
-            <a href='#'>
+            <a href='/#'>
               <FaArrowUp
                 size={24}
                 style={{ fill: 'white', position: 'absolute', top: 7, left: 8 }}

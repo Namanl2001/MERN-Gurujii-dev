@@ -10,26 +10,26 @@ import Footer from './components/Footer';
 function App() {
   return (
     <>
-    <Router>
-      <div className='parallax'>
-        <Navbar />
-        <br />
-        <br />
-        <br />
-        <div className='center'>
-          <img src={Board} alt='' />
+      <Router>
+        <div className='parallax'>
+          <Navbar />
+          <br />
+          <br />
+          <br />
+          <div className='center'>
+            <img src={Board} alt='' />
+          </div>
+          <br />
+          <br />
+          <br />
+          <br />
         </div>
-        <br />
-        <br />
-        <br />
-        <br />
-      </div>
 
-      <br />
-      <Route path='/' exact component={Home} />
-      <ChatBotComponent />
-    </Router>
-    <Footer/>
+        <br />
+        <Route path='/' exact component={Home} />
+        <ChatBotComponent />
+      </Router>
+      <Footer />
     </>
   );
 }
