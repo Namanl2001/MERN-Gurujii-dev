@@ -34,7 +34,8 @@ class navbar extends Component {
         if (response.status == 200) {
           axios.get(`/users/sendMail/${this.props.emailid}/2`);
           if (alert(`Your profile deleted successfully.....!! `)) {
-          } else window.location.reload();
+            window.location.reload();
+          }
         }
       })
       .catch(function (error) {
@@ -240,9 +241,6 @@ class navbar extends Component {
             className='alert alert-success alert-dismissible fade show myalert'
             // style="margin-bottom:0"
           >
-            <button type='button' className='close' data-dismiss='alert'>
-              &times;
-            </button>
             <strong>Great Landing !</strong> Teachers have to signin to make
             profile.
           </div>
