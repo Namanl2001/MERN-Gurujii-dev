@@ -241,9 +241,6 @@ class navbar extends Component {
             className='alert alert-success alert-dismissible fade show myalert'
             // style="margin-bottom:0"
           >
-            <button type='button' className='close' data-dismiss='alert'>
-              &times;
-            </button>
             <strong>Great Landing !</strong> Teachers have to signin to make
             profile.
           </div>
