@@ -129,52 +129,7 @@ function rootReducer(state = defaultState, action) {
       return {
         ...state,
         users: newArray4,
-        class: '9',
-      };
-
-    case 'C10':
-      const newArray5 = state.subjdata.filter(user => {
-        return (
-          user.class1 == '10' ||
-          user.class2 == '10' ||
-          user.class3 == '10' ||
-          user.class4 == '10'
-        );
-      });
-      return {
-        ...state,
-        users: newArray5,
-        class: '10',
-      };
-
-    case 'C11':
-      const newArray6 = state.subjdata.filter(user => {
-        return (
-          user.class1 == '11' ||
-          user.class2 == '11' ||
-          user.class3 == '11' ||
-          user.class4 == '11'
-        );
-      });
-      return {
-        ...state,
-        users: newArray6,
-        class: '11',
-      };
-
-    case 'C12':
-      const newArray7 = state.subjdata.filter(user => {
-        return (
-          user.class1 == '12' ||
-          user.class2 == '12' ||
-          user.class3 == '12' ||
-          user.class4 == '12'
-        );
-      });
-      return {
-        ...state,
-        users: newArray7,
-        class: '12',
+        class: action.type.slice(1),
       };
 
     case 'LOGIN':
