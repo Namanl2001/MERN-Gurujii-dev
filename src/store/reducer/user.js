@@ -56,8 +56,8 @@ function rootReducer(state = defaultState, action) {
         class: 'All',
       };
 
-    case 'PIN':
-      const newArray0 = state.all.filter(user => user.pin === action.pin);
+    case "PIN":
+      const newArray0 = state.all.filter(user => user.pin.toString() === action.pin);
       return {
         ...state,
         pindata: newArray0,
