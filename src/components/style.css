@@ -360,3 +360,26 @@ ul {
   margin-top: 70%;
   text-align: center;
 }
+.error_heading {
+  -webkit-text-stroke: 1px #f8f8f8;
+  text-shadow: 0px 2px 4px #424242;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
+}
+.error_img {
+  width: 45%;
+  margin-left: 27%;
+  margin-top: -6rem;
+  margin-bottom: 0rem;
+}
+@media only screen and (max-width: 900px) {
+  .error_img {
+    margin-top: -3rem;
+    width: 50%;
+  }
+  .error-heading {
+    font-size: 2rem;
+  }
+}
