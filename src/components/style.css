@@ -352,6 +352,7 @@ ul {
   font-size: 14px;
   color: #878787;
 }
+
 .contct {
   justify-content: center;
   padding: 25px;
@@ -399,6 +400,11 @@ ul {
   border-top: none;
   outline: none;
   width: 100%;
+
+.col {
+  padding-right: 50px;
+  padding-left: 45px;
+
 }
 .cont {
   margin-top: 70%;

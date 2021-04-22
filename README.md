@@ -13,7 +13,7 @@
 </p>
 
 <p>
- We have created this platform to help the students find best tution teacher in their city easily.You just have to enter pincode of your city and we will show you best teachers in your locality along with their teaching styles and their qualification from which you can select best teacher for yourself.
+ We have created this platform to help students find the best tution teachers in their city quite easily.You just have to enter the pincode of your city and we will show you the best teachers in your locality along with their teaching styles and their qualification from which you can select the best teacher for yourself.
 </p>
 
 <h2>Technology Stack <a><img src="https://github.com/Samridhi-98/Images/blob/master/Images/atom.svg" width="4%"></a></h2>
@@ -48,7 +48,7 @@ $ yarn dev
 
 <strong> This should launch the website on `localhost:3000`. <strong>
 
-We have used proxy so all the requests made to backend from frontend will be served at
+We have used proxy so all the requests made to the backend from the frontend will be served at
 `localhost:5000` at which our backend is running.
 
 <h2>Note <a><img src="https://github.com/Samridhi-98/Images/blob/master/Images/alarm.svg" width="3%"></a> </h2>
@@ -61,7 +61,7 @@ We have used proxy so all the requests made to backend from frontend will be ser
   - Lines 9, 40 of `backend/server.js`
   - Line 3 of `backend/controllers/user.controller.js`
 
-- For security reasons we have made the MongoDb URI secure, by not adding a hardcoded username and password. For development purpose, you can install, MongoDB locally or use the online version. Also create your own `backend/config.js` file with proper credentials, following the format given in `backend.config.example/js`.
+- For security reasons, we have made the MongoDb URI secure, by not adding a hardcoded username and password. For development purpose, you can install, MongoDB locally or use the online version. Also create your own `backend/config.js` file with proper credentials, following the format given in `backend.config.example/js`.
 - There is a route that sends emails - Line 82 of `backend/controllers/user.controller.js`. Remember to replace the auth credentials with your own before testing the route.
 - Remember not to push any personal data like mongo uri or mail credentials.
 
@@ -96,11 +96,11 @@ Click Here to view the deployment!
 
 <h2> Open Source Program <a><img src="https://github.com/Samridhi-98/Images/blob/master/Images/open-source.svg" width="3%"></a></h2>
 
-This Project is a part of the following Open Source Program
+This Project is a part of the following Open Source Programs
 
-- GirlScript Summer of Code is the 3 month long Open Source program during summers conducted by GirlScript Foundation, started in 2018, with an aim to help beginners get started with Open Source Development while encouraging diversity. Throughout the program, participants contribute to different projects under guidance of experienced mentors. Top participants get exciting goodies and opportunities.
+- GirlScript Summer of Code is a 3 month long Open Source program during summers conducted by the GirlScript Foundation which was started in 2018, with an aim to help beginners to get started with Open Source Development while encouraging diversity. Throughout the program, participants contribute to different projects under the guidance of experienced mentors. Top participants get exciting goodies and opportunities.
 
-- GirlScript Summer of Code 2020 witnessed overwhelming participation and 2021 edition will carry the legacy forward while promising to be even more impactful and grand.
+- GirlScript Summer of Code 2020 witnessed an overwhelming participation and 2021 edition will carry the legacy forward while promising to be even more impactful and grand.
 
 <img src ="https://miro.medium.com/max/3000/1*CKaCnG11p5i0KiQyaoyBvg.png" alt ="Girlscript Summer Of Code"></img>
 
