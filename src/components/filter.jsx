@@ -9,7 +9,7 @@ class filter extends Component {
     name: '',
   };
 
-  clearfield = e => {
+  clearfield() {
     this.setState({ pin: '' });
     this.setState({ name: '' });
   };
