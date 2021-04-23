@@ -9,8 +9,9 @@ const E404 = () => {
     <div>
       <Navbar />
       <Chatbot />
-      <h1 className='error_heading'>You went too far buddy!</h1>
-
+      <h1 className='error_heading'>
+        Oops &#44; the page you&apos;re looking for doesn&apos;t exist
+      </h1>
       <img src={Img404} className='error_img'></img>
     </div>
   );
