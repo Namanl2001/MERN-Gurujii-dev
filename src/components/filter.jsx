@@ -12,7 +12,7 @@ class filter extends Component {
   clearfield() {
     this.setState({ pin: '' });
     this.setState({ name: '' });
-  };
+  }
 
   handleNameChange = e => {
     this.setState({
@@ -42,7 +42,7 @@ class filter extends Component {
         <div>
           <form onSubmit={this.handleSubmitPIN} className='form1'>
             <input
-              class='textbox'
+              className='textbox'
               type='number'
               onChange={this.handlePinChange}
               value={this.state.pin}
@@ -55,7 +55,7 @@ class filter extends Component {
           </form>
           <form onSubmit={this.handleSubmitName} className='form2'>
             <input
-              class='textbox'
+              className='textbox'
               type='string'
               onChange={this.handleNameChange}
               value={this.state.name}
