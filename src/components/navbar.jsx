@@ -30,7 +30,7 @@ class navbar extends Component {
 
     axios
       .delete(`/users/delete/${this.props.id}`)
-      .then((response) => {
+      .then(response => {
         if (response.status === 200) {
           axios.get(`/users/sendMail/${this.props.emailid}/2`);
           if (!alert(`Your profile deleted successfully.....!! `)) {
