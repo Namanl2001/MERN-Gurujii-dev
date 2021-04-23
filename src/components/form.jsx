@@ -52,11 +52,11 @@ class form extends Component {
         phone: this.state.phone,
       })
       .then(response => {
-        if (response.status == 200) {
+        if (response.status === 200) {
           axios.get(`/users/sendMail/${this.props.emailid}/1`);
           if (
             alert(
-              `Congratulations!! ${this.state.userName} Your profile added successfully to our database `
+              `Congratulations!! ${this.state.userName.toUpperCase()} Your profile added successfully to our database `
             )
           ) {
             window.location.reload();

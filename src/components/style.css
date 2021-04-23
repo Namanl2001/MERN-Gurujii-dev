@@ -352,9 +352,74 @@ ul {
   font-size: 14px;
   color: #878787;
 }
-.col {
-  padding-right: 50px;
-  padding-left: 45px;
+@media only screen and (max-width: 800px) {
+  .form1 {
+    display: flex;
+    justify-content: center;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+  }
+  .form2 {
+    display: flex;
+    align-items: center;
+    margin-top: 2%;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+  }
+  .form1 > .textbox {
+    margin-left: -20%;
+  }
+  .form2 > .textbox {
+    margin-left: 17.5%;
+  }
+}
+.form1 {
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  margin-left: 27%;
+}
+.form2 {
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+form > .textbox {
+  border: 2px solid #007bff;
+  height: 42px;
+  width: 244px;
+  line-height: 42px;
+  padding: 0 16px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #212121;
+  float: left;
+  -webkit-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
+}
+form > .textbox:focus {
+  outline: 0;
+  background-color: #fff;
+}
+form > .button {
+  background-color: rgba(38, 50, 56, 0.8);
+  float: left;
+  height: 42px;
+  width: 42px;
+  text-align: center;
+  line-height: 42px;
+  margin-right: 2%;
+  color: #fff;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 16px;
+  text-rendering: auto;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -webkit-transition: background-color 0.4s ease;
+  transition: background-color 0.4s ease;
+  -webkit-border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 4px 0;
+}
+
+form > .button:hover {
+  background-color: #007bff;
+  cursor: pointer;
 }
 .cont {
   margin-top: 70%;
