@@ -141,7 +141,7 @@ function rootReducer(state = defaultState, action) {
         users: newArray4,
         class: action.type.slice(1),
       };
-      
+
     case 'LOGIN':
       return {
         ...state,
