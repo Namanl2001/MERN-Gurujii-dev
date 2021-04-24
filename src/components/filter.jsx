@@ -61,7 +61,25 @@ class filter extends Component {
             alignItems: 'center',
             justifyContent: 'center',
           }}
-        >
+        >  
+
+        <Dropdown
+            style={{
+              marginRight: '2em',
+            }}
+          >
+            <Dropdown.Button primary id='dropdownMenuButton'>
+              {this.props.tutor}
+            </Dropdown.Button>
+            <Dropdown.Menu aria-labelledby='dropdownMenuButton'>
+              <Dropdown.Item disabled>HOME/EXTERNAL TUTOR</Dropdown.Item>
+              <Dropdown.Item onClick={this.props.alltut}>All</Dropdown.Item>
+              <Dropdown.Item onClick={this.props.home}>Home Tutor</Dropdown.Item>
+              <Dropdown.Item onClick={this.props.exe}>External Tutor</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+
+
           <Dropdown
             style={{
               marginRight: '2em',
@@ -76,22 +94,6 @@ class filter extends Component {
               <Dropdown.Item onClick={this.props.phy}>Physics</Dropdown.Item>
               <Dropdown.Item onClick={this.props.che}>Chemistry</Dropdown.Item>
               <Dropdown.Item onClick={this.props.mat}>Maths</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
-          
-          <Dropdown
-            style={{
-              marginRight: '2em',
-            }}
-          >
-            <Dropdown.Button primary id='dropdownMenuButton'>
-              {this.props.tutor}
-            </Dropdown.Button>
-            <Dropdown.Menu aria-labelledby='dropdownMenuButton'>
-              <Dropdown.Item disabled>HOME/EXTERNAL TUTOR</Dropdown.Item>
-              <Dropdown.Item onClick={this.props.alltut}>All</Dropdown.Item>
-              <Dropdown.Item onClick={this.props.home}>Home Tutor</Dropdown.Item>
-              <Dropdown.Item onClick={this.props.exe}>External Tutor</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
 
@@ -126,8 +128,8 @@ class filter extends Component {
 
 const mapStatetoProps = state => {
   return {
-    subject: state.subject,
     tutor: state.tutor,
+    subject: state.subject,
     class: state.class,
   };
 };
@@ -135,15 +137,15 @@ const mapStatetoProps = state => {
 const mapDispatchtoProps = dispatch => {
   return {
     pin: pin => dispatch({ type: 'PIN', pin: pin }),
+    
+    alltut: () => dispatch({ type: 'ALLTUT' }),
+    home: () => dispatch({ type: 'HOME' }),
+    exe: () => dispatch({ type: 'EXE' }),
 
     allsub: () => dispatch({ type: 'ALLSUB' }),
     phy: () => dispatch({ type: 'PHY' }),
     che: () => dispatch({ type: 'CHE' }),
     mat: () => dispatch({ type: 'MAT' }),
-
-    alltut: () => dispatch({ type: 'ALLTUT' }),
-    home: () => dispatch({ type: 'HOME' }),
-    exe: () => dispatch({ type: 'EXE' }),
 
     allcls: () => dispatch({ type: 'ALLCLS' }),
     c9: () => dispatch({ type: 'C9' }),
