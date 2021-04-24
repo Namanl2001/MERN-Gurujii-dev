@@ -1,5 +1,5 @@
 import React from 'react';
-import Img404 from './404.png';
+import Img404 from '../assets/404.png';
 import Navbar from '../components/navbar';
 import Chatbot from '../components/chatbot';
 import './style.css';

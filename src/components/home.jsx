@@ -6,7 +6,7 @@ import Filter from './filter';
 import { Container, Row } from 'bootstrap-4-react';
 import { Progress } from 'bootstrap-4-react';
 import ScrollToTop from './scrollToTop';
-import Board from './board.jpg';
+import Board from '../assets/board.jpg';
 import Navbar from '../components/navbar';
 import Chatbot from '../components/chatbot';
 

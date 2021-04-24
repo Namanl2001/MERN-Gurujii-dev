@@ -387,4 +387,9 @@ ul {
   .error_heading {
     font-size: 1.75rem;
   }
+  .error_img {
+    margin-top: -2rem;
+    width: 60%;
+    margin-left: 22%;
+  }
 }
