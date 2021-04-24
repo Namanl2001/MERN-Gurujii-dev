@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import {
   Navbar,
   Nav,
@@ -19,22 +19,23 @@ import './style.css';
 
 class navbar extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
-         hidden:false
-    }
-}
-  handleSubmit = (e) => {
+      hidden: false,
+    };
+  }
+  handleSubmit = e => {
     e.preventDefault();
 
     axios
       .delete(`/users/delete/${this.props.id}`)
       .then(response => {
-        if (response.status == 200) {
+        if (response.status === 200) {
           axios.get(`/users/sendMail/${this.props.emailid}/2`);
-          if (alert(`Your profile deleted successfully.....!! `)) {
-          } else window.location.reload();
+          if (!alert(`Your profile deleted successfully.....!! `)) {
+            window.location.reload();
+          }
         }
       })
       .catch(function (error) {
@@ -233,25 +234,28 @@ class navbar extends Component {
           </div>
         )}
 
-        {this.state.hidden ? " ":<div
-          className="alert alert-success alert-dismissible fade show myalert"
-          // style="margin-bottom:0"
-        >
-          <button type='button' class='close' data-dismiss='alert'>
-            &times;
-          </button>
-          <strong>Great Landing !</strong> Teachers have to signin to make
-          profile.
-        </div>}
+        {this.state.hidden ? (
+          ' '
+        ) : (
+          <div
+            className='alert alert-success alert-dismissible fade show myalert'
+            // style="margin-bottom:0"
+          >
+            <strong>Great Landing !</strong> Teachers have to signin to make
+            profile.
+          </div>
+        )}
       </div>
     );
   }
   componentDidMount() {
-    this.timer = setInterval(() => { this.setState({ hidden: true}) }, 12000);
+    this.timer = setInterval(() => {
+      this.setState({ hidden: true });
+    }, 12000);
   }
 
   componentWillUnmount() {
-    clearInterval(this.timer)
+    clearInterval(this.timer);
   }
 }
 

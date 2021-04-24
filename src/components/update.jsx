@@ -52,13 +52,14 @@ class update extends Component {
         phone: this.state.phone,
       })
       .then(response => {
-        if (response.status == 200) {
+        if (response.status === 200) {
           if (
-            alert(
+            !alert(
               `Congratulations!! ${this.state.userName} Your profile Updated Successfully `
             )
           ) {
-          } else window.location.reload();
+            window.location.reload();
+          }
         }
       })
       .catch(function (error) {
@@ -98,6 +99,7 @@ class update extends Component {
                       </option>
                       <option value='Mr.'>Mr.</option>
                       <option value='Mrs.'>Mrs.</option>
+                      <option value='Ms.'>Ms.</option>
                     </Form.CustomSelect>
                   </Col>
                 </Row>

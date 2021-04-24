@@ -1,7 +1,6 @@
 let User = require('../models/user.model');
 var nodemailer = require('nodemailer');
 const { pass } = require('../config');
-
 // Fetch All Users from the DB
 const fetchAllUsers = (req, res) => {
   User.find()
@@ -93,8 +92,10 @@ const sendEmail = (req, res) => {
     },
   });
 
+  let mailOptions;
+
   if (req.params.c == 1) {
-    var mailOptions = {
+    mailOptions = {
       from: 'namanlakhwaninl@gmail.com',
       to: req.params.email,
       subject: 'GuruJii.com',
@@ -104,7 +105,7 @@ const sendEmail = (req, res) => {
   }
 
   if (req.params.c == 2) {
-    var mailOptions = {
+    mailOptions = {
       from: 'namanlakhwaninl@gmail.com',
       to: req.params.email,
       subject: 'GuruJii.com',
@@ -113,7 +114,7 @@ const sendEmail = (req, res) => {
     };
   }
 
-  transporter.sendMail(mailOptions, function (error, info) {
+  transporter.sendMail(mailOptions, function (error) {
     if (error) {
       res.status(400).json('Error: ' + error);
     } else {

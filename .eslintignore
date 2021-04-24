@@ -1,0 +1,6 @@
+build
+public
+.github
+node_modules
+backend/public
+backend/node_modules
