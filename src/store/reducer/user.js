@@ -21,6 +21,7 @@ const defaultState = {
   isDataInitialized: false, // You can add additional property to denote, that data is not fetched for the first time
   subject: 'All',
   class: 'All',
+  tutor: 'All',
   currentUser: '',
   email: '',
   loggedin: false,
@@ -76,6 +77,7 @@ function rootReducer(state = defaultState, action) {
         ...state,
         users: state.tutdata,
         subjdata: state.tutdata,
+        tutdata: newArray0,
         subject: 'All',
         class: 'All',
       };
