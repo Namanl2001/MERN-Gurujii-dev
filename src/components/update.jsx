@@ -52,10 +52,10 @@ class update extends Component {
         phone: this.state.phone,
       })
       .then(response => {
-        if (response.status == 200) {
+        if (response.status === 200) {
           if (
             !alert(
-              `Congratulations!! ${this.state.userName} Your profile Updated Successfully `
+              `Congratulations!! ${this.state.userName.toUpperCase()} Your profile Updated Successfully `
             )
           ) {
             window.location.reload();

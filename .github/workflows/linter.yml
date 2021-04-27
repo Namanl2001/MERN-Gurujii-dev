@@ -1,4 +1,4 @@
-name: Run linters
+name: Check Code Formatting and Linting
 
 on:
   push:
@@ -32,8 +32,8 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile
 
-      - name: Format Code
-        run: yarn pretty-quick --staged
+      - name: Check Formatting
+        run: yarn check-formatting
 
-      - name: Check linting
-        run: yarn lint-staged
+      - name: Check Linting
+        run: yarn check-linting

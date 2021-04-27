@@ -1,7 +1,6 @@
 let User = require('../models/user.model');
 var nodemailer = require('nodemailer');
 const { pass } = require('../config');
-
 // Fetch All Users from the DB
 const fetchAllUsers = (req, res) => {
   User.find()
