@@ -55,7 +55,7 @@ class update extends Component {
         if (response.status === 200) {
           if (
             !alert(
-              `Congratulations!! ${this.state.userName} Your profile Updated Successfully `
+              `Congratulations!! ${this.state.userName.toUpperCase()} Your profile Updated Successfully `
             )
           ) {
             window.location.reload();
