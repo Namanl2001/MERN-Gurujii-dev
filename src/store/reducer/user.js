@@ -146,13 +146,13 @@ function rootReducer(state = defaultState, action) {
         class: action.type.slice(1),
       };
     case 'NAME':
-      const newArray8 = state.pindata.filter(
+      const newArray5 = state.pindata.filter(
         user => user.username.toLowerCase() === action.username.toLowerCase()
       );
       return {
         ...state,
-        namedata: newArray8,
-        users: newArray8,
+        namedata: newArray5,
+        users: newArray5,
         subjdata: state.pindata,
         subject: 'All',
         class: 'All',
