@@ -58,7 +58,7 @@ class navbar extends Component {
               <Collapse navbar id='navbarSupportedContent'>
                 <Navbar.Nav ml='auto'>
                   <Nav.Item active>
-                    <Nav.Link href='#'>Home</Nav.Link>
+                    <Nav.Link href='/'>Home</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
                     <Nav.Link href='#'>Link</Nav.Link>
@@ -113,7 +113,7 @@ class navbar extends Component {
               <Collapse navbar id='navbarSupportedContent'>
                 <Navbar.Nav ml='auto'>
                   <Nav.Item active>
-                    <Nav.Link href='#'>Home</Nav.Link>
+                    <Nav.Link href='/'>Home</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
                     <Nav.Link href='#'>Link</Nav.Link>
@@ -210,7 +210,7 @@ class navbar extends Component {
               <Collapse navbar id='navbarSupportedContent'>
                 <Navbar.Nav ml='auto'>
                   <Nav.Item active>
-                    <Nav.Link href='#'>Home</Nav.Link>
+                    <Nav.Link href='/'>Home</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
                     <Nav.Link href='#'>Link</Nav.Link>
@@ -231,18 +231,6 @@ class navbar extends Component {
                 <Login />
               </Collapse>
             </Navbar>
-          </div>
-        )}
-
-        {this.state.hidden ? (
-          ' '
-        ) : (
-          <div
-            className='alert alert-success alert-dismissible fade show myalert'
-            // style="margin-bottom:0"
-          >
-            <strong>Great Landing !</strong> Teachers have to signin to make
-            profile.
           </div>
         )}
       </div>

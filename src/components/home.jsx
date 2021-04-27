@@ -9,6 +9,7 @@ import ScrollToTop from './scrollToTop';
 import Board from '../assets/board.jpg';
 import Navbar from '../components/navbar';
 import Chatbot from '../components/chatbot';
+import Alert from '../components/alert';
 
 class home extends Component {
   componentDidMount() {
@@ -50,6 +51,7 @@ class home extends Component {
       <>
         <div className='parallax'>
           <Navbar />
+          <Alert />
           <br />
           <br />
           <br />
@@ -60,9 +62,7 @@ class home extends Component {
           <br />
           <br />
         </div>
-
         <Chatbot />
-
         {!this.props.isDataInitialized && (
           <Progress mb='4' w='25%'>
             <Progress.Bar striped animated min='0' max='100' mx='auto' now='50'>
