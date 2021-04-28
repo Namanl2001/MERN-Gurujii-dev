@@ -73,6 +73,7 @@ class home extends Component {
         {this.props.isDataInitialized && (
           <div>
             <div className='text-center'>
+              <br />
               <h1>Plan Your Future With US !!</h1>
               <hr className='w-25 mx-auto pt-5' />
             </div>

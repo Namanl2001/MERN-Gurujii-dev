@@ -66,6 +66,7 @@ class filter extends Component {
           </form>
         </div>
         <br />
+        <br />
         <div
           style={{
             marginTop: '2em',

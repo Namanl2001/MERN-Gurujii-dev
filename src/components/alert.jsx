@@ -19,8 +19,10 @@ class alert extends Component {
             className='alert alert-success alert-dismissible fade show myalert'
             // style="margin-bottom:0"
           >
-            <strong>Great Landing !</strong> Teachers have to signin to make
-            profile.
+            <p>
+              <strong>Great Landing !</strong> Teachers have to signin to make
+              profile.
+            </p>
             {
               (this.timer = setInterval(() => {
                 this.setState({ hidden: true });

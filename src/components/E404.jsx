@@ -12,7 +12,7 @@ const E404 = () => {
       <h1 className='error_heading'>
         Oops &#44; the page you&apos;re looking for doesn&apos;t exist
       </h1>
-      <img src={Img404} className='error_img'></img>
+      <img src={Img404} className='error_img' alt='Img404'></img>
     </div>
   );
 };
