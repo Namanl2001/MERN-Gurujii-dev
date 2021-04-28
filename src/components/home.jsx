@@ -6,6 +6,10 @@ import Filter from './filter';
 import { Container, Row } from 'bootstrap-4-react';
 import { Progress } from 'bootstrap-4-react';
 import ScrollToTop from './scrollToTop';
+import Board from '../assets/board.jpg';
+import Navbar from '../components/navbar';
+import Chatbot from '../components/chatbot';
+import Alert from '../components/alert';
 
 class home extends Component {
   componentDidMount() {
@@ -45,6 +49,20 @@ class home extends Component {
   render() {
     return (
       <>
+        <div className='parallax'>
+          <Navbar />
+          <Alert />
+          <br />
+          <br />
+          <br />
+          <div className='center'>
+            <img src={Board} alt='' />
+          </div>
+          <br />
+          <br />
+          <br />
+        </div>
+        <Chatbot />
         {!this.props.isDataInitialized && (
           <Progress mb='4' w='25%'>
             <Progress.Bar striped animated min='0' max='100' mx='auto' now='50'>
@@ -55,6 +73,7 @@ class home extends Component {
         {this.props.isDataInitialized && (
           <div>
             <div className='text-center'>
+              <br />
               <h1>Plan Your Future With US !!</h1>
               <hr className='w-25 mx-auto pt-5' />
             </div>
