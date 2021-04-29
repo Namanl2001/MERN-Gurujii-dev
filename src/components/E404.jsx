@@ -8,6 +8,8 @@ const E404 = () => {
   return (
     <div>
       <Navbar />
+      <br />
+      <br />
       <Chatbot />
       <h1 className='error_heading'>
         Oops &#44; the page you&apos;re looking for doesn&apos;t exist
