@@ -422,8 +422,8 @@ form > .button:hover {
   cursor: pointer;
 }
 .cont {
-  margin-top: 88px;
-  margin-bottom: 74px;
+  margin-top: 6rem;
+  position: relative;
   text-align: center;
 }
 .error_heading {
