@@ -21,9 +21,42 @@ class form extends Component {
     city: '',
     pin: null,
     phone: null,
+    errormessage1: '',
+    errormessage2: '',
   };
 
   handleChange = e => {
+    let nam = e.target.id;
+    let val = e.target.value;
+    const pinRegex = RegExp(/[1-9][0-9]{5}/);
+    const phoneRegex = RegExp(/^[0-9\b]+$/);
+    let err = '';
+    if (nam === 'pin') {
+      if (!pinRegex.test(val) || (val.length != 6 && val !== '')) {
+        err = (
+          <strong style={{ color: 'red' }}>Please enter valid pincode</strong>
+        );
+        document.getElementById('pin').style.border = '1px solid red';
+      } else {
+        document.getElementById('pin').style.borderColor = '';
+      }
+      this.setState({ errormessage1: err });
+    }
+
+    if (nam === 'phone') {
+      if (!phoneRegex.test(val) || (val.length != 10 && val !== '')) {
+        err = (
+          <strong style={{ color: 'red' }}>
+            Please enter valid mobile number
+          </strong>
+        );
+        document.getElementById('phone').style.border = '1px solid red';
+      } else {
+        document.getElementById('phone').style.borderColor = '';
+      }
+      this.setState({ errormessage2: err });
+    }
+
     this.setState({
       [e.target.id]: e.target.value,
     });
@@ -299,6 +332,7 @@ class form extends Component {
                       onChange={this.handleChange}
                       value={this.state.pin}
                     />
+                    {this.state.errormessage1}
                   </Col>
                 </Row>
                 <Row>
@@ -313,6 +347,7 @@ class form extends Component {
                       onChange={this.handleChange}
                       value={this.state.phone}
                     />
+                    {this.state.errormessage2}
                   </Col>
                 </Row>
               </div>
