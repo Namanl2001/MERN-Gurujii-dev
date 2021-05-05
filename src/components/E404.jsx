@@ -3,18 +3,28 @@ import Img404 from '../assets/404.png';
 import Navbar from '../components/navbar';
 import Chatbot from '../components/chatbot';
 import './style.css';
+import { Link } from 'react-router-dom';
 
 const E404 = () => {
   return (
     <div>
       <Navbar />
-      <br />
-      <br />
       <Chatbot />
-      <h1 className='error_heading'>
-        Oops &#44; the page you&apos;re looking for doesn&apos;t exist
-      </h1>
-      <img src={Img404} className='error_img' alt='Img404'></img>
+      <div className='not-found'>
+        <div className='error'>
+          <div>
+            <img src={Img404} className='error-logo' alt='Img404'></img>
+          </div>
+          <div className='error-content'>
+            The page you are looking for is not available.
+          </div>
+          <Link to='/'>
+            <button id='err_btn' type='submit'>
+              Go Home
+            </button>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };
