@@ -1,6 +1,32 @@
 body {
   font-family: 'Varela Round', sans-serif;
 }
+.g-heading {
+  display: inline-block;
+  color: #ffc107;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.profile-button {
+  background-color: #ffc107;
+  border: 2px solid white !important;
+  border-radius: 0%;
+  font-weight: bold;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+@media only screen and (max-width: 992px) {
+  .profile-button {
+    margin-bottom: 20px;
+    padding-right: 18px !important;
+    padding-left: 18px !important;
+  }
+  .collapse {
+    text-align: center;
+  }
+}
+
 .modal-confirm {
   color: #636363;
   width: 400px;
@@ -123,7 +149,7 @@ body {
   position: absolute;
   text-align: center;
   text-decoration: none;
-  top: 50px;
+  top: 63px;
   width: 100%;
   animation-delay: 100s;
   -webkit-animation: alert 1s ease forwards;
