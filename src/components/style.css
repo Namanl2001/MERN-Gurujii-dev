@@ -358,6 +358,53 @@ ul {
   font-size: 14px;
   color: #878787;
 }
+@media screen and (max-width: 767px) {
+  div.formRoot,
+  select.custom-select,
+  input.form-control {
+    font-size: 0.8rem;
+  }
+  select.custom-select,
+  input.form-control {
+    width: 100%;
+  }
+  div.form-child-left,
+  div.form-child-right {
+    flex: 100%;
+  }
+  div.modal-content {
+    margin: 300px auto;
+    width: 310px;
+    position: relative;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  div.formRoot,
+  select.custom-select,
+  input.form-control {
+    font-size: 0.9rem;
+  }
+  select.custom-select,
+  input.form-control {
+    width: 107%;
+  }
+  div.modal-content {
+    width: 760px;
+    padding-right: 10px;
+    left: 50px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  select.custom-select,
+  input.form-control {
+    width: 104%;
+  }
+  div.modal-content {
+    width: 968px;
+    margin-left: -200px;
+    padding-right: 10px;
+  }
+}
 @media only screen and (max-width: 800px) {
   .form1 {
     display: flex;
