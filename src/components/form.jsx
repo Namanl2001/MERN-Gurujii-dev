@@ -32,7 +32,7 @@ class form extends Component {
     const phoneRegex = RegExp(/^[0-9\b]+$/);
     let err = '';
     if (nam === 'pin') {
-      if (!pinRegex.test(val) || (val.length != 6 && val !== '')) {
+      if (!pinRegex.test(val) || (val.length !== 6 && val !== '')) {
         err = (
           <strong style={{ color: 'red' }}>Please enter valid pincode</strong>
         );
@@ -44,7 +44,7 @@ class form extends Component {
     }
 
     if (nam === 'phone') {
-      if (!phoneRegex.test(val) || (val.length != 10 && val !== '')) {
+      if (!phoneRegex.test(val) || (val.length !== 10 && val !== '')) {
         err = (
           <strong style={{ color: 'red' }}>
             Please enter valid mobile number
