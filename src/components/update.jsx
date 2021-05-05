@@ -4,6 +4,12 @@ import { connect } from 'react-redux';
 
 import { Modal, Button, Form, Row, Col } from 'bootstrap-4-react';
 
+const validateForm = errors => {
+  let valid = true;
+  Object.values(errors).forEach(val => val.length > 0 && (valid = false));
+  return valid;
+};
+
 class update extends Component {
   state = {
     email: this.props.data.email,
@@ -24,11 +30,26 @@ class update extends Component {
     phone: this.props.data.phone,
     errormessage1: '',
     errormessage2: '',
+    errors: {
+      title: '',
+      userName: '',
+      subject: '',
+      tutor: '',
+      coachingName: '',
+      qualification: '',
+      about: '',
+      c1: '',
+      address: '',
+      city: '',
+      pin: '',
+      phone: '',
+    },
   };
 
   handleChange = e => {
     let nam = e.target.id;
     let val = e.target.value;
+    let errors = this.state.errors;
     const pinRegex = RegExp(/[1-9][0-9]{5}/);
     const phoneRegex = RegExp(/^[0-9\b]+$/);
     let err = '';
@@ -57,47 +78,91 @@ class update extends Component {
       }
       this.setState({ errormessage2: err });
     }
+    switch (nam) {
+      case 'title':
+        errors.title = val == '' ? 'Title is required!' : '';
+        break;
+      case 'userName':
+        errors.userName = val.length < 1 ? 'Username is required!' : '';
+        break;
+      case 'subject':
+        errors.subject =
+          val == '' ? 'Full Name must be 5 characters long!' : '';
+        break;
+      case 'tutor':
+        errors.tutor = val == '' ? 'Tutor is required!' : '';
+        break;
+      case 'coachingName':
+        errors.coachingName =
+          val.length < 1 ? 'Coaching name is required!' : '';
+        break;
+      case 'qualification':
+        errors.qualification =
+          val.length < 1 ? 'Qualification is required!' : '';
+        break;
+      case 'about':
+        errors.about = val.length < 1 ? 'About is required!' : '';
+        break;
+      case 'c1':
+        errors.c1 = val.length < 1 ? 'Class1 is required!' : '';
+        break;
+      case 'address':
+        errors.address = val.length < 1 ? 'Address is required!' : '';
+        break;
+      case 'city':
+        errors.city = val.length < 1 ? 'City is required!' : '';
+        break;
+      case 'pin':
+        errors.pin = val.length < 1 ? 'Pin is required!' : '';
+        break;
+      case 'phone':
+        errors.phone = val.length < 1 ? 'Phone number is required!' : '';
+        break;
+      default:
+        break;
+    }
 
-    this.setState({
-      [e.target.id]: e.target.value,
-    });
+    this.setState({ errors, [e.target.id]: e.target.value });
   };
 
   handleSubmit = e => {
     e.preventDefault();
-
-    axios
-      .post(`/users/update/${this.props.data._id}`, {
-        title: this.state.title,
-        userName: this.state.userName,
-        subject: this.state.subject,
-        tutor: this.state.tutor,
-        coachingName: this.state.coachingName,
-        qualification: this.state.qualification,
-        about: this.state.about,
-        c1: this.state.c1,
-        c2: this.state.c2,
-        c3: this.state.c3,
-        c4: this.state.c4,
-        address: this.state.address,
-        city: this.state.city,
-        pin: this.state.pin,
-        phone: this.state.phone,
-      })
-      .then(response => {
-        if (response.status === 200) {
-          if (
-            !alert(
-              `Congratulations!! ${this.state.userName.toUpperCase()} Your profile Updated Successfully `
-            )
-          ) {
-            window.location.reload();
+    if (validateForm(this.state.errors)) {
+      axios
+        .post(`/users/update/${this.props.data._id}`, {
+          title: this.state.title,
+          userName: this.state.userName,
+          subject: this.state.subject,
+          tutor: this.state.tutor,
+          coachingName: this.state.coachingName,
+          qualification: this.state.qualification,
+          about: this.state.about,
+          c1: this.state.c1,
+          c2: this.state.c2,
+          c3: this.state.c3,
+          c4: this.state.c4,
+          address: this.state.address,
+          city: this.state.city,
+          pin: this.state.pin,
+          phone: this.state.phone,
+        })
+        .then(response => {
+          if (response.status === 200) {
+            if (
+              !alert(
+                `Congratulations!! ${this.state.userName.toUpperCase()} Your profile Updated Successfully `
+              )
+            ) {
+              window.location.reload();
+            }
           }
-        }
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    } else {
+      alert('Please fill out all fields to proceed');
+    }
   };
 
   render() {
