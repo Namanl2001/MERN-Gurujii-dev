@@ -120,10 +120,10 @@ body {
   display: block;
   font: bold 16px/40px sans-serif;
   height: 70px;
-  /* position: absolute; */
+  position: absolute;
   text-align: center;
   text-decoration: none;
-  top: -125px;
+  top: 50px;
   width: 100%;
   animation-delay: 100s;
   -webkit-animation: alert 1s ease forwards;
@@ -133,6 +133,12 @@ body {
   animation: alert 1s ease forwards;
 }
 
+@media only screen and (max-width: 700px) {
+  .myalert {
+    height: 60px;
+    line-height: 1;
+  }
+}
 /* Animation */
 
 @-webkit-keyframes alert {
@@ -143,7 +149,7 @@ body {
     opacity: 1;
   }
   100% {
-    top: 0;
+    top: 6;
   }
 }
 @-moz-keyframes alert {
@@ -154,7 +160,7 @@ body {
     opacity: 1;
   }
   100% {
-    top: 0;
+    top: 6;
   }
 }
 @-ms-keyframes alert {
@@ -165,7 +171,7 @@ body {
     opacity: 1;
   }
   100% {
-    top: 0;
+    top: 6;
   }
 }
 @-o-keyframes alert {
@@ -176,7 +182,7 @@ body {
     opacity: 1;
   }
   100% {
-    top: 0;
+    top: 6;
   }
 }
 @keyframes alert {
@@ -187,7 +193,7 @@ body {
     opacity: 1;
   }
   100% {
-    top: 0;
+    top: 6;
   }
 }
 /*Footer styles*/

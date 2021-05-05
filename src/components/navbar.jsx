@@ -52,7 +52,7 @@ class navbar extends Component {
       <div>
         {this.props.logged && !this.props.registeredUser && (
           <div>
-            <Navbar expand='lg' dark bg='dark'>
+            <Navbar expand='lg' dark bg='dark' fixed='top' className='navbar'>
               <Navbar.Brand href='#'>GuruJii</Navbar.Brand>
               <Navbar.Toggler target='#navbarSupportedContent' />
               <Collapse navbar id='navbarSupportedContent'>
@@ -107,7 +107,7 @@ class navbar extends Component {
 
         {this.props.logged && this.props.registeredUser && (
           <div>
-            <Navbar expand='lg' dark bg='dark'>
+            <Navbar expand='lg' dark bg='dark' fixed='top' className='navbar'>
               <Navbar.Brand href='#'>GuruJii</Navbar.Brand>
               <Navbar.Toggler target='#navbarSupportedContent' />
               <Collapse navbar id='navbarSupportedContent'>
@@ -204,7 +204,7 @@ class navbar extends Component {
 
         {!this.props.logged && (
           <div>
-            <Navbar expand='lg' dark bg='dark'>
+            <Navbar expand='lg' dark bg='dark' fixed='top' className='navbar'>
               <Navbar.Brand href='#'>GuruJii</Navbar.Brand>
               <Navbar.Toggler target='#navbarSupportedContent' />
               <Collapse navbar id='navbarSupportedContent'>
