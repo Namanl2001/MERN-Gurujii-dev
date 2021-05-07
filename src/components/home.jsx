@@ -10,6 +10,7 @@ import Board from '../assets/board.jpg';
 import Navbar from '../components/navbar';
 import Chatbot from '../components/chatbot';
 import Alert from '../components/alert';
+import Reach from '../components/Reach';
 
 class home extends Component {
   componentDidMount() {
@@ -91,6 +92,8 @@ class home extends Component {
               <Row>{this.List()}</Row>
             </Container>
             <ScrollToTop />
+            <Reach />
+            <br />
           </div>
         )}
       </>
