@@ -358,7 +358,7 @@ ul {
   font-size: 14px;
   color: #878787;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 500px) {
   div.formRoot,
   select.custom-select,
   input.form-control {
@@ -373,9 +373,49 @@ ul {
     flex: 100%;
   }
   div.modal-content {
-    margin: 300px auto;
+    margin: 100px auto;
     width: 310px;
     position: relative;
+  }
+}
+@media screen and (min-width: 501px) and (max-width: 577px) {
+  div.formRoot,
+  select.custom-select,
+  input.form-control {
+    font-size: 0.7rem;
+  }
+  select.custom-select,
+  input.form-control {
+    width: 80%;
+  }
+  div.form-child-left,
+  div.form-child-right {
+    flex: 50%;
+  }
+  div.modal-content {
+    margin-top: 100px;
+    width: 480px;
+    left: 200px;
+  }
+}
+@media screen and (min-width: 578px) and (max-width: 767px) {
+  div.formRoot,
+  select.custom-select,
+  input.form-control {
+    font-size: 0.7rem;
+  }
+  select.custom-select,
+  input.form-control {
+    width: 100%;
+  }
+  div.form-child-left,
+  div.form-child-right {
+    flex: 50%;
+  }
+  div.modal-content {
+    margin-top: 100px;
+    width: 480px;
+    left: 180px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
