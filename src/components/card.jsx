@@ -30,7 +30,7 @@ class cards extends Component {
                   {this.props.user.coaching}
                 </h3>
 
-                <h5>
+                <h5 className='head'>
                   {this.props.user.title} {this.props.user.username}
                 </h5>
                 <h3 className='flip-box-header'>
@@ -55,7 +55,7 @@ class cards extends Component {
             >
               <div
                 className='back-face-card inner color-white'
-                style={{ marginTop: '-10%' }}
+                style={{ marginTop: '17%' }}
               >
                 <h4>{this.props.user.tutor}</h4>
                 <div style={{ fontSize: 25 }}>
@@ -79,7 +79,6 @@ class cards extends Component {
                 Address: {this.props.user.address} , {this.props.user.city}{' '}
                 <br />
                 {this.props.user.pin}
-                <br />
                 <p className='cont'>Contact: {this.props.user.phone}</p>
               </div>
             </div>

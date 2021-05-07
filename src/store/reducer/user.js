@@ -16,6 +16,7 @@ const defaultState = {
   all: {},
   users: {}, // It should be empty during store init
   pindata: {},
+  namedata: {},
   subjdata: {},
   isDataInitialized: false, // You can add additional property to denote, that data is not fetched for the first time
   subject: 'All',
@@ -35,6 +36,7 @@ function rootReducer(state = defaultState, action) {
         all: action.all.data,
         users: action.all.data,
         pindata: action.all.data,
+        namedata: action.all.data,
         subjdata: action.all.data,
         isDataInitialized: true,
       };
@@ -51,16 +53,20 @@ function rootReducer(state = defaultState, action) {
         ...state,
         users: state.all,
         pindata: state.all,
+        namedata: state.all,
         subjdata: state.all,
         subject: 'All',
         class: 'All',
       };
 
     case 'PIN':
-      const newArray0 = state.all.filter(user => user.pin == action.pin);
+      const newArray0 = state.all.filter(
+        user => user.pin.toString() === action.pin
+      );
       return {
         ...state,
         pindata: newArray0,
+        namedata: newArray0,
         subjdata: newArray0,
         users: newArray0,
         subject: 'All',
@@ -69,13 +75,13 @@ function rootReducer(state = defaultState, action) {
     case 'ALLSUB':
       return {
         ...state,
-        users: state.pindata,
-        subjdata: state.pindata,
+        users: state.namedata,
+        subjdata: state.namedata,
         subject: 'All',
         class: 'All',
       };
     case 'PHY':
-      const newArray1 = state.pindata.filter(
+      const newArray1 = state.namedata.filter(
         user => user.subject === 'physics'
       );
       return {
@@ -86,7 +92,7 @@ function rootReducer(state = defaultState, action) {
         class: 'All',
       };
     case 'CHE':
-      const newArray2 = state.pindata.filter(
+      const newArray2 = state.namedata.filter(
         user => user.subject === 'chemistry'
       );
       return {
@@ -97,7 +103,7 @@ function rootReducer(state = defaultState, action) {
         class: 'All',
       };
     case 'MAT':
-      const newArray3 = state.pindata.filter(
+      const newArray3 = state.namedata.filter(
         user => user.subject === 'mathematics'
       );
       return {
@@ -116,63 +122,40 @@ function rootReducer(state = defaultState, action) {
       };
 
     case 'C9':
+    case 'C10':
+    case 'C11':
+    case 'C12':
       const newArray4 = state.subjdata.filter(user => {
-        return (
-          user.class1 == '9' ||
-          user.class2 == '9' ||
-          user.class3 == '9' ||
-          user.class4 == '9'
-        );
+        const b1 = user.class1
+          ? user.class1.toString() === action.type.slice(1)
+          : false;
+        const b2 = user.class2
+          ? user.class2.toString() === action.type.slice(1)
+          : false;
+        const b3 = user.class3
+          ? user.class3.toString() === action.type.slice(1)
+          : false;
+        const b4 = user.class4
+          ? user.class4.toString() === action.type.slice(1)
+          : false;
+        return b1 || b2 || b3 || b4;
       });
       return {
         ...state,
         users: newArray4,
-        class: '9',
+        class: action.type.slice(1),
       };
-
-    case 'C10':
-      const newArray5 = state.subjdata.filter(user => {
-        return (
-          user.class1 == '10' ||
-          user.class2 == '10' ||
-          user.class3 == '10' ||
-          user.class4 == '10'
-        );
-      });
+    case 'NAME':
+      const newArray5 = state.pindata.filter(
+        user => user.username.toLowerCase() === action.username.toLowerCase()
+      );
       return {
         ...state,
+        namedata: newArray5,
         users: newArray5,
-        class: '10',
-      };
-
-    case 'C11':
-      const newArray6 = state.subjdata.filter(user => {
-        return (
-          user.class1 == '11' ||
-          user.class2 == '11' ||
-          user.class3 == '11' ||
-          user.class4 == '11'
-        );
-      });
-      return {
-        ...state,
-        users: newArray6,
-        class: '11',
-      };
-
-    case 'C12':
-      const newArray7 = state.subjdata.filter(user => {
-        return (
-          user.class1 == '12' ||
-          user.class2 == '12' ||
-          user.class3 == '12' ||
-          user.class4 == '12'
-        );
-      });
-      return {
-        ...state,
-        users: newArray7,
-        class: '12',
+        subjdata: state.pindata,
+        subject: 'All',
+        class: 'All',
       };
 
     case 'LOGIN':
