@@ -16,7 +16,7 @@ const E404 = () => {
             <img src={Img404} className='error-logo' alt='Img404'></img>
           </div>
           <div className='error-content'>
-            The page you are looking for is not available.
+            Oops &#44; the page you&apos;re looking for doesn&apos;t exist
           </div>
           <Link to='/'>
             <button id='err_btn' type='submit'>
