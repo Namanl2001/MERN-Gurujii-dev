@@ -27,21 +27,21 @@ class form extends Component {
     city: '',
     pin: null,
     phone: null,
-    errormessage1: '',
-    errormessage2: '',
+    errormessage1: 'Pincode is required!',
+    errormessage2: 'Phone number is required!',
     errors: {
-      title: 'invalid',
+      title: 'Title is required!',
       userName: '',
-      subject: 'invalid',
-      tutor: 'invalid',
-      coachingName: 'invalid',
-      qualification: 'invalid',
-      about: 'invalid',
-      c1: 'invalid',
-      address: 'invalid',
-      city: 'invalid',
-      pin: 'invalid',
-      phone: 'invalid',
+      subject: 'Subject is required!',
+      tutor: 'Tutor is required!',
+      coachingName: 'Coaching name is required!',
+      qualification: 'Qualification is required!',
+      about: 'About is required!',
+      c1: 'Class1 is required!',
+      address: 'Address is required!',
+      city: 'City is required!',
+      pin: 'Pincode is required!',
+      phone: 'Phone number is required!',
     },
   };
 
@@ -54,9 +54,7 @@ class form extends Component {
     let err = '';
     if (nam === 'pin') {
       if (!pinRegex.test(val) || (val.length !== 6 && val !== '')) {
-        err = (
-          <strong style={{ color: 'red' }}>Please enter valid pincode</strong>
-        );
+        err = <span style={{ color: 'red' }}>Please enter valid pincode!</span>;
         document.getElementById('pin').style.border = '1px solid red';
       } else {
         document.getElementById('pin').style.borderColor = '';
@@ -67,9 +65,7 @@ class form extends Component {
     if (nam === 'phone') {
       if (!phoneRegex.test(val) || (val.length !== 10 && val !== '')) {
         err = (
-          <strong style={{ color: 'red' }}>
-            Please enter valid mobile number
-          </strong>
+          <span style={{ color: 'red' }}>Please enter valid phone number!</span>
         );
         document.getElementById('phone').style.border = '1px solid red';
       } else {
@@ -86,8 +82,7 @@ class form extends Component {
         errors.userName = val.length < 1 ? 'Username is required!' : '';
         break;
       case 'subject':
-        errors.subject =
-          val == '' ? 'Full Name must be 5 characters long!' : '';
+        errors.subject = val == '' ? 'Subject is required!' : '';
         break;
       case 'tutor':
         errors.tutor = val == '' ? 'Tutor is required!' : '';
@@ -200,6 +195,9 @@ class form extends Component {
                       <option value='Mrs.'>Mrs.</option>
                       <option value='Ms.'>Ms.</option>
                     </Form.CustomSelect>
+                    <span style={{ color: 'red' }}>
+                      {this.state.errors.title}
+                    </span>
                   </Col>
                 </Row>
 
@@ -215,6 +213,9 @@ class form extends Component {
                       onChange={this.handleChange}
                       value={this.state.userName}
                     />
+                    <span style={{ color: 'red' }}>
+                      {this.state.errors.userName}
+                    </span>
                   </Col>
                 </Row>
                 <br />
@@ -237,6 +238,9 @@ class form extends Component {
                       <option value='chemistry'>Chemistry</option>
                       <option value='mathematics'>Mathematics</option>
                     </Form.CustomSelect>
+                    <span style={{ color: 'red' }}>
+                      {this.state.errors.subject}
+                    </span>
                   </Col>
                 </Row>
                 <Row>
@@ -257,6 +261,9 @@ class form extends Component {
                       <option value='Home Tutor'>Home Tutor</option>
                       <option value='External Tutor'>External Tutor</option>
                     </Form.CustomSelect>
+                    <span style={{ color: 'red' }}>
+                      {this.state.errors.tutor}
+                    </span>
                   </Col>
                 </Row>
                 <Row>
@@ -271,6 +278,9 @@ class form extends Component {
                       onChange={this.handleChange}
                       value={this.state.coachingName}
                     />
+                    <span style={{ color: 'red' }}>
+                      {this.state.errors.coachingName}
+                    </span>
                   </Col>
                 </Row>
                 <Row>
@@ -285,6 +295,9 @@ class form extends Component {
                       onChange={this.handleChange}
                       value={this.state.qualification}
                     />
+                    <span style={{ color: 'red' }}>
+                      {this.state.errors.qualification}
+                    </span>
                   </Col>
                 </Row>
                 <Row>
@@ -299,6 +312,9 @@ class form extends Component {
                       onChange={this.handleChange}
                       value={this.state.about}
                     />
+                    <span style={{ color: 'red' }}>
+                      {this.state.errors.about}
+                    </span>
                   </Col>
                 </Row>
               </div>
@@ -315,6 +331,7 @@ class form extends Component {
                       onChange={this.handleChange}
                       value={this.state.c1}
                     />
+                    <span style={{ color: 'red' }}>{this.state.errors.c1}</span>
                   </Col>
                   <Form.LabelCol col='sm-2' htmlFor='c2'>
                     Class 2
@@ -369,6 +386,9 @@ class form extends Component {
                       onChange={this.handleChange}
                       value={this.state.address}
                     />
+                    <span style={{ color: 'red' }}>
+                      {this.state.errors.address}
+                    </span>
                   </Col>
                 </Row>
                 <Row>
@@ -383,6 +403,9 @@ class form extends Component {
                       onChange={this.handleChange}
                       value={this.state.city}
                     />
+                    <span style={{ color: 'red' }}>
+                      {this.state.errors.city}
+                    </span>
                   </Col>
                 </Row>
                 <Row>
@@ -397,7 +420,9 @@ class form extends Component {
                       onChange={this.handleChange}
                       value={this.state.pin}
                     />
-                    {this.state.errormessage1}
+                    <span style={{ color: 'red' }}>
+                      {this.state.errormessage1}
+                    </span>
                   </Col>
                 </Row>
                 <Row>
@@ -412,7 +437,9 @@ class form extends Component {
                       onChange={this.handleChange}
                       value={this.state.phone}
                     />
-                    {this.state.errormessage2}
+                    <span style={{ color: 'red' }}>
+                      {this.state.errormessage2}
+                    </span>
                   </Col>
                 </Row>
               </div>
