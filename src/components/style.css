@@ -607,3 +607,44 @@ form > .button:hover {
     margin-top: -1rem;
   }
 }
+.card-body img {
+  margin-top: 2rem;
+  width: 4rem;
+}
+.card-body h5 {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+.card-body h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+.black {
+  color: black;
+}
+.yellow {
+  color: yellow;
+}
+.headercontent {
+  font-size: 3.5rem;
+}
+.headercontent span {
+  color: red;
+}
+.cards2 {
+  height: 50vh;
+}
+.color2 {
+  background-color: #e85d04;
+}
+.color1 {
+  background-color: #ffc107;
+}
+.color3 {
+  background-color: #d00000;
+}
+@media only screen and (max-width: 800px) {
+  .card-body h5 {
+    font-size: 1.2rem;
+  }
+}
