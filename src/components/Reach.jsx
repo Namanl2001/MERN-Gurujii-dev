@@ -37,9 +37,9 @@ class cards extends Component {
                 />
                 <br />
                 <br />
-                <h2 className='card-title text-center black'>260+</h2>
+                <h2 className='card-title text-center black'>90+</h2>
                 <br />
-                <h5 className='text-center'>COMMITS</h5>
+                <h5 className='text-center'>FORKS</h5>
               </div>
             </div>
           </div>
@@ -53,7 +53,7 @@ class cards extends Component {
                 />
                 <br />
                 <br />
-                <h2 className='card-title text-center yellow'>60+</h2>
+                <h2 className='card-title text-center yellow'>30+</h2>
                 <br />
                 <h5 className='text-center'>STARS</h5>
               </div>
