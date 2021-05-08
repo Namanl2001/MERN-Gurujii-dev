@@ -479,7 +479,7 @@ ul {
   }
   .form2 {
     display: flex;
-    align-items: center;
+    justify-content: center;
     margin-top: 2%;
     -webkit-border-radius: 4px;
     border-radius: 4px;
@@ -488,7 +488,7 @@ ul {
     margin-left: -20%;
   }
   .form2 > .textbox {
-    margin-left: 17.5%;
+    margin-left: 12.5%;
   }
 }
 .form1 {
@@ -540,8 +540,8 @@ form > .button:hover {
   cursor: pointer;
 }
 .cont {
-  margin-top: 88px;
-  margin-bottom: 74px;
+  margin-top: 6rem;
+  position: relative;
   text-align: center;
 }
 
