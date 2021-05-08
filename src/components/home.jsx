@@ -55,6 +55,8 @@ class home extends Component {
           <br />
           <br />
           <br />
+          <br />
+          <br />
           <div className='center'>
             <img src={Board} alt='' />
           </div>
