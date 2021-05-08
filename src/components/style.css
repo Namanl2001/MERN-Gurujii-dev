@@ -326,7 +326,6 @@ ul {
 }
 .footer-widget ul li {
   display: inline-block;
-  float: left;
   width: 50%;
   margin-bottom: 12px;
 }
@@ -545,36 +544,66 @@ form > .button:hover {
   margin-bottom: 74px;
   text-align: center;
 }
-.error_heading {
-  -webkit-text-stroke: 1px #f8f8f8;
-  text-shadow: 0px 2px 4px #424242;
-  font-size: 2.5rem;
-  font-weight: bold;
+
+.error-logo {
+  width: 95%;
+  height: auto;
+  object-fit: cover;
+}
+.error-content {
+  color: #323a42;
   text-align: center;
-  margin-top: 1rem;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 100;
+  letter-spacing: 1px;
+  margin-top: -3rem;
 }
-.error_img {
-  width: 45%;
-  margin-left: 27%;
-  margin-top: -6rem;
-  margin-bottom: 0rem;
+#err_btn {
+  background-color: #2f4343;
+  color: white;
+  font-size: 20px;
+  padding: 10px 60px;
+  border-radius: 5px;
+  margin: 10px 0px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  font-family: 'Nunito', sans-serif;
 }
-@media only screen and (max-width: 900px) {
-  .error_img {
-    margin-top: -3rem;
-    width: 50%;
-  }
-  .error_heading {
-    font-size: 2rem;
-  }
+
+#err_btn:hover {
+  background-color: #f5a623;
+  color: #fff;
 }
-@media only screen and (max-width: 600px) {
-  .error_heading {
-    font-size: 1.75rem;
+
+.not-found {
+  background: whitesmoke;
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: -4% 10% 0 10%;
+}
+
+@media screen and (max-width: 950px) {
+  .error {
+    min-height: 60vh;
+    margin: 0 5% 0 5%;
+    padding: 15px;
   }
-  .error_img {
-    margin-top: -2rem;
-    width: 60%;
-    margin-left: 22%;
+
+  #err_btn {
+    font-size: 1rem;
+    padding: 6px 40px;
+    margin: 6px 0px;
+  }
+  .error-content {
+    font-size: 1rem;
+    margin-top: -1rem;
   }
 }
