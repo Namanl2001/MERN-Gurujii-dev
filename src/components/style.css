@@ -1,6 +1,32 @@
 body {
   font-family: 'Varela Round', sans-serif;
 }
+.g-heading {
+  display: inline-block;
+  color: #ffc107;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.profile-button {
+  background-color: #ffc107;
+  border: 2px solid white !important;
+  border-radius: 0%;
+  font-weight: bold;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+@media only screen and (max-width: 992px) {
+  .profile-button {
+    margin-bottom: 20px;
+    padding-right: 18px !important;
+    padding-left: 18px !important;
+  }
+  .collapse {
+    text-align: center;
+  }
+}
+
 .modal-confirm {
   color: #636363;
   width: 400px;
@@ -123,7 +149,7 @@ body {
   position: absolute;
   text-align: center;
   text-decoration: none;
-  top: 50px;
+  top: 63px;
   width: 100%;
   animation-delay: 100s;
   -webkit-animation: alert 1s ease forwards;
@@ -300,7 +326,6 @@ ul {
 }
 .footer-widget ul li {
   display: inline-block;
-  float: left;
   width: 50%;
   margin-bottom: 12px;
 }
@@ -357,6 +382,93 @@ ul {
 .footer-menu li a {
   font-size: 14px;
   color: #878787;
+}
+@media screen and (max-width: 500px) {
+  div.formRoot,
+  select.custom-select,
+  input.form-control {
+    font-size: 0.8rem;
+  }
+  select.custom-select,
+  input.form-control {
+    width: 100%;
+  }
+  div.form-child-left,
+  div.form-child-right {
+    flex: 100%;
+  }
+  div.modal-content {
+    margin: 100px auto;
+    width: 310px;
+    position: relative;
+  }
+}
+@media screen and (min-width: 501px) and (max-width: 577px) {
+  div.formRoot,
+  select.custom-select,
+  input.form-control {
+    font-size: 0.7rem;
+  }
+  select.custom-select,
+  input.form-control {
+    width: 80%;
+  }
+  div.form-child-left,
+  div.form-child-right {
+    flex: 50%;
+  }
+  div.modal-content {
+    margin-top: 300px;
+    width: 480px;
+    left: 200px;
+  }
+}
+@media screen and (min-width: 578px) and (max-width: 767px) {
+  div.formRoot,
+  select.custom-select,
+  input.form-control {
+    font-size: 0.7rem;
+  }
+  select.custom-select,
+  input.form-control {
+    width: 100%;
+  }
+  div.form-child-left,
+  div.form-child-right {
+    flex: 50%;
+  }
+  div.modal-content {
+    margin-top: 100px;
+    width: 480px;
+    left: 180px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  div.formRoot,
+  select.custom-select,
+  input.form-control {
+    font-size: 0.9rem;
+  }
+  select.custom-select,
+  input.form-control {
+    width: 107%;
+  }
+  div.modal-content {
+    width: 760px;
+    padding-right: 10px;
+    left: 50px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  select.custom-select,
+  input.form-control {
+    width: 104%;
+  }
+  div.modal-content {
+    width: 968px;
+    margin-left: -200px;
+    padding-right: 10px;
+  }
 }
 @media only screen and (max-width: 800px) {
   .form1 {
@@ -432,37 +544,67 @@ form > .button:hover {
   margin-bottom: 74px;
   text-align: center;
 }
-.error_heading {
-  -webkit-text-stroke: 1px #f8f8f8;
-  text-shadow: 0px 2px 4px #424242;
-  font-size: 2.5rem;
-  font-weight: bold;
+
+.error-logo {
+  width: 95%;
+  height: auto;
+  object-fit: cover;
+}
+.error-content {
+  color: #323a42;
   text-align: center;
-  margin-top: 1rem;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 100;
+  letter-spacing: 1px;
+  margin-top: -3rem;
 }
-.error_img {
-  width: 45%;
-  margin-left: 27%;
-  margin-top: -6rem;
-  margin-bottom: 0rem;
+#err_btn {
+  background-color: #2f4343;
+  color: white;
+  font-size: 20px;
+  padding: 10px 60px;
+  border-radius: 5px;
+  margin: 10px 0px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  font-family: 'Nunito', sans-serif;
 }
-@media only screen and (max-width: 900px) {
-  .error_img {
-    margin-top: -3rem;
-    width: 50%;
-  }
-  .error_heading {
-    font-size: 2rem;
-  }
+
+#err_btn:hover {
+  background-color: #f5a623;
+  color: #fff;
 }
-@media only screen and (max-width: 600px) {
-  .error_heading {
-    font-size: 1.75rem;
+
+.not-found {
+  background: whitesmoke;
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: -4% 10% 0 10%;
+}
+
+@media screen and (max-width: 950px) {
+  .error {
+    min-height: 60vh;
+    margin: 0 5% 0 5%;
+    padding: 15px;
   }
-  .error_img {
-    margin-top: -2rem;
-    width: 60%;
-    margin-left: 22%;
+
+  #err_btn {
+    font-size: 1rem;
+    padding: 6px 40px;
+    margin: 6px 0px;
+  }
+  .error-content {
+    font-size: 1rem;
+    margin-top: -1rem;
   }
 }
 .card-body img {
