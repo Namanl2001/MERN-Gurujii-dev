@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './style.css';
+import CountUp from 'react-countup';
+import VisibilitySensor from 'react-visibility-sensor';
 
 class cards extends Component {
   render() {
@@ -21,7 +23,16 @@ class cards extends Component {
                 />
                 <br />
                 <br />
-                <h2 className='card-title text-center black'>30+</h2>
+                <h2 className='card-title text-center black'>
+                  <CountUp end={30} redraw={true}>
+                    {({ countUpRef, start }) => (
+                      <VisibilitySensor onChange={start} delayedCall>
+                        <span ref={countUpRef} />
+                      </VisibilitySensor>
+                    )}
+                  </CountUp>
+                  +
+                </h2>
                 <br />
                 <h5 className='text-center'>CONTRIBUTORS</h5>
               </div>
@@ -37,7 +48,16 @@ class cards extends Component {
                 />
                 <br />
                 <br />
-                <h2 className='card-title text-center black'>90+</h2>
+                <h2 className='card-title text-center black'>
+                  <CountUp end={90} redraw={true}>
+                    {({ countUpRef, start }) => (
+                      <VisibilitySensor onChange={start} delayedCall>
+                        <span ref={countUpRef} />
+                      </VisibilitySensor>
+                    )}
+                  </CountUp>
+                  +
+                </h2>
                 <br />
                 <h5 className='text-center'>FORKS</h5>
               </div>
@@ -53,7 +73,16 @@ class cards extends Component {
                 />
                 <br />
                 <br />
-                <h2 className='card-title text-center yellow'>30+</h2>
+                <h2 className='card-title text-center yellow'>
+                  <CountUp end={30} redraw={true}>
+                    {({ countUpRef, start }) => (
+                      <VisibilitySensor onChange={start} delayedCall>
+                        <span ref={countUpRef} />
+                      </VisibilitySensor>
+                    )}
+                  </CountUp>
+                  +
+                </h2>
                 <br />
                 <h5 className='text-center'>STARS</h5>
               </div>
