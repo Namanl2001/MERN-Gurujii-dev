@@ -91,6 +91,7 @@ function rootReducer(state = defaultState, action) {
         users: newArray5,
         subjdata: state.pindata,
         subject: 'All',
+        tutor: 'All',
         class: 'All',
       };
 
