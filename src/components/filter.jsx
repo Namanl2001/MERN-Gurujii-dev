@@ -82,6 +82,26 @@ class filter extends Component {
             }}
           >
             <Dropdown.Button primary id='dropdownMenuButton'>
+              {this.props.tutor}
+            </Dropdown.Button>
+            <Dropdown.Menu aria-labelledby='dropdownMenuButton'>
+              <Dropdown.Item disabled>HOME/EXTERNAL TUTOR</Dropdown.Item>
+              <Dropdown.Item onClick={this.props.alltut}>All</Dropdown.Item>
+              <Dropdown.Item onClick={this.props.home}>
+                Home Tutor
+              </Dropdown.Item>
+              <Dropdown.Item onClick={this.props.exe}>
+                External Tutor
+              </Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+
+          <Dropdown
+            style={{
+              marginRight: '2em',
+            }}
+          >
+            <Dropdown.Button primary id='dropdownMenuButton'>
               {this.props.subject}
             </Dropdown.Button>
             <Dropdown.Menu aria-labelledby='dropdownMenuButton'>
@@ -130,6 +150,7 @@ class filter extends Component {
 
 const mapStatetoProps = state => {
   return {
+    tutor: state.tutor,
     subject: state.subject,
     class: state.class,
   };
@@ -138,6 +159,9 @@ const mapStatetoProps = state => {
 const mapDispatchtoProps = dispatch => {
   return {
     pin: pin => dispatch({ type: 'PIN', pin: pin }),
+    alltut: () => dispatch({ type: 'ALLTUT' }),
+    home: () => dispatch({ type: 'HOME' }),
+    exe: () => dispatch({ type: 'EXE' }),
     username: username => dispatch({ type: 'NAME', username: username }),
 
     allsub: () => dispatch({ type: 'ALLSUB' }),
