@@ -25,10 +25,14 @@ class cards extends Component {
                   {this.props.user.coaching}
                 </h3>
                 <br />
-                <h5>
+                <h5 className='head'>
                   {this.props.user.title} {this.props.user.username}
                 </h5>
-                <h3 className='flip-box-header'>
+                <h4 style={{ marginTop: '1.5rem' }}>{this.props.user.tutor}</h4>
+                <h3
+                  className='flip-box-header'
+                  style={{ textTransform: 'Capitalize' }}
+                >
                   {this.props.user.subject} <br />
                 </h3>
                 <p>
@@ -48,8 +52,8 @@ class cards extends Component {
                 backgroundImage: `url(https://i.pinimg.com/736x/5e/e2/db/5ee2db0b6b3098b78812712d137c102d.jpg)`,
               }}
             >
-              <div className='inner color-white'>
-                <h4 style={{ marginTop: '50%' }}>{this.props.user.tutor}</h4>
+              <br />
+              <div className='inner color-white' style={{ marginTop: '7%' }}>
                 <div style={{ fontSize: 25 }}>
                   <StarRatingComponent
                     name='rate2'
@@ -67,11 +71,9 @@ class cards extends Component {
                   max='80'
                   readMoreText='Click! to read more'
                 />
-                <br />
                 Address: {this.props.user.address} , {this.props.user.city}{' '}
                 <br />
                 {this.props.user.pin}
-                <br />
                 <p className='cont'>Contact: {this.props.user.phone}</p>
               </div>
             </div>

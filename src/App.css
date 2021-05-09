@@ -66,6 +66,7 @@ html {
 
 .formRoot {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .modal-content {
@@ -78,7 +79,12 @@ html {
 }
 
 .form-child-left {
+  flex: 50%;
   width: 467px;
+}
+
+.form-child-right {
+  flex: 50%;
 }
 
 input::-webkit-outer-spin-button,
@@ -211,9 +217,10 @@ html {
 
 .flip-box-header {
   font-size: 32px;
+}
+.head {
   text-transform: capitalize;
 }
-
 .flip-box p {
   font-size: 20px;
   line-height: 1.5em;

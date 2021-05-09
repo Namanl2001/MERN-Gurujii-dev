@@ -21,9 +21,42 @@ class form extends Component {
     city: '',
     pin: null,
     phone: null,
+    errormessage1: '',
+    errormessage2: '',
   };
 
   handleChange = e => {
+    let nam = e.target.id;
+    let val = e.target.value;
+    const pinRegex = RegExp(/[1-9][0-9]{5}/);
+    const phoneRegex = RegExp(/^[0-9\b]+$/);
+    let err = '';
+    if (nam === 'pin') {
+      if (!pinRegex.test(val) || (val.length !== 6 && val !== '')) {
+        err = (
+          <strong style={{ color: 'red' }}>Please enter valid pincode</strong>
+        );
+        document.getElementById('pin').style.border = '1px solid red';
+      } else {
+        document.getElementById('pin').style.borderColor = '';
+      }
+      this.setState({ errormessage1: err });
+    }
+
+    if (nam === 'phone') {
+      if (!phoneRegex.test(val) || (val.length !== 10 && val !== '')) {
+        err = (
+          <strong style={{ color: 'red' }}>
+            Please enter valid mobile number
+          </strong>
+        );
+        document.getElementById('phone').style.border = '1px solid red';
+      } else {
+        document.getElementById('phone').style.borderColor = '';
+      }
+      this.setState({ errormessage2: err });
+    }
+
     this.setState({
       [e.target.id]: e.target.value,
     });
@@ -52,11 +85,11 @@ class form extends Component {
         phone: this.state.phone,
       })
       .then(response => {
-        if (response.status == 200) {
+        if (response.status === 200) {
           axios.get(`/users/sendMail/${this.props.emailid}/1`);
           if (
             alert(
-              `Congratulations!! ${this.state.userName} Your profile added successfully to our database `
+              `Congratulations!! ${this.state.userName.toUpperCase()} Your profile added successfully to our database `
             )
           ) {
             window.location.reload();
@@ -218,7 +251,7 @@ class form extends Component {
                       value={this.state.c1}
                     />
                   </Col>
-                  <Form.LabelCol col='sm-2' htmlFor='c2'>
+                  <Form.LabelCol col='sm-3' htmlFor='c2'>
                     Class 2
                   </Form.LabelCol>
                   <Col col='sm-3'>
@@ -245,7 +278,7 @@ class form extends Component {
                       value={this.state.c3}
                     />
                   </Col>
-                  <Form.LabelCol col='sm-2' htmlFor='c2'>
+                  <Form.LabelCol col='sm-3' htmlFor='c2'>
                     Class 4
                   </Form.LabelCol>
                   <Col col='sm-3'>
@@ -299,6 +332,7 @@ class form extends Component {
                       onChange={this.handleChange}
                       value={this.state.pin}
                     />
+                    {this.state.errormessage1}
                   </Col>
                 </Row>
                 <Row>
@@ -313,6 +347,7 @@ class form extends Component {
                       onChange={this.handleChange}
                       value={this.state.phone}
                     />
+                    {this.state.errormessage2}
                   </Col>
                 </Row>
               </div>

@@ -9,9 +9,10 @@
     "axios": ">=0.21.1",
     "bootstrap-4-react": "0.0.59",
     "bootstrap4": "0.0.1-security",
-    "concurrently": "^6.0.1",
+    "concurrently": "^6.0.2",
     "nodemailer": "^6.4.11",
     "react": "^16.13.1",
+    "react-countup": "^4.3.3",
     "react-dom": "^16.13.1",
     "react-google-login": "^5.1.21",
     "react-icons": "^4.2.0",
@@ -22,6 +23,7 @@
     "react-scroll": "^1.8.2",
     "react-simple-chatbot": "^0.6.1",
     "react-star-rating-component": "^1.4.1",
+    "react-visibility-sensor": "^5.1.1",
     "read-more-react": "^1.0.10",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
@@ -38,7 +40,9 @@
     "dep1": "concurrently \"yarn server-dependencies\" \"yarn client-dependencies\"",
     "client": "yarn start",
     "server": "cd backend && yarn start",
-    "dev": "concurrently \"yarn server\" \"yarn client\""
+    "dev": "concurrently \"yarn server\" \"yarn client\"",
+    "check-formatting": "prettier --check '**/*.{js,jsx,css,html}'",
+    "check-linting": "eslint '**/*.{js,jsx}'"
   },
   "eslintConfig": {
     "extends": "react-app"

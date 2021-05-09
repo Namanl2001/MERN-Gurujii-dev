@@ -31,10 +31,11 @@ class navbar extends Component {
     axios
       .delete(`/users/delete/${this.props.id}`)
       .then(response => {
-        if (response.status == 200) {
+        if (response.status === 200) {
           axios.get(`/users/sendMail/${this.props.emailid}/2`);
-          if (alert(`Your profile deleted successfully.....!! `)) {
-          } else window.location.reload();
+          if (!alert(`Your profile deleted successfully.....!! `)) {
+            window.location.reload();
+          }
         }
       })
       .catch(function (error) {
@@ -51,13 +52,19 @@ class navbar extends Component {
       <div>
         {this.props.logged && !this.props.registeredUser && (
           <div>
-            <Navbar expand='lg' dark bg='dark'>
-              <Navbar.Brand href='#'>GuruJii</Navbar.Brand>
+            <Navbar expand='lg' dark bg='dark' fixed='top' className='navbar'>
+              <Navbar.Brand href='#'>
+                {' '}
+                <span className='g-heading'>
+                  <h2>G</h2>
+                </span>
+                uruJii
+              </Navbar.Brand>
               <Navbar.Toggler target='#navbarSupportedContent' />
               <Collapse navbar id='navbarSupportedContent'>
                 <Navbar.Nav ml='auto'>
                   <Nav.Item active>
-                    <Nav.Link href='#'>Home</Nav.Link>
+                    <Nav.Link href='/'>Home</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
                     <Nav.Link href='#'>Link</Nav.Link>
@@ -76,7 +83,7 @@ class navbar extends Component {
                   </Nav.Item>
                 </Navbar.Nav>
                 <Button
-                  warning
+                  className='profile-button'
                   mr='sm-4'
                   data-toggle='modal'
                   data-target='#Modal'
@@ -106,13 +113,18 @@ class navbar extends Component {
 
         {this.props.logged && this.props.registeredUser && (
           <div>
-            <Navbar expand='lg' dark bg='dark'>
-              <Navbar.Brand href='#'>GuruJii</Navbar.Brand>
+            <Navbar expand='lg' dark bg='dark' fixed='top' className='navbar'>
+              <Navbar.Brand href='#'>
+                <span className='g-heading'>
+                  <h2>G</h2>
+                </span>
+                uruJii
+              </Navbar.Brand>
               <Navbar.Toggler target='#navbarSupportedContent' />
               <Collapse navbar id='navbarSupportedContent'>
                 <Navbar.Nav ml='auto'>
                   <Nav.Item active>
-                    <Nav.Link href='#'>Home</Nav.Link>
+                    <Nav.Link href='/'>Home</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
                     <Nav.Link href='#'>Link</Nav.Link>
@@ -203,13 +215,18 @@ class navbar extends Component {
 
         {!this.props.logged && (
           <div>
-            <Navbar expand='lg' dark bg='dark'>
-              <Navbar.Brand href='#'>GuruJii</Navbar.Brand>
+            <Navbar expand='lg' dark bg='dark' fixed='top' className='navbar'>
+              <Navbar.Brand href='#'>
+                <span className='g-heading'>
+                  <h2>G</h2>
+                </span>
+                uruJii
+              </Navbar.Brand>
               <Navbar.Toggler target='#navbarSupportedContent' />
               <Collapse navbar id='navbarSupportedContent'>
                 <Navbar.Nav ml='auto'>
                   <Nav.Item active>
-                    <Nav.Link href='#'>Home</Nav.Link>
+                    <Nav.Link href='/'>Home</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
                     <Nav.Link href='#'>Link</Nav.Link>
@@ -230,21 +247,6 @@ class navbar extends Component {
                 <Login />
               </Collapse>
             </Navbar>
-          </div>
-        )}
-
-        {this.state.hidden ? (
-          ' '
-        ) : (
-          <div
-            className='alert alert-success alert-dismissible fade show myalert'
-            // style="margin-bottom:0"
-          >
-            <button type='button' className='close' data-dismiss='alert'>
-              &times;
-            </button>
-            <strong>Great Landing !</strong> Teachers have to signin to make
-            profile.
           </div>
         )}
       </div>
