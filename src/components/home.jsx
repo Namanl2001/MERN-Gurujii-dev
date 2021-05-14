@@ -11,6 +11,7 @@ import Navbar from '../components/navbar';
 import Chatbot from '../components/chatbot';
 import Alert from '../components/alert';
 import Reach from '../components/Reach';
+import Vision from '../components/ourvision';
 
 class home extends Component {
   componentDidMount() {
@@ -93,6 +94,7 @@ class home extends Component {
               <Row>{this.List()}</Row>
             </Container>
             <ScrollToTop />
+            <Vision />
             <Reach />
             <br />
           </div>
