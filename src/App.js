@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 import E404 from './components/E404';
 const Home = React.lazy(() => {
   return new Promise(resolve => {
-    setTimeout(() => resolve(import('./components/home')), 7000);
+    setTimeout(() => resolve(import('./components/home')), 4000);
   });
 });
 
