@@ -9,10 +9,7 @@ const ourvision = () => {
         Our <span>Vision</span>
       </h1>
       <br />
-      <h5>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam quasi
-        ipsum{' '}
-      </h5>
+      <h5>To connect you, with the best teacher for you, in your locality. </h5>
       <br />
       <br />
       <div className='row' style={{ justifyContent: 'space-evenly' }}>
@@ -62,11 +59,12 @@ const ourvision = () => {
                 className='mx-auto d-block'
               />
               <br />
-              <h3>Everything in One</h3>
+              <h3>Our Mission</h3>
               <br />
               <h5>
-                Original, reliable, playful, and relatable. These are the values
-                that connect our users and our employees at Discord.
+                Our mission is to create a thriving community of engaged people,
+                who share their time, knowledge and influence to support the
+                success of our students.
               </h5>
             </div>
           </div>
