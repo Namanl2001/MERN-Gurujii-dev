@@ -1,13 +1,3 @@
-// axios
-//   .get("http://localhost:5000/users/")
-//   .then((response) => {
-//     this.setState({ users: response.data });
-//     console.log(this.state.users);
-//   })
-//   .catch((error) => {
-//     console.log(error);
-//   });
-
 import thunkMiddleware from 'redux-thunk';
 import { createStore, applyMiddleware } from 'redux';
 import axios from 'axios';
