@@ -8,7 +8,6 @@ import { Progress } from 'bootstrap-4-react';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import YouTubeIcon from '@material-ui/icons/YouTube';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import ScrollToTop from './scrollToTop';
@@ -114,7 +113,7 @@ class home extends Component {
                   </a>
                 </li>
                 <li>
-                  <a href='/#'>
+                  <a href='https://github.com/Namanl2001/MERN-Gurujii-dev'>
                     <span>Github</span>
                     <GitHubIcon />
                   </a>
@@ -123,12 +122,6 @@ class home extends Component {
                   <a href='/#'>
                     <span>Instagram</span>
                     <InstagramIcon />
-                  </a>
-                </li>
-                <li>
-                  <a href='/#'>
-                    <span>YouTube</span>
-                    <YouTubeIcon />
                   </a>
                 </li>
                 <li>

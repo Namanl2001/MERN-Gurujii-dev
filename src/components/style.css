@@ -751,6 +751,7 @@ h5 {
   transform: translateY(-50%);
   z-index: 1000;
 }
+
 .social ul {
   margin: 0;
   padding: 0;
@@ -791,4 +792,9 @@ h5 {
   opacity: 1;
   backface-visibility: visible;
   left: 40px;
+}
+@media only screen and (max-width: 768px) {
+  .social {
+    display: none;
+  }
 }
