@@ -9,7 +9,7 @@
     "axios": ">=0.21.1",
     "bootstrap-4-react": "0.0.59",
     "bootstrap4": "0.0.1-security",
-    "concurrently": "^6.0.2",
+    "concurrently": "^6.1.0",
     "nodemailer": "^6.4.11",
     "react": "^16.13.1",
     "react-countup": "^4.3.3",
