@@ -9,6 +9,11 @@ class alert extends Component {
       hidden: false,
     };
   }
+
+  timer = setInterval(() => {
+    this.setState({ hidden: true });
+  }, 10000);
+
   render() {
     return (
       <div>
@@ -23,11 +28,6 @@ class alert extends Component {
               <strong>Great Landing !</strong> Teachers have to signin to make
               profile.
             </p>
-            {
-              (this.timer = setInterval(() => {
-                this.setState({ hidden: true });
-              }, 10000))
-            }
           </div>
         )}
       </div>
