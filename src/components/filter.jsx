@@ -130,7 +130,16 @@ class filter extends Component {
               <Dropdown.Item onClick={this.props.c12}>12 th</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
-
+        </div>
+        <div
+          style={{
+            marginTop: '2em',
+            textAlign: 'center',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
           <Button
             secondary
             onClick={() => {
