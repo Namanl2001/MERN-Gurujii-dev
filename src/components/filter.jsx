@@ -67,15 +67,7 @@ class filter extends Component {
         </div>
         <br />
         <br />
-        <div
-          style={{
-            marginTop: '2em',
-            textAlign: 'center',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
+        <div className='alignment'>
           <Dropdown
             style={{
               marginRight: '2em',
@@ -131,15 +123,7 @@ class filter extends Component {
             </Dropdown.Menu>
           </Dropdown>
         </div>
-        <div
-          style={{
-            marginTop: '2em',
-            textAlign: 'center',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
+        <div className='alignment'>
           <Button
             secondary
             onClick={() => {
