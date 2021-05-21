@@ -5,13 +5,13 @@ import './App.css';
 
 const Home = React.lazy(() => {
   return new Promise(resolve => {
-    setTimeout(() => resolve(import('./components/home')), 4000);
+    setTimeout(() => resolve(import('./components/home')), 2000);
   });
 });
 
 const Footer = React.lazy(() => {
   return new Promise(resolve => {
-    setTimeout(() => resolve(import('./components/Footer')), 5000);
+    setTimeout(() => resolve(import('./components/Footer')), 2000);
   });
 });
 
@@ -21,13 +21,20 @@ const E404 = React.lazy(() => {
   });
 });
 
+const About = React.lazy(() => {
+  return new Promise(resolve => {
+    setTimeout(() => resolve(import('./components/about')), 1000);
+  });
+});
+
 function App() {
   return (
     <>
       <Router>
         <React.Suspense fallback={<Preloader />}>
           <Switch>
-            <Route exact path='/' component={Home} />
+            <Route exact path='/' component={About} />
+            <Route exact path='/home' component={Home} />
 
             <Route path='*' component={E404} />
           </Switch>

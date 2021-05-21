@@ -11,12 +11,9 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import ScrollToTop from './scrollToTop';
-import Board from '../assets/board.jpg';
 import Navbar from '../components/navbar';
 import Chatbot from '../components/chatbot';
 import Alert from '../components/alert';
-import Reach from '../components/Reach';
-import Vision from '../components/ourvision';
 
 class home extends Component {
   componentDidMount() {
@@ -56,17 +53,10 @@ class home extends Component {
   render() {
     return (
       <>
-        <div className='parallax'>
+        <div>
           <Navbar />
           <Alert />
           <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <div className='center'>
-            <img src={Board} alt='' />
-          </div>
           <br />
           <br />
           <br />
@@ -133,8 +123,6 @@ class home extends Component {
               </ul>
             </div>
             <ScrollToTop />
-            <Vision />
-            <Reach />
             <br />
           </div>
         )}

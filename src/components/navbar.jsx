@@ -64,10 +64,10 @@ class navbar extends Component {
               <Collapse navbar id='navbarSupportedContent'>
                 <Navbar.Nav ml='auto'>
                   <Nav.Item active>
-                    <Nav.Link href='/'>Home</Nav.Link>
+                    <Nav.Link href='/'>About</Nav.Link>
                   </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link href='#'>Link</Nav.Link>
+                  <Nav.Item active>
+                    <Nav.Link href='/home'>Home</Nav.Link>
                   </Nav.Item>
                   <Nav.Item dropdown>
                     <Nav.Link dropdownToggle>Dropdown</Nav.Link>
@@ -124,10 +124,10 @@ class navbar extends Component {
               <Collapse navbar id='navbarSupportedContent'>
                 <Navbar.Nav ml='auto'>
                   <Nav.Item active>
-                    <Nav.Link href='/'>Home</Nav.Link>
+                    <Nav.Link href='/'>About</Nav.Link>
                   </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link href='#'>Link</Nav.Link>
+                  <Nav.Item active>
+                    <Nav.Link href='/home'>Home</Nav.Link>
                   </Nav.Item>
                   <Nav.Item dropdown>
                     <Nav.Link dropdownToggle>Dropdown</Nav.Link>
@@ -226,10 +226,10 @@ class navbar extends Component {
               <Collapse navbar id='navbarSupportedContent'>
                 <Navbar.Nav ml='auto'>
                   <Nav.Item active>
-                    <Nav.Link href='/'>Home</Nav.Link>
+                    <Nav.Link href='/'>About</Nav.Link>
                   </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link href='#'>Link</Nav.Link>
+                  <Nav.Item active>
+                    <Nav.Link href='/home'>Home</Nav.Link>
                   </Nav.Item>
                   <Nav.Item dropdown>
                     <Nav.Link dropdownToggle>Dropdown</Nav.Link>
