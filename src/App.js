@@ -5,13 +5,13 @@ import './App.css';
 
 const Home = React.lazy(() => {
   return new Promise(resolve => {
-    setTimeout(() => resolve(import('./components/home')), 2000);
+    setTimeout(() => resolve(import('./components/home')), 4000);
   });
 });
 
 const Footer = React.lazy(() => {
   return new Promise(resolve => {
-    setTimeout(() => resolve(import('./components/Footer')), 2000);
+    setTimeout(() => resolve(import('./components/Footer')), 5000);
   });
 });
 
@@ -23,7 +23,7 @@ const E404 = React.lazy(() => {
 
 const About = React.lazy(() => {
   return new Promise(resolve => {
-    setTimeout(() => resolve(import('./components/about')), 1000);
+    setTimeout(() => resolve(import('./components/about')), 4000);
   });
 });
 

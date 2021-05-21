@@ -798,7 +798,10 @@ h5 {
     display: none;
   }
 }
-.bigbtn-container {
+.bigbtn-container,
+.alignment {
+  margin-top: 2em;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
