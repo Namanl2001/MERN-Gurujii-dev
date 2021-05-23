@@ -3,11 +3,22 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Preloader from './components/Preloader';
 import healthtips from './components/healthtips';
 import './App.css';
-import Footer from './components/Footer';
-import E404 from './components/E404';
+
 const Home = React.lazy(() => {
   return new Promise(resolve => {
     setTimeout(() => resolve(import('./components/home')), 4000);
+  });
+});
+
+const Footer = React.lazy(() => {
+  return new Promise(resolve => {
+    setTimeout(() => resolve(import('./components/Footer')), 5000);
+  });
+});
+
+const E404 = React.lazy(() => {
+  return new Promise(resolve => {
+    setTimeout(() => resolve(import('./components/E404')), 3000);
   });
 });
 
@@ -23,7 +34,22 @@ function App() {
           </Switch>
         </React.Suspense>
       </Router>
-      <Footer />
+      <React.Suspense
+        fallback={
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              marginTop: '50px',
+              fontWeight: 'medium',
+            }}
+          >
+            Loading...
+          </div>
+        }
+      >
+        <Footer />
+      </React.Suspense>
     </>
   );
 }
