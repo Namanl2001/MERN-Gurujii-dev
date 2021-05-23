@@ -55,9 +55,7 @@ class update extends Component {
     let err = '';
     if (nam === 'pin') {
       if (!pinRegex.test(val) || (val.length !== 6 && val !== '')) {
-        err = (
-          <strong style={{ color: 'red' }}>Please enter valid pincode</strong>
-        );
+        err = <span style={{ color: 'red' }}>Please enter valid pincode!</span>;
         document.getElementById('pin').style.border = '1px solid red';
       } else {
         document.getElementById('pin').style.borderColor = '';
@@ -68,9 +66,9 @@ class update extends Component {
     if (nam === 'phone') {
       if (!phoneRegex.test(val) || (val.length !== 10 && val !== '')) {
         err = (
-          <strong style={{ color: 'red' }}>
-            Please enter valid mobile number
-          </strong>
+          <span style={{ color: 'red' }}>
+            Please enter valid mobile number!
+          </span>
         );
         document.getElementById('phone').style.border = '1px solid red';
       } else {
@@ -80,43 +78,40 @@ class update extends Component {
     }
     switch (nam) {
       case 'title':
-        errors.title = val == '' ? 'Title is required!' : '';
+        errors.title = val == '' ? '*' : '';
         break;
       case 'userName':
-        errors.userName = val.length < 1 ? 'Username is required!' : '';
+        errors.userName = val.length < 1 ? '*' : '';
         break;
       case 'subject':
-        errors.subject =
-          val == '' ? 'Full Name must be 5 characters long!' : '';
+        errors.subject = val == '' ? '*' : '';
         break;
       case 'tutor':
-        errors.tutor = val == '' ? 'Tutor is required!' : '';
+        errors.tutor = val == '' ? '*' : '';
         break;
       case 'coachingName':
-        errors.coachingName =
-          val.length < 1 ? 'Coaching name is required!' : '';
+        errors.coachingName = val.length < 1 ? '*' : '';
         break;
       case 'qualification':
-        errors.qualification =
-          val.length < 1 ? 'Qualification is required!' : '';
+        errors.qualification = val.length < 1 ? '*' : '';
         break;
       case 'about':
-        errors.about = val.length < 1 ? 'About is required!' : '';
+        errors.about = val.length < 1 ? '*' : '';
         break;
       case 'c1':
-        errors.c1 = val.length < 1 ? 'Class1 is required!' : '';
+        errors.c1 = val.length < 1 ? '*' : '';
         break;
       case 'address':
-        errors.address = val.length < 1 ? 'Address is required!' : '';
+        errors.address = val.length < 1 ? '*' : '';
         break;
       case 'city':
-        errors.city = val.length < 1 ? 'City is required!' : '';
+        errors.city = val.length < 1 ? '*' : '';
         break;
       case 'pin':
-        errors.pin = val.length < 1 ? 'Pin is required!' : '';
+        errors.pin = val.length < 1 ? '*' : '';
         break;
       case 'phone':
-        errors.phone = val.length < 1 ? 'Phone number is required!' : '';
+        errors.phone = val.length < 1 ? '*' : '';
         break;
       default:
         break;
@@ -161,7 +156,7 @@ class update extends Component {
           console.log(error);
         });
     } else {
-      alert('Please fill out all fields to proceed');
+      alert('Please fill out all the required fields to proceed.');
     }
   };
 
@@ -204,6 +199,9 @@ class update extends Component {
                 <Row>
                   <Form.LabelCol col='sm-3' htmlFor='userName'>
                     Name
+                    <nobr style={{ color: 'red' }}>
+                      {this.state.errors.userName}
+                    </nobr>
                   </Form.LabelCol>
                   <Col col='sm-8'>
                     <Form.Input
@@ -257,6 +255,9 @@ class update extends Component {
                 <Row>
                   <Form.LabelCol col='sm-3' htmlFor='coachingName'>
                     Coaching
+                    <nobr style={{ color: 'red' }}>
+                      {this.state.errors.coachingName}
+                    </nobr>
                   </Form.LabelCol>
                   <Col col='sm-8'>
                     <Form.Input
@@ -271,6 +272,9 @@ class update extends Component {
                 <Row>
                   <Form.LabelCol col='sm-3' htmlFor='qualification'>
                     Qualification
+                    <nobr style={{ color: 'red' }}>
+                      {this.state.errors.qualification}
+                    </nobr>
                   </Form.LabelCol>
                   <Col col='sm-8'>
                     <Form.Input
@@ -285,6 +289,9 @@ class update extends Component {
                 <Row>
                   <Form.LabelCol col='sm-3' htmlFor='about'>
                     About
+                    <nobr style={{ color: 'red' }}>
+                      {this.state.errors.about}
+                    </nobr>
                   </Form.LabelCol>
                   <Col col='sm-8'>
                     <Form.Input
@@ -301,6 +308,7 @@ class update extends Component {
                 <Row>
                   <Form.LabelCol col='sm-2' htmlFor='c1'>
                     Class 1
+                    <nobr style={{ color: 'red' }}>{this.state.errors.c1}</nobr>
                   </Form.LabelCol>
                   <Col col='sm-3'>
                     <Form.Input
@@ -354,6 +362,9 @@ class update extends Component {
                 <Row>
                   <Form.LabelCol col='sm-2' htmlFor='address'>
                     address
+                    <nobr style={{ color: 'red' }}>
+                      {this.state.errors.address}
+                    </nobr>
                   </Form.LabelCol>
                   <Col col='sm-10'>
                     <Form.Input
@@ -368,6 +379,9 @@ class update extends Component {
                 <Row>
                   <Form.LabelCol col='sm-2' htmlFor='city'>
                     city
+                    <nobr style={{ color: 'red' }}>
+                      {this.state.errors.city}
+                    </nobr>
                   </Form.LabelCol>
                   <Col col='sm-10'>
                     <Form.Input
@@ -382,6 +396,9 @@ class update extends Component {
                 <Row>
                   <Form.LabelCol col='sm-2' htmlFor='pin'>
                     pin
+                    <nobr style={{ color: 'red' }}>
+                      {this.state.errors.pin}
+                    </nobr>
                   </Form.LabelCol>
                   <Col col='sm-10'>
                     <Form.Input
@@ -397,6 +414,9 @@ class update extends Component {
                 <Row>
                   <Form.LabelCol col='sm-2' htmlFor='phone'>
                     phone
+                    <nobr style={{ color: 'red' }}>
+                      {this.state.errors.phone}
+                    </nobr>
                   </Form.LabelCol>
                   <Col col='sm-10'>
                     <Form.Input

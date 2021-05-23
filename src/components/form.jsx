@@ -27,21 +27,21 @@ class form extends Component {
     city: '',
     pin: null,
     phone: null,
-    errormessage1: 'Pincode is required!',
-    errormessage2: 'Phone number is required!',
+    errormessage1: '',
+    errormessage2: '',
     errors: {
-      title: 'Title is required!',
+      title: '*',
       userName: '',
-      subject: 'Subject is required!',
-      tutor: 'Tutor is required!',
-      coachingName: 'Coaching name is required!',
-      qualification: 'Qualification is required!',
-      about: 'About is required!',
-      c1: 'Class1 is required!',
-      address: 'Address is required!',
-      city: 'City is required!',
-      pin: 'Pincode is required!',
-      phone: 'Phone number is required!',
+      subject: '*',
+      tutor: '*',
+      coachingName: '*',
+      qualification: '*',
+      about: '*',
+      c1: '*',
+      address: '*',
+      city: '*',
+      pin: '*',
+      phone: '*',
     },
   };
 
@@ -76,42 +76,40 @@ class form extends Component {
 
     switch (nam) {
       case 'title':
-        errors.title = val == '' ? 'Title is required!' : '';
+        errors.title = val == '' ? '*' : '';
         break;
       case 'userName':
-        errors.userName = val.length < 1 ? 'Username is required!' : '';
+        errors.userName = val.length < 1 ? '*' : '';
         break;
       case 'subject':
-        errors.subject = val == '' ? 'Subject is required!' : '';
+        errors.subject = val == '' ? '*' : '';
         break;
       case 'tutor':
-        errors.tutor = val == '' ? 'Tutor is required!' : '';
+        errors.tutor = val == '' ? '*' : '';
         break;
       case 'coachingName':
-        errors.coachingName =
-          val.length < 1 ? 'Coaching name is required!' : '';
+        errors.coachingName = val.length < 1 ? '*' : '';
         break;
       case 'qualification':
-        errors.qualification =
-          val.length < 1 ? 'Qualification is required!' : '';
+        errors.qualification = val.length < 1 ? '*' : '';
         break;
       case 'about':
-        errors.about = val.length < 1 ? 'About is required!' : '';
+        errors.about = val.length < 1 ? '*' : '';
         break;
       case 'c1':
-        errors.c1 = val.length < 1 ? 'Class1 is required!' : '';
+        errors.c1 = val.length < 1 ? '*' : '';
         break;
       case 'address':
-        errors.address = val.length < 1 ? 'Address is required!' : '';
+        errors.address = val.length < 1 ? '*' : '';
         break;
       case 'city':
-        errors.city = val.length < 1 ? 'City is required!' : '';
+        errors.city = val.length < 1 ? '*' : '';
         break;
       case 'pin':
-        errors.pin = val.length < 1 ? 'Pin is required!' : '';
+        errors.pin = val.length < 1 ? '*' : '';
         break;
       case 'phone':
-        errors.phone = val.length < 1 ? 'Phone number is required!' : '';
+        errors.phone = val.length < 1 ? '*' : '';
         break;
       default:
         break;
@@ -157,7 +155,7 @@ class form extends Component {
           console.log(error);
         });
     } else {
-      alert('Please fill out all fields to proceed');
+      alert('Please fill out all the required fields to proceed');
     }
   };
 
@@ -179,6 +177,9 @@ class form extends Component {
                 <Row>
                   <Form.LabelCol col='sm-3' htmlFor='title'>
                     Title
+                    <nobr style={{ color: 'red' }}>
+                      {this.state.errors.title}
+                    </nobr>
                   </Form.LabelCol>
                   <Col col='sm-8'>
                     <Form.CustomSelect
@@ -195,15 +196,15 @@ class form extends Component {
                       <option value='Mrs.'>Mrs.</option>
                       <option value='Ms.'>Ms.</option>
                     </Form.CustomSelect>
-                    <span style={{ color: 'red' }}>
-                      {this.state.errors.title}
-                    </span>
                   </Col>
                 </Row>
 
                 <Row>
                   <Form.LabelCol col='sm-3' htmlFor='userName'>
                     Name
+                    <nobr style={{ color: 'red' }}>
+                      {this.state.errors.userName}
+                    </nobr>
                   </Form.LabelCol>
                   <Col col='sm-8'>
                     <Form.Input
@@ -213,15 +214,15 @@ class form extends Component {
                       onChange={this.handleChange}
                       value={this.state.userName}
                     />
-                    <span style={{ color: 'red' }}>
-                      {this.state.errors.userName}
-                    </span>
                   </Col>
                 </Row>
                 <br />
                 <Row>
                   <Form.LabelCol col='sm-3' htmlFor='subject'>
                     Subject
+                    <nobr style={{ color: 'red' }}>
+                      {this.state.errors.subject}
+                    </nobr>
                   </Form.LabelCol>
                   <Col col='sm-8'>
                     <Form.CustomSelect
@@ -238,14 +239,14 @@ class form extends Component {
                       <option value='chemistry'>Chemistry</option>
                       <option value='mathematics'>Mathematics</option>
                     </Form.CustomSelect>
-                    <span style={{ color: 'red' }}>
-                      {this.state.errors.subject}
-                    </span>
                   </Col>
                 </Row>
                 <Row>
                   <Form.LabelCol col='sm-3' htmlFor='tutor'>
                     Tutor
+                    <nobr style={{ color: 'red' }}>
+                      {this.state.errors.tutor}
+                    </nobr>
                   </Form.LabelCol>
                   <Col col='sm-8'>
                     <Form.CustomSelect
@@ -261,14 +262,14 @@ class form extends Component {
                       <option value='Home Tutor'>Home Tutor</option>
                       <option value='External Tutor'>External Tutor</option>
                     </Form.CustomSelect>
-                    <span style={{ color: 'red' }}>
-                      {this.state.errors.tutor}
-                    </span>
                   </Col>
                 </Row>
                 <Row>
                   <Form.LabelCol col='sm-3' htmlFor='coachingName'>
                     Coaching
+                    <nobr style={{ color: 'red' }}>
+                      {this.state.errors.coachingName}
+                    </nobr>
                   </Form.LabelCol>
                   <Col col='sm-8'>
                     <Form.Input
@@ -278,14 +279,14 @@ class form extends Component {
                       onChange={this.handleChange}
                       value={this.state.coachingName}
                     />
-                    <span style={{ color: 'red' }}>
-                      {this.state.errors.coachingName}
-                    </span>
                   </Col>
                 </Row>
                 <Row>
                   <Form.LabelCol col='sm-3' htmlFor='qualification'>
                     Qualification
+                    <nobr style={{ color: 'red' }}>
+                      {this.state.errors.qualification}
+                    </nobr>
                   </Form.LabelCol>
                   <Col col='sm-8'>
                     <Form.Input
@@ -295,14 +296,14 @@ class form extends Component {
                       onChange={this.handleChange}
                       value={this.state.qualification}
                     />
-                    <span style={{ color: 'red' }}>
-                      {this.state.errors.qualification}
-                    </span>
                   </Col>
                 </Row>
                 <Row>
                   <Form.LabelCol col='sm-3' htmlFor='about'>
                     About
+                    <nobr style={{ color: 'red' }}>
+                      {this.state.errors.about}
+                    </nobr>
                   </Form.LabelCol>
                   <Col col='sm-8'>
                     <Form.Input
@@ -312,9 +313,6 @@ class form extends Component {
                       onChange={this.handleChange}
                       value={this.state.about}
                     />
-                    <span style={{ color: 'red' }}>
-                      {this.state.errors.about}
-                    </span>
                   </Col>
                 </Row>
               </div>
@@ -322,6 +320,7 @@ class form extends Component {
                 <Row>
                   <Form.LabelCol col='sm-3' htmlFor='c1'>
                     Class 1
+                    <nobr style={{ color: 'red' }}>{this.state.errors.c1}</nobr>
                   </Form.LabelCol>
                   <Col col='sm-3'>
                     <Form.Input
@@ -331,7 +330,6 @@ class form extends Component {
                       onChange={this.handleChange}
                       value={this.state.c1}
                     />
-                    <span style={{ color: 'red' }}>{this.state.errors.c1}</span>
                   </Col>
                   <Form.LabelCol col='sm-3' htmlFor='c2'>
                     Class 2
@@ -377,6 +375,9 @@ class form extends Component {
                 <Row>
                   <Form.LabelCol col='sm-2' htmlFor='address'>
                     Address
+                    <nobr style={{ color: 'red' }}>
+                      {this.state.errors.address}
+                    </nobr>
                   </Form.LabelCol>
                   <Col col='sm-10'>
                     <Form.Input
@@ -386,14 +387,14 @@ class form extends Component {
                       onChange={this.handleChange}
                       value={this.state.address}
                     />
-                    <span style={{ color: 'red' }}>
-                      {this.state.errors.address}
-                    </span>
                   </Col>
                 </Row>
                 <Row>
                   <Form.LabelCol col='sm-2' htmlFor='city'>
                     City
+                    <nobr style={{ color: 'red' }}>
+                      {this.state.errors.city}
+                    </nobr>
                   </Form.LabelCol>
                   <Col col='sm-10'>
                     <Form.Input
@@ -403,14 +404,14 @@ class form extends Component {
                       onChange={this.handleChange}
                       value={this.state.city}
                     />
-                    <span style={{ color: 'red' }}>
-                      {this.state.errors.city}
-                    </span>
                   </Col>
                 </Row>
                 <Row>
                   <Form.LabelCol col='sm-2' htmlFor='pin'>
                     Pin
+                    <nobr style={{ color: 'red' }}>
+                      {this.state.errors.pin}
+                    </nobr>
                   </Form.LabelCol>
                   <Col col='sm-10'>
                     <Form.Input
@@ -428,6 +429,9 @@ class form extends Component {
                 <Row>
                   <Form.LabelCol col='sm-2' htmlFor='phone'>
                     Phone
+                    <nobr style={{ color: 'red' }}>
+                      {this.state.errors.phone}
+                    </nobr>
                   </Form.LabelCol>
                   <Col col='sm-10'>
                     <Form.Input
@@ -437,9 +441,7 @@ class form extends Component {
                       onChange={this.handleChange}
                       value={this.state.phone}
                     />
-                    <span style={{ color: 'red' }}>
-                      {this.state.errormessage2}
-                    </span>
+                    <span>{this.state.errormessage2}</span>
                   </Col>
                 </Row>
               </div>
