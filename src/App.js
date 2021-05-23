@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Preloader from './components/Preloader';
-import healthtips from './components/HealthTips/healthtips';
+import healthtips from './components/healthtips';
 import './App.css';
 import Footer from './components/Footer';
 import E404 from './components/E404';

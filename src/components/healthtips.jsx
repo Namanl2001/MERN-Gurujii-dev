@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { getInitalData } from '../../store/reducer/user';
+import { getInitalData } from '../store/reducer/user';
 import { connect } from 'react-redux';
 import { Container, Row } from 'bootstrap-4-react';
-import Navbar from '../navbar';
-import Card from './Style';
+import Navbar from '../components/navbar';
+import './style.css';
 
 const content = [
   {
@@ -23,6 +23,53 @@ const content = [
   },
 ];
 
+class Card extends Component {
+  render() {
+    return (
+      <div className='box-container'>
+        <div className='box-item'>
+          <div className='flip-box'>
+            <div
+              className='flip-box-front text-center'
+              style={{
+                backgroundImage: `url(https://i.pinimg.com/originals/7c/05/50/7c05508149920eba2d934c19ff83cbba.jpg)`,
+              }}
+            >
+              <div className='inner color-white'>
+                <br />
+                <br />
+                <h3
+                  className='flip-box-header'
+                  style={{ textTransform: 'uppercase' }}
+                >
+                  {this.props.content.aboutNumber}
+                </h3>
+                <br />
+                <img
+                  src='https://s25.postimg.cc/65hsttv9b/cta-arrow.png'
+                  alt=''
+                  className='flip-box-img'
+                />
+              </div>
+            </div>
+            <div
+              className='flip-box-back text-center'
+              style={{
+                backgroundImage: `url(https://i.pinimg.com/736x/5e/e2/db/5ee2db0b6b3098b78812712d137c102d.jpg)`,
+              }}
+            >
+              <br />
+              <div className='inner color-white'>
+                {this.props.content.aboutContent}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
 class healthtips extends Component {
   componentDidMount() {
     this.props.getInitalData();
@@ -31,7 +78,7 @@ class healthtips extends Component {
   render() {
     return (
       <>
-        <div className='parallax'>
+        <div>
           <Navbar />
           <br />
           <br />
