@@ -10,6 +10,9 @@ import Board from '../assets/board.jpg';
 import Navbar from '../components/navbar';
 import Chatbot from '../components/chatbot';
 import Alert from '../components/alert';
+import Reach from '../components/Reach';
+import Vision from '../components/ourvision';
+import Sidebar from '../components/Sidebar';
 
 class home extends Component {
   componentDidMount() {
@@ -56,6 +59,7 @@ class home extends Component {
           <br />
           <br />
           <br />
+          <br />
           <div className='center'>
             <img src={Board} alt='' />
           </div>
@@ -90,7 +94,11 @@ class home extends Component {
             >
               <Row>{this.List()}</Row>
             </Container>
+            <Sidebar />
             <ScrollToTop />
+            <Vision />
+            <Reach />
+            <br />
           </div>
         )}
       </>

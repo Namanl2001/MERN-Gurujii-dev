@@ -333,7 +333,7 @@ class form extends Component {
                     />
                     <span style={{ color: 'red' }}>{this.state.errors.c1}</span>
                   </Col>
-                  <Form.LabelCol col='sm-2' htmlFor='c2'>
+                  <Form.LabelCol col='sm-3' htmlFor='c2'>
                     Class 2
                   </Form.LabelCol>
                   <Col col='sm-3'>
@@ -360,7 +360,7 @@ class form extends Component {
                       value={this.state.c3}
                     />
                   </Col>
-                  <Form.LabelCol col='sm-2' htmlFor='c2'>
+                  <Form.LabelCol col='sm-3' htmlFor='c2'>
                     Class 4
                   </Form.LabelCol>
                   <Col col='sm-3'>
