@@ -236,7 +236,9 @@ class navbar extends Component {
                     <Nav.Link href='#'>Link</Nav.Link>
                   </Nav.Item>
                   <Nav.Item active dropdown>
-                    <Nav.Link dropdownToggle>Dropdown</Nav.Link>
+                    <Nav.Link dropdownToggle href='#'>
+                      Dropdown
+                    </Nav.Link>
                     <Dropdown.Menu>
                       <Dropdown.Item href='/healthtips'>
                         Health Tips
