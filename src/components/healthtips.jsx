@@ -76,22 +76,14 @@ class healthtips extends Component {
           <br />
           <br />
           <br />
-          <Container
-            style={{
-              marginTop: '5em',
-              textAlign: 'center',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
+          <br />
+          <Container className='alignment'>
             <Row>
               <Card content={content[0]} />
               <Card content={content[1]} />
               <Card content={content[2]} />
             </Row>
           </Container>
-          <br />
           <br />
           <br />
         </div>
