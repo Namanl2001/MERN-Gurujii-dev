@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { getInitalData } from '../store/reducer/user';
-import { connect } from 'react-redux';
 import { Container, Row } from 'bootstrap-4-react';
 import Navbar from '../components/navbar';
 import './style.css';
@@ -58,7 +56,6 @@ class Card extends Component {
                 backgroundImage: `url(https://i.pinimg.com/736x/5e/e2/db/5ee2db0b6b3098b78812712d137c102d.jpg)`,
               }}
             >
-              <br />
               <div className='inner color-white'>
                 {this.props.content.aboutContent}
               </div>
@@ -71,17 +68,11 @@ class Card extends Component {
 }
 
 class healthtips extends Component {
-  componentDidMount() {
-    this.props.getInitalData();
-  }
-
   render() {
     return (
       <>
         <div>
           <Navbar />
-          <br />
-          <br />
           <br />
           <br />
           <br />
@@ -109,4 +100,4 @@ class healthtips extends Component {
   }
 }
 
-export default connect(state => state, { getInitalData })(healthtips);
+export default healthtips;
