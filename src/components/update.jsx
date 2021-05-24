@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import { Modal, Button, Form, Row, Col } from 'bootstrap-4-react';
+toast.configure();
 
 const validateForm = errors => {
   let valid = true;
@@ -156,7 +159,7 @@ class update extends Component {
           console.log(error);
         });
     } else {
-      alert('Please fill out all the required fields to proceed.');
+      toast.error('Please fill out all the required fields to proceed.');
     }
   };
 
