@@ -13,6 +13,7 @@ import Alert from '../components/alert';
 import Reach from '../components/Reach';
 import Vision from '../components/ourvision';
 import Sidebar from '../components/Sidebar';
+import About from '../components/about';
 
 class home extends Component {
   componentDidMount() {
@@ -52,21 +53,16 @@ class home extends Component {
   render() {
     return (
       <>
-        <div className='parallax'>
-          <Navbar />
-          <Alert />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <div className='center'>
-            <img src={Board} alt='' />
-          </div>
-          <br />
-          <br />
-          <br />
-        </div>
+        <Navbar />
+        <Alert />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <About />
+        <br />
+
         <Chatbot />
         {!this.props.isDataInitialized && (
           <Progress mb='4' w='25%'>
