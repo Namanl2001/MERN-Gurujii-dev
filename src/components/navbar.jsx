@@ -138,9 +138,6 @@ class navbar extends Component {
                   <Nav.Item active>
                     <Nav.Link href='/'>Home</Nav.Link>
                   </Nav.Item>
-                  <Nav.Item active>
-                    <Nav.Link href='/'>Home</Nav.Link>
-                  </Nav.Item>
                   <Nav.Item>
                     <Nav.Link href='#'>Link</Nav.Link>
                   </Nav.Item>
