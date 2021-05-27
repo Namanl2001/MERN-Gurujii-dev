@@ -6,13 +6,10 @@ import Filter from './filter';
 import { Container, Row } from 'bootstrap-4-react';
 import { Progress } from 'bootstrap-4-react';
 import ScrollToTop from './scrollToTop';
-import Board from '../assets/board.jpg';
 import Navbar from '../components/navbar';
 import Chatbot from '../components/chatbot';
 import Alert from '../components/alert';
-import Reach from '../components/Reach';
-import Vision from '../components/ourvision';
-import Sidebar from '../components/Sidebar';
+import Sidebar from './Sidebar';
 
 class home extends Component {
   componentDidMount() {
@@ -52,17 +49,10 @@ class home extends Component {
   render() {
     return (
       <>
-        <div className='parallax'>
+        <div>
           <Navbar />
           <Alert />
           <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <div className='center'>
-            <img src={Board} alt='' />
-          </div>
           <br />
           <br />
           <br />
@@ -96,8 +86,6 @@ class home extends Component {
             </Container>
             <Sidebar />
             <ScrollToTop />
-            <Vision />
-            <Reach />
             <br />
           </div>
         )}
