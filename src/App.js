@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Preloader from './components/Preloader';
+import healthtips from './components/healthtips';
 import './App.css';
 
 const Home = React.lazy(() => {
@@ -35,6 +36,7 @@ function App() {
           <Switch>
             <Route exact path='/' component={About} />
             <Route exact path='/home' component={Home} />
+            <Route exact path='/healthtips' component={healthtips} />
 
             <Route path='*' component={E404} />
           </Switch>

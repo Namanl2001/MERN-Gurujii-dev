@@ -69,10 +69,14 @@ class navbar extends Component {
                   <Nav.Item active>
                     <Nav.Link href='/home'>Home</Nav.Link>
                   </Nav.Item>
-                  <Nav.Item dropdown>
-                    <Nav.Link dropdownToggle>Dropdown</Nav.Link>
+                  <Nav.Item active dropdown>
+                    <Nav.Link dropdownToggle href='#'>
+                      Dropdown
+                    </Nav.Link>
                     <Dropdown.Menu>
-                      <Dropdown.Item>Action</Dropdown.Item>
+                      <Dropdown.Item href='/healthtips'>
+                        Health Tips
+                      </Dropdown.Item>
                       <Dropdown.Item>Another action</Dropdown.Item>
                       <Dropdown.Divider />
                       <Dropdown.Item>Something else</Dropdown.Item>
@@ -129,10 +133,14 @@ class navbar extends Component {
                   <Nav.Item active>
                     <Nav.Link href='/home'>Home</Nav.Link>
                   </Nav.Item>
-                  <Nav.Item dropdown>
-                    <Nav.Link dropdownToggle>Dropdown</Nav.Link>
+                  <Nav.Item active dropdown>
+                    <Nav.Link dropdownToggle href='#'>
+                      Dropdown
+                    </Nav.Link>
                     <Dropdown.Menu>
-                      <Dropdown.Item>Action</Dropdown.Item>
+                      <Dropdown.Item href='/healthtips'>
+                        Health Tips
+                      </Dropdown.Item>
                       <Dropdown.Item>Another action</Dropdown.Item>
                       <Dropdown.Divider />
                       <Dropdown.Item>Something else</Dropdown.Item>
@@ -231,10 +239,14 @@ class navbar extends Component {
                   <Nav.Item active>
                     <Nav.Link href='/home'>Home</Nav.Link>
                   </Nav.Item>
-                  <Nav.Item dropdown>
-                    <Nav.Link dropdownToggle>Dropdown</Nav.Link>
+                  <Nav.Item active dropdown>
+                    <Nav.Link dropdownToggle href='#'>
+                      Dropdown
+                    </Nav.Link>
                     <Dropdown.Menu>
-                      <Dropdown.Item>Action</Dropdown.Item>
+                      <Dropdown.Item href='/healthtips'>
+                        Health Tips
+                      </Dropdown.Item>
                       <Dropdown.Item>Another action</Dropdown.Item>
                       <Dropdown.Divider />
                       <Dropdown.Item>Something else</Dropdown.Item>

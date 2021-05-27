@@ -14,6 +14,7 @@
     "bootstrap4": "0.0.1-security",
     "concurrently": "^6.1.0",
     "hover.css": "^2.3.2",
+    "express-async-handler": "^1.1.4",
     "nodemailer": "^6.4.11",
     "react": "^16.13.1",
     "react-countup": "^4.3.3",
