@@ -66,6 +66,7 @@ html {
 
 .formRoot {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .modal-content {
@@ -78,7 +79,12 @@ html {
 }
 
 .form-child-left {
+  flex: 50%;
   width: 467px;
+}
+
+.form-child-right {
+  flex: 50%;
 }
 
 input::-webkit-outer-spin-button,
@@ -223,4 +229,15 @@ html {
 .flip-box-img {
   margin-top: 25px;
   height: 3em;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  border: 7px solid #232943;
+  box-shadow: inset 0 0 2.5px 2px rgba(0, 0, 0, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #808080, #fff);
+  border-radius: 3px;
 }

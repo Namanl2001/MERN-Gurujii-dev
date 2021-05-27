@@ -61,6 +61,7 @@ const addNewUser = (req, res) => {
       city: req.body.city,
       pin: req.body.pin,
       phone: req.body.phone,
+      isAdmin: req.body.isAdmin,
       profilePic: req.file.filename,
     });
 
@@ -94,6 +95,7 @@ const updateUser = (req, res) => {
       user.city = req.body.city;
       user.pin = req.body.pin;
       user.phone = req.body.phone;
+      user.isAdmin = req.body.isAdmin;
 
       user
         .save()

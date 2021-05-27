@@ -33,7 +33,11 @@ class cards extends Component {
                 <h5 className='head'>
                   {this.props.user.title} {this.props.user.username}
                 </h5>
-                <h3 className='flip-box-header'>
+                <h4 style={{ marginTop: '1.5rem' }}>{this.props.user.tutor}</h4>
+                <h3
+                  className='flip-box-header'
+                  style={{ textTransform: 'Capitalize' }}
+                >
                   {this.props.user.subject} <br />
                 </h3>
                 <p>
@@ -75,7 +79,6 @@ class cards extends Component {
                   max='80'
                   readMoreText='Click! to read more'
                 />
-                <br />
                 Address: {this.props.user.address} , {this.props.user.city}{' '}
                 <br />
                 {this.props.user.pin}

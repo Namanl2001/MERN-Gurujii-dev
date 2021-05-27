@@ -1,6 +1,32 @@
 body {
   font-family: 'Varela Round', sans-serif;
 }
+.g-heading {
+  display: inline-block;
+  color: #ffc107;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.profile-button {
+  background-color: #ffc107;
+  border: 2px solid white !important;
+  border-radius: 0%;
+  font-weight: bold;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+@media only screen and (max-width: 992px) {
+  .profile-button {
+    margin-bottom: 20px;
+    padding-right: 18px !important;
+    padding-left: 18px !important;
+  }
+  .collapse {
+    text-align: center;
+  }
+}
+
 .modal-confirm {
   color: #636363;
   width: 400px;
@@ -123,7 +149,7 @@ body {
   position: absolute;
   text-align: center;
   text-decoration: none;
-  top: 50px;
+  top: 63px;
   width: 100%;
   animation-delay: 100s;
   -webkit-animation: alert 1s ease forwards;
@@ -300,7 +326,6 @@ ul {
 }
 .footer-widget ul li {
   display: inline-block;
-  float: left;
   width: 50%;
   margin-bottom: 12px;
 }
@@ -358,6 +383,93 @@ ul {
   font-size: 14px;
   color: #878787;
 }
+@media screen and (max-width: 500px) {
+  div.formRoot,
+  select.custom-select,
+  input.form-control {
+    font-size: 0.8rem;
+  }
+  select.custom-select,
+  input.form-control {
+    width: 100%;
+  }
+  div.form-child-left,
+  div.form-child-right {
+    flex: 100%;
+  }
+  div.modal-content {
+    margin: 100px auto;
+    width: 310px;
+    position: relative;
+  }
+}
+@media screen and (min-width: 501px) and (max-width: 577px) {
+  div.formRoot,
+  select.custom-select,
+  input.form-control {
+    font-size: 0.7rem;
+  }
+  select.custom-select,
+  input.form-control {
+    width: 80%;
+  }
+  div.form-child-left,
+  div.form-child-right {
+    flex: 50%;
+  }
+  div.modal-content {
+    margin-top: 300px;
+    width: 480px;
+    left: 200px;
+  }
+}
+@media screen and (min-width: 578px) and (max-width: 767px) {
+  div.formRoot,
+  select.custom-select,
+  input.form-control {
+    font-size: 0.7rem;
+  }
+  select.custom-select,
+  input.form-control {
+    width: 100%;
+  }
+  div.form-child-left,
+  div.form-child-right {
+    flex: 50%;
+  }
+  div.modal-content {
+    margin-top: 100px;
+    width: 480px;
+    left: 180px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  div.formRoot,
+  select.custom-select,
+  input.form-control {
+    font-size: 0.9rem;
+  }
+  select.custom-select,
+  input.form-control {
+    width: 107%;
+  }
+  div.modal-content {
+    width: 760px;
+    padding-right: 10px;
+    left: 50px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  select.custom-select,
+  input.form-control {
+    width: 104%;
+  }
+  div.modal-content {
+    width: 968px;
+    margin-left: -200px;
+    padding-right: 10px;
+  }
+}
 @media only screen and (max-width: 800px) {
   .form1 {
     display: flex;
@@ -367,7 +479,7 @@ ul {
   }
   .form2 {
     display: flex;
-    align-items: center;
+    justify-content: center;
     margin-top: 2%;
     -webkit-border-radius: 4px;
     border-radius: 4px;
@@ -376,7 +488,7 @@ ul {
     margin-left: -20%;
   }
   .form2 > .textbox {
-    margin-left: 17.5%;
+    margin-left: 12.5%;
   }
 }
 .form1 {
@@ -450,40 +562,268 @@ form > .button:hover {
 }
 
 .cont {
-  margin-top: 5em;
-  margin-bottom: 4em;
+  margin-top: 6rem;
+  position: relative;
   text-align: center;
 }
-.error_heading {
-  -webkit-text-stroke: 1px #f8f8f8;
-  text-shadow: 0px 2px 4px #424242;
-  font-size: 2.5rem;
+
+.error-logo {
+  width: 95%;
+  height: auto;
+  object-fit: cover;
+}
+.error-content {
+  color: #323a42;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 100;
+  letter-spacing: 1px;
+  margin-top: -3rem;
+}
+#err_btn {
+  background-color: #2f4343;
+  color: white;
+  font-size: 20px;
+  padding: 10px 60px;
+  border-radius: 5px;
+  margin: 10px 0px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  font-family: 'Nunito', sans-serif;
+}
+
+#err_btn:hover {
+  background-color: #f5a623;
+  color: #fff;
+}
+
+.not-found {
+  background: whitesmoke;
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: -4% 10% 0 10%;
+}
+
+@media screen and (max-width: 950px) {
+  .error {
+    min-height: 60vh;
+    margin: 0 5% 0 5%;
+    padding: 15px;
+  }
+
+  #err_btn {
+    font-size: 1rem;
+    padding: 6px 40px;
+    margin: 6px 0px;
+  }
+  .error-content {
+    font-size: 1rem;
+    margin-top: -1rem;
+  }
+}
+.card-body img {
+  margin-top: 2rem;
+  width: 4rem;
+}
+.card-body h5 {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+.card-body h2 {
+  font-size: 2.2rem;
   font-weight: bold;
+}
+.black {
+  color: black;
+}
+.yellow {
+  color: yellow;
+}
+.headercontent {
+  font-size: 3.5rem;
+}
+.headercontent span {
+  color: red;
+}
+.cards2 {
+  height: 50vh;
+}
+.color2 {
+  background-color: #e85d04;
+}
+.color1 {
+  background-color: #ffc107;
+}
+.color3 {
+  background-color: #d00000;
+}
+@media only screen and (max-width: 800px) {
+  .card-body h5 {
+    font-size: 1.2rem;
+  }
+}
+.color4 h5 {
+  color: grey;
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans';
   text-align: center;
-  margin-top: 1rem;
+  font-weight: bold;
 }
-.error_img {
-  width: 45%;
-  margin-left: 27%;
-  margin-top: -6rem;
-  margin-bottom: 0rem;
+.color4 h3,
+h5 {
+  color: black;
+  font-size: 22px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans';
+  text-align: center;
+  font-weight: bold;
 }
-@media only screen and (max-width: 900px) {
-  .error_img {
-    margin-top: -3rem;
-    width: 50%;
+.color4 {
+  border-radius: 50px;
+  border: gray 1px solid;
+  height: 19rem;
+}
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999999;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: backgroundcolorchange 4s infinite alternate;
+  animation: backgroundcolorchange 4s infinite alternate;
+}
+.preloader img {
+  width: 6rem;
+  height: 4rem;
+  animation: animatelogo 1s alternate-reverse infinite;
+}
+.preloader h1 {
+  font-size: 3rem;
+  animation: animatelogo 1s alternate-reverse infinite;
+  color: black;
+}
+.updown {
+  display: flex;
+  justify-content: space-between;
+}
+@keyframes animatelogo {
+  from {
+    transform: translateY(-25px);
   }
-  .error_heading {
-    font-size: 2rem;
+  to {
+    transform: translateY(25px);
   }
 }
-@media only screen and (max-width: 600px) {
-  .error_heading {
-    font-size: 1.75rem;
+@keyframes backgroundcolorchange {
+  0% {
+    background: #1abc9c;
   }
-  .error_img {
-    margin-top: -2rem;
-    width: 60%;
-    margin-left: 22%;
+
+  25% {
+    background: #808080;
   }
+
+  50% {
+    background: #ffa07a;
+  }
+
+  75% {
+    background: #87cefa;
+  }
+
+  100% {
+    background: pink;
+  }
+}
+
+.preloader .updown h1 span:nth-child(1) {
+  animation: fade 0.5s infinite alternate-reverse;
+}
+.preloader .updown h1 span:nth-child(2) {
+  animation: fade 1s infinite alternate-reverse;
+}
+.preloader .updown h1 span:nth-child(3) {
+  animation: fade 1.5s infinite alternate-reverse;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.social {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.social ul {
+  margin: 0;
+  padding: 0;
+}
+.social ul li {
+  list-style: none;
+  margin: 0 0;
+}
+.social ul li a {
+  width: 45px;
+  height: 45px;
+  line-height: 50px;
+  font-size: 25px;
+  color: black;
+  background-color: #1e90ff;
+  display: block;
+  text-align: center;
+  position: relative;
+}
+.social ul li a span {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 45px;
+  color: white;
+  background-color: lightblue;
+  font-size: 15px;
+  font-weight: bold;
+  z-index: -1;
+  opacity: 0;
+  backface-visibility: hidden;
+  transition: 0.7s;
+}
+.social ul li:hover span {
+  opacity: 1;
+  backface-visibility: visible;
+  left: 40px;
+}
+@media only screen and (max-width: 768px) {
+  .social {
+    display: none;
+  }
+}
+.alignment {
+  margin-top: 2em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

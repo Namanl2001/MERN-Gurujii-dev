@@ -1,13 +1,3 @@
-// axios
-//   .get("http://localhost:5000/users/")
-//   .then((response) => {
-//     this.setState({ users: response.data });
-//     console.log(this.state.users);
-//   })
-//   .catch((error) => {
-//     console.log(error);
-//   });
-
 import thunkMiddleware from 'redux-thunk';
 import { createStore, applyMiddleware } from 'redux';
 import axios from 'axios';
@@ -18,7 +8,9 @@ const defaultState = {
   pindata: {},
   namedata: {},
   subjdata: {},
+  tutdata: {},
   isDataInitialized: false, // You can add additional property to denote, that data is not fetched for the first time
+  tutor: 'All',
   subject: 'All',
   class: 'All',
   currentUser: '',
@@ -38,6 +30,7 @@ function rootReducer(state = defaultState, action) {
         pindata: action.all.data,
         namedata: action.all.data,
         subjdata: action.all.data,
+        tutdata: action.all.data,
         isDataInitialized: true,
       };
 
@@ -52,11 +45,13 @@ function rootReducer(state = defaultState, action) {
       return {
         ...state,
         users: state.all,
+        tutdata: state.all,
         pindata: state.all,
         namedata: state.all,
         subjdata: state.all,
         subject: 'All',
         class: 'All',
+        tutor: 'All',
       };
 
     case 'PIN':
@@ -66,22 +61,78 @@ function rootReducer(state = defaultState, action) {
       return {
         ...state,
         pindata: newArray0,
+        tutdata: newArray0,
         namedata: newArray0,
         subjdata: newArray0,
         users: newArray0,
         subject: 'All',
+        tutor: 'All',
         class: 'All',
       };
+
+    case 'NAME':
+      const newArray5 = state.pindata.filter(
+        user => user.username.toLowerCase() === action.username.toLowerCase()
+      );
+      return {
+        ...state,
+        namedata: newArray5,
+        tutdata: state.pindata,
+        users: newArray5,
+        subjdata: state.pindata,
+        subject: 'All',
+        tutor: 'All',
+        class: 'All',
+      };
+
+    case 'ALLTUT':
+      return {
+        ...state,
+        users: state.pindata,
+        subjdata: state.pindata,
+        tutdata: state.pindata,
+        subject: 'All',
+        tutor: 'All',
+        class: 'All',
+      };
+    case 'HOME':
+      const newArray6 = state.pindata.filter(
+        user => user.tutor === 'Home Tutor'
+      );
+      return {
+        ...state,
+        subjdata: newArray6,
+        tutdata: newArray6,
+        users: newArray6,
+        tutor: 'Home',
+        subject: 'All',
+        class: 'All',
+      };
+    case 'EXE':
+      const newArray7 = state.pindata.filter(
+        user => user.tutor === 'External Tutor'
+      );
+      return {
+        ...state,
+        subjdata: newArray7,
+        tutdata: newArray7,
+        users: newArray7,
+        tutor: 'External',
+        subject: 'All',
+        class: 'All',
+      };
+
     case 'ALLSUB':
       return {
         ...state,
-        users: state.namedata,
-        subjdata: state.namedata,
+        users: state.tutdata,
+        subjdata: state.tutdata,
+        tutdata: state.tutdata,
         subject: 'All',
         class: 'All',
       };
     case 'PHY':
-      const newArray1 = state.namedata.filter(
+      const newArray1 = state.tutdata.filter(
         user => user.subject === 'physics'
       );
       return {
@@ -92,7 +143,7 @@ function rootReducer(state = defaultState, action) {
         class: 'All',
       };
     case 'CHE':
-      const newArray2 = state.namedata.filter(
+      const newArray2 = state.tutdata.filter(
         user => user.subject === 'chemistry'
       );
       return {
@@ -103,7 +154,7 @@ function rootReducer(state = defaultState, action) {
         class: 'All',
       };
     case 'MAT':
-      const newArray3 = state.namedata.filter(
+      const newArray3 = state.tutdata.filter(
         user => user.subject === 'mathematics'
       );
       return {
@@ -144,18 +195,6 @@ function rootReducer(state = defaultState, action) {
         ...state,
         users: newArray4,
         class: action.type.slice(1),
-      };
-    case 'NAME':
-      const newArray5 = state.pindata.filter(
-        user => user.username.toLowerCase() === action.username.toLowerCase()
-      );
-      return {
-        ...state,
-        namedata: newArray5,
-        users: newArray5,
-        subjdata: state.pindata,
-        subject: 'All',
-        class: 'All',
       };
 
     case 'LOGIN':
