@@ -42,8 +42,13 @@ const addNewUser = (req, res) => {
       return res.status(500).json(err);
     }
     console.log(req.body);
-    console.log(req.file.filename);
-
+    //  console.log(req.file.filename);
+    var profilePic = '';
+    if (req.file !== undefined) {
+      profilePic = req.file.filename;
+    } else {
+      profilePic = '';
+    }
     const newUser = new User({
       email: req.body.email,
       title: req.body.title,
@@ -62,7 +67,7 @@ const addNewUser = (req, res) => {
       pin: req.body.pin,
       phone: req.body.phone,
       isAdmin: req.body.isAdmin,
-      profilePic: req.file.filename,
+      profilePic,
     });
 
     newUser.save(function (err) {
@@ -96,6 +101,7 @@ const updateUser = (req, res) => {
       user.pin = req.body.pin;
       user.phone = req.body.phone;
       user.isAdmin = req.body.isAdmin;
+      user.profilePic = req.file.filename;
 
       user
         .save()

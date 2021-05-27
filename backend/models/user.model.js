@@ -95,6 +95,7 @@ const userSchema = new mongoose.Schema({
   profilePic: {
     type: String,
     trim: true,
+    default: '',
   },
   isAdmin: {
     type: Boolean,

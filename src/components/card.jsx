@@ -5,7 +5,14 @@ import StarRatingComponent from 'react-star-rating-component';
 
 class cards extends Component {
   render() {
-    const imageUrl = `./uploads/${this.props.user.profilePic}`;
+    console.log(this.props.user);
+    var imageUrl = '';
+    if (this.props.user.profilePic === '') {
+      imageUrl = './photo.png';
+    } else {
+      imageUrl = `./uploads/${this.props.user.profilePic}`;
+    }
+
     return (
       <div className='box-container'>
         <div className='box-item'>
@@ -20,6 +27,9 @@ class cards extends Component {
                 className='card-img-top'
                 src={imageUrl}
                 alt='Card image cap'
+                onError={e => {
+                  e.target.src = './photo.png';
+                }}
               />
 
               <div className='front-face-card inner color-white'>
