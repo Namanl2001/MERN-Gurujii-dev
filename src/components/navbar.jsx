@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Clock from 'react-live-clock';
 // import ReactDOM from 'react-dom';
 import {
   Navbar,
@@ -63,6 +64,10 @@ class navbar extends Component {
               <Navbar.Toggler target='#navbarSupportedContent' />
               <Collapse navbar id='navbarSupportedContent'>
                 <Navbar.Nav ml='auto'>
+                  <div className='clk'>
+                    <Clock format={'hh:mmA'} ticking={true} />
+                  </div>
+
                   <Nav.Item active>
                     <Nav.Link href='/'>About</Nav.Link>
                   </Nav.Item>
@@ -127,6 +132,9 @@ class navbar extends Component {
               <Navbar.Toggler target='#navbarSupportedContent' />
               <Collapse navbar id='navbarSupportedContent'>
                 <Navbar.Nav ml='auto'>
+                  <div className='clk'>
+                    <Clock format={'hh:mmA'} ticking={true} />
+                  </div>
                   <Nav.Item active>
                     <Nav.Link href='/'>About</Nav.Link>
                   </Nav.Item>
@@ -233,6 +241,9 @@ class navbar extends Component {
               <Navbar.Toggler target='#navbarSupportedContent' />
               <Collapse navbar id='navbarSupportedContent'>
                 <Navbar.Nav ml='auto'>
+                  <div className='clk'>
+                    <Clock format={'hh:mmA'} ticking={true} />
+                  </div>
                   <Nav.Item active>
                     <Nav.Link href='/'>About</Nav.Link>
                   </Nav.Item>
