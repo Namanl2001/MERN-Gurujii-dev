@@ -7,6 +7,7 @@ import AOS from 'aos';
 import Reach from '../components/Reach';
 import Vision from '../components/ourvision';
 import ScrollToTop from './scrollToTop';
+import Contributors from './contributors';
 import 'aos/dist/aos.css';
 class about extends Component {
   componentDidMount() {
@@ -45,7 +46,7 @@ class about extends Component {
         </div>
         <Vision />
         <Reach />
-        {/* <Contributors /> */}
+        <Contributors />
         <br />
       </>
     );

@@ -25,7 +25,7 @@ class contributors extends Component {
 
   render() {
     return (
-      <div className='container-fluid'>
+      <div className='container-fluid contributor-div'>
         <br />
         <h1 className='text-center mb-3 headercontent'>
           Our <span>Contributors</span>
