@@ -89,7 +89,7 @@ class form extends Component {
       .post('/users/add', data)
       .then(response => {
         console.log(response);
-        if (response.status == 200) {
+        if (response.status === 200) {
           axios.get(`/users/sendMail/${this.props.emailid}/1`);
           if (
             alert(
