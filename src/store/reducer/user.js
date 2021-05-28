@@ -71,15 +71,15 @@ function rootReducer(state = defaultState, action) {
       };
 
     case 'NAME':
-      const newArray5 = state.pindata.filter(
-        user => user.username.toLowerCase() === action.username.toLowerCase()
+      const newArray5 = state.pindata.filter(user =>
+        user.username.toLowerCase().includes(action.username.toLowerCase())
       );
       return {
         ...state,
         namedata: newArray5,
-        tutdata: state.pindata,
+        tutdata: newArray5,
         users: newArray5,
-        subjdata: state.pindata,
+        subjdata: newArray5,
         subject: 'All',
         tutor: 'All',
         class: 'All',
@@ -88,15 +88,15 @@ function rootReducer(state = defaultState, action) {
     case 'ALLTUT':
       return {
         ...state,
-        users: state.pindata,
-        subjdata: state.pindata,
-        tutdata: state.pindata,
+        users: state.namedata,
+        subjdata: state.namedata,
+        tutdata: state.namedata,
         subject: 'All',
         tutor: 'All',
         class: 'All',
       };
     case 'HOME':
-      const newArray6 = state.pindata.filter(
+      const newArray6 = state.namedata.filter(
         user => user.tutor === 'Home Tutor'
       );
       return {
@@ -109,7 +109,7 @@ function rootReducer(state = defaultState, action) {
         class: 'All',
       };
     case 'EXE':
-      const newArray7 = state.pindata.filter(
+      const newArray7 = state.namedata.filter(
         user => user.tutor === 'External Tutor'
       );
       return {

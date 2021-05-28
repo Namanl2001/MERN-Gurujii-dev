@@ -22,14 +22,22 @@ const E404 = React.lazy(() => {
   });
 });
 
+const About = React.lazy(() => {
+  return new Promise(resolve => {
+    setTimeout(() => resolve(import('./components/about')), 4000);
+  });
+});
+
 function App() {
   return (
     <>
       <Router>
         <React.Suspense fallback={<Preloader />}>
           <Switch>
-            <Route exact path='/' component={Home} />
+            <Route exact path='/' component={About} />
+            <Route exact path='/home' component={Home} />
             <Route exact path='/healthtips' component={healthtips} />
+
             <Route path='*' component={E404} />
           </Switch>
         </React.Suspense>
