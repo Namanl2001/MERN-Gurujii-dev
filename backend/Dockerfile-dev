@@ -1,0 +1,21 @@
+# server/Dockerfile-dev
+
+# Install node image in container
+FROM node
+
+# Create and set the working directory
+RUN mkdir -p /app/backend
+WORKDIR /app/backend
+
+# Copy the dependency files over
+COPY package*.json /app/backend/
+COPY yarn* /app/backend/
+
+# Install dependencies
+RUN yarn install
+
+# Copy the server files over
+COPY . /app/backend
+
+# Command to run them
+CMD ["node", "server.js"]

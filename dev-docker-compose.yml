@@ -1,0 +1,68 @@
+version: '3'
+
+services:
+  ##########################
+  ### SETUP SERVER CONTAINER
+  ##########################
+  server:
+    # Tell docker what file to build the server from
+    build:
+      context: ./backend
+      dockerfile: Dockerfile-dev
+    # The ports to expose
+    expose:
+      - 5000
+    # Environment variables
+    environment:
+      #put mongouri here
+      - PORT=5000
+      #- JWT_SECRET=secretsecret
+      #- JWT_EXPIRY=30d
+      #- DEBUG=worker:*
+      #- NODE_ENV=development
+    # Port mapping
+    ports:
+      - 5000:5000
+    # Volumes to mount
+    volumes:
+      - ./backend/src:/app/backend/src
+    # Run command
+
+    command: node server.js
+    # Connect to other containers
+    #use if mongo container is created
+    # links:
+    #   - db
+    # Restart action
+    restart: always
+  ##########################
+  ### SETUP CLIENT CONTAINER
+  ##########################
+  client:
+    stdin_open: true
+    build:
+      context: ./
+      dockerfile: Dockerfile-dev
+      
+    environment:
+      - REACT_APP_PORT=3000
+    expose:
+      - 3000
+    ports:
+      - 3000:3000
+    volumes:
+      - ./src:/app/frontend/src
+      - ./public:/app/frontend/public
+    links:
+      - server
+    command: yarn start
+    restart: always
+  ##########################
+  ### SETUP DB CONTAINER
+  ##########################
+  #optional setup for local mongo db.
+  # db:
+  #   image: mongo
+  #   ports:
+  #     - 27017:27017
+  #   restart: always

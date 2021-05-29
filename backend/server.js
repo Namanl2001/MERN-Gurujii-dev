@@ -6,7 +6,7 @@ const xss = require('xss-clean');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const path = require('path');
-const { username, pass, myCluster } = require('./config');
+const { username, pass, myCluster } = require('./config/db');
 require('dotenv').config();
 
 const app = express();
