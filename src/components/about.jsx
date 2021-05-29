@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Chatbot from '../components/chatbot';
 import Sidebar from './Sidebar';
-import Board from '../assets/board.jpg';
+import About from './aboutus';
 import Navbar from '../components/navbar';
 import AOS from 'aos';
 import Reach from '../components/Reach';
@@ -19,20 +19,16 @@ class about extends Component {
   render() {
     return (
       <>
-        <div className='parallax'>
-          <Navbar />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <div className='center'>
-            <img data-aos='fade-up' src={Board} alt='' />
-          </div>
-          <br />
-          <br />
-          <br />
+        <Navbar />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div data-aos='fade-up'>
+          <About />
         </div>
+        <br />
         <Chatbot />
         <Sidebar />
         <ScrollToTop />
