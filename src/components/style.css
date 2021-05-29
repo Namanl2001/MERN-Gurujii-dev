@@ -540,7 +540,8 @@ form > .button:hover {
   cursor: pointer;
 }
 .front-face-card {
-  top: 74% !important;
+  top: 71% !important;
+  padding: 0 10px !important;
 }
 .card-img-top {
   border-radius: 10px;
@@ -559,6 +560,7 @@ form > .button:hover {
 }
 .back-face-card {
   padding: 30px !important;
+  top: 47% !important;
 }
 
 .cont {

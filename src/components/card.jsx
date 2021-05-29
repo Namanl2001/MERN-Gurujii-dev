@@ -43,14 +43,14 @@ class cards extends Component {
                 <h5 className='head'>
                   {this.props.user.title} {this.props.user.username}
                 </h5>
-                <h4 style={{ marginTop: '1.5rem' }}>{this.props.user.tutor}</h4>
+                <h4>{this.props.user.tutor}</h4>
                 <h3
                   className='flip-box-header'
                   style={{ textTransform: 'Capitalize' }}
                 >
                   {this.props.user.subject} <br />
                 </h3>
-                <p>
+                <p style={{ marginBottom: '5px' }}>
                   ( {this.props.user.class1} {this.props.user.class2}{' '}
                   {this.props.user.class3} {this.props.user.class4} )
                 </p>
