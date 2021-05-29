@@ -1,14 +1,35 @@
 import React, { Component } from 'react';
 import './style.css';
+import axios from 'axios';
 import ReadMoreReact from 'read-more-react';
 import StarRatingComponent from 'react-star-rating-component';
 
 class cards extends Component {
+  state={
+    clicked:false,
+    popularity:this.props.popularity
+  }
+  handleClick = () => {
+    axios
+      .patch(`/users/update/${this.props.data._id}`, {
+        popularity: this.state.popularity+1
+      })
+      .then(response => {
+        console.log(response)
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    this.setState({
+      clicked:true
+    })
+  };
+
   render() {
     return (
       <div className='box-container'>
         <div className='box-item'>
-          <div className='flip-box'>
+          <div className='flip-box' onClick={this.state.clicked?'':this.handleClick}>
             <div
               className='flip-box-front text-center'
               style={{

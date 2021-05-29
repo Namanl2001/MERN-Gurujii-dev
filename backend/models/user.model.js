@@ -41,6 +41,11 @@ const userSchema = new mongoose.Schema({
     trim: true,
     required: true,
   },
+  popularity: {
+    type: Number,
+    trim: true,
+    required: false,
+  },
   class1: {
     type: Number,
     min: 9,
