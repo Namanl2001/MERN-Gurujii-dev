@@ -69,10 +69,10 @@ class navbar extends Component {
                   </div>
 
                   <Nav.Item active>
-                    <Nav.Link href='/'>Home</Nav.Link>
+                    <Nav.Link href='/'>About</Nav.Link>
                   </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link href='#'>Link</Nav.Link>
+                  <Nav.Item active>
+                    <Nav.Link href='/home'>Home</Nav.Link>
                   </Nav.Item>
                   <Nav.Item active dropdown>
                     <Nav.Link dropdownToggle href='#'>
@@ -136,10 +136,10 @@ class navbar extends Component {
                     <Clock format={'hh:mmA'} ticking={true} />
                   </div>
                   <Nav.Item active>
-                    <Nav.Link href='/'>Home</Nav.Link>
+                    <Nav.Link href='/'>About</Nav.Link>
                   </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link href='#'>Link</Nav.Link>
+                  <Nav.Item active>
+                    <Nav.Link href='/home'>Home</Nav.Link>
                   </Nav.Item>
                   <Nav.Item active dropdown>
                     <Nav.Link dropdownToggle href='#'>
@@ -245,10 +245,10 @@ class navbar extends Component {
                     <Clock format={'hh:mmA'} ticking={true} />
                   </div>
                   <Nav.Item active>
-                    <Nav.Link href='/'>Home</Nav.Link>
+                    <Nav.Link href='/'>About</Nav.Link>
                   </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link href='#'>Link</Nav.Link>
+                  <Nav.Item active>
+                    <Nav.Link href='/home'>Home</Nav.Link>
                   </Nav.Item>
                   <Nav.Item active dropdown>
                     <Nav.Link dropdownToggle href='#'>
