@@ -81,16 +81,16 @@ class update extends Component {
     }
     switch (nam) {
       case 'title':
-        errors.title = val == '' ? '*' : '';
+        errors.title = val === '' ? '*' : '';
         break;
       case 'userName':
         errors.userName = val.length < 1 ? '*' : '';
         break;
       case 'subject':
-        errors.subject = val == '' ? '*' : '';
+        errors.subject = val === '' ? '*' : '';
         break;
       case 'tutor':
-        errors.tutor = val == '' ? '*' : '';
+        errors.tutor = val === '' ? '*' : '';
         break;
       case 'coachingName':
         errors.coachingName = val.length < 1 ? '*' : '';
@@ -309,7 +309,7 @@ class update extends Component {
               </div>
               <div className='form-child-right'>
                 <Row>
-                  <Form.LabelCol col='sm-2' htmlFor='c1'>
+                  <Form.LabelCol col='sm-3' htmlFor='c1'>
                     Class 1
                     <nobr style={{ color: 'red' }}>{this.state.errors.c1}</nobr>
                   </Form.LabelCol>
@@ -322,7 +322,7 @@ class update extends Component {
                       value={this.state.c1}
                     />
                   </Col>
-                  <Form.LabelCol col='sm-2' htmlFor='c2'>
+                  <Form.LabelCol col='sm-3' htmlFor='c2'>
                     Class 2
                   </Form.LabelCol>
                   <Col col='sm-3'>
@@ -337,7 +337,7 @@ class update extends Component {
                 </Row>
 
                 <Row>
-                  <Form.LabelCol col='sm-2' htmlFor='c3'>
+                  <Form.LabelCol col='sm-3' htmlFor='c3'>
                     Class 3
                   </Form.LabelCol>
                   <Col col='sm-3'>
@@ -349,7 +349,7 @@ class update extends Component {
                       value={this.state.c3}
                     />
                   </Col>
-                  <Form.LabelCol col='sm-2' htmlFor='c2'>
+                  <Form.LabelCol col='sm-3' htmlFor='c2'>
                     Class 4
                   </Form.LabelCol>
                   <Col col='sm-3'>

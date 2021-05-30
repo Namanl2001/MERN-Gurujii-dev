@@ -466,7 +466,7 @@ ul {
   }
   div.modal-content {
     width: 968px;
-    margin-left: -200px;
+    margin-right: -200px;
     padding-right: 10px;
   }
 }

@@ -5,7 +5,6 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Modal, Button, Form, Row, Col } from 'bootstrap-4-react';
 
-toast.configure();
 const validateForm = errors => {
   let valid = true;
   Object.values(errors).forEach(val => val.length > 0 && (valid = false));
@@ -78,16 +77,16 @@ class form extends Component {
 
     switch (nam) {
       case 'title':
-        errors.title = val == '' ? '*' : '';
+        errors.title = val === '' ? '*' : '';
         break;
       case 'userName':
         errors.userName = val.length < 1 ? '*' : '';
         break;
       case 'subject':
-        errors.subject = val == '' ? '*' : '';
+        errors.subject = val === '' ? '*' : '';
         break;
       case 'tutor':
-        errors.tutor = val == '' ? '*' : '';
+        errors.tutor = val === '' ? '*' : '';
         break;
       case 'coachingName':
         errors.coachingName = val.length < 1 ? '*' : '';
@@ -145,7 +144,7 @@ class form extends Component {
           if (response.status === 200) {
             axios.get(`/users/sendMail/${this.props.emailid}/1`);
             if (
-              alert(
+              !alert(
                 `Congratulations!! ${this.state.userName.toUpperCase()} Your profile added successfully to our database `
               )
             ) {
@@ -157,7 +156,7 @@ class form extends Component {
           console.log(error);
         });
     } else {
-      toast.error('Please fill out all the required fields to proceed');
+      alert('Please fill out all the required fields to proceed');
     }
   };
 
