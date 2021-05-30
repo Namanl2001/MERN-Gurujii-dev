@@ -5,6 +5,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Modal, Button, Form, Row, Col } from 'bootstrap-4-react';
 
+toast.configure();
 const validateForm = errors => {
   let valid = true;
   Object.values(errors).forEach(val => val.length > 0 && (valid = false));
@@ -156,7 +157,7 @@ class form extends Component {
           console.log(error);
         });
     } else {
-      alert('Please fill out all the required fields to proceed');
+      toast.error('Please fill out all the required fields to proceed');
     }
   };
 
