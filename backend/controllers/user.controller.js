@@ -67,7 +67,6 @@ const updateUser = (req, res) => {
       user.city = req.body.city;
       user.pin = req.body.pin;
       user.phone = req.body.phone;
-      user.isAdmin = req.body.isAdmin;
 
       user
         .save()
