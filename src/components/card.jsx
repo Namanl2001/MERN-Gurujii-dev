@@ -5,7 +5,6 @@ import StarRatingComponent from 'react-star-rating-component';
 
 class cards extends Component {
   render() {
-    console.log(this.props.user);
     var imageUrl = '';
     if (this.props.user.profilePic === '') {
       imageUrl = './photo.png';
