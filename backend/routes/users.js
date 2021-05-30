@@ -1,5 +1,8 @@
-const router = require('express').Router();
+const express = require('express');
+const router = express.Router();
 const userController = require('../controllers/user.controller');
+
+router.use(express.static(__dirname + './public/'));
 
 router.route('/').get(userController.fetchAllUsers);
 router.route('/:email').get(userController.fetchUserByEmail);

@@ -539,6 +539,30 @@ form > .button:hover {
   background-color: #007bff;
   cursor: pointer;
 }
+.front-face-card {
+  top: 71% !important;
+  padding: 0 10px !important;
+}
+.card-img-top {
+  border-radius: 10px;
+  width: 260px;
+  height: 180px;
+  max-width: 70%;
+  margin: 22px 49px;
+}
+
+.flip-box-img {
+  margin-top: 0 !important;
+}
+.flip-box-front,
+.flip-box-back {
+  min-height: 490px;
+}
+.back-face-card {
+  padding: 30px !important;
+  top: 47% !important;
+}
+
 .cont {
   margin-top: 6rem;
   position: relative;
