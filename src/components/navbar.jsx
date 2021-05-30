@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Clock from 'react-live-clock';
 // import ReactDOM from 'react-dom';
 import {
   Navbar,
@@ -63,16 +64,24 @@ class navbar extends Component {
               <Navbar.Toggler target='#navbarSupportedContent' />
               <Collapse navbar id='navbarSupportedContent'>
                 <Navbar.Nav ml='auto'>
+                  <div className='clk'>
+                    <Clock format={'hh:mmA'} ticking={true} />
+                  </div>
+
                   <Nav.Item active>
-                    <Nav.Link href='/'>Home</Nav.Link>
+                    <Nav.Link href='/'>About</Nav.Link>
                   </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link href='#'>Link</Nav.Link>
+                  <Nav.Item active>
+                    <Nav.Link href='/home'>Home</Nav.Link>
                   </Nav.Item>
-                  <Nav.Item dropdown>
-                    <Nav.Link dropdownToggle>Dropdown</Nav.Link>
+                  <Nav.Item active dropdown>
+                    <Nav.Link dropdownToggle href='#'>
+                      Dropdown
+                    </Nav.Link>
                     <Dropdown.Menu>
-                      <Dropdown.Item>Action</Dropdown.Item>
+                      <Dropdown.Item href='/healthtips'>
+                        Health Tips
+                      </Dropdown.Item>
                       <Dropdown.Item>Another action</Dropdown.Item>
                       <Dropdown.Divider />
                       <Dropdown.Item>Something else</Dropdown.Item>
@@ -123,16 +132,23 @@ class navbar extends Component {
               <Navbar.Toggler target='#navbarSupportedContent' />
               <Collapse navbar id='navbarSupportedContent'>
                 <Navbar.Nav ml='auto'>
+                  <div className='clk'>
+                    <Clock format={'hh:mmA'} ticking={true} />
+                  </div>
                   <Nav.Item active>
-                    <Nav.Link href='/'>Home</Nav.Link>
+                    <Nav.Link href='/'>About</Nav.Link>
                   </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link href='#'>Link</Nav.Link>
+                  <Nav.Item active>
+                    <Nav.Link href='/home'>Home</Nav.Link>
                   </Nav.Item>
-                  <Nav.Item dropdown>
-                    <Nav.Link dropdownToggle>Dropdown</Nav.Link>
+                  <Nav.Item active dropdown>
+                    <Nav.Link dropdownToggle href='#'>
+                      Dropdown
+                    </Nav.Link>
                     <Dropdown.Menu>
-                      <Dropdown.Item>Action</Dropdown.Item>
+                      <Dropdown.Item href='/healthtips'>
+                        Health Tips
+                      </Dropdown.Item>
                       <Dropdown.Item>Another action</Dropdown.Item>
                       <Dropdown.Divider />
                       <Dropdown.Item>Something else</Dropdown.Item>
@@ -225,16 +241,23 @@ class navbar extends Component {
               <Navbar.Toggler target='#navbarSupportedContent' />
               <Collapse navbar id='navbarSupportedContent'>
                 <Navbar.Nav ml='auto'>
+                  <div className='clk'>
+                    <Clock format={'hh:mmA'} ticking={true} />
+                  </div>
                   <Nav.Item active>
-                    <Nav.Link href='/'>Home</Nav.Link>
+                    <Nav.Link href='/'>About</Nav.Link>
                   </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link href='#'>Link</Nav.Link>
+                  <Nav.Item active>
+                    <Nav.Link href='/home'>Home</Nav.Link>
                   </Nav.Item>
-                  <Nav.Item dropdown>
-                    <Nav.Link dropdownToggle>Dropdown</Nav.Link>
+                  <Nav.Item active dropdown>
+                    <Nav.Link dropdownToggle href='#'>
+                      Dropdown
+                    </Nav.Link>
                     <Dropdown.Menu>
-                      <Dropdown.Item>Action</Dropdown.Item>
+                      <Dropdown.Item href='/healthtips'>
+                        Health Tips
+                      </Dropdown.Item>
                       <Dropdown.Item>Another action</Dropdown.Item>
                       <Dropdown.Divider />
                       <Dropdown.Item>Something else</Dropdown.Item>
