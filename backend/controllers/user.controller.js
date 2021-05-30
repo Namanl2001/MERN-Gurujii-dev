@@ -18,7 +18,6 @@ var upload = multer({ storage }).single('file');
 const fetchAllUsers = (req, res) => {
   User.find()
     .then(users => {
-      // console.log(users);
       res.json(users);
     })
 
@@ -34,15 +33,12 @@ const fetchUserByEmail = (req, res) => {
 
 // Add new user document to db
 const addNewUser = (req, res) => {
-  console.log('this function works');
   upload(req, res, function (err) {
     if (err instanceof multer.MulterError) {
       return res.status(500).json('there is some error');
     } else if (err) {
       return res.status(500).json(err);
     }
-    console.log(req.body);
-    //  console.log(req.file.filename);
     var profilePic = '';
     if (req.file !== undefined) {
       profilePic = req.file.filename;

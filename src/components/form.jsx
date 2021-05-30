@@ -83,12 +83,10 @@ class form extends Component {
     data.append('city', this.state.city);
     data.append('pin', this.state.pin);
     data.append('phone', this.state.phone);
-    console.log(data.get('file'));
 
     axios
       .post('/users/add', data)
       .then(response => {
-        console.log(response);
         if (response.status === 200) {
           axios.get(`/users/sendMail/${this.props.emailid}/1`);
           if (
