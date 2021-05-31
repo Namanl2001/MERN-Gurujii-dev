@@ -92,9 +92,18 @@ const userSchema = new mongoose.Schema({
     trim: true,
     required: true,
   },
+  profilePic: {
+    type: String,
+    trim: true,
+    default: '',
+  },
   isAdmin: {
     type: Boolean,
     default: false,
+  },
+  popularity: {
+    type: Number,
+    trim: true,
   },
 });
 

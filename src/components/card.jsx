@@ -1,41 +1,77 @@
 import React, { Component } from 'react';
 import './style.css';
 import ReadMoreReact from 'read-more-react';
+import axios from 'axios';
 import StarRatingComponent from 'react-star-rating-component';
 
 class cards extends Component {
+  state = {
+    clicked: false,
+    popularity: this.props.popularity,
+  };
+  handleClick = () => {
+    axios
+      .patch(`/users/update/${this.props.data._id}`, {
+        popularity: this.state.popularity + 1,
+      })
+      .then(res => {
+        res.status(200).send({ message: 'Popularity increased' });
+      })
+      .catch(err => {
+        console.log('error :', err);
+        res.status(400).send({ message: 'error updating popularity' });
+      });
+    this.setState({
+      clicked: true,
+    });
+  };
+
   render() {
+    var imageUrl = '';
+    if (this.props.user.profilePic === '') {
+      imageUrl = './photo.png';
+    } else {
+      imageUrl = `./uploads/${this.props.user.profilePic}`;
+    }
+
     return (
       <div className='box-container'>
         <div className='box-item'>
           <div className='flip-box'>
             <div
-              className='flip-box-front text-center'
+              className='flip-box-front text-center card'
               style={{
                 backgroundImage: `url(https://i.pinimg.com/originals/7c/05/50/7c05508149920eba2d934c19ff83cbba.jpg)`,
               }}
             >
-              <div className='inner color-white'>
-                <br />
-                <br />
+              <img
+                className='card-img-top'
+                src={imageUrl}
+                alt='Card image cap'
+                onError={e => {
+                  e.target.src = './photo.png';
+                }}
+              />
+
+              <div className='front-face-card inner color-white'>
                 <h3
                   className='flip-box-header'
                   style={{ textTransform: 'uppercase' }}
                 >
                   {this.props.user.coaching}
                 </h3>
-                <br />
+
                 <h5 className='head'>
                   {this.props.user.title} {this.props.user.username}
                 </h5>
-                <h4 style={{ marginTop: '1.5rem' }}>{this.props.user.tutor}</h4>
+                <h4>{this.props.user.tutor}</h4>
                 <h3
                   className='flip-box-header'
                   style={{ textTransform: 'Capitalize' }}
                 >
                   {this.props.user.subject} <br />
                 </h3>
-                <p>
+                <p style={{ marginBottom: '5px' }}>
                   ( {this.props.user.class1} {this.props.user.class2}{' '}
                   {this.props.user.class3} {this.props.user.class4} )
                 </p>
@@ -52,8 +88,11 @@ class cards extends Component {
                 backgroundImage: `url(https://i.pinimg.com/736x/5e/e2/db/5ee2db0b6b3098b78812712d137c102d.jpg)`,
               }}
             >
-              <br />
-              <div className='inner color-white' style={{ marginTop: '7%' }}>
+              <div
+                className='back-face-card inner color-white'
+                style={{ marginTop: '17%' }}
+              >
+                <h4>{this.props.user.tutor}</h4>
                 <div style={{ fontSize: 25 }}>
                   <StarRatingComponent
                     name='rate2'
