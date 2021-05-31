@@ -85,6 +85,8 @@ function rootReducer(state = defaultState, action) {
         class: 'All',
       };
 
+    // case 'SLIDER':
+
     case 'ALLTUT':
       return {
         ...state,
