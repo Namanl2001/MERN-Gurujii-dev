@@ -2,11 +2,14 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './style.css';
 import { Dropdown, Button } from 'bootstrap-4-react';
+import Slider from 'rc-slider';
+import 'rc-slider/assets/index.css';
 
 class filter extends Component {
   state = {
     pin: '',
     name: '',
+    popularity: '',
   };
 
   clearfield() {
@@ -65,6 +68,8 @@ class filter extends Component {
             <input title='Search' value='' type='submit' className='button' />
           </form>
         </div>
+        {/* Slider for the popularity filter */}
+        <Slider value={this.state.popularity} min={0} max={100} />
         <br />
         <br />
         <div className='alignment'>
@@ -153,6 +158,7 @@ const mapDispatchtoProps = dispatch => {
   return {
     pin: pin => dispatch({ type: 'PIN', pin: pin }),
     alltut: () => dispatch({ type: 'ALLTUT' }),
+    slider: popularity => dispatch({ type: 'SLIDER', value: popularity }),
     home: () => dispatch({ type: 'HOME' }),
     exe: () => dispatch({ type: 'EXE' }),
     username: username => dispatch({ type: 'NAME', username: username }),
