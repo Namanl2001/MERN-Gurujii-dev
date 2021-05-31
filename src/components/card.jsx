@@ -25,9 +25,12 @@ class cards extends Component {
                   {this.props.user.coaching}
                 </h3>
                 <br />
+                {/* will add more logic here */}
+                <h5>{this.props.popularity} Searches</h5>
                 <h5 className='head'>
                   {this.props.user.title} {this.props.user.username}
                 </h5>
+
                 <h4 style={{ marginTop: '1.5rem' }}>{this.props.user.tutor}</h4>
                 <h3
                   className='flip-box-header'
