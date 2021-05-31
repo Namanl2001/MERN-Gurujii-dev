@@ -541,7 +541,7 @@ form > .button:hover {
 }
 .cont {
   margin-top: 6rem;
-  position: relative;
+  position: absolute;
   text-align: center;
 }
 

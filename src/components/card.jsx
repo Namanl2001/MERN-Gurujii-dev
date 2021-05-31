@@ -74,6 +74,7 @@ class cards extends Component {
                 Address: {this.props.user.address} , {this.props.user.city}{' '}
                 <br />
                 {this.props.user.pin}
+                {/* will include absolute styles for this element */}
                 <p className='cont'>Contact: {this.props.user.phone}</p>
               </div>
             </div>
