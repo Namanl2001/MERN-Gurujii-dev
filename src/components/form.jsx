@@ -148,7 +148,7 @@ class form extends Component {
           if (response.status === 200) {
             axios.get(`/users/sendMail/${this.props.emailid}/1`);
             if (
-              alert(
+              !alert(
                 `Congratulations!! ${this.state.userName.toUpperCase()} Your profile added successfully to our database `
               )
             ) {
