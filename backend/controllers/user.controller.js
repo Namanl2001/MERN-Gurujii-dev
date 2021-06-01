@@ -96,7 +96,7 @@ const updateUser = (req, res) => {
       user.city = req.body.city;
       user.pin = req.body.pin;
       user.phone = req.body.phone;
-      user.profilePic = req.file.filename;
+      //user.profilePic = req.file.filename;
 
       user
         .save()
@@ -130,8 +130,7 @@ const sendEmail = (req, res) => {
       from: 'namanlakhwaninl@gmail.com',
       to: req.params.email,
       subject: 'GuruJii.com',
-      text:
-        'Greetings from GuruJii.com !!. We are glad to see you and will try to serve our great and best services to you. \n\nThanks and regards \nNaman Lakhwani ',
+      text: 'Greetings from GuruJii.com !!. We are glad to see you and will try to serve our great and best services to you. \n\nThanks and regards \nNaman Lakhwani ',
     };
   }
 
@@ -140,8 +139,7 @@ const sendEmail = (req, res) => {
       from: 'namanlakhwaninl@gmail.com',
       to: req.params.email,
       subject: 'GuruJii.com',
-      text:
-        'It is very disheartening to see you leave. We hope that you liked our service and would come back again. \n\nThanks and regards \nNaman Lakhwani',
+      text: 'It is very disheartening to see you leave. We hope that you liked our service and would come back again. \n\nThanks and regards \nNaman Lakhwani',
     };
   }
 
