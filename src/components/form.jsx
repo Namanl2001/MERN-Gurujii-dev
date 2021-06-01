@@ -14,13 +14,14 @@ class form extends Component {
     qualification: '',
     about: '',
     c1: null,
-    c2: null,
-    c3: null,
-    c4: null,
+    c2: '',
+    c3: '',
+    c4: '',
     address: '',
     city: '',
     pin: null,
     phone: null,
+    image: null,
     errormessage1: '',
     errormessage2: '',
   };
@@ -64,26 +65,27 @@ class form extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
+    const data = new FormData();
+    data.append('file', this.state.image);
+    data.append('email', this.props.emailid);
+    data.append('title', this.state.title);
+    data.append('userName', this.state.userName);
+    data.append('subject', this.state.subject);
+    data.append('tutor', this.state.tutor);
+    data.append('coachingName', this.state.coachingName);
+    data.append('qualification', this.state.qualification);
+    data.append('about', this.state.about);
+    data.append('c1', this.state.c1);
+    data.append('c2', this.state.c2);
+    data.append('c3', this.state.c3);
+    data.append('c4', this.state.c4);
+    data.append('address', this.state.address);
+    data.append('city', this.state.city);
+    data.append('pin', this.state.pin);
+    data.append('phone', this.state.phone);
 
     axios
-      .post('/users/add', {
-        email: this.props.emailid,
-        title: this.state.title,
-        userName: this.state.userName,
-        subject: this.state.subject,
-        tutor: this.state.tutor,
-        coachingName: this.state.coachingName,
-        qualification: this.state.qualification,
-        about: this.state.about,
-        c1: this.state.c1,
-        c2: this.state.c2,
-        c3: this.state.c3,
-        c4: this.state.c4,
-        address: this.state.address,
-        city: this.state.city,
-        pin: this.state.pin,
-        phone: this.state.phone,
-      })
+      .post('/users/add', data)
       .then(response => {
         if (response.status === 200) {
           axios.get(`/users/sendMail/${this.props.emailid}/1`);
@@ -348,6 +350,20 @@ class form extends Component {
                       value={this.state.phone}
                     />
                     {this.state.errormessage2}
+                  </Col>
+                </Row>
+                <Row>
+                  <Form.LabelCol col='sm-2' htmlFor='profile-pic'>
+                    Profile Picture
+                  </Form.LabelCol>
+                  <Col col='sm-10'>
+                    <input
+                      type='file'
+                      name='file'
+                      onChange={e =>
+                        this.setState({ image: e.target.files[0] })
+                      }
+                    />
                   </Col>
                 </Row>
               </div>
