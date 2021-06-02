@@ -6,33 +6,56 @@ import StarRatingComponent from 'react-star-rating-component';
 
 class cards extends Component {
   render() {
+    var imageUrl = '';
+    if (this.props.user.profilePic === '') {
+      imageUrl = './photo.png';
+    } else {
+      imageUrl = `./uploads/${this.props.user.profilePic}`;
+    }
+
     return (
       <div class='box-container'>
         <div class='box-item'>
           <div class='flip-box'>
             <div
-              class='flip-box-front text-center'
+
+              className='flip-box-front text-center card'
+
               style={{
                 backgroundImage: `url(https://i.pinimg.com/originals/7c/05/50/7c05508149920eba2d934c19ff83cbba.jpg)`,
               }}
             >
-              <div class='inner color-white'>
-                <br />
-                <br />
+
+              <img
+                className='card-img-top'
+                src={imageUrl}
+                alt='Card image cap'
+                onError={e => {
+                  e.target.src = './photo.png';
+                }}
+              />
+
+
                 <h3
                   class='flip-box-header'
                   style={{ textTransform: 'uppercase' }}
                 >
                   {this.props.user.coaching}
                 </h3>
-                <br />
-                <h5>
+
+                <h5 className='head'>
                   {this.props.user.title} {this.props.user.username}
                 </h5>
-                <h3 class='flip-box-header'>
+
+                <h4>{this.props.user.tutor}</h4>
+                <h3
+                  className='flip-box-header'
+                  style={{ textTransform: 'Capitalize' }}
+                >
+
                   {this.props.user.subject} <br />
                 </h3>
-                <p>
+                <p style={{ marginBottom: '5px' }}>
                   ( {this.props.user.class1} {this.props.user.class2}{' '}
                   {this.props.user.class3} {this.props.user.class4} )
                 </p>
@@ -49,8 +72,12 @@ class cards extends Component {
                 backgroundImage: `url(https://i.pinimg.com/736x/5e/e2/db/5ee2db0b6b3098b78812712d137c102d.jpg)`,
               }}
             >
-              <div class='inner color-white'>
-                <h4 style={{ marginTop: '50%' }}>{this.props.user.tutor}</h4>
+
+              <div
+                className='back-face-card inner color-white'
+                style={{ marginTop: '17%' }}
+              >
+                <h4>{this.props.user.tutor}</h4>
                 <div style={{ fontSize: 25 }}>
                   <StarRatingComponent
                     name='rate2'
@@ -68,11 +95,9 @@ class cards extends Component {
                   max='80'
                   readMoreText='Click! to read more'
                 />
-                <br />
                 Address: {this.props.user.address} , {this.props.user.city}{' '}
                 <br />
                 {this.props.user.pin}
-                <br />
                 <p className='cont'>Contact: {this.props.user.phone}</p>
               </div>
             </div>

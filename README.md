@@ -13,7 +13,8 @@
 </p>
 
 <p>
- We have created this platform to help the students find best tution teacher in their city easily.You just have to enter pincode of your city and we will show you best teachers in your locality along with their teaching styles and their qualification from which you can select best teacher for yourself.
+
+ We have created this platform to help students find the best tuition teachers in their city quite easily. You just have to enter the pin code of your city and we will show you the best teachers in your locality along with their teaching styles and their qualification from which you can select the best teacher for yourself.
 </p>
 
 <h2>Technology Stack <a><img src="https://github.com/Samridhi-98/Images/blob/master/Images/atom.svg" width="4%"></a></h2>
@@ -61,7 +62,8 @@ We have used proxy so all the requests made to backend from frontend will be ser
   - Lines 9, 40 of `backend/server.js`
   - Line 3 of `backend/controllers/user.controller.js`
 
-- For security reasons we have made the MongoDb URI secure, by not adding a hardcoded username and password. For development purpose, you can install, MongoDB locally or use the online version. Also create your own `backend/config.js` file with proper credentials, following the format given in `backend.config.example/js`.
+
+- For security reasons, we have made the MongoDb URI secure, by not adding a hardcoded username and password. For development purposes, you can install, MongoDB locally or use the online version. Also create your own `backend/config.js` file with proper credentials, following the format given in `backend.config.example/js`.
 - There is a route that sends emails - Line 82 of `backend/controllers/user.controller.js`. Remember to replace the auth credentials with your own before testing the route.
 - Remember not to push any personal data like mongo uri or mail credentials.
 
@@ -76,7 +78,7 @@ Contributions are very welcome! See our <a href="https://github.com/Namanl2001/M
 <p>
  
 - To view on mobile, your laptop and mobile phone should be on the same network.
-- Run ipconfig on terminal, enter `<ip4address>:3000` as url on mobile web browser.
+- Run ipconfig on the terminal, enter `<ip4address>:3000` as URL on the mobile web browser.
 
 </p>
 
@@ -100,7 +102,9 @@ This Project is a part of the following Open Source Program
 
 - GirlScript Summer of Code is the 3 month long Open Source program during summers conducted by GirlScript Foundation, started in 2018, with an aim to help beginners get started with Open Source Development while encouraging diversity. Throughout the program, participants contribute to different projects under guidance of experienced mentors. Top participants get exciting goodies and opportunities.
 
-- GirlScript Summer of Code 2020 witnessed overwhelming participation and 2021 edition will carry the legacy forward while promising to be even more impactful and grand.
+
+- GirlScript Summer of Code 2020 witnessed overwhelming participation and the 2021 edition will carry the legacy forward while promising to be even more impactful and grand.
+
 
 <img src ="https://miro.medium.com/max/3000/1*CKaCnG11p5i0KiQyaoyBvg.png" alt ="Girlscript Summer Of Code"></img>
 

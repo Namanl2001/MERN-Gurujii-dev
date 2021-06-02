@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Clock from 'react-live-clock';
 // import ReactDOM from 'react-dom';
 import {
   Navbar,
@@ -51,21 +52,35 @@ class navbar extends Component {
       <div>
         {this.props.logged && !this.props.registeredUser && (
           <div>
-            <Navbar expand='lg' dark bg='dark'>
-              <Navbar.Brand href='#'>GuruJii</Navbar.Brand>
+            <Navbar expand='lg' dark bg='dark' fixed='top' className='navbar'>
+              <Navbar.Brand href='#'>
+                {' '}
+                <span className='g-heading'>
+                  <h2>G</h2>
+                </span>
+                uruJii
+              </Navbar.Brand>
               <Navbar.Toggler target='#navbarSupportedContent' />
               <Collapse navbar id='navbarSupportedContent'>
                 <Navbar.Nav ml='auto'>
+                  <div className='clk'>
+                    <Clock format={'hh:mmA'} ticking={true} />
+                  </div>
+
                   <Nav.Item active>
-                    <Nav.Link href='#'>Home</Nav.Link>
+                    <Nav.Link href='/'>About</Nav.Link>
                   </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link href='#'>Link</Nav.Link>
+                  <Nav.Item active>
+                    <Nav.Link href='/home'>Home</Nav.Link>
                   </Nav.Item>
-                  <Nav.Item dropdown>
-                    <Nav.Link dropdownToggle>Dropdown</Nav.Link>
+                  <Nav.Item active dropdown>
+                    <Nav.Link dropdownToggle href='#'>
+                      Dropdown
+                    </Nav.Link>
                     <Dropdown.Menu>
-                      <Dropdown.Item>Action</Dropdown.Item>
+                      <Dropdown.Item href='/healthtips'>
+                        Health Tips
+                      </Dropdown.Item>
                       <Dropdown.Item>Another action</Dropdown.Item>
                       <Dropdown.Divider />
                       <Dropdown.Item>Something else</Dropdown.Item>
@@ -76,7 +91,7 @@ class navbar extends Component {
                   </Nav.Item>
                 </Navbar.Nav>
                 <Button
-                  warning
+                  className='profile-button'
                   mr='sm-4'
                   data-toggle='modal'
                   data-target='#Modal'
@@ -106,21 +121,33 @@ class navbar extends Component {
 
         {this.props.logged && this.props.registeredUser && (
           <div>
-            <Navbar expand='lg' dark bg='dark'>
-              <Navbar.Brand href='#'>GuruJii</Navbar.Brand>
+            <Navbar expand='lg' dark bg='dark' fixed='top' className='navbar'>
+              <Navbar.Brand href='#'>
+                <span className='g-heading'>
+                  <h2>G</h2>
+                </span>
+                uruJii
+              </Navbar.Brand>
               <Navbar.Toggler target='#navbarSupportedContent' />
               <Collapse navbar id='navbarSupportedContent'>
                 <Navbar.Nav ml='auto'>
+                  <div className='clk'>
+                    <Clock format={'hh:mmA'} ticking={true} />
+                  </div>
                   <Nav.Item active>
-                    <Nav.Link href='#'>Home</Nav.Link>
+                    <Nav.Link href='/'>About</Nav.Link>
                   </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link href='#'>Link</Nav.Link>
+                  <Nav.Item active>
+                    <Nav.Link href='/home'>Home</Nav.Link>
                   </Nav.Item>
-                  <Nav.Item dropdown>
-                    <Nav.Link dropdownToggle>Dropdown</Nav.Link>
+                  <Nav.Item active dropdown>
+                    <Nav.Link dropdownToggle href='#'>
+                      Dropdown
+                    </Nav.Link>
                     <Dropdown.Menu>
-                      <Dropdown.Item>Action</Dropdown.Item>
+                      <Dropdown.Item href='/healthtips'>
+                        Health Tips
+                      </Dropdown.Item>
                       <Dropdown.Item>Another action</Dropdown.Item>
                       <Dropdown.Divider />
                       <Dropdown.Item>Something else</Dropdown.Item>
@@ -203,21 +230,33 @@ class navbar extends Component {
 
         {!this.props.logged && (
           <div>
-            <Navbar expand='lg' dark bg='dark'>
-              <Navbar.Brand href='#'>GuruJii</Navbar.Brand>
+            <Navbar expand='lg' dark bg='dark' fixed='top' className='navbar'>
+              <Navbar.Brand href='#'>
+                <span className='g-heading'>
+                  <h2>G</h2>
+                </span>
+                uruJii
+              </Navbar.Brand>
               <Navbar.Toggler target='#navbarSupportedContent' />
               <Collapse navbar id='navbarSupportedContent'>
                 <Navbar.Nav ml='auto'>
+                  <div className='clk'>
+                    <Clock format={'hh:mmA'} ticking={true} />
+                  </div>
                   <Nav.Item active>
-                    <Nav.Link href='#'>Home</Nav.Link>
+                    <Nav.Link href='/'>About</Nav.Link>
                   </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link href='#'>Link</Nav.Link>
+                  <Nav.Item active>
+                    <Nav.Link href='/home'>Home</Nav.Link>
                   </Nav.Item>
-                  <Nav.Item dropdown>
-                    <Nav.Link dropdownToggle>Dropdown</Nav.Link>
+                  <Nav.Item active dropdown>
+                    <Nav.Link dropdownToggle href='#'>
+                      Dropdown
+                    </Nav.Link>
                     <Dropdown.Menu>
-                      <Dropdown.Item>Action</Dropdown.Item>
+                      <Dropdown.Item href='/healthtips'>
+                        Health Tips
+                      </Dropdown.Item>
                       <Dropdown.Item>Another action</Dropdown.Item>
                       <Dropdown.Divider />
                       <Dropdown.Item>Something else</Dropdown.Item>
@@ -233,20 +272,6 @@ class navbar extends Component {
           </div>
         )}
 
-        {this.state.hidden ? (
-          ' '
-        ) : (
-          <div
-            className='alert alert-success alert-dismissible fade show myalert'
-            // style="margin-bottom:0"
-          >
-            <button type='button' className='close' data-dismiss='alert'>
-              &times;
-            </button>
-            <strong>Great Landing !</strong> Teachers have to signin to make
-            profile.
-          </div>
-        )}
       </div>
     );
   }

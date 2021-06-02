@@ -1,37 +1,66 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Navbar from './components/navbar';
-import Home from './components/home';
-import ChatBotComponent from './components/chatbot';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Preloader from './components/Preloader';
+import healthtips from './components/healthtips';
 import './App.css';
-import Board from './board.jpg';
-import ContactUS from './components/ContactUS';
-import Footer from './components/Footer';
+
+
+
+const Home = React.lazy(() => {
+  return new Promise(resolve => {
+    setTimeout(() => resolve(import('./components/home')), 4000);
+  });
+});
+
+const Footer = React.lazy(() => {
+  return new Promise(resolve => {
+    setTimeout(() => resolve(import('./components/Footer')), 5000);
+  });
+});
+
+const E404 = React.lazy(() => {
+  return new Promise(resolve => {
+    setTimeout(() => resolve(import('./components/E404')), 3000);
+  });
+});
+
+const About = React.lazy(() => {
+  return new Promise(resolve => {
+    setTimeout(() => resolve(import('./components/about')), 4000);
+  });
+});
 
 function App() {
   return (
     <>
       <Router>
-        <div className='parallax'>
-          <Navbar />
-          <br />
-          <br />
-          <br />
-          <div className='center'>
-            <img src={Board} alt='' />
-          </div>
-          <br />
-          <br />
-          <br />
-          <br />
-        </div>
+        <React.Suspense fallback={<Preloader />}>
+          <Switch>
+            <Route exact path='/' component={About} />
+            <Route exact path='/home' component={Home} />
+            <Route exact path='/healthtips' component={healthtips} />
 
-        <br />
-        <Route path='/' exact component={Home} />
-        <ChatBotComponent />
+            <Route path='*' component={E404} />
+          </Switch>
+        </React.Suspense>
       </Router>
-      <ContactUS />
-      <Footer />
+
+      <React.Suspense
+        fallback={
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              marginTop: '50px',
+              fontWeight: 'medium',
+            }}
+          >
+            Loading...
+          </div>
+        }
+      >
+        <Footer />
+      </React.Suspense>
     </>
   );
 }
