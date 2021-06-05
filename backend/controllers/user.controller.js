@@ -98,12 +98,24 @@ const updateUser = (req, res) => {
       user.pin = req.body.pin;
       user.phone = req.body.phone;
       user.profilePic = req.file.filename;
-      user.popularity = req.body.popularity;
 
       user
         .save()
         .then(() => res.json('Exercise updated!'))
         .catch(err => res.status(400).json('Error: ' + err));
+    })
+    .catch(err => res.status(400).json('Error: ' + err));
+};
+
+// Update user popularity
+const updateUserPopularity = (req, res) => {
+  User.findById(req.params.id)
+    .then(user => {
+      user.popularity = req.body.popularity;
+      user
+        .save()
+        .then(() => res.status(200).json('Popularity updated!'))
+        .catch(err => res.status(400).json('Error ' + err));
     })
     .catch(err => res.status(400).json('Error: ' + err));
 };
@@ -163,4 +175,5 @@ module.exports = {
   updateUser,
   deleteUser,
   sendEmail,
+  updateUserPopularity,
 };

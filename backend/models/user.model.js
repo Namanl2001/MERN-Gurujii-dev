@@ -104,6 +104,7 @@ const userSchema = new mongoose.Schema({
   popularity: {
     type: Number,
     trim: true,
+    default: 0,
   },
 });
 

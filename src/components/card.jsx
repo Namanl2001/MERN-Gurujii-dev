@@ -3,30 +3,35 @@ import './style.css';
 import ReadMoreReact from 'read-more-react';
 import axios from 'axios';
 import StarRatingComponent from 'react-star-rating-component';
+import { Button } from 'bootstrap-4-react';
 
 class cards extends Component {
   state = {
     clicked: false,
-    popularity: this.props.popularity,
+    popularity: this.props.user.popularity,
   };
   handleClick = () => {
+    console.log('current state is', this.state);
     axios
-      .patch(`/users/update/${this.props.data._id}`, {
+      .post(`/users/updatePopularity/${this.props.user._id}`, {
         popularity: this.state.popularity + 1,
       })
-      .then(res => {
-        res.status(200).send({ message: 'Popularity increased' });
-      })
-      .catch(err => {
-        console.log('error :', err);
-        res.status(400).send({ message: 'error updating popularity' });
-      });
+      .then(
+        res => {
+          console.log(res);
+        },
+        error => {
+          console.log(`Error: ${error}`);
+        }
+      );
+
     this.setState({
       clicked: true,
     });
   };
 
   render() {
+    console.log(this.props);
     var imageUrl = '';
     if (this.props.user.profilePic === '') {
       imageUrl = './photo.png';
@@ -88,6 +93,13 @@ class cards extends Component {
                 backgroundImage: `url(https://i.pinimg.com/736x/5e/e2/db/5ee2db0b6b3098b78812712d137c102d.jpg)`,
               }}
             >
+              <Button
+                info
+                style={{ marginTop: '10px' }}
+                onClick={this.state.clicked ? '' : this.handleClick}
+              >
+                Click here to know more!
+              </Button>
               <div
                 className='back-face-card inner color-white'
                 style={{ marginTop: '17%' }}
