@@ -68,17 +68,18 @@ class cards extends Component {
                 <h5 className='head'>
                   {this.props.user.title} {this.props.user.username}
                 </h5>
-                <h4>{this.props.user.tutor}</h4>
-                <h3
+                <h5>{this.props.user.tutor}</h5>
+                <h4
                   className='flip-box-header'
                   style={{ textTransform: 'Capitalize' }}
                 >
                   {this.props.user.subject} <br />
-                </h3>
+                </h4>
                 <p style={{ marginBottom: '5px' }}>
                   ( {this.props.user.class1} {this.props.user.class2}{' '}
                   {this.props.user.class3} {this.props.user.class4} )
                 </p>
+
                 <img
                   src='https://s25.postimg.cc/65hsttv9b/cta-arrow.png'
                   alt=''
@@ -99,10 +100,12 @@ class cards extends Component {
               >
                 Click here to know more!
               </Button>
+
               <div
                 className='back-face-card inner color-white'
                 style={{ marginTop: '17%' }}
               >
+                <h6>Profile Views : {this.state.popularity}</h6>
                 <h4>{this.props.user.tutor}</h4>
                 <div style={{ fontSize: 25 }}>
                   <StarRatingComponent
