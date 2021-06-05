@@ -1,9 +1,35 @@
 import React, { Component } from 'react';
 import './style.css';
 import ReadMoreReact from 'read-more-react';
+import axios from 'axios';
 import StarRatingComponent from 'react-star-rating-component';
+import { Button } from 'bootstrap-4-react';
 
 class cards extends Component {
+  state = {
+    clicked: false,
+    popularity: this.props.user.popularity,
+  };
+  handleClick = () => {
+    console.log('current state is', this.state);
+    axios
+      .post(`/users/updatePopularity/${this.props.user._id}`, {
+        popularity: this.state.popularity + 1,
+      })
+      .then(
+        res => {
+          console.log(res);
+        },
+        error => {
+          console.log(`Error: ${error}`);
+        }
+      );
+
+    this.setState({
+      clicked: true,
+    });
+  };
+
   render() {
     var imageUrl = '';
     if (this.props.user.profilePic === '') {
@@ -66,6 +92,13 @@ class cards extends Component {
                 backgroundImage: `url(https://i.pinimg.com/736x/5e/e2/db/5ee2db0b6b3098b78812712d137c102d.jpg)`,
               }}
             >
+              <Button
+                info
+                style={{ marginTop: '10px' }}
+                onClick={this.state.clicked ? '' : this.handleClick}
+              >
+                Click here to know more!
+              </Button>
               <div
                 className='back-face-card inner color-white'
                 style={{ marginTop: '17%' }}

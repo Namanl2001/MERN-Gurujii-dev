@@ -463,6 +463,20 @@ class form extends Component {
                     />
                   </Col>
                 </Row>
+                <Row>
+                  <Form.LabelCol col='sm-2' htmlFor='profile-pic'>
+                    Profile Picture
+                  </Form.LabelCol>
+                  <Col col='sm-10'>
+                    <input
+                      type='file'
+                      name='file'
+                      onChange={e =>
+                        this.setState({ image: e.target.files[0] })
+                      }
+                    />
+                  </Col>
+                </Row>
               </div>
             </div>
           </Form>
