@@ -101,10 +101,7 @@ class cards extends Component {
                 Click here to know more!
               </Button>
 
-              <div
-                className='back-face-card inner color-white'
-                style={{ marginTop: '17%' }}
-              >
+              <div className='back-face-card inner color-white'>
                 <h6>Profile Views : {this.state.popularity}</h6>
                 <h4>{this.props.user.tutor}</h4>
                 <div style={{ fontSize: 25 }}>
@@ -127,8 +124,11 @@ class cards extends Component {
                 Address: {this.props.user.address} , {this.props.user.city}{' '}
                 <br />
                 {this.props.user.pin}
-                <p className='cont'>Contact: {this.props.user.phone}</p>
               </div>
+              {/* will include absolute styles for this element */}
+              <h6 style={{ color: 'white' }} className='contact'>
+                Contact: {this.props.user.phone}
+              </h6>
             </div>
           </div>
         </div>

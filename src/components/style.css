@@ -564,10 +564,8 @@ form > .button:hover {
   top: 47% !important;
 }
 
-.cont {
-  margin-top: 6rem;
-  position: relative;
-  text-align: center;
+.contact {
+  margin-top: 390px;
 }
 
 .error-logo {
