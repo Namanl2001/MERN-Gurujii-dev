@@ -31,7 +31,6 @@ class cards extends Component {
   };
 
   render() {
-    console.log(this.props);
     var imageUrl = '';
     if (this.props.user.profilePic === '') {
       imageUrl = './photo.png';
