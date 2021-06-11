@@ -49,9 +49,7 @@
     "dep1": "concurrently \"yarn server-dependencies\" \"yarn client-dependencies\"",
     "client": "yarn start",
     "server": "cd backend && yarn start",
-    "dev": "concurrently \"yarn server\" \"yarn client\"",
-    "check-formatting": "prettier --check '**/*.{js,jsx,css,html}'",
-    "check-linting": "eslint '**/*.{js,jsx}'"
+    "dev": "concurrently \"yarn server\" \"yarn client\""
   },
   "eslintConfig": {
     "extends": "react-app"

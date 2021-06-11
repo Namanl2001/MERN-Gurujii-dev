@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import './style.css';
 import ReadMoreReact from 'read-more-react';
 import axios from 'axios';
@@ -39,15 +40,18 @@ class cards extends Component {
     }
 
     return (
-      <div className='box-container'>
-        <div className='box-item'>
-          <div className='flip-box'>
+      <div class='box-container'>
+        <div class='box-item'>
+          <div class='flip-box'>
             <div
+
               className='flip-box-front text-center card'
+
               style={{
                 backgroundImage: `url(https://i.pinimg.com/originals/7c/05/50/7c05508149920eba2d934c19ff83cbba.jpg)`,
               }}
             >
+
               <img
                 className='card-img-top'
                 src={imageUrl}
@@ -57,9 +61,9 @@ class cards extends Component {
                 }}
               />
 
-              <div className='front-face-card inner color-white'>
+
                 <h3
-                  className='flip-box-header'
+                  class='flip-box-header'
                   style={{ textTransform: 'uppercase' }}
                 >
                   {this.props.user.coaching}
@@ -68,11 +72,13 @@ class cards extends Component {
                 <h5 className='head'>
                   {this.props.user.title} {this.props.user.username}
                 </h5>
+
                 <h5>{this.props.user.tutor}</h5>
                 <h4
                   className='flip-box-header'
                   style={{ textTransform: 'Capitalize' }}
                 >
+
                   {this.props.user.subject} <br />
                 </h4>
                 <p style={{ marginBottom: '5px' }}>
@@ -83,20 +89,22 @@ class cards extends Component {
                 <img
                   src='https://s25.postimg.cc/65hsttv9b/cta-arrow.png'
                   alt=''
-                  className='flip-box-img'
+                  class='flip-box-img'
                 />
               </div>
             </div>
             <div
-              className='flip-box-back text-center'
+              class='flip-box-back text-center'
               style={{
                 backgroundImage: `url(https://i.pinimg.com/736x/5e/e2/db/5ee2db0b6b3098b78812712d137c102d.jpg)`,
               }}
             >
+
               <Button
                 info
                 style={{ marginTop: '10px' }}
                 onClick={this.state.clicked ? '' : this.handleClick}
+
               >
                 Click here to know more!
               </Button>

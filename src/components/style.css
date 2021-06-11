@@ -384,6 +384,7 @@ ul {
   font-size: 14px;
   color: #878787;
 }
+
 @media screen and (max-width: 500px) {
   div.formRoot,
   select.custom-select,
@@ -534,6 +535,7 @@ form > .button {
   transition: background-color 0.4s ease;
   -webkit-border-radius: 0 4px 4px 0;
   border-radius: 0 4px 4px 0;
+
 }
 
 form > .button:hover {
@@ -980,4 +982,16 @@ h5 {
   margin-left: -10rem;
 
   position: fixed;
+}
+#sec1 {
+  width: 434px;
+  padding: 40px 40px 0px 40px;
+  justify-items: center;
+  background-image: url('https://freefrontend.com/assets/img/css-background-patterns/simple-pattern-with-css3.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#sec2 {
+  width: 434px;
+  padding: 40px;
 }

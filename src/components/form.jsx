@@ -142,6 +142,7 @@ class form extends Component {
       data.append('pin', this.state.pin);
       data.append('phone', this.state.phone);
 
+
       axios
         .post('/users/add', data)
         .then(response => {

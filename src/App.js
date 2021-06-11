@@ -4,6 +4,8 @@ import Preloader from './components/Preloader';
 import healthtips from './components/healthtips';
 import './App.css';
 
+
+
 const Home = React.lazy(() => {
   return new Promise(resolve => {
     setTimeout(() => resolve(import('./components/home')), 4000);
@@ -42,6 +44,7 @@ function App() {
           </Switch>
         </React.Suspense>
       </Router>
+
       <React.Suspense
         fallback={
           <div

@@ -1,6 +1,7 @@
 let User = require('../models/user.model');
 var nodemailer = require('nodemailer');
 const { pass } = require('../config');
+
 var multer = require('multer');
 
 var storage = multer.diskStorage({

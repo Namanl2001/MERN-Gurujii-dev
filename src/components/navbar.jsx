@@ -32,11 +32,10 @@ class navbar extends Component {
     axios
       .delete(`/users/delete/${this.props.id}`)
       .then(response => {
-        if (response.status === 200) {
+        if (response.status == 200) {
           axios.get(`/users/sendMail/${this.props.emailid}/2`);
-          if (!alert(`Your profile deleted successfully.....!! `)) {
-            window.location.reload();
-          }
+          if (alert(`Your profile deleted successfully.....!! `)) {
+          } else window.location.reload();
         }
       })
       .catch(function (error) {
@@ -272,6 +271,7 @@ class navbar extends Component {
             </Navbar>
           </div>
         )}
+
       </div>
     );
   }
