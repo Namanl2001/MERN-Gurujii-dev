@@ -65,6 +65,7 @@ const addNewUser = (req, res) => {
       phone: req.body.phone,
       isAdmin: req.body.isAdmin,
       profilePic,
+      popularity: '0',
     });
 
     newUser.save(function (err) {
@@ -107,6 +108,19 @@ const updateUser = (req, res) => {
     .catch(err => res.status(400).json('Error: ' + err));
 };
 
+// Update user popularity
+const updateUserPopularity = (req, res) => {
+  User.findById(req.params.id)
+    .then(user => {
+      user.popularity = req.body.popularity;
+      user
+        .save()
+        .then(() => res.status(200).json('Popularity updated!'))
+        .catch(err => res.status(400).json('Error ' + err));
+    })
+    .catch(err => res.status(400).json('Error: ' + err));
+};
+
 // Delete existing user document on basis of ID
 const deleteUser = (req, res) => {
   User.findByIdAndDelete(req.params.id)
@@ -131,7 +145,8 @@ const sendEmail = (req, res) => {
       from: 'namanlakhwaninl@gmail.com',
       to: req.params.email,
       subject: 'GuruJii.com',
-      text: 'Greetings from GuruJii.com !!. We are glad to see you and will try to serve our great and best services to you. \n\nThanks and regards \nNaman Lakhwani ',
+      text:
+        'Greetings from GuruJii.com !!. We are glad to see you and will try to serve our great and best services to you. \n\nThanks and regards \nNaman Lakhwani ',
     };
   }
 
@@ -140,7 +155,8 @@ const sendEmail = (req, res) => {
       from: 'namanlakhwaninl@gmail.com',
       to: req.params.email,
       subject: 'GuruJii.com',
-      text: 'It is very disheartening to see you leave. We hope that you liked our service and would come back again. \n\nThanks and regards \nNaman Lakhwani',
+      text:
+        'It is very disheartening to see you leave. We hope that you liked our service and would come back again. \n\nThanks and regards \nNaman Lakhwani',
     };
   }
 
@@ -160,4 +176,5 @@ module.exports = {
   updateUser,
   deleteUser,
   sendEmail,
+  updateUserPopularity,
 };

@@ -2,9 +2,35 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './style.css';
 import ReadMoreReact from 'read-more-react';
+import axios from 'axios';
 import StarRatingComponent from 'react-star-rating-component';
+import { Button } from 'bootstrap-4-react';
 
 class cards extends Component {
+  state = {
+    clicked: false,
+    popularity: this.props.user.popularity,
+  };
+  handleClick = () => {
+    console.log('current state is', this.state);
+    axios
+      .post(`/users/updatePopularity/${this.props.user._id}`, {
+        popularity: this.state.popularity + 1,
+      })
+      .then(
+        res => {
+          console.log(res);
+        },
+        error => {
+          console.log(`Error: ${error}`);
+        }
+      );
+
+    this.setState({
+      clicked: true,
+    });
+  };
+
   render() {
     var imageUrl = '';
     if (this.props.user.profilePic === '') {
@@ -47,18 +73,19 @@ class cards extends Component {
                   {this.props.user.title} {this.props.user.username}
                 </h5>
 
-                <h4>{this.props.user.tutor}</h4>
-                <h3
+                <h5>{this.props.user.tutor}</h5>
+                <h4
                   className='flip-box-header'
                   style={{ textTransform: 'Capitalize' }}
                 >
 
                   {this.props.user.subject} <br />
-                </h3>
+                </h4>
                 <p style={{ marginBottom: '5px' }}>
                   ( {this.props.user.class1} {this.props.user.class2}{' '}
                   {this.props.user.class3} {this.props.user.class4} )
                 </p>
+
                 <img
                   src='https://s25.postimg.cc/65hsttv9b/cta-arrow.png'
                   alt=''
@@ -73,10 +100,17 @@ class cards extends Component {
               }}
             >
 
-              <div
-                className='back-face-card inner color-white'
-                style={{ marginTop: '17%' }}
+              <Button
+                info
+                style={{ marginTop: '10px' }}
+                onClick={this.state.clicked ? '' : this.handleClick}
+
               >
+                Click here to know more!
+              </Button>
+
+              <div className='back-face-card inner color-white'>
+                <h6>Profile Views : {this.state.popularity}</h6>
                 <h4>{this.props.user.tutor}</h4>
                 <div style={{ fontSize: 25 }}>
                   <StarRatingComponent
@@ -98,8 +132,11 @@ class cards extends Component {
                 Address: {this.props.user.address} , {this.props.user.city}{' '}
                 <br />
                 {this.props.user.pin}
-                <p className='cont'>Contact: {this.props.user.phone}</p>
               </div>
+              {/* will include absolute styles for this element */}
+              <h6 style={{ color: 'white' }} className='contact'>
+                Contact: {this.props.user.phone}
+              </h6>
             </div>
           </div>
         </div>
