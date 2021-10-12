@@ -981,3 +981,11 @@ h5 {
 
   position: fixed;
 }
+.navbar-logo {
+  height: 60px;
+  width: auto;
+}
+.logo-image {
+  height: 100%;
+  width: auto;
+}
