@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Clock from 'react-live-clock';
+import logo from '../assets/logo.png';
+
 // import ReactDOM from 'react-dom';
 import {
   Navbar,
@@ -56,10 +58,9 @@ class navbar extends Component {
             <Navbar expand='lg' dark bg='dark' fixed='top' className='navbar'>
               <Navbar.Brand href='#'>
                 {' '}
-                <span className='g-heading'>
-                  <h2>G</h2>
-                </span>
-                uruJii
+                <div className='navbar-logo'>
+                  <img className='logo-image' src={logo} />
+                </div>
               </Navbar.Brand>
               <Navbar.Toggler target='#navbarSupportedContent' />
               <Collapse navbar id='navbarSupportedContent'>
@@ -124,10 +125,9 @@ class navbar extends Component {
           <div>
             <Navbar expand='lg' dark bg='dark' fixed='top' className='navbar'>
               <Navbar.Brand href='#'>
-                <span className='g-heading'>
-                  <h2>G</h2>
-                </span>
-                uruJii
+                <div className='navbar-logo'>
+                  <img className='logo-image' src={logo} />
+                </div>
               </Navbar.Brand>
               <Navbar.Toggler target='#navbarSupportedContent' />
               <Collapse navbar id='navbarSupportedContent'>
@@ -233,10 +233,9 @@ class navbar extends Component {
           <div>
             <Navbar expand='lg' dark bg='dark' fixed='top' className='navbar'>
               <Navbar.Brand href='#'>
-                <span className='g-heading'>
-                  <h2>G</h2>
-                </span>
-                uruJii
+                <div className='navbar-logo'>
+                  <img className='logo-image' src={logo} />
+                </div>
               </Navbar.Brand>
               <Navbar.Toggler target='#navbarSupportedContent' />
               <Collapse navbar id='navbarSupportedContent'>
