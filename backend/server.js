@@ -38,6 +38,7 @@ app.use(mongoSanitize());
 app.use(xss());
 
 const url = `mongodb+srv://${username}:${pass}${myCluster}.mongodb.net/project?retryWrites=true&w=majority`;
+
 mongoose.connect(url, {
   useNewUrlParser: true,
   useCreateIndex: true,
@@ -50,12 +51,16 @@ connection.once('open', () => {
 
 const usersRouter = require('./routes/users');
 const adminRouter = require('./routes/admin');
+const ContactUsRouter = require('./routes/contact');
 
 //User Routes
 app.use('/users', usersRouter);
 
 //Admin Routes
 app.use('/admin', adminRouter);
+
+//Contact Route
+app.use('/contactus', ContactUsRouter);
 
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);

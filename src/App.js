@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Preloader from './components/Preloader';
 import healthtips from './components/healthtips';
 import './App.css';
+import ContactUsComponent from './components/ContactForm';
 
 const Home = React.lazy(() => {
   return new Promise(resolve => {
@@ -37,6 +38,8 @@ function App() {
             <Route exact path='/' component={About} />
             <Route exact path='/home' component={Home} />
             <Route exact path='/healthtips' component={healthtips} />
+            {/* Route for contact us Form */}
+            <Route exact path='/contactus' component={ContactUsComponent} />
 
             <Route path='*' component={E404} />
           </Switch>

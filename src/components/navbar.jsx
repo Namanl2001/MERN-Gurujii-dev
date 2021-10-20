@@ -91,6 +91,9 @@ class navbar extends Component {
                   <Nav.Item>
                     <Nav.Link disabled>Disabled</Nav.Link>
                   </Nav.Item>
+                  <Nav.Item active>
+                    <Nav.Link href='/contactus'>Contact Us</Nav.Link>
+                  </Nav.Item>
                 </Navbar.Nav>
                 <Button
                   className='profile-button'
@@ -156,6 +159,9 @@ class navbar extends Component {
                   </Nav.Item>
                   <Nav.Item>
                     <Nav.Link disabled>Disabled</Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item active>
+                    <Nav.Link href='/contactus'>Contact Us</Nav.Link>
                   </Nav.Item>
                 </Navbar.Nav>
                 <Button
@@ -264,6 +270,9 @@ class navbar extends Component {
                   </Nav.Item>
                   <Nav.Item>
                     <Nav.Link disabled>Disabled</Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item active>
+                    <Nav.Link href='/contactus'>Contact Us</Nav.Link>
                   </Nav.Item>
                 </Navbar.Nav>
                 <Login />

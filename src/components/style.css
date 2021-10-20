@@ -989,3 +989,48 @@ h5 {
   height: 100%;
   width: auto;
 }
+/* 
+CSS for contact us page */
+.contactus-mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 60vh;
+  justify-content: center;
+}
+.contactus-form {
+  display: flex;
+  flex-direction: column;
+  height: 60%;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 3%;
+}
+.input-box {
+  width: 50vw;
+}
+.input-box > input,
+.input-box > textarea {
+  width: 100%;
+  padding: 1%;
+  border: 1px solid rgb(80, 80, 143);
+  border-radius: 4px;
+}
+.topic-text {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.btn {
+  padding: 1%;
+  width: 20%;
+  background-color: rgb(80, 80, 143);
+  color: white;
+  border-radius: 4px;
+}
+.btn:hover {
+  background-color: transparent;
+  border: 1px solid rgb(80, 80, 143);
+  color: black;
+  cursor: pointer;
+}
