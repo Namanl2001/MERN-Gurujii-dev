@@ -61,7 +61,10 @@ We have used proxy so all the requests made to the backend from the frontend wil
   - Lines 9, 40 of `backend/server.js`
   - Line 3 of `backend/controllers/user.controller.js`
 
-- For security reasons, we have made the MongoDb URI secure, by not adding a hardcoded username and password. For development purposes, you can install, MongoDB locally or use the online version. Also create your own `backend/config.js` file with proper credentials, following the format given in `backend.config.example/js`.
+- For security reasons, we have made the MongoDb URI secure, by not adding a hardcoded username and password. For development purposes, you can install, MongoDB locally or use the online version. Create a .env file same as the given env file (.env.example) in `backend`
+  - `MONGODB` is for API calls
+  - `MONGODB_TEST_URI` is for unit test cases
+- Also create your own `backend/config.js` file with proper credentials, following the format given in `backend.config.example/js`.
 - There is a route that sends emails - Line 82 of `backend/controllers/user.controller.js`. Remember to replace the auth credentials with your own before testing the route.
 - Remember not to push any personal data like mongo uri or mail credentials.
 

@@ -6,7 +6,7 @@ const xss = require('xss-clean');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const path = require('path');
-const { username, pass, myCluster } = require('./config');
+const { myCluster } = require('./config');
 require('dotenv').config();
 
 const app = express();
@@ -37,8 +37,7 @@ app.use(mongoSanitize());
 //data sanitization against xss
 app.use(xss());
 
-const url = `mongodb+srv://${username}:${pass}${myCluster}.mongodb.net/project?retryWrites=true&w=majority`;
-
+const url = myCluster;
 mongoose.connect(url, {
   useNewUrlParser: true,
   useCreateIndex: true,
@@ -63,5 +62,7 @@ app.use('/admin', adminRouter);
 app.use('/contactus', ContactUsRouter);
 
 app.listen(port, () => {
-  console.log(`Server is running on port: ${port}`);
+  module.exports = app.listen(port, () => {
+    console.log(`Server is running on port: ${port}`);
+  });
 });
