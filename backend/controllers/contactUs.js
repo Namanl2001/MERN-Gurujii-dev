@@ -13,10 +13,11 @@ exports.sendMail = (req, res) => {
   const { name, email, message, subject } = req.body;
 
   const options = {
-    from: `${email}`,
+    from: 'namanlakhwaninl@gmail.com',
     to: 'namanlakhwaninl@gmail.com',
     subject: `${subject}`,
-    text: `From : ${name}, Message : ${message}`,
+    text: `From:`,
+    html: `<p>From: ${email}<br>Name : ${name}<br>Message: ${message}</p>`,
   };
 
   transporter.sendMail(options, err => {
