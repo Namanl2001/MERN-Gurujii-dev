@@ -61,8 +61,6 @@ app.use('/admin', adminRouter);
 //Contact Route
 app.use('/contactus', ContactUsRouter);
 
-app.listen(port, () => {
-  module.exports = app.listen(port, () => {
-    console.log(`Server is running on port: ${port}`);
-  });
+module.exports = app.listen(port, () => {
+  console.log(`Server is running on port: ${port}`);
 });
