@@ -84,6 +84,9 @@ class navbar extends Component {
                         Health Tips
                       </Dropdown.Item>
                       <Dropdown.Item>Another action</Dropdown.Item>
+                      <Dropdown.Item href='/contactus'>
+                        Contact Us
+                      </Dropdown.Item>
                       <Dropdown.Divider />
                       <Dropdown.Item>Something else</Dropdown.Item>
                     </Dropdown.Menu>
@@ -150,6 +153,9 @@ class navbar extends Component {
                         Health Tips
                       </Dropdown.Item>
                       <Dropdown.Item>Another action</Dropdown.Item>
+                      <Dropdown.Item href='/contactus'>
+                        Contact Us
+                      </Dropdown.Item>
                       <Dropdown.Divider />
                       <Dropdown.Item>Something else</Dropdown.Item>
                     </Dropdown.Menu>
@@ -258,6 +264,9 @@ class navbar extends Component {
                         Health Tips
                       </Dropdown.Item>
                       <Dropdown.Item>Another action</Dropdown.Item>
+                      <Dropdown.Item href='/contactus'>
+                        Contact Us
+                      </Dropdown.Item>
                       <Dropdown.Divider />
                       <Dropdown.Item>Something else</Dropdown.Item>
                     </Dropdown.Menu>

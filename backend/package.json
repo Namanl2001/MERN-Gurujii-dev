@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "dev": "nodemon server.js",
     "test": "SET NODE_ENV=test && mocha --recursive --timeout 10000 --exit",
     "start": "node server.js"
   },
@@ -28,6 +29,7 @@
     "node": ">=12.14.0"
   },
   "devDependencies": {
+    "nodemon": "^2.0.13",
     "chai": "^4.3.4",
     "mocha": "^9.1.3",
     "supertest": "^6.1.6"
