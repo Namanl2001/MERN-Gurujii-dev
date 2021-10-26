@@ -10,9 +10,9 @@ const defaultState = {
   subjdata: {},
   tutdata: {},
   isDataInitialized: false, // You can add additional property to denote, that data is not fetched for the first time
-  tutor: 'All',
-  subject: 'All',
-  class: 'All',
+  tutor: 'Tutor',
+  subject: 'Subject',
+  class: 'Class',
   currentUser: '',
   email: '',
   loggedin: false,
@@ -49,9 +49,9 @@ function rootReducer(state = defaultState, action) {
         pindata: state.all,
         namedata: state.all,
         subjdata: state.all,
-        subject: 'All',
-        class: 'All',
-        tutor: 'All',
+        subject: 'Subject',
+        class: 'Class',
+        tutor: 'Tutor',
       };
 
     case 'PIN':
@@ -65,9 +65,9 @@ function rootReducer(state = defaultState, action) {
         namedata: newArray0,
         subjdata: newArray0,
         users: newArray0,
-        subject: 'All',
-        tutor: 'All',
-        class: 'All',
+        subject: 'Subject',
+        tutor: 'Tutor',
+        class: 'Class',
       };
 
     case 'NAME':
@@ -80,9 +80,9 @@ function rootReducer(state = defaultState, action) {
         tutdata: newArray5,
         users: newArray5,
         subjdata: newArray5,
-        subject: 'All',
-        tutor: 'All',
-        class: 'All',
+        subject: 'Subject',
+        tutor: 'Tutor',
+        class: 'Class',
       };
 
     case 'ALLTUT':
@@ -91,9 +91,9 @@ function rootReducer(state = defaultState, action) {
         users: state.namedata,
         subjdata: state.namedata,
         tutdata: state.namedata,
-        subject: 'All',
+        subject: 'Subject',
         tutor: 'All',
-        class: 'All',
+        class: 'Class',
       };
     case 'HOME':
       const newArray6 = state.namedata.filter(
@@ -105,8 +105,8 @@ function rootReducer(state = defaultState, action) {
         tutdata: newArray6,
         users: newArray6,
         tutor: 'Home',
-        subject: 'All',
-        class: 'All',
+        subject: 'Subject',
+        class: 'Class',
       };
     case 'EXE':
       const newArray7 = state.namedata.filter(
@@ -118,8 +118,8 @@ function rootReducer(state = defaultState, action) {
         tutdata: newArray7,
         users: newArray7,
         tutor: 'External',
-        subject: 'All',
-        class: 'All',
+        subject: 'Subject',
+        class: 'Class',
       };
 
     case 'ALLSUB':
@@ -129,7 +129,7 @@ function rootReducer(state = defaultState, action) {
         subjdata: state.tutdata,
         tutdata: state.tutdata,
         subject: 'All',
-        class: 'All',
+        class: 'Class',
       };
     case 'PHY':
       const newArray1 = state.tutdata.filter(
@@ -140,7 +140,7 @@ function rootReducer(state = defaultState, action) {
         subjdata: newArray1,
         users: newArray1,
         subject: 'Physics',
-        class: 'All',
+        class: 'Class',
       };
     case 'CHE':
       const newArray2 = state.tutdata.filter(
@@ -151,7 +151,7 @@ function rootReducer(state = defaultState, action) {
         subjdata: newArray2,
         users: newArray2,
         subject: 'Chemistry',
-        class: 'All',
+        class: 'Class',
       };
     case 'MAT':
       const newArray3 = state.tutdata.filter(
@@ -162,7 +162,7 @@ function rootReducer(state = defaultState, action) {
         subjdata: newArray3,
         users: newArray3,
         subject: 'Maths',
-        class: 'All',
+        class: 'Class',
       };
 
     case 'ALLCLS':

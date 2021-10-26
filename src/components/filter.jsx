@@ -77,7 +77,6 @@ class filter extends Component {
               {this.props.tutor}
             </Dropdown.Button>
             <Dropdown.Menu aria-labelledby='dropdownMenuButton'>
-              <Dropdown.Item disabled>HOME/EXTERNAL TUTOR</Dropdown.Item>
               <Dropdown.Item onClick={this.props.alltut}>All</Dropdown.Item>
               <Dropdown.Item onClick={this.props.home}>
                 Home Tutor
@@ -97,7 +96,6 @@ class filter extends Component {
               {this.props.subject}
             </Dropdown.Button>
             <Dropdown.Menu aria-labelledby='dropdownMenuButton'>
-              <Dropdown.Item disabled>SUBJECTS</Dropdown.Item>
               <Dropdown.Item onClick={this.props.allsub}>All</Dropdown.Item>
               <Dropdown.Item onClick={this.props.phy}>Physics</Dropdown.Item>
               <Dropdown.Item onClick={this.props.che}>Chemistry</Dropdown.Item>
@@ -114,7 +112,6 @@ class filter extends Component {
               {this.props.class}
             </Dropdown.Button>
             <Dropdown.Menu aria-labelledby='dropdownMenuButton'>
-              <Dropdown.Item disabled>CLASSES</Dropdown.Item>
               <Dropdown.Item onClick={this.props.allcls}>All</Dropdown.Item>
               <Dropdown.Item onClick={this.props.c9}>9 th</Dropdown.Item>
               <Dropdown.Item onClick={this.props.c10}>10 th</Dropdown.Item>
