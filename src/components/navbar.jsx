@@ -88,7 +88,21 @@ class navbar extends Component {
                         Contact Us
                       </Dropdown.Item>
                       <Dropdown.Divider />
-                      <Dropdown.Item>Something else</Dropdown.Item>
+                      <Dropdown.Item
+                        onClick={() => {
+                          window.localStorage.setItem(
+                            'muted',
+                            window.localStorage.getItem('muted') === 'true'
+                              ? 'false'
+                              : 'true'
+                          );
+                          window.location.reload();
+                        }}
+                      >
+                        {window.localStorage.getItem('muted') === 'false'
+                          ? 'Unmute Chatbot'
+                          : 'Mute Chatbot'}
+                      </Dropdown.Item>
                     </Dropdown.Menu>
                   </Nav.Item>
                   <Nav.Item>
@@ -157,7 +171,21 @@ class navbar extends Component {
                         Contact Us
                       </Dropdown.Item>
                       <Dropdown.Divider />
-                      <Dropdown.Item>Something else</Dropdown.Item>
+                      <Dropdown.Item
+                        onClick={() => {
+                          window.localStorage.setItem(
+                            'muted',
+                            window.localStorage.getItem('muted') === 'true'
+                              ? 'false'
+                              : 'true'
+                          );
+                          window.location.reload();
+                        }}
+                      >
+                        {window.localStorage.getItem('muted') === 'false'
+                          ? 'Unmute Chatbot'
+                          : 'Mute Chatbot'}
+                      </Dropdown.Item>
                     </Dropdown.Menu>
                   </Nav.Item>
                   <Nav.Item>
@@ -268,7 +296,21 @@ class navbar extends Component {
                         Contact Us
                       </Dropdown.Item>
                       <Dropdown.Divider />
-                      <Dropdown.Item>Something else</Dropdown.Item>
+                      <Dropdown.Item
+                        onClick={() => {
+                          window.localStorage.setItem(
+                            'muted',
+                            window.localStorage.getItem('muted') === 'true'
+                              ? 'false'
+                              : 'true'
+                          );
+                          window.location.reload();
+                        }}
+                      >
+                        {window.localStorage.getItem('muted') === 'false'
+                          ? 'Unmute Chatbot'
+                          : 'Mute Chatbot'}
+                      </Dropdown.Item>
                     </Dropdown.Menu>
                   </Nav.Item>
                   <Nav.Item>
