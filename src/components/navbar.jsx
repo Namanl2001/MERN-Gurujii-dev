@@ -92,7 +92,7 @@ class navbar extends Component {
                         onClick={() => {
                           window.localStorage.setItem(
                             'muted',
-                            window.localStorage.getItem('muted') === 'true'
+                            JSON.parse(window.localStorage.getItem('muted'))
                               ? 'false'
                               : 'true'
                           );
@@ -175,7 +175,7 @@ class navbar extends Component {
                         onClick={() => {
                           window.localStorage.setItem(
                             'muted',
-                            window.localStorage.getItem('muted') === 'true'
+                            JSON.parse(window.localStorage.getItem('muted'))
                               ? 'false'
                               : 'true'
                           );
@@ -300,7 +300,7 @@ class navbar extends Component {
                         onClick={() => {
                           window.localStorage.setItem(
                             'muted',
-                            window.localStorage.getItem('muted') === 'true'
+                            JSON.parse(window.localStorage.getItem('muted'))
                               ? 'false'
                               : 'true'
                           );

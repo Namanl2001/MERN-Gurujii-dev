@@ -83,10 +83,10 @@ const ChatBotComponent = () => {
       steps={steps}
       {...config}
       recognitionEnable={
-        window.localStorage.getItem('muted') === 'false' ? false : true
+        JSON.parse(window.localStorage.getItem('muted')) ? true : false
       }
       speechSynthesis={{
-        enable: window.localStorage.getItem('muted') === 'false' ? false : true,
+        enable: JSON.parse(window.localStorage.getItem('muted')) ? true : false,
         lang: 'en',
       }}
     />
