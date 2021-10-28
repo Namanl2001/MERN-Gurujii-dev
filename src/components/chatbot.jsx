@@ -81,6 +81,7 @@ const ChatBotComponent = () => {
     // <ThemeProvider theme={theme}>
     <ChatBot
       steps={steps}
+      {...config}
       recognitionEnable={
         window.localStorage.getItem('muted') === 'false' ? false : true
       }
