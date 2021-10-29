@@ -77,13 +77,12 @@ class navbar extends Component {
                   </Nav.Item>
                   <Nav.Item active dropdown>
                     <Nav.Link dropdownToggle href='#'>
-                      Dropdown
+                      More
                     </Nav.Link>
                     <Dropdown.Menu>
                       <Dropdown.Item href='/healthtips'>
                         Health Tips
                       </Dropdown.Item>
-                      <Dropdown.Item>Another action</Dropdown.Item>
                       <Dropdown.Item href='/contactus'>
                         Contact Us
                       </Dropdown.Item>
@@ -99,9 +98,9 @@ class navbar extends Component {
                           window.location.reload();
                         }}
                       >
-                        {window.localStorage.getItem('muted') === 'false'
-                          ? 'Unmute Chatbot'
-                          : 'Mute Chatbot'}
+                        {JSON.parse(window.localStorage.getItem('muted'))
+                          ? 'Mute Chatbot'
+                          : 'Unmute Chatbot'}
                       </Dropdown.Item>
                     </Dropdown.Menu>
                   </Nav.Item>
@@ -160,13 +159,12 @@ class navbar extends Component {
                   </Nav.Item>
                   <Nav.Item active dropdown>
                     <Nav.Link dropdownToggle href='#'>
-                      Dropdown
+                      More
                     </Nav.Link>
                     <Dropdown.Menu>
                       <Dropdown.Item href='/healthtips'>
                         Health Tips
                       </Dropdown.Item>
-                      <Dropdown.Item>Another action</Dropdown.Item>
                       <Dropdown.Item href='/contactus'>
                         Contact Us
                       </Dropdown.Item>
@@ -182,9 +180,9 @@ class navbar extends Component {
                           window.location.reload();
                         }}
                       >
-                        {window.localStorage.getItem('muted') === 'false'
-                          ? 'Unmute Chatbot'
-                          : 'Mute Chatbot'}
+                        {JSON.parse(window.localStorage.getItem('muted'))
+                          ? 'Mute Chatbot'
+                          : 'Unmute Chatbot'}
                       </Dropdown.Item>
                     </Dropdown.Menu>
                   </Nav.Item>
@@ -285,13 +283,12 @@ class navbar extends Component {
                   </Nav.Item>
                   <Nav.Item active dropdown>
                     <Nav.Link dropdownToggle href='#'>
-                      Dropdown
+                      More
                     </Nav.Link>
                     <Dropdown.Menu>
                       <Dropdown.Item href='/healthtips'>
                         Health Tips
                       </Dropdown.Item>
-                      <Dropdown.Item>Another action</Dropdown.Item>
                       <Dropdown.Item href='/contactus'>
                         Contact Us
                       </Dropdown.Item>
@@ -307,9 +304,9 @@ class navbar extends Component {
                           window.location.reload();
                         }}
                       >
-                        {window.localStorage.getItem('muted') === 'false'
-                          ? 'Unmute Chatbot'
-                          : 'Mute Chatbot'}
+                        {JSON.parse(window.localStorage.getItem('muted'))
+                          ? 'Mute Chatbot'
+                          : 'Unmute Chatbot'}
                       </Dropdown.Item>
                     </Dropdown.Menu>
                   </Nav.Item>
