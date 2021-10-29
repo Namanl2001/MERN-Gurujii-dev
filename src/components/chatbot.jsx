@@ -80,10 +80,15 @@ const ChatBotComponent = () => {
   return (
     // <ThemeProvider theme={theme}>
     <ChatBot
-      recognitionEnable={true}
-      speechSynthesis={{ enable: true, lang: 'en' }}
       steps={steps}
       {...config}
+      recognitionEnable={
+        JSON.parse(window.localStorage.getItem('muted')) ? true : false
+      }
+      speechSynthesis={{
+        enable: JSON.parse(window.localStorage.getItem('muted')) ? true : false,
+        lang: 'en',
+      }}
     />
     // </ThemeProvider>
   );

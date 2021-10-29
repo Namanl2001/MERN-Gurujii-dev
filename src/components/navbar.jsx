@@ -77,18 +77,31 @@ class navbar extends Component {
                   </Nav.Item>
                   <Nav.Item active dropdown>
                     <Nav.Link dropdownToggle href='#'>
-                      Dropdown
+                      More
                     </Nav.Link>
                     <Dropdown.Menu>
                       <Dropdown.Item href='/healthtips'>
                         Health Tips
                       </Dropdown.Item>
-                      <Dropdown.Item>Another action</Dropdown.Item>
                       <Dropdown.Item href='/contactus'>
                         Contact Us
                       </Dropdown.Item>
                       <Dropdown.Divider />
-                      <Dropdown.Item>Something else</Dropdown.Item>
+                      <Dropdown.Item
+                        onClick={() => {
+                          window.localStorage.setItem(
+                            'muted',
+                            JSON.parse(window.localStorage.getItem('muted'))
+                              ? 'false'
+                              : 'true'
+                          );
+                          window.location.reload();
+                        }}
+                      >
+                        {JSON.parse(window.localStorage.getItem('muted'))
+                          ? 'Mute Chatbot'
+                          : 'Unmute Chatbot'}
+                      </Dropdown.Item>
                     </Dropdown.Menu>
                   </Nav.Item>
                   <Nav.Item>
@@ -146,18 +159,31 @@ class navbar extends Component {
                   </Nav.Item>
                   <Nav.Item active dropdown>
                     <Nav.Link dropdownToggle href='#'>
-                      Dropdown
+                      More
                     </Nav.Link>
                     <Dropdown.Menu>
                       <Dropdown.Item href='/healthtips'>
                         Health Tips
                       </Dropdown.Item>
-                      <Dropdown.Item>Another action</Dropdown.Item>
                       <Dropdown.Item href='/contactus'>
                         Contact Us
                       </Dropdown.Item>
                       <Dropdown.Divider />
-                      <Dropdown.Item>Something else</Dropdown.Item>
+                      <Dropdown.Item
+                        onClick={() => {
+                          window.localStorage.setItem(
+                            'muted',
+                            JSON.parse(window.localStorage.getItem('muted'))
+                              ? 'false'
+                              : 'true'
+                          );
+                          window.location.reload();
+                        }}
+                      >
+                        {JSON.parse(window.localStorage.getItem('muted'))
+                          ? 'Mute Chatbot'
+                          : 'Unmute Chatbot'}
+                      </Dropdown.Item>
                     </Dropdown.Menu>
                   </Nav.Item>
                   <Nav.Item>
@@ -257,18 +283,31 @@ class navbar extends Component {
                   </Nav.Item>
                   <Nav.Item active dropdown>
                     <Nav.Link dropdownToggle href='#'>
-                      Dropdown
+                      More
                     </Nav.Link>
                     <Dropdown.Menu>
                       <Dropdown.Item href='/healthtips'>
                         Health Tips
                       </Dropdown.Item>
-                      <Dropdown.Item>Another action</Dropdown.Item>
                       <Dropdown.Item href='/contactus'>
                         Contact Us
                       </Dropdown.Item>
                       <Dropdown.Divider />
-                      <Dropdown.Item>Something else</Dropdown.Item>
+                      <Dropdown.Item
+                        onClick={() => {
+                          window.localStorage.setItem(
+                            'muted',
+                            JSON.parse(window.localStorage.getItem('muted'))
+                              ? 'false'
+                              : 'true'
+                          );
+                          window.location.reload();
+                        }}
+                      >
+                        {JSON.parse(window.localStorage.getItem('muted'))
+                          ? 'Mute Chatbot'
+                          : 'Unmute Chatbot'}
+                      </Dropdown.Item>
                     </Dropdown.Menu>
                   </Nav.Item>
                   <Nav.Item>

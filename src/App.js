@@ -5,6 +5,9 @@ import healthtips from './components/healthtips';
 import './App.css';
 import ContactUsComponent from './components/ContactForm';
 
+if (!window.localStorage.getItem('muted'))
+  window.localStorage.setItem('muted', 'true');
+
 const Home = React.lazy(() => {
   return new Promise(resolve => {
     setTimeout(() => resolve(import('./components/home')), 4000);
