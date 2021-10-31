@@ -61,14 +61,84 @@ We have used proxy so all the requests made to the backend from the frontend wil
   - Lines 9, 40 of `backend/server.js`
   - Line 3 of `backend/controllers/user.controller.js`
 
-- For security reasons, we have made the MongoDb URI secure, by not adding a hardcoded username and password. For development purposes, you can install, MongoDB locally or use the online version. Create a .env file same as the given env file (.env.example) in `backend`
-  - `MONGODB` is for API calls
-  - `MONGODB_TEST_URI` is for unit test cases
-- Also create your own `backend/config.js` file with proper credentials, following the format given in `backend.config.example/js`.
 - There is a route that sends emails - Line 82 of `backend/controllers/user.controller.js`. Remember to replace the auth credentials with your own before testing the route.
 - Remember not to push any personal data like mongo uri or mail credentials.
 
-</p>
+<h1>Backend</h1>
+<h2>Local Setup </h2>
+You can run the backend of the app locally by following these steps
+
+<p>
+
+- Install dependencies theough `yarn` by navigating to the backend folder.
+
+```
+  # Go into backend folder
+  $ cd backend
+
+  # Install dependencies
+  $ yarn install
+```
+
+<p>
+
+- For security reasons, we have made the MongoDb URI secure, by not adding a hardcoded username and password. For development purposes, you can install, MongoDB locally or use the online version. Create a .env file same as the given env file (.env.example) in backend
+
+  - `MONGODB` is for API calls
+  - `MONGODB_TEST_URI` is for unit test cases
+  <p>
+
+- You have to start MongoDB server locally to establish a database connection.
+
+- Also create your own `backend/config.js` file with proper credentials, following the format given in `backend.config.example/js`.
+
+<p>
+
+- The project uses `nodemon` as a devDependency for runnning backend in development mode.
+
+```
+  # run in development mode
+  $ yarn dev
+```
+
+<p>
+
+- Once the server is up and running, you will see two messages in terminal :
+
+  - Server is running on port: 5000
+  - MongoDB database connection established successfully
+  - Now your backend is running successfully in development mode.
+
+<h2>Understanding Backend Flow</h2>
+
+- Go through the code and try to understand the code flow. On a high level, the flow goes like:-
+
+  - An API is hit from the client-side.
+  - The main route is matched with a route in various JS files in `routes` folder.
+  - A `router` is selected based on the route given, and the request is passed on to a `controller` in `controllers` folder.
+  - The controller receives the request and function accordingly. Finally, a response is sent in JSON format which is processed in the frontend-side.
+  - Additionally, it contains `middleware` folder which currently contains admin authentication middleware.
+  - Overall, the control sequence is `client request -> server/routes.js -> server/api/controllers/{some controller}/router.js -> server/api/controllers/{some controller}/controller.js -> client response`.
+
+<hr>
+
+<h1>Frontend</h1>
+<h2>Quick Setup</h2>
+To start the frontend, you need to install dependencies in the `package.json` file in the root folder.
+
+```
+  # install dependencies
+  $ yarn install
+```
+
+This will install dependencies required to start the `React` server.
+
+- Once the dependencies have been installed, you can run the server locally on your system on `localhost:3000`.
+
+```
+  # start react server
+  $ yarn start
+```
 
 <h2>Contribution <a><img src="https://github.com/Samridhi-98/Images/blob/master/Images/support(1).svg" width="3%"></a> </h2>
 <p>
